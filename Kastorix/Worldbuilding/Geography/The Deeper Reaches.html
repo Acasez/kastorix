@@ -1,87 +1,103 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>The Deeper Reaches</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<base href="/Kastorix/">
-		<link rel="stylesheet" href="kastorix.css" />
-		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
-	</head>
-	<body class="is-preload">
-		<!-- Header -->
-		<div id="header-placeholder"></div>
-		<!-- Main -->
-			<div id="main">
-				<!-- Main Projects -->
-					<section id="Main Projects" class="sectionText">
-						<header>
-						<h3 class="portfolio-title">The Deeper Reaches</h3>
-						</header>
-						<div class="portfolio-row reverse"> <!-- The Deeper Reaches -->
-							<div class="portfolio-image large">
-								<img src="/images/Kastorix/Maps/The Caverns Below.jpg" alt="World Map" />
-							</div>
-							<div class="portfolio-text">
-								<p class="portfolio-description">
-									<h3 class="portfolio-title">The Deeper Reaches</h3>
-									<!-- Overview Text Below -->
-                                    <p>The Deeper Reaches is the colloquial name for the deeper areas of <a href="Worldbuilding/Geography/The Caverns Below.html">The Caverns Below</a> where the intense heat makes life hard and the high mana concentration allows creates many strange magical creatures. Exploration of the deeper reaches is difficult and dangerous, even for seasoned explorers and experienced mages. The high concentration of mana and magical materials makes such exploration valuable however.</p>
-							</div>
-						</div>
-						<div class="portfolio-row"> <!-- Geography -->
-							<div class="portfolio-text">
-								<p class="portfolio-description">
-									<h3 class="portfolio-title">Geography</h3>
-									<!-- Geography Text Below -->
-                                    <p>Due to dangerous environments it's unclear how large The Deeper Reaches are and how deep they go. Explorers have spoken of vast crystal caves, lava lakes and strange ruins.</p>
-							</div>
-						</div>
-						<div class="portfolio-row"> <!-- Biodiversity -->
-							<div class="portfolio-text">
-								<p class="portfolio-description">
-									<h3 class="portfolio-title">Biodiversity</h3>
-									<!-- Biodiversity Text Below -->
-                                    <p>There are no recognized sapients living in the deeper reaches, but vesper explorers have spoken of an mysterious insectoid species wielding forged weapons wandering the depths. Nicknamed the <a href="Worldbuilding/Geography/Kilkaz.html">Kilkaz</a> for the clicking sounds they make, its unclear how they survive the depths or why they stay there. The Kilkaz are a beetle-like insectoid species with orange carapaces and prominent antennae. They appear to have some form of civilization as they have been seen wielding metallic weapons. </p>
-<p>Beside the Kilkaz, The Deeper Reaches also has multiple dangerous and strange creatures like the <a href="Worldbuilding/Geography/Yasailir.html">Yasailir</a>.</p>
-							</div>
-						</div>
-					</section>
+
+<head>
+	<title>The Deeper Reaches</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<base href="/kastorix/Kastorix/">
+	<link rel="stylesheet" href="kastorix.css" />
+	<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<div id="header-placeholder"></div>
+	<!-- Main -->
+	<div id="main">
+		<!-- Main Projects -->
+		<section id="Main Projects" class="sectionText">
+			<header>
+				<h3 class="portfolio-title">The Deeper Reaches</h3>
+			</header>
+			<div class="portfolio-row reverse"> <!-- The Deeper Reaches -->
+				<div class="portfolio-image large">
+					<img src="/images/Kastorix/Maps/The Caverns Below.jpg" alt="World Map" />
+				</div>
+				<div class="portfolio-text">
+					<p class="portfolio-description">
+					<h3 class="portfolio-title">The Deeper Reaches</h3>
+					<!-- Overview Text Below -->
+					<p>The Deeper Reaches is the colloquial name for the deeper areas of <a
+							href="Worldbuilding/Geography/The Caverns Below.html">The Caverns Below</a> where the
+						intense heat makes life hard and the high mana concentration allows creates many strange magical
+						creatures. Exploration of the deeper reaches is difficult and dangerous, even for seasoned
+						explorers and experienced mages. The high concentration of mana and magical materials makes such
+						exploration valuable however.</p>
+				</div>
 			</div>
-		<!-- Footer -->
-			<div id="footer">
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+			<div class="portfolio-row"> <!-- Geography -->
+				<div class="portfolio-text">
+					<p class="portfolio-description">
+					<h3 class="portfolio-title">Geography</h3>
+					<!-- Geography Text Below -->
+					<p>Due to dangerous environments it's unclear how large The Deeper Reaches are and how deep they go.
+						Explorers have spoken of vast crystal caves, lava lakes and strange ruins.</p>
+				</div>
 			</div>
-		<!-- Scripts -->
-			<script>
-				fetch('rpgheader.html')
-					.then(response => response.text())
-					.then(data => {
-						document.getElementById('header-placeholder').innerHTML = data;
-					});
-				// Close dropdowns when clicking outside
-				window.onclick = function(event) {
-					if (!event.target.matches('.dropbtn')) {
-						var dropdowns = document.getElementsByClassName("dropdown-content");
-						for (var i = 0; i < dropdowns.length; i++) {
-							var openDropdown = dropdowns[i];
-							if (openDropdown.style.display === "block") {
-								openDropdown.style.display = "none";
-							}
-						}
+			<div class="portfolio-row"> <!-- Biodiversity -->
+				<div class="portfolio-text">
+					<p class="portfolio-description">
+					<h3 class="portfolio-title">Biodiversity</h3>
+					<!-- Biodiversity Text Below -->
+					<p>There are no recognized sapients living in the deeper reaches, but vesper explorers have spoken
+						of an mysterious insectoid species wielding forged weapons wandering the depths. Nicknamed the
+						<a href="Worldbuilding/Geography/Kilkaz.html">Kilkaz</a> for the clicking sounds they make, its
+						unclear how they survive the depths or why they stay there. The Kilkaz are a beetle-like
+						insectoid species with orange carapaces and prominent antennae. They appear to have some form of
+						civilization as they have been seen wielding metallic weapons. </p>
+					<p>Beside the Kilkaz, The Deeper Reaches also has multiple dangerous and strange creatures like the
+						<a href="Worldbuilding/Geography/Yasailir.html">Yasailir</a>.</p>
+				</div>
+			</div>
+		</section>
+	</div>
+	<!-- Footer -->
+	<div id="footer">
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+	<!-- Scripts -->
+	<script>
+		fetch('rpgheader.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('header-placeholder').innerHTML = data;
+			});
+		// Close dropdowns when clicking outside
+		window.onclick = function (event) {
+			if (!event.target.matches('.dropbtn')) {
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				for (var i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.style.display === "block") {
+						openDropdown.style.display = "none";
 					}
-				};
-			</script>
-		 
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+				}
+			}
+		};
+	</script>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
 </html>

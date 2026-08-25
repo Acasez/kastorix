@@ -1,70 +1,81 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>The Yearning</title>
-		<meta charset="utf-8" />
-		<base href="/Kastorix/">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="kastorix.css" />
-		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
-	</head>
-	<body class="is-preload">
-		<!-- Header -->
-		<div id="header-placeholder"></div>
-		<!-- Main -->
-			<div id="main">
-				<!-- Main Projects -->
-					<section id="Main Projects" class="sectionText">
-						<header>
-						<h3 class="portfolio-title">The Yearning</h3>
-						</header>
-						<div class="portfolio-row reverse"> <!-- The Yearning -->
-							<div class="portfolio-image large">
-								<img src="/images/Kastorix/Maps/Meibor.jpg" alt="World Map" />
-							</div>
-							<div class="portfolio-text">
-								<p class="portfolio-description">
-									<h3 class="portfolio-title">Overview</h3>
-									<!-- Overview Text Below -->
-                                    <p>The yearning is the biggest river in <a href="Worldbuilding/Geography/Kastorix.html">Kastorix</a>, located in the <a href="Worldbuilding/Geography/Najanova Jungle.html">Najanova Jungle</a> on the continent of <a href="Worldbuilding/Geography/Meibor.html">Meibor</a>. The Yearning flows from <a href="Worldbuilding/Geography/Lake Yatinue.html">Lake Yatinue</a> out to sea at <a href="Worldbuilding/Geography/Naga-Lar.html">Naga-Lar</a>. The river spans for over 650 kilometers and flows at a steady pace.</p>
-							</div>
-						</div>
-						<div class="portfolio-row"> <!-- Geography -->
-							<div class="portfolio-text">
-								<p class="portfolio-description">
-									<h3 class="portfolio-title">Geography</h3>
-									<!-- Geography Text Below -->
-                                    <p>The yearnings flow shapes much of the eastern past of the <a href="Worldbuilding/Geography/Najanova Jungle.html">Najanova Jungle</a>.</p>
-							</div>
-						</div>
-					</section>
+
+<head>
+	<title>The Yearning</title>
+	<meta charset="utf-8" />
+	<base href="/kastorix/Kastorix/">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="kastorix.css" />
+	<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<div id="header-placeholder"></div>
+	<!-- Main -->
+	<div id="main">
+		<!-- Main Projects -->
+		<section id="Main Projects" class="sectionText">
+			<header>
+				<h3 class="portfolio-title">The Yearning</h3>
+			</header>
+			<div class="portfolio-row reverse"> <!-- The Yearning -->
+				<div class="portfolio-image large">
+					<img src="/images/Kastorix/Maps/Meibor.jpg" alt="World Map" />
+				</div>
+				<div class="portfolio-text">
+					<p class="portfolio-description">
+					<h3 class="portfolio-title">Overview</h3>
+					<!-- Overview Text Below -->
+					<p>The yearning is the biggest river in <a
+							href="Worldbuilding/Geography/Kastorix.html">Kastorix</a>, located in the <a
+							href="Worldbuilding/Geography/Najanova Jungle.html">Najanova Jungle</a> on the continent of
+						<a href="Worldbuilding/Geography/Meibor.html">Meibor</a>. The Yearning flows from <a
+							href="Worldbuilding/Geography/Lake Yatinue.html">Lake Yatinue</a> out to sea at <a
+							href="Worldbuilding/Geography/Naga-Lar.html">Naga-Lar</a>. The river spans for over 650
+						kilometers and flows at a steady pace.</p>
+				</div>
 			</div>
-		<!-- Footer -->
-			<div id="footer">
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+			<div class="portfolio-row"> <!-- Geography -->
+				<div class="portfolio-text">
+					<p class="portfolio-description">
+					<h3 class="portfolio-title">Geography</h3>
+					<!-- Geography Text Below -->
+					<p>The yearnings flow shapes much of the eastern past of the <a
+							href="Worldbuilding/Geography/Najanova Jungle.html">Najanova Jungle</a>.</p>
+				</div>
 			</div>
-		<!-- Scripts -->
-			<script>
-				fetch('rpgheader.html')
-					.then(response => response.text())
-					.then(data => {
-						document.getElementById('header-placeholder').innerHTML = data;
-					});
-				// Close dropdowns when clicking outside
-				window.onclick = function(event) {
-					if (!event.target.matches('.dropbtn')) {
-						var dropdowns = document.getElementsByClassName("dropdown-content");
-						for (var i = 0; i < dropdowns.length; i++) {
-							var openDropdown = dropdowns[i];
-							if (openDropdown.style.display === "block") {
-								openDropdown.style.display = "none";
-							}
-						}
+		</section>
+	</div>
+	<!-- Footer -->
+	<div id="footer">
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+	<!-- Scripts -->
+	<script>
+		fetch('rpgheader.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('header-placeholder').innerHTML = data;
+			});
+		// Close dropdowns when clicking outside
+		window.onclick = function (event) {
+			if (!event.target.matches('.dropbtn')) {
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				for (var i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.style.display === "block") {
+						openDropdown.style.display = "none";
 					}
-				};
-			</script>
-	</body>
+				}
+			}
+		};
+	</script>
+</body>
+
 </html>

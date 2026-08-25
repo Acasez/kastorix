@@ -1,70 +1,79 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Walawi Forest</title>
-		<meta charset="utf-8" />
-		<base href="/Kastorix/">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="kastorix.css" />
-		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
-	</head>
-	<body class="is-preload">
-		<!-- Header -->
-		<div id="header-placeholder"></div>
-		<!-- Main -->
-			<div id="main">
-				<!-- Main Projects -->
-					<section id="Main Projects" class="sectionText">
-						<header>
-						<h3 class="portfolio-title">Walawi Forest</h3>
-						</header>
-						<div class="portfolio-row reverse"> <!-- Walawi Forest -->
-							<div class="portfolio-image large">
-								<img src="/images/Kastorix/Maps/Meibor.jpg" alt="World Map" />
-							</div>
-							<div class="portfolio-text">
-								<p class="portfolio-description">
-									<h3 class="portfolio-title">Overview</h3>
-									<!-- Overview Text Below -->
-                                    <p>The Walawi forest is a large forest located in southern <a href="Worldbuilding/Geography/Meibor.html">Meibor</a>, covering the lands south of the <a href="Worldbuilding/Geography/Everglow Mountains.html">Everglow Mountains</a> between Vern and the <a href="Worldbuilding/Geography/Mistlands.html">Mistlands</a>. It's sparsely populated, though there are multiple <a href="Worldbuilding/Species/Yirte.html">Yirte</a> communities.</p>
-							</div>
-						</div>
-						<div class="portfolio-row"> <!-- Geography -->
-							<div class="portfolio-text">
-								<p class="portfolio-description">
-									<h3 class="portfolio-title">Geography</h3>
-									<!-- Geography Text Below -->
-                                    <p>The Walawi forest spans over 1 500 000 km². Not too much is known about it's internal geography and features.</p>
-							</div>
-						</div>
-					</section>
+
+<head>
+	<title>Walawi Forest</title>
+	<meta charset="utf-8" />
+	<base href="/kastorix/Kastorix/">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="kastorix.css" />
+	<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<div id="header-placeholder"></div>
+	<!-- Main -->
+	<div id="main">
+		<!-- Main Projects -->
+		<section id="Main Projects" class="sectionText">
+			<header>
+				<h3 class="portfolio-title">Walawi Forest</h3>
+			</header>
+			<div class="portfolio-row reverse"> <!-- Walawi Forest -->
+				<div class="portfolio-image large">
+					<img src="/images/Kastorix/Maps/Meibor.jpg" alt="World Map" />
+				</div>
+				<div class="portfolio-text">
+					<p class="portfolio-description">
+					<h3 class="portfolio-title">Overview</h3>
+					<!-- Overview Text Below -->
+					<p>The Walawi forest is a large forest located in southern <a
+							href="Worldbuilding/Geography/Meibor.html">Meibor</a>, covering the lands south of the <a
+							href="Worldbuilding/Geography/Everglow Mountains.html">Everglow Mountains</a> between Vern
+						and the <a href="Worldbuilding/Geography/Mistlands.html">Mistlands</a>. It's sparsely populated,
+						though there are multiple <a href="Worldbuilding/Species/Yirte.html">Yirte</a> communities.</p>
+				</div>
 			</div>
-		<!-- Footer -->
-			<div id="footer">
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+			<div class="portfolio-row"> <!-- Geography -->
+				<div class="portfolio-text">
+					<p class="portfolio-description">
+					<h3 class="portfolio-title">Geography</h3>
+					<!-- Geography Text Below -->
+					<p>The Walawi forest spans over 1 500 000 km². Not too much is known about it's internal geography
+						and features.</p>
+				</div>
 			</div>
-		<!-- Scripts -->
-			<script>
-				fetch('rpgheader.html')
-					.then(response => response.text())
-					.then(data => {
-						document.getElementById('header-placeholder').innerHTML = data;
-					});
-				// Close dropdowns when clicking outside
-				window.onclick = function(event) {
-					if (!event.target.matches('.dropbtn')) {
-						var dropdowns = document.getElementsByClassName("dropdown-content");
-						for (var i = 0; i < dropdowns.length; i++) {
-							var openDropdown = dropdowns[i];
-							if (openDropdown.style.display === "block") {
-								openDropdown.style.display = "none";
-							}
-						}
+		</section>
+	</div>
+	<!-- Footer -->
+	<div id="footer">
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+	<!-- Scripts -->
+	<script>
+		fetch('rpgheader.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('header-placeholder').innerHTML = data;
+			});
+		// Close dropdowns when clicking outside
+		window.onclick = function (event) {
+			if (!event.target.matches('.dropbtn')) {
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				for (var i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.style.display === "block") {
+						openDropdown.style.display = "none";
 					}
-				};
-			</script>
-	</body>
+				}
+			}
+		};
+	</script>
+</body>
+
 </html>

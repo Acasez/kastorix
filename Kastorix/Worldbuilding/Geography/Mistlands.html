@@ -1,70 +1,80 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Mistlands</title>
-		<meta charset="utf-8" />
-		<base href="/Kastorix/">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="kastorix.css" />
-		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
-	</head>
-	<body class="is-preload">
-		<!-- Header -->
-		<div id="header-placeholder"></div>
-		<!-- Main -->
-			<div id="main">
-				<!-- Main Projects -->
-					<section id="Main Projects" class="sectionText">
-						<header>
-						<h3 class="portfolio-title">Mistlands</h3>
-						</header>
-						<div class="portfolio-row reverse"> <!-- Mistlands -->
-							<div class="portfolio-image large">
-								<img src="/images/Kastorix/Maps/Meibor.jpg" alt="World Map" />
-							</div>
-							<div class="portfolio-text">
-								<p class="portfolio-description">
-									<h3 class="portfolio-title">Overview</h3>
-									<!-- Overview Text Below -->
-                                    <p>The Mistlands are a region of southeastern <a href="Worldbuilding/Geography/Meibor.html">Meibor</a> characterized for ever-present mist that covers the land. The Mistlands holds few settlements, though it said that there are large ruins inside. It is also home to many dangerous creatures, and a group of outlaws called the <a href="Worldbuilding/Geography/Mist Raiders.html">Mist Raiders</a>.</p>
-							</div>
-						</div>
-						<div class="portfolio-row"> <!-- Geography -->
-							<div class="portfolio-text">
-								<p class="portfolio-description">
-									<h3 class="portfolio-title">Geography</h3>
-									<!-- Geography Text Below -->
-                                    <p>The Mistlands borders <a href="Worldbuilding/Nations/Deshir.html">Deshir</a> to the east and <a href="Worldbuilding/Nations/Ganderei.html">Ganderei</a> to the north, as well as easternmost edge of the <a href="Worldbuilding/Geography/Everglow Mountains.html">Everglow Mountains</a></p>
-							</div>
-						</div>
-					</section>
+
+<head>
+	<title>Mistlands</title>
+	<meta charset="utf-8" />
+	<base href="/kastorix/Kastorix/">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="kastorix.css" />
+	<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<div id="header-placeholder"></div>
+	<!-- Main -->
+	<div id="main">
+		<!-- Main Projects -->
+		<section id="Main Projects" class="sectionText">
+			<header>
+				<h3 class="portfolio-title">Mistlands</h3>
+			</header>
+			<div class="portfolio-row reverse"> <!-- Mistlands -->
+				<div class="portfolio-image large">
+					<img src="/images/Kastorix/Maps/Meibor.jpg" alt="World Map" />
+				</div>
+				<div class="portfolio-text">
+					<p class="portfolio-description">
+					<h3 class="portfolio-title">Overview</h3>
+					<!-- Overview Text Below -->
+					<p>The Mistlands are a region of southeastern <a
+							href="Worldbuilding/Geography/Meibor.html">Meibor</a> characterized for ever-present mist
+						that covers the land. The Mistlands holds few settlements, though it said that there are large
+						ruins inside. It is also home to many dangerous creatures, and a group of outlaws called the <a
+							href="Worldbuilding/Geography/Mist Raiders.html">Mist Raiders</a>.</p>
+				</div>
 			</div>
-		<!-- Footer -->
-			<div id="footer">
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+			<div class="portfolio-row"> <!-- Geography -->
+				<div class="portfolio-text">
+					<p class="portfolio-description">
+					<h3 class="portfolio-title">Geography</h3>
+					<!-- Geography Text Below -->
+					<p>The Mistlands borders <a href="Worldbuilding/Nations/Deshir.html">Deshir</a> to the east and <a
+							href="Worldbuilding/Nations/Ganderei.html">Ganderei</a> to the north, as well as easternmost
+						edge of the <a href="Worldbuilding/Geography/Everglow Mountains.html">Everglow Mountains</a></p>
+				</div>
 			</div>
-		<!-- Scripts -->
-			<script>
-				fetch('rpgheader.html')
-					.then(response => response.text())
-					.then(data => {
-						document.getElementById('header-placeholder').innerHTML = data;
-					});
-				// Close dropdowns when clicking outside
-				window.onclick = function(event) {
-					if (!event.target.matches('.dropbtn')) {
-						var dropdowns = document.getElementsByClassName("dropdown-content");
-						for (var i = 0; i < dropdowns.length; i++) {
-							var openDropdown = dropdowns[i];
-							if (openDropdown.style.display === "block") {
-								openDropdown.style.display = "none";
-							}
-						}
+		</section>
+	</div>
+	<!-- Footer -->
+	<div id="footer">
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+	<!-- Scripts -->
+	<script>
+		fetch('rpgheader.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('header-placeholder').innerHTML = data;
+			});
+		// Close dropdowns when clicking outside
+		window.onclick = function (event) {
+			if (!event.target.matches('.dropbtn')) {
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				for (var i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.style.display === "block") {
+						openDropdown.style.display = "none";
 					}
-				};
-			</script>
-	</body>
+				}
+			}
+		};
+	</script>
+</body>
+
 </html>

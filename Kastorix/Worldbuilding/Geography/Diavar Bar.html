@@ -1,62 +1,72 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Diavar Bay</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<base href="/Kastorix/">
-		<link rel="stylesheet" href="kastorix.css"/>
-		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
-	</head>
-	<body class="is-preload">
-		<!-- Header -->
-		<div id="header-placeholder"></div>
-		<!-- Main -->
-			<div id="main">
-				<!-- Main Projects -->
-					<section id="Main Projects" class="sectionText">
-						<header>
-						<h3 class="portfolio-title">Diavar Bay</h3>
-						</header>
-						<div class="portfolio-row reverse"> <!-- Diavar Bay. -->
-							<div class="portfolio-image large">
-								<img src="/images/Kastorix/Maps/Northwest Meibor.jpg" alt="World Map" />
-							</div>
-							<div class="portfolio-text">
-								<p class="portfolio-description">
-									<h3 class="portfolio-title">Overview</h3>
-									<!-- Overview Text Below -->
-                                    <p><strong>Avijor</strong> is the northernmost and largest of the continents on <a href="Worldbuilding/Geography/Kastorix.html">Kastorix</a>. Historically it was composed of many different nations, however after [[The Breach]], only <a href="Worldbuilding/Geography/The Draconium.html">The Draconium</a> remains standing. Before the breach Avijor had a majority [[Humans|human]] population, with a significant amount of [[Gnomes|gnomes]], [[Brannur|brannur]], [[Dragonkin|dragonkin]] and [[Yirte|yirte]]. It also had all of Kastorix's [[Elves|elves]] before they vanished in the breach.</p>
-							</div>
-						</div>
-					</section>
+
+<head>
+	<title>Diavar Bay</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<base href="/kastorix/Kastorix/">
+	<link rel="stylesheet" href="kastorix.css" />
+	<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<div id="header-placeholder"></div>
+	<!-- Main -->
+	<div id="main">
+		<!-- Main Projects -->
+		<section id="Main Projects" class="sectionText">
+			<header>
+				<h3 class="portfolio-title">Diavar Bay</h3>
+			</header>
+			<div class="portfolio-row reverse"> <!-- Diavar Bay. -->
+				<div class="portfolio-image large">
+					<img src="/images/Kastorix/Maps/Northwest Meibor.jpg" alt="World Map" />
+				</div>
+				<div class="portfolio-text">
+					<p class="portfolio-description">
+					<h3 class="portfolio-title">Overview</h3>
+					<!-- Overview Text Below -->
+					<p><strong>Avijor</strong> is the northernmost and largest of the continents on <a
+							href="Worldbuilding/Geography/Kastorix.html">Kastorix</a>. Historically it was composed of
+						many different nations, however after [[The Breach]], only <a
+							href="Worldbuilding/Geography/The Draconium.html">The Draconium</a> remains standing. Before
+						the breach Avijor had a majority [[Humans|human]] population, with a significant amount of
+						[[Gnomes|gnomes]], [[Brannur|brannur]], [[Dragonkin|dragonkin]] and [[Yirte|yirte]]. It also had
+						all of Kastorix's [[Elves|elves]] before they vanished in the breach.</p>
+				</div>
 			</div>
-		<!-- Footer -->
-			<div id="footer">
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-			</div>
-		<!-- Scripts -->
-			<script>
-				fetch('rpgheader.html')
-					.then(response => response.text())
-					.then(data => {
-						document.getElementById('header-placeholder').innerHTML = data;
-					});
-				// Close dropdowns when clicking outside
-				window.onclick = function(event) {
-					if (!event.target.matches('.dropbtn')) {
-						var dropdowns = document.getElementsByClassName("dropdown-content");
-						for (var i = 0; i < dropdowns.length; i++) {
-							var openDropdown = dropdowns[i];
-							if (openDropdown.style.display === "block") {
-								openDropdown.style.display = "none";
-							}
-						}
+		</section>
+	</div>
+	<!-- Footer -->
+	<div id="footer">
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+	<!-- Scripts -->
+	<script>
+		fetch('rpgheader.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('header-placeholder').innerHTML = data;
+			});
+		// Close dropdowns when clicking outside
+		window.onclick = function (event) {
+			if (!event.target.matches('.dropbtn')) {
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				for (var i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.style.display === "block") {
+						openDropdown.style.display = "none";
 					}
-				};
-			</script>
-	</body>
+				}
+			}
+		};
+	</script>
+</body>
+
 </html>
