@@ -1,0 +1,179 @@
+.modal .modal-content>div {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalButton {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #888;
+    background-color: darkslategray;
+    color: #e6e6e6;
+    font-size: 17px;
+
+    margin: 4px 0;
+    /* Add vertical spacing */
+    border-radius: 4px;
+    /* Rounded corners */
+    transition: all 0.2s ease;
+    /* Smooth hover/focus transitions */
+    cursor: pointer;
+}
+
+.modalButton:hover {
+    background-color: #4a4a4a;
+    /* Lighter on hover */
+    border-color: #777;
+}
+
+.modalButton.featChosen {
+    background-color: rgb(2, 108, 108);
+    border-color: rgb(2, 140, 140);
+    /* Lighter border for selected state */
+}
+
+.modalButton:active {
+    transform: scale(0.98);
+    /* Slight press effect */
+}
+
+.spell-add-button,
+.metamagic-add-button,
+.weapon-add-button,
+.combatManeuvers-add-button,
+.gadgets-add-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 34px;
+    margin: 4px;
+    border-radius: 4px;
+    border: 1px solid #888;
+    background: rgba(0, 0, 0, 0.15);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.spell-add-button:hover,
+.metamagic-add-button:hover,
+.weapon-add-button:hover,
+.combatManeuvers-add-button:hover,
+.gadgets-add-button:hover {
+    background: rgba(100, 100, 100, 0.7);
+    /* Lighter on hover */
+    border-color: #888;
+}
+
+.spell-add-button:active,
+.metamagic-add-button:active,
+.weapon-add-button:active,
+.combatManeuvers-add-button:active,
+.gadgets-add-button:active {
+    transform: scale(0.95);
+    /* Slight press effect */
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 100;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Darker overlay for better focus */
+    backdrop-filter: blur(2px);
+    /* Optional: Blur the background */
+}
+
+.modal-content {
+    background-color: #7b7b7b;
+    margin: 3% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 85%;
+    height: 85%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    color: #ddd;
+    overflow: hidden;
+}
+
+.modal-content.small {
+    margin: 14% auto;
+    /* 15% from the top and centered */
+    width: 35%;
+    /* Could be more or less, depending on screen size */
+    height: 40%;
+}
+
+.stat-assignment {
+    display: flex;
+    flex-direction: row !important;
+    gap: 10px;
+    margin: 15px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.confirm-button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.confirm-button:hover {
+    background-color: #45a049;
+}
+
+.stat-row label {
+    font-size: 1.4em;
+    /* Increase label size */
+    min-width: 50px;
+    /* Ensure labels align properly */
+}
+
+.statIncreaseButton {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 110px;
+    height: 45px;
+}
+
+.runeContainer p {
+    color: black;
+}
+

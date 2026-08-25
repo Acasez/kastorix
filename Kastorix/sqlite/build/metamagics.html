@@ -1,0 +1,105 @@
+
+    <style>
+        #metamagicsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="metamagicsTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Spell Type</th><th onclick='sortTable(2)'>Effect</th><th onclick='sortTable(3)'>DC Change</th><th onclick='sortTable(4)'>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="careful-spell">
+                <td>Careful Spell</td><td></td><td class="wide-column">Increase the action cost of the spell by 1</td><td>-3</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="channeled-spell">
+                <td>Channeled Spell</td><td></td><td class="wide-column">Reduce the mana cost of the spell by its rank times your WIL</td><td>3</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="close-range-cast">
+                <td>Close-range Cast</td><td>Targeting</td><td class="wide-column">You cast the spell in a way to weave in the flow of combat. <br>Adjacent creatures have a -1 penalty to their saving throw of the spell instead of a +2 bonus</td><td>2</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="distant-spell">
+                <td>Distant Spell</td><td></td><td class="wide-column">Double the range of the spell.<br>If the spell had a range of touch, it's instead 3 tiles</td><td>3</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="expand-spell">
+                <td>Expand Spell</td><td>Area</td><td class="wide-column">Increase the amount of the tiles the spell effects by one row or column. (4x4 to 4x5 for example)</td><td>3</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="fuel-spell">
+                <td>Fuel Spell</td><td>Fire</td><td class="wide-column">Increase the amount of dice dealt by the spell. You take that dice's damage as Vital damage.</td><td>0</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="obscure-spell">
+                <td>Obscure Spell</td><td></td><td class="wide-column">You weave the mana in an unorthodox fashion for the spell, giving any attempts to Identify it a -5 penalty.<br>Alternatively you may attempt to make the spell appear as another spell you know. </td><td>2</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="sculpted-spell">
+                <td>Sculpted Spell</td><td>Area</td><td class="wide-column">Choose one creature in the area of the spell to not be affected by the spell.<br> You may choose more than one creature, increasing the Spellshaping DC by one for each extra creature.</td><td>2</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="tracing-spell">
+                <td>Tracing Spell</td><td>Targeting</td><td class="wide-column">You attach a thread of mana to the target with the spell<br>If the target is in range of a mana thread attach one</td><td>2</td><td class="narrow-column">2</td>
+            </tr>
+        
+            <tr id="armor-breaking-spell">
+                <td>Armor Breaking Spell</td><td></td><td class="wide-column">You infuse the spell with more force to overwhelm and shatter armor.<br>The instant damage done by the spell ignores resistance equal to its rank + your INT or WIL</td><td>3</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="elemental-shift">
+                <td>Elemental Shift</td><td></td><td class="wide-column">Shift the spell's damage type to an aspect you have <a href="Arcane Feats.html#basic-elemental-magic">Basic Elemental Magic</a> with</td><td>3</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="homing-spell">
+                <td>Homing Spell</td><td>Targeting</td><td class="wide-column">Increase the initial Save of the spell by 3.</td><td>4</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="quick-spell">
+                <td>Quick Spell</td><td></td><td class="wide-column">Reduce the action cost of the spell by 1 (minimum one action)</td><td>5</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="sustaining-spell">
+                <td>Sustaining Spell</td><td></td><td class="wide-column">The first three turns the spell sustains itself, needing no action from you</td><td>5</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="ride-the-lightning">
+                <td>Ride the lightning</td><td>Lightning</td><td class="wide-column">Move to any location the spell hits</td><td>4</td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="twin-spell">
+                <td>Twin Spell</td><td>Targeting</td><td class="wide-column">Casts the spell at two targets within range, use the same spellshaping for both. <br>Gives the spell the Draining Trait (it costs twice the mana)</td><td>6</td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="compressed-spell">
+                <td>Compressed Spell</td><td></td><td class="wide-column">Instead of being cast immediately, the spell is prepared and stored in a dimensional bubble. <br>It can be released later as reaction to any trigger<br>At the end of each turn you hold a Compressed Spell, you pay a third of its mana cost or its cast automatically, centered on you</td><td>4</td><td class="narrow-column">10</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

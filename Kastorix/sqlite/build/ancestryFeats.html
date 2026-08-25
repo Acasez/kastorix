@@ -1,0 +1,141 @@
+
+    <style>
+        #ancestryFeatsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="ancestryFeatsTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Feat Name</th><th onclick='sortTable(1)'>Description</th><th onclick='sortTable(2)'>Type</th><th onclick='sortTable(3)'>Prerequisites</th><th onclick='sortTable(4)'>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="advanced-weapon-training">
+                <td>Advanced Weapon Training</td><td class="wide-column"><span class='flavor-text'>You've always been fascinated with unique, advanced weapons. </span><br>Your proficiency level with one advanced weapon increases (max Trained)<br>Your proficiency level with Warfare Lore or Crafting increases (max Trained)</td><td>Cultural</td><td>Human</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="clawfighter">
+                <td>Clawfighter</td><td class="wide-column"><span class='flavor-text'>You have trained in fighting with your claws. </span><br>You gain <a href="General Feats.html#martial-arts-training">Martial Arts Training</a> Feat</td><td>Biological</td><td>Dragonkin/Yirte/Naga/Aruna</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="coil-up">
+                <td>Coil Up</td><td class="wide-column"><span class='flavor-text'>You learned to coil your body up, to later move in burst of speed.</span><br>You have the Coil Up action<br><span class='action-title'>Coil Up</span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/><br>Next turn you may Step or Stride once as free action. <br>If you move or are knocked prone, this bonus is lost</td><td>Biological</td><td>Naga</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="combat-regeneration">
+                <td>Combat Regeneration</td><td class="wide-column"><span class='flavor-text'>You've learned how to use your regenerative abilities in combat.</span><br>You learn the Combat Regeneration action<br><span class='action-title'>Combat Regeneration</span> - <img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/><br>Use one of regeneration charges<br>You cannot use this if you took fire, lightning or acid damage since your last turn</td><td>Biological</td><td>Troll</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="drums-of-war">
+                <td>Drums of War</td><td class="wide-column"><span class='flavor-text'>Music is important to the Brannur and you've learned the tools of your people. Your proficiency level in Performance increases (max Expert). </span><br>You have the Drums of War action. <br><span class='action-title'>Drums of War</span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/> - Can be used once per Day <br>Make a warchant to hype yourself and your allies up for battle. <br>You and allies within 5 tiles gain temporary hit points equal to your WIL plus half your level which last up to a minute</td><td>Cultural</td><td>Brannur</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="elven-blood">
+                <td>Elven Blood</td><td class="wide-column"><span class='flavor-text'>The elves might be gone but you still have a drop of their blood in your ancestry.</span><br>You have resistance 3 + half your level to cold damage.<br>You have advantage on saves against illusions</td><td>Biological</td><td>Human, Brannur, Gnome</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="powerful-wingflap">
+                <td>Powerful Wingflap</td><td class="wide-column"><span class='flavor-text'>Aruna wings don't generally provide enough lift to fly, but with enough strength and the right technique you can temporary take off.</span><br>You have the Take Off action. You can use it a number of times equal to PHY each day.<br><span class='action-title'>Take Off</span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/><br>Fly a number of spaces equal to your glide speed</td><td>Biological</td><td>Aruna</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="forest-stalker">
+                <td>Forest Stalker</td><td class="wide-column"><span class='flavor-text'>You've trained to fight and hunt in the forests and jungles of you homeland</span><br>Your proficiency level in Stealth increases (max Expert)<br>Your proficiency level with the Bows weapon group increases (max Trained)</td><td>Cultural</td><td>Yirte</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="formation-fighting-">
+                <td>Formation Fighting </td><td class="wide-column"><span class='flavor-text'>You have fought shoulder to shoulder with your allies.</span><br>You have a +1 bonus to melee strikes and spell attacks when adjacent to at least two allies</td><td>Cultural</td><td>Human, Brannur, Dragonkin</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="fruits-of-civilization">
+                <td>Fruits of Civilization</td><td class="wide-column"><span class='flavor-text'>The Draconium is the center of civilization and your pride comes it's glory</span><br>When you use Proud Bearing the bonus increases to 3 if you are expert in the check, 4 for master and 5 for legendary<br>You can use Proud Bearing one more time per day.</td><td>Cultural</td><td>Dragonkin</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="jungle-swimmer">
+                <td>Jungle Swimmer</td><td class="wide-column"><span class='flavor-text'>You've grown up swimming in the many rivers and lakes of your homeland. </span><br>You have a 4 tile Swim Speed</td><td>Cultural</td><td>Naga, Yirte</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="lesser-dragonbreath">
+                <td>Lesser Dragonbreath</td><td class="wide-column"><span class='flavor-text'>You've learned to use your attunement to imitate the breath of your draconic ancestor. </span><br>You gain the Dragonbreath action, breathing out a cone of magic connected to your attunement<br><span class='action-title'>Dragonbreath</span> - <img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/>, 7 mana<br>Breathe out a 5 tile cone of elemental force. <br>Creatures inside the cone need to make a basic Reflex save. <br>On a failure they take 3d6 damage.</td><td>Biological</td><td>Dragonkin<br>Attunement</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="marsh-walker">
+                <td>Marsh Walker</td><td class="wide-column"><span class='flavor-text'>You've learned to navigate the wet and dangerous grounds of your homeland. </span><br>You ignore difficult terrain caused by wetlands, swamps, jungles and similar. <br>You have +3 bonus to Survival and Nature checks regarding those environments.</td><td>Biological</td><td>Naga</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="powerful-tail">
+                <td>Powerful Tail</td><td class="wide-column"><span class='flavor-text'>You can use your powerful tail to block incoming attacks and whack foes</span><br>Your tail is a natural weapon that deals 1d4 bludgeoning damage.<br>It has the Block 1 and Shove traits. </td><td>Biological</td><td>Dragonkin, Naga</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="resilience">
+                <td>Resilience</td><td class="wide-column"><span class='flavor-text'>You won't go down when most would fall.</span><br>Once per day when you would be reduced to zero health, stay at 1 health instead</td><td>Biological</td><td>Brannur</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="sensitive-nose">
+                <td>Sensitive Nose</td><td class="wide-column"><span class='flavor-text'>While all Yirte have a greater sense of smell than most, you have trained your nose beyond that. </span><br>You have an imprecise sense of smell, which you can use to try find creatures or objects. <br>Your proficiency level in Perception increases (max Expert)</td><td>Biological</td><td>Yirte</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="sha'des'ka-practioner">
+                <td>Sha'des'ka Practioner</td><td class="wide-column"><span class='flavor-text'>You trained in the ancient Naga art of Sha'des'ka, or its modern form Arcane Dueling. </span><br>You gain the <a href="General Feats.html#duelist">Duelist</a> Feat</td><td>Cultural</td><td>Naga</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="subterranean-experize">
+                <td>Subterranean Experize</td><td class="wide-column"><span class='flavor-text'>You've learned all you can about the depths you call home and can navigate them with ease</span><br>Your proficiency level with Depths Below Lore increases (max Expert)<br>You ignore difficult terrain from natural rocks and earthen formations</td><td>Cultural</td><td>Vesper</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="updraft-glider">
+                <td>Updraft Glider</td><td class="wide-column"><span class='flavor-text'>You ignore difficult terrain from harsh winds and airborne obstacles</span><br>You take half the normal penalty on aiming through smoke</td><td>Cultural</td><td>Aruna</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="waters-of-the-isles">
+                <td>Waters of the isles</td><td class="wide-column"><span class='flavor-text'>You've grown up swimming around the waters of Te'ohuvi and learned of creatures there.</span><br>You have a 3 tile Swim Speed<br>You have a +2 bonus on nature and survival checks connected to aquatic creatures</td><td>Cultural</td><td>Troll</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="lesser-pseudo-attunement">
+                <td>Lesser Pseudo-Attunement</td><td class="wide-column"><span class='flavor-text'>While gnomes, can't have a normal attunement you have absorbed some elemental energies from your environment, giving you something similar</span><br>Gain the Basic Elemental Magic Feat.<br>You have small visible connections to your elements. This might patches of stone for an Earth Pseudo-Attunement or hair that flows like water for a Water one</td><td>Biological</td><td>Gnome</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="spellward">
+                <td>Spellward</td><td class="wide-column"><span class='flavor-text'>You've learned some of the old techniques used by the Spear's Legacy mercenary company to fight battlemages</span><br>You have a +1 bonus to all saves against spells</td><td>Cultural</td><td>Brannur</td><td class="narrow-column">5</td>
+            </tr>
+        
+            <tr id="inspiring-presence">
+                <td>Inspiring Presence</td><td class="wide-column"><span class='flavor-text'>Your pride inspires your companions.</span><br>After you use Proud Bearing up to 5 nearby allies gets +1 to their next roll. This bonus increases to +2 if you succeed on the roll, or +3 if you critically succeed.<br>You can use Proud Bearing one more time per day.</td><td>Cultural</td><td>Dragonkin</td><td class="narrow-column">5</td>
+            </tr>
+        
+            <tr id="lightning-strike">
+                <td>Lightning Strike</td><td class="wide-column"><span class='flavor-text'>You take advantage of the speed from Coil Up to hit foes that aren't expecting it.</span><br>After you use the free Step or Stride from Coil Up, your next Strike that turn has a +2 attack bonus</td><td>Biological</td><td>Naga<br><a href="Ancestry Feats.html#coil-up">Coil Up</a></td><td class="narrow-column">5</td>
+            </tr>
+        
+            <tr id="strong-blood">
+                <td>Strong Blood</td><td class="wide-column"><span class='flavor-text'>You can use your Regeneration trait once more per day</span></td><td>Biological</td><td>Troll</td><td class="narrow-column">5</td>
+            </tr>
+        
+            <tr id="winged-dragonkin">
+                <td>Winged Dragonkin</td><td class="wide-column"><span class='flavor-text'>You've been chosen to undergo the ritual of Wings. </span><br>This ritual is generally only granted to high ranking Dragonkin of the Draconium. <br>Your new draconic wings grants you a 5 tile flying speed.</td><td>Biological</td><td>Dragonkin</td><td class="narrow-column">10</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

@@ -1,0 +1,100 @@
+{
+    "All": [
+        {
+            "name": "Scope",
+            "description": "You put a custom designed scope on your runegun.\nIt's range is increased by 2 tiles.\nWhen you take the Aim Combat Maneuver with it the bonus increases to +3.",
+            "prerequisites": "Rifle or Sharpshot Runegun",
+            "level": 4
+        },
+        {
+            "name": "Revolving Barrel",
+            "description": "You've designed a system to allow you load multiple bullets at once in your runegun\nYour Runegun has the Magazine 3 trait, allowing you to fire three times before reloading.\nThe reload action still only reloads one bullet, so you will need to spend three actions to fully reload",
+            "prerequisites": "Pistol or Rifle Runegun",
+            "level": 4
+        },
+        {
+            "name": "Agile Gunsmith",
+            "description": "You've modified your pistol to be a quick and graceful weapon.\nYou're Runegun Pistol has the Agile trait",
+            "prerequisites": "Pistol Runegun",
+            "level": 4
+        },
+        {
+            "name": "Integrated Bayonet",
+            "description": "You have integrated an bayonet into the design of your runegun.\nYour runegun has an in built bayonet, which loses the -1 attack penalty.\nIt can be retracted or extended from your runegun as an action\nIt benefits from all the Runes you apply to your runegun.",
+            "prerequisites": "Incompatible with Pistol Runegun",
+            "level": 4
+        },
+        {
+            "name": "Bigger Booms",
+            "description": "You can increase the impact of your cannon\nWhen firing your runegun you can spend 5 mana to make it deal an additional dice of damage\nAfter using this you become Off-Guard 2 until the start of your next turn or until you take an action to steady yourself",
+            "prerequisites": "Cannon Runegun",
+            "level": 4
+        },
+        {
+            "name": "Silencer",
+            "description": "You've added a sound rune absorbing rune to make your runegun more subtle.\nWhen firing your runegun you can spend 2 mana to ignore the Loud trait",
+            "prerequisites": "Incompatible with Runegun Cannon",
+            "level": 6
+        },
+        {
+            "name": "Mighty Blast",
+            "description": "You have modified your runegun so you can project a cone of thundering force in front of you\nWhen firing your runegun you can spend 4 mana to deal a d8 of thunder damage in a 3 tile cone",
+            "prerequisites": "Incompatible with Pistol Runegun",
+            "level": 6
+        },
+        {
+            "name": "Blastback",
+            "description": "You can let the power of your weapon blast you back away from your foes.\nWhen you strike with your Runegun Cannon you can choose to move back 1 tile away from the direction you fired.\nEnemies have disadvantage on Reactive Strikes provoked by this movement",
+            "prerequisites": "Cannon Runegun",
+            "level": 6
+        },
+        {
+            "name": "Fatal Bullets",
+            "description": "Your custom bullets are even more deadly than normal\nIncrease the deadly damage dice of your runegun by 2. (d6 to d8, d8 to d10, d10 to d12)\nYour proficiency level in crafting, intimidation or survival increases (max Expert).",
+            "prerequisites": "",
+            "level": 6
+        },
+        {
+            "name": "Six Shot",
+            "description": "You've enhanced your barrel capacity.\nYour Runegun now has the Magazine 6 trait.",
+            "prerequisites": "[Revolving Barrel]",
+            "level": 8
+        },
+        {
+            "name": "Harness Discharged Mana",
+            "description": "You can empower your Bayonet with discharged mana from the runework of your runegun.\nIf you make a bayonet attack as the next action after firing your Runegun it gains a +1 bonus and does and extra d6 damage",
+            "prerequisites": "[Integrated Bayonet]",
+            "level": 8
+        },
+        {
+            "name": "Stabilizer",
+            "description": "When stabilized and aiming at stationary targets you almost can't miss\nIf you've taken the Aim action and your target hasn't moved since last turn the bonus increases to +5",
+            "prerequisites": "[Scope]",
+            "level": 8
+        },
+        {
+            "name": "Fan The Hammer",
+            "description": "You can quickly unload your bullets into a target\nYou can have the Fan The Hammer activity.\nFan The Hammer, 1 Focus Point, Two Actions \n - Attack a target within your runegun's first range increment. Keep attacking until you have made four attacks or your Magazine runs out",
+            "prerequisites": "[Revolving Barrel]",
+            "level": 12
+        },
+        {
+            "name": "True Deadliness",
+            "description": "One Shot, One Kill\nFurther increase the deadly damage dice for your runegun. (d8 to d10, d10 to d12, d12 to 2d8)\nYour proficiency level in crafting, intimidation or survival increases (max Master).",
+            "prerequisites": "[Fatal Bullets]",
+            "level": 12
+        },
+        {
+            "name": "Biggest Booms",
+            "description": "None can dwarf your blasts\nWhen using Bigger Booms you can spend 15 mana to deal two additional dice of damage instead.",
+            "prerequisites": "[Bigger Booms]",
+            "level": 12
+        },
+        {
+            "name": "Magazine Reload",
+            "description": "With a complex mechanical system you can now reload your entire magazine at once\nYou can spend two actions to reload your runegun magazine",
+            "prerequisites": "[Revolving Barrel]",
+            "level": 16
+        }
+    ]
+}

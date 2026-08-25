@@ -1,0 +1,473 @@
+
+    <style>
+        #spellsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="spellsTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Actions</th><th onclick='sortTable(2)'>Aspects</th><th onclick='sortTable(3)'>Traits</th><th onclick='sortTable(4)'>Range</th><th onclick='sortTable(5)'>Target</th><th onclick='sortTable(6)'>Duration</th><th onclick='sortTable(7)'>Effect</th><th onclick='sortTable(8)'>Upcast</th><th onclick='sortTable(9)'>Rank</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="ascend">
+                <td>Ascend</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Air</td><td>Movement</td><td>Self</td><td>Self</td><td></td><td class="wide-column">Creates a gust of wind to lift you up. <br>Move up to 5 tiles up and up to 2 tile in any other direction. <br>Creatures have disadvantage on reactive strike reacting to this.</td><td>By Rank: Increase the distance 2 tiles up and 1 tile in another direction</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="blinding-flash">
+                <td>Blinding Flash</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Light</td><td>Targeting</td><td>10</td><td>One Creature</td><td>Up to one minute</td><td class="wide-column">Send a blinding flash of light at a creature. It must make a Fortitude save <br> Success: Target is dazzled for one turn.<br> Failure: Target is blinded for one turn and dazzled for one minute <br> Critical Failure: Target is blinded for one minute<br>While affected by this spell, the target can spend one action to attempt to redo the save, removing the remaining effects on a success.</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="chill">
+                <td>Chill</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/>-<img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Water</td><td>Targeting</td><td>Touch</td><td>One Creature</td><td>-</td><td class="wide-column">Freeze an medium or smaller object or creature, dealing 3d4 cold damage with a basic Fortitude save.<br>On a critical failure the target is partially frozen and has move speed reduced by 2 tiles next turn. <br>If the target is standing in water it has a -3 penalty to the save <br>If you spend two actions on the spell the range increases to 3 tiles.</td><td>By Rank: Increase the damage by 2d4</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="control-water">
+                <td>Control Water</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Water</td><td>Manipulation</td><td>12</td><td>-</td><td>-</td><td class="wide-column">Allows the caster to shape and manipulate water, creating simple shapes or moving water around. <br>While the spell doesn't offer permanent control, it can be used to redirect small rivers, create temporary barriers, or even form small tools made of water. <br>The water returns to its natural state after the spell ends.</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="darken">
+                <td>Darken</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Darkness</td><td>Area</td><td>10</td><td>3x3 tiles</td><td>Up to one minute</td><td class="wide-column">Creates a zone of darkness of up to 9 joining tiles that blocks out non-magical lights. <br>If you spend 3 actions on this spell, the zone can be up to 15 tiles</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="earthglide">
+                <td>Earthglide</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Earth</td><td>Movement</td><td>Self</td><td>Self</td><td>-</td><td class="wide-column">Glide along the earth, creating rough terrain in your wake. <br>Move up to 6 tiles in a line across the ground, and cause any tile you move across to become rough terrain. <br>If your next action is to cast a Earth spell, it costs 1 action less.</td><td>By Rank: Increase the distance by 3 tiles</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="ferrokinesis">
+                <td>Ferrokinesis</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Metal</td><td>Targeting</td><td>6</td><td>One unenchanted metal object of light weight or less</td><td>-</td><td class="wide-column">Move a piece of metal of light weight or less up to spells range, if you move it into your space you may catch it with a free hand. <br>If you attempt to move a metal object that's being held, the holder gets a to attempt a Fortitude save against the spell. <br>Enchanted metal or artifice typically has runes to prevent it being moved with spells. <br>You can use this spell to shoot a metal object at an enemy in range, dealing 2d8 physical damage with a basic Reflex save.</td><td>By Rank: Increase the damage by 1d8</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="firebolt">
+                <td>Firebolt</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Fire</td><td>Targeting</td><td>6</td><td>One creature</td><td>-</td><td class="wide-column">Throw a bolt of fire against a target, dealing 2d6 fire damage with a basic Reflex save. <br>On a critical failure the target is also set on fire, taking 1d6 persistent fire damage.</td><td>By Rank: Increase the damage by 1d6</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="flameshape">
+                <td>Flameshape</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Fire</td><td>Manipulation</td><td>3</td><td>-</td><td>-</td><td class="wide-column">Can be used to light candles, create patterns, or manipulate flames for visual effects. <br>Cannot be used to deal damage directly. <br>Can be cast as a Complex spell to also change the color of fire. </td><td>By Rank: You can control an additional fire</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="gentle-breeze">
+                <td>Gentle Breeze</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Air</td><td>Enchantment</td><td>Self</td><td>2 tile burst</td><td>-</td><td class="wide-column">Summons a cool breeze that refreshes and soothes,  common spell in hot climates or social gatherings. <br>The first time each day a creature is affected by this spell it loses one level of exhaustion. <br>If you spend 3 actions on this spell, the area increases to a 3 tiles burst from the caster</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="glide">
+                <td>Glide</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Air</td><td>Movement, Enchantment</td><td>Self</td><td></td><td></td><td class="wide-column">Allows the caster to glide down with the wind. <br>Gives the caster a Glide speed equal to their land speed for the turn. <br>After casting the spell the caster can glide as a free action.</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="glow">
+                <td>Glow</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Light</td><td>Enchantment</td><td>Touch</td><td>One object or creature of size small or smaller</td><td>1 Minute</td><td class="wide-column">Cause an object or creature to glow spreading light for 4 tiles, and dim light for 4 more. <br>The light can be dismissed with an action. <br>If the target is a creature or held object, the creature gets a Reflex save to resist the spell</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="gravel-spray">
+                <td>Gravel Spray</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Earth</td><td>Area</td><td>Area from Self</td><td>4 Tile cone from caster</td><td>-</td><td class="wide-column">Throw a barrage of gravel or other small bits of earth in a cone. <br>Creatures inside the cone need to make a basic Fortitude saving throw or take 2d4 physical damage. <br>The area affected by the spell becomes difficult terrain. <br> If you spend three actions on this spell it deals 3d4 damage and the area is a 5 tile cone.</td><td>By Rank: Increase the damage by 1d4</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="gust">
+                <td>Gust</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Air</td><td>Targeting</td><td>10</td><td>One creature or object</td><td>-</td><td class="wide-column">Creates a sudden burst of wind that can push away small objects, unbalance foes, or snuff out small flames. If the target is a creature it must make a Reflex or Fortitude save. <br> Success: Target is knocked back 1 tile or knocked off-guard 1 (targets choice)<br> Failure: Target is knocked back 2 tiles and knocked off-guard 2<br> Critical Failure: Target is knocked back 4 tiles and knocked prone<br>A light object is pushed 4 tiles back. This spell cannot push large or larger creatures. You may increase the actions spent on the spell to increase the amount of tiles of knockback by 2 for each action.</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="heat">
+                <td>Heat</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Fire</td><td>Targeting</td><td>Touch</td><td>One creature or object</td><td>-</td><td class="wide-column">Heat an medium or smaller object or creature, dealing 2d4 fire damage with a basic Fortitude save. <br>The effect can be lessened to warm food or objects to a pleasant temperature. I<br>f the target is a created affected by an Ice spell, your may attempt to remove it, giving it a new save against the effect.</td><td>By Rank: Increase the damage by 2d4</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="icy-floor">
+                <td>Icy Floor</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Water</td><td>Area</td><td>6</td><td>4x4 Tiles</td><td>One minute</td><td class="wide-column">Freeze the ground in a 4x4 tiles large area. <br>Any creatures that walks across one of those squares must make a DC 13 Acrobatics check or fall prone. <br>If another effect would cause the creature to fall prone while standing on Icy Floor, it has a -5 penalty to that check.</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="ignite">
+                <td>Ignite</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Fire</td><td>Targeting</td><td>5</td><td>One creature or object</td><td>Up to one minute</td><td class="wide-column">Lights a flammable object or creature on fire. <br>If the target is a creature it can make a Reflex or Fortitude save. <br>On a failure it's set on fire, taking 1d8 persistent fire damage. <br>It can use on action its turn to repeat the save, ending the spell on success</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="interpose-earth">
+                <td>Interpose Earth</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/>, when you would have to make a Reflex save</td><td>Earth</td><td>-</td><td>Self</td><td>Self</td><td>-</td><td class="wide-column">Using your magic you throw a nearby piece of earth to block part of the attack. Make the save with +3 modifier. <br>You may cast this when allies within 3 tiles would have to make a save instead, giving them the bonus. If you do the spell has the complex trait.</td><td>By Rank: Increase the modifier by 1</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="magnetic-field">
+                <td>Magnetic Field</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Metal</td><td>Enchantment</td><td>Self</td><td></td><td>Sustained, up to one minute</td><td class="wide-column">Surround yourself with a field that rebounds metal.<br>You have a +4 bonus to Reflex saves against metal weapons or projectiles.</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="magnetic-rebound">
+                <td>Magnetic Rebound</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/>, when you would have to make a Reflex save against an attack by a metal weapon or projectile.</td><td>Metal</td><td>-</td><td>Self</td><td>One metallic weapon or projectile</td><td>-</td><td class="wide-column">Attempt to move the metal out of the way. <br>Use the Spellshaping check instead of making a Reflex Saving Throw<br>On a critical success you may select another valid target for the attack instead</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="magnetize">
+                <td>Magnetize</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Metal</td><td>Enchantment</td><td>Touch</td><td>One Creature</td><td></td><td class="wide-column">Magnetize a target to make it easier for metal objects to hit it.<br>Target creature makes a Wil save.<br>On a success they are magnetized for one round<br>On a failure they are magnetized for a minute<br>On a critical they are magnetized for a minute and the effect is doubled.<br>While magnetized they have a -2 penalty to Reflex saves against Metal weapons and projectiles</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="metal-shards">
+                <td>Metal Shards</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Metal</td><td>Targeting</td><td>6</td><td>One Creature</td><td>-</td><td class="wide-column">Shoot three small shards of metal at targets of your choosing. <br>They deal 1d4 damage each with a basic Reflex save. <br>If you spend three actions you shoot one extra needle.</td><td>By Rank: Increase the amount of needles by 1</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="mold-earth">
+                <td>Mold Earth</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Earth</td><td>Manipulation</td><td>3</td><td></td><td></td><td class="wide-column">Use your magic to shape small bits of earth. <br>You an make an 2 tile high, 1 tile large earthen pillar that provides greater cover or turn 4 adjacent tiles rough, creating difficult terrain. <br>With more time you can make simple shapes and constructions out of earth, though they fall apart after an hour.</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="momentary-acceleration">
+                <td>Momentary Acceleration</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Arcane</td><td>Enchantment, Complex, Temporal</td><td>5</td><td></td><td></td><td class="wide-column">A flash of time magic accelerates a group of creatures.<br>Choose a number of creatures in range up to your INT.<br>They become Hastened 1 for one turn</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="move-with-the-wind">
+                <td>Move with the Wind</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Air</td><td>Complex, Enchantment</td><td>Self</td><td>Self</td><td>Sustained, up to 1 minute</td><td class="wide-column">Connect to the wind, becoming faster and more agile. <br>Your movement speed increases by 2 tiles and you gain a +2 bonus to Reflex saving throws. <br>When you cast or sustain this spell you may stride (or fly if you have a flying speed), ignoring difficult terrain for that action.</td><td>By Rank: Increase the modifiers by 1</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="muddy-ground">
+                <td>Muddy Ground</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Earth, Water</td><td>Area</td><td>8</td><td>5x5 Tiles</td><td>-</td><td class="wide-column">Create an 5x5 tiles large area of mud, slowing down those that walk over it. <br>The area is difficult terrain for up to an hour.</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="null">
+                <td>Null</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Void</td><td>Complex</td><td>Touch</td><td>One Creature</td><td>-</td><td class="wide-column">Use rare void magic to attempt to tear through magical defenses, dealing no physical damage, but destroying auras<br>The target must make a basic WIL save, on a failure it takes 3d4 aura damage<br>This damage only targets auras and magical defenses, dealing full damage to auras.<br>If the target has no aura or magical defenses, this spell has no effect<br>Every extra action you spend on the spell increases its damage by 2d4<br>Void magic is dangerous, on a failed spellshape you take half the aura damage instead.</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="quick-jet">
+                <td>Quick Jet</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Fire</td><td>Movement, Complex</td><td>Self</td><td>Self</td><td></td><td class="wide-column">With a quick jet of flame you propel yourself forward horizontally in a line.<br>Travel up to 6 tiles forward in a line, treating difficult terrain one step less.<br>This movement does not provoke opportunity attacks<br>You can use this spell to cross gaps, though if you end your movement in midair after casting it you fall<br>You may choose to travel 4 tiles diagonally up or down instead</td><td>By Rank: Increase the movement distance by 2</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="rock-toss">
+                <td>Rock Toss</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Earth</td><td>Targeting</td><td>8</td><td>One Creature</td><td>-</td><td class="wide-column">Use your magic to throw a bit of loose earth or a rock against a target, dealing 1d6 physical damage with a basic Reflex save. <br>If you spend two actions on this spell it throws a larger rock, dealing 1d10 damage. <br>If you spend three actions on this spell it throws an even larger rock, dealing 1d12 damage and knocking the target prone on a critical failure</td><td>By Rank: Increase the damage dice amount by 1</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="slip">
+                <td>Slip</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/>, when you see another creature in range take the Stride action</td><td>Water</td><td>Manipulation, Complex</td><td>5</td><td>One Creature</td><td></td><td class="wide-column">You manipulate water or ice to make a moving creature slip.<br>It must make a Reflex saving throw.<br> Success: The creature must stop its movement or become off-guard 1 until the end of your next turn<br> Failure: The creature falls prone<br> Critical Failure: The creature falls prone and takes 1d6 bludgeoning damage.</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="soul-ward">
+                <td>Soul Ward</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Arcane</td><td>Enchantment, Complex, Soul</td><td>Self</td><td>Self</td><td>Sustained, up to 10 minutes, </td><td class="wide-column">The basics of soul magic is protecting your own.<br>You project an invisible field that gives you a +5 bonus on WIL saves against spells, attacks and effects with the soul traits while the spell is active.<br>You also have a +1 bonus on other WIl saves</td><td>At Grand Magus: The spell does not need to be sustained</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="sturdy-as-stone">
+                <td>Sturdy as Stone</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Earth</td><td>Complex, Enchantment</td><td>Self</td><td>Self</td><td>Sustained, up to 1 minute</td><td class="wide-column">Infuse yourself with the earth. <br>Gain resistance 5 to physical damage, and a +3 bonus to fortitude saving throws, but a -1 tile speed penalty. <br>If you would become prone or off-guard you may dismiss this spell to avoid becoming prone or off-guard. <br>The benefits of this spell stop working while you are in the air.</td><td>By Rank: Increase the modifiers by 1</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="water-bullet">
+                <td>Water Bullet</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Water</td><td>Targeting</td><td>12</td><td>One Creature</td><td>-</td><td class="wide-column">Creates a compressed bullet of water to strike at a creature, dealing 2d12 piercing damage with a basic Reflex save. <br>If you stand in or next to water the spell only costs 2 actions to cast</td><td>By Rank: Increase the damage by 1d10</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="water-push">
+                <td>Water Push</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Water</td><td>Targeting</td><td>5</td><td>One Creature</td><td>-</td><td class="wide-column">Creates a blast of water to push a creature. It must make a Reflex or Fortitude save. <br> Success: Target is pushed 1 tile back <br> Failure: Target is pushed 3 tiles back <br> Critical Failure: Target is pushed 3 tiles back and knocked off-guard 2<br> For each size above Medium the creature is pushed 2 tiles less. <br>If you are standing in water the range or spend three actions on the spell, it instead targets all creatures in a 5 tile line from you. This gives the spell the Draining Trait</td><td></td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="zap">
+                <td>Zap</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Lightning</td><td>Targeting, Complex</td><td>2</td><td>One Creature</td><td>-</td><td class="wide-column">Sends a weak but very fast bolt of electricity at the target, dealing 1d8 lightning damage. <br>If the target is wearing armor made of metal or holding a metal object it makes a Reflex save with a -4 modifier, otherwise the modifier is -2.</td><td>By Rank: Increase the damage by 1d8</td><td>(1) Apprentice</td>
+            </tr>
+        
+            <tr id="accelerate-self">
+                <td>Accelerate Self</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Arcane</td><td>Enchantment, Complex, Temporal</td><td>Self</td><td>Self</td><td></td><td class="wide-column">With a quick cast you move in a burst of speed<br>Gain Hastened 3 this turn<br>You can´t be affected by Accelerate Self for 1d4 turns</td><td>At Grand Magus: Gain Hastened 4 instead</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="air-bubble">
+                <td>Air Bubble</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/> or <img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Air</td><td>Enchantment</td><td>Self</td><td>One Creature</td><td>Sustained, up to 1 minute</td><td class="wide-column">Creates a bubble of air which allows the user to breathe in environments without breathable air like underwater or toxic areas. <br>When casting the spell you can choose to extend the area to the adjacent tiles, if you do the spell takes 3 actions and gives the spell the Draining Trait.</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="barricade">
+                <td>Barricade</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Earth, Metal</td><td>Area</td><td>8</td><td>-</td><td>-</td><td class="wide-column">Forms a barricade of metal or stone on 5 connected tiles. <br>The barricade provides cover. You can choose if it blocks line of sight or not. <br>If you spend 3 actions on the spell the barricade is 8 tiles long.</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="beam-of-light">
+                <td>Beam of Light</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Light</td><td>Enchantment</td><td>Self</td><td>-</td><td>-</td><td class="wide-column">Casts a beam of light that can blind a multiple creatures in a 1 tile wide, 6 tiles long line. Any creatures in the line must make a Fortitude save. <br>Success: Target is dazzled for one turn. <br>Failure: Target is blinded for one turn and dazzled for one minute. <br>Critical Failure: Target is blinded for one minute. <br>While affected by this spell, the target can spend one action to attempt to redo the save, removing the remaining effects on a success.</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="breathe-fire">
+                <td>Breathe Fire</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Fire</td><td>Area</td><td>Area from Self</td><td>-</td><td>-</td><td class="wide-column">Create a cone of fire to burn your enemies. <br>Creatures inside the cone need to make a basic Reflex save. <br>On a failure they take 3d6 fire damage. <br>The cone is 4 or 6 tiles large, depending on the amount of actions used to cast the spell</td><td>By Rank: Increase the damage by 1d6</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="conjure">
+                <td>Conjure</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Arcane</td><td>Teleportation</td><td>8</td><td></td><td></td><td class="wide-column">The simplest teleportation magic, Conjure brings a runed item to the caster.<br>Teleports a medium or smaller item within range with a Conjuration rune that you have drawn to you. <br>If you have a free hand you can catch it in your hand.</td><td>By Rank: Double the range per rank<br>At Grand Magus: You can conjure Large items</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="detect-metal">
+                <td>Detect Metal</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Metal</td><td>Sensing</td><td>Self</td><td>-</td><td>Sustained, up to 1 minute</td><td class="wide-column">Allows the caster to detect metal through objects.<br>Gives you a precise metalsense with a range of 5, which works through non-magical materials</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="dispell">
+                <td>Dispell</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Arcane</td><td></td><td>Touch</td><td>One Creature or Object</td><td></td><td class="wide-column">Attempt to counteract a spell or magical effect on a target you can touch.<br>Use your Spellshaping check versus the Spellshaping check of the caster of the spell.<br>On a success you end the effect on the targetted creature<br>The targets check has a +3 bonus for each rank of their spell higher than the rank you cast this spell at</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="earth-tremor">
+                <td>Earth Tremor</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Earth</td><td>Area, Environmental</td><td>Area from Self</td><td></td><td></td><td class="wide-column">Causes the earth to shake in a area around you.<br>Creatures other than you in a 5 tile burst need to make a Reflex or Fortitude save or take 1d8 bludgeoning damage and fall prone</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="earthen-armor">
+                <td>Earthen Armor</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Earth</td><td>Enchantment</td><td>Self</td><td>One Creature</td><td>Up to 10 minutes</td><td class="wide-column">Forms armor of hardened earth or stone around the caster<br>It counts as heavy armor, but you are proficiencient with this armor even if they don't have armor proficiency.<br>The armor has resistance 8 to physical damage and resistance 4 to elemental damage. <br>It has a Weak Point Difficulty of 10 and provides a +3 bonus to Fortitude saves and athletics checks.<br>While wearing the armor you have a -2 tile move speed.<br>The armor imposes a -3 armor penalty</td><td>By Rank: Increase the physical resistance by 2 and elemental resistance by 1</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="earthen-launch">
+                <td>Earthen Launch</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Earth</td><td>Movement</td><td>Self</td><td></td><td></td><td class="wide-column">Boost yourself away with a sudden burst of earth magic.<br>To cast this spell you need to be on solid ground connected to the earth. <br>Jump up to five tiles up and seven tiles in any direction. <br>If you land on a creature they need to make Reflex saving throw or take 2d6 bludgeoning damage</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="electrify">
+                <td>Electrify</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Lightning</td><td>Enchantment</td><td>Touch</td><td>One Object</td><td>Sustained, up to 1 minute</td><td class="wide-column">The caster electrifies a melee weapon, causing it to deal an additional 1d12 of lightning damage on a hit.<br>If the weapon falls into water or the wielder fails a saving throw from a Water trait the effect ends, and lightning zaps all creatures in a 2 tile burst dealing 2d10 damage with a basic Fortitude save</td><td>At Grand Magus: Increase the damage by 1d12</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="flame-jet">
+                <td>Flame Jet</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Fire</td><td>Area</td><td>Area from Self</td><td>-</td><td>-</td><td class="wide-column">The caster unleashes a jet of flame in a 8 tiles long straight line, dealing 2d8 fire damage to all creatures in its path. <br>Creatures in the line must make a basic Reflex save. <br>The caster can choose to be pushed up to 3 tiles away from direction of the flame, moving without provoking opportunity attacks.</td><td>By Rank: Increase the damage by 1d8</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="heatwave">
+                <td>Heatwave</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Air, Fire</td><td>Area</td><td>10</td><td></td><td>-</td><td class="wide-column">You create a wide 8x8 area of scorching air.<br>Any creatures inside need to make a basic Fortitude save or take 2d4 fire damage.<br>On a critical failure creatures also take one level of exhaustion</td><td>By Rank: Increase the damage by 2d4</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="hone-edge">
+                <td>Hone Edge</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Metal</td><td>Enchantment</td><td>Touch</td><td></td><td>1 Minute</td><td class="wide-column">You sharpen a blade to a fine point.<br>Choose a metal weapon or up to five pieces of ammunition that deal slashing or piercing damage.<br>They deal an additional 1d8 damage for the duration</td><td>At Grand Magus: Increase the damage by 1d8</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="ice-shard">
+                <td>Ice Shard</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Water</td><td>Targeting, Precision</td><td>8</td><td>One Creature</td><td>-</td><td class="wide-column">Throw a shard of ice against a target, dealing 3d6 piercing damage with a basic Reflex save. <br>On a critical failure the damage dice of this spell increases to d10's</td><td>By Rank: Increase the damage by 1d6</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="inflame">
+                <td>Inflame</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Fire</td><td>Enchantment</td><td>Self</td><td>Self</td><td>Sustained, up to 1 minute</td><td class="wide-column">Conjure flames hands, harmless to you, but dangerous to others<br>Any creature that hits you with a melee attack takes 1d6 fire damage. <br>Your unarmed melee attacks deal an extra d6 fire damage<br>When cast or sustained you can make an unarmed melee strike as part of the same action</td><td>By Rank: Increase the damage by 1d4</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="levitate">
+                <td>Levitate</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Air</td><td>Enchantment</td><td>Self</td><td>One Creature</td><td>Sustained, up to 1 minute</td><td class="wide-column">You defy gravity and levitate the target 1 tile off the ground. When you sustain you can move the target up or down 10 feet. <br>A creature floating in the air from levitate takes a -2 circumstance penalty to attack rolls, but can spend an Interact action to stabilize itself and negate this penalty for the remainder of its turn.<br>If the target is adjacent to a fixed object or terrain of suitable stability, it can move across the surface by climbing (if the surface is vertical, like a wall) or crawling (if the surface is horizontal, such as a ceiling). <br>Creatures with a Glide speed have a Flight speed when affected by this spell.</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="lightning-shroud">
+                <td>Lightning Shroud</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Lightning</td><td>Enchantment</td><td>Self</td><td>One Creature</td><td>Sustained, up to 1 minute</td><td class="wide-column">The caster is surrounded by crackling electricity, dealing 2d6 lightning damage to any creature that hits them with a melee attack or grapples them. <br>The caster also gains resistance 5 to lightning damage.</td><td>By Rank: Increase the damage by 1d6 and resistance by 3</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="orbiting-earth">
+                <td>Orbiting Earth</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/>+</td><td>Earth</td><td>Enchantment</td><td>Self</td><td>Self</td><td>Sustained, up to 1 minute</td><td class="wide-column">You shape three rocks or pieces of debris into projectiles that orbit you.<br>While they orbit you can use a reaction to interpose them in the way of incoming attacks, making a Spellshaping check instead of a Fortitude or Reflex save.<br>When you sustain this spell you may make an attack with one of the earths, dealing 1d10 bludgeoning damage with a basic Reflex save.<br>When you block or attack with this spell you lose one orbiter, if you run out of orbiters the spell ends.<br>If you spend 3 actions on this spell you raise four orbiters</td><td>By Rank: Increase the amount of orbiters by 1</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="propel">
+                <td>Propel</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/>, when you see an ally stride within reach</td><td>Air</td><td>Movement</td><td>6</td><td>One Creature</td><td>-</td><td class="wide-column">You help your ally along with a push of wind.<br>Increase the move distance by 2 or 4 if the ally is moving directly away from you.<br>You can also use this spell to give an ally +5 on Jump Check</td><td>By Rank: Increase the tiles moved by 2.</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="purify-water">
+                <td>Purify Water</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Water</td><td>Manipulation</td><td>Touch</td><td>One Body of Water</td><td>Sustained, up to 1 minute</td><td class="wide-column">Removes pollutants, toxins, and harmful substances from a body of water, making it safe to drink. <br>The purified water remains clean for up to 1 hour.<br>The first time each day creatures drink purified water they lose one level of exhaustion </td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="quick-forge">
+                <td>Quick Forge</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Metal</td><td>Manipulation</td><td>Touch</td><td>One Metal Object</td><td>10 Minutes</td><td class="wide-column">The caster can quickly repair or forge a simple metal object, such as a weapon, tool, or piece of armor. <br>The object must be small enough to hold in one hand. <br>The repaired or forged item is functional but not masterfully crafted. <br>The magic keeping the object together fades after the spell ends and it deforms or returns to its earlier state.</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="sense-water">
+                <td>Sense Water</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Water</td><td>Sensing</td><td>Self</td><td>Self</td><td>Sustained, up to 1 minute</td><td class="wide-column">A utility spell that allows the caster to sense nearby sources of water within 20 tiles, even if they are hidden underground or behind obstacles. <br>The caster can determine the direction and approximate distance to the nearest water source.</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="shape-bone">
+                <td>Shape Bone</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td></td><td>Manipulation</td><td>Touch</td><td>One Object</td><td>-</td><td class="wide-column">The caster can reshape a small bone or bone fragment into a simple tool, weapon, or decorative item. <br>The reshaped bone retains its original durability but can be customized for specific purposes, such as a bone dagger or needle. <br>The object must be no larger than what can be held in one hand.</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="soul-sight">
+                <td>Soul Sight</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Arcane</td><td>Enchantment, Complex, Soul</td><td>Self</td><td>Self</td><td>Sustained, up to 10 minutes, </td><td class="wide-column">With an incantation you can see the souls of others.<br>While this spell is active you have the effect of Soul Sight advantage.</td><td>At Archmage: The spell does not need to be sustained</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="stalagmite">
+                <td>Stalagmite</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Earth</td><td>Area</td><td>7</td><td>-</td><td>-</td><td class="wide-column">The caster causes a stalagmite to rise from the ground in an unoccupied space within range. <br>The stalagmite is 2 tiles tall and provides cover. <br>If cast under a creature, the creature must make a Reflex save or be speared by the stalagmite, taking 3d6 piercing damage and becoming pinned until they make a Athletics check against the Spellshaping roll.</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="steam-cloud">
+                <td>Steam Cloud</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Fire, Water</td><td>Area</td><td>10</td><td>-</td><td>Sustained, up to 1 minute</td><td class="wide-column">Creates a 4-tile-large cloud of steam that obscures vision. <br>Creatures within the cloud have a -5 penalty to visual perception checks. <br>The cloud dissipates if exposed to strong wind. <br>If the previous action was to cast a Water or Fire spell, this spell only costs 1 Action</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="tailwind">
+                <td>Tailwind</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Air</td><td>Enchantment</td><td>10</td><td>One Creature</td><td>Up to 1 minute</td><td class="wide-column">The caster creates a gust of wind that propels a target creature forward, increasing their movement speed by 2 tiles for the duration. <br>The target can choose to move in any direction but must move at least 1 tile per turn.</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="teleport">
+                <td>Teleport</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Arcane</td><td>Teleportation</td><td>10</td><td>Self</td><td>-</td><td class="wide-column">Teleport to a tile you can see within range.</td><td>By Rank: Increase the range by 10</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="tremor-sense">
+                <td>Tremor Sense</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Earth</td><td>Sensing</td><td>Self</td><td>Self</td><td>Sustained, up to 1 minute</td><td class="wide-column">The caster gains the ability to sense vibrations through the ground, allowing them to detect movement within range. <br>This can reveal hidden or invisible creatures, but won't detect flying or hovering creatures. <br>The caster has a 12 range Tremor Sense as a precise sense</td><td>At Grand Magus: The spell does not need to be sustained</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="water-arm">
+                <td>Water Arm</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Water</td><td>Enchantment, Complex, Conjured Weapon</td><td>Self</td><td>-</td><td>Sustained, up to 1 minute</td><td class="wide-column">Create a tentacle of water that can grab things or attack. <br>While the spell is active, you have the Water Tentacle and Water Slam strikes. <br>You can also use an action to grab a small object within 30 feet with an arm. Each conjured water arm also gives you a climb speed of 2 tiles while you don't have a grabbed creature. <br>Water Tentacle has range 4, hands 1 and deals 2d6 bludgeoning damage. On a hit you can also grab a creature.<br>Water Slam has range 5, hands 1, the shove trait and deals 2d8 bludgeoning damage.</td><td>By Rank: Increase amount of water arms by 1</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="water-ball">
+                <td>Water Ball</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Water</td><td>Area</td><td>6</td><td></td><td>Sustained, up to 1 minute</td><td class="wide-column">Create a hovering ball of water, 4x4 tiles wide. <br>When you cast or sustain the spell you can move the ball up to 3 tiles.<br>Any creatures that move into the ball or that the ball moves into need to make Reflex or Fortitude saving throws or become trapped in the ball.<br>Creatures trapped in the ball are move along with it. <br>They can make Athletics checks to try to get out of. <br>Creatures with a swimming speed can swim out of the ball without needing to make a check</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="water-walk">
+                <td>Water Walk</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Water</td><td>Enchantment</td><td>Touch</td><td>One Creature</td><td>10 Minutes</td><td class="wide-column">Grants the creature the ability to walk on the surface of water or other liquids as if they were solid ground. <br>The caster can move at their normal speed and does not need to make any checks to balance.</td><td>By Rank: Increase the amount of targets by 1</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="wave-dash">
+                <td>Wave Dash</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Water</td><td>Movement, Area</td><td>Area from Self</td><td></td><td></td><td class="wide-column">Create a slamming wave, a 4 tile cone of water from your position, dealing 2d6 bludgeoning damage<br>Creatures hit by the spell need to make a basic Fortitude save<br>Creatures who fail the spell are also pushed along 2 tiles with it, or 4 tiles on a critical failure<br>You may choose to ride the wave, arriving anywhere on the edge of the cone.<br>If you cast this spell in water the cone is 6 tiles long and the spell does 2d8 damage</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="whirlwind">
+                <td>Whirlwind</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Air</td><td>Area, Complex</td><td>10</td><td>-</td><td>Sustained, up to 1 minute</td><td class="wide-column">Creates a whirlwind in a 3x3 tile area. <br>Creatures within the whirlwind must make a Fortitude save at the start of their turn: <br> Failure: The creature is lifted 2 tiles into the air and takes 2d6 bludgeoning damage. <br> Critical Failure: The creature is lifted 4 tiles into the air and takes 4d6 bludgeoning damage. <br>When you sustain this you can move the whirlwind up to 3 tiles, carrying creatures inside the whirlwind with it.<br>The first time each turn you move the whirlwind into a creatures space, they must make a Fortitude save</td><td>By Rank: Increase the amount of tiles creatures are lifted by 1 and the damage by 1d6</td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="wind-wall">
+                <td>Wind Wall</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Air</td><td>Area</td><td>10</td><td>-</td><td>Sustained, up to 1 minute</td><td class="wide-column">Creates a wall of strong wind, 10 tiles long and 3 tiles high. <br>The wall blocks gaseous forms, such as clouds, and imposes a -4 penalty to ranged attack rolls passing through it. <br>Small or smaller creatures attempting to move through the wall must make a Fortitude save or be pushed back 2 tiles.</td><td></td><td>(2) Adept</td>
+            </tr>
+        
+            <tr id="air-slice">
+                <td>Air Slice</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Air</td><td>Targeting, Precision</td><td>12</td><td>One Creature</td><td>-</td><td class="wide-column">Send out a cutting wind, dealing 2d10 slashing damage with a basic Reflex save.</td><td>By Rank: Increase the damage by 1d10</td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="blink">
+                <td>Blink</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Arcane</td><td>Teleportation, Complex</td><td>6</td><td>Self</td><td>-</td><td class="wide-column">With a flash of magic you appear elsewhere<br>Teleport to a tile you can see within range.</td><td>By Rank: Increase range by 6</td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="creeping-shadows">
+                <td>Creeping Shadows</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Darkness</td><td>Area</td><td>10</td><td>Self</td><td>Sustained, up to 1 minute</td><td class="wide-column">Create a spreading cloud of darkness that seems to cling onto whatever they touch. <br>Creates a zone of darkness of up to 9 joining tiles that blocks out non-magical lights.  <br>Any creatures in the darkness at the start of their turn need to make a Will save or be Frightened 1. <br>When you sustain this you can extend the darkness by 3 tiles.</td><td></td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="dust-devil">
+                <td>Dust Devil</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Air, Earth</td><td>Area</td><td>10</td><td></td><td>Sustained, up to 10 minutes, </td><td class="wide-column">Create a (2 tile burst) whirling swirl of air and dust in range. <br>When you create it and move it, creatures inside it need to make a Fortitude saving throw<br>On a failed save they take 1d8 slashing damage and have -3 penalty to perception checks and ranged attacks until they take an action to clear dust from their eyes.<br>When you sustain this you can move the dust devil 3 tiles.</td><td>By Rank: Increase the burst size by 1 tile </td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="fire-whip">
+                <td>Fire Whip</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Fire</td><td>Enchantment, Conjured Weapon</td><td>Self</td><td>Self</td><td>Sustained, up to 1 minute</td><td class="wide-column">Creates a Fire Whip weapon in hand. <br>It deals 2d6 fire damage, has a +2 item bonus to attack, range 4 and is held in one hand.<br>It has the agile, finesse and deadly (d8) traits.<br>It's in the flail weapon group.<br>When you sustain this spell you can make make a Strike with the weapon.</td><td>By Rank: Increase the damage by 1d4</td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="fireball">
+                <td>Fireball</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Fire</td><td>Area</td><td>8</td><td>-</td><td></td><td class="wide-column">Creates a 4 tiles burst of fire at a location you can see within range.<br>It deals 6d6 fire damage with a basic Reflex save</td><td></td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="fly">
+                <td>Fly</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Air</td><td>Enchantment</td><td>Self</td><td>Self</td><td>Sustained, up to 10 minutes, </td><td class="wide-column">Connects you to the wind, allowing you to fly freely.<br>You gain a 4 tiles flight speed. <br>When you sustain this spell you may fly as a free action</td><td>By Rank: Increase the flying speed by 2</td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="giant-stone-hand">
+                <td>Giant Stone Hand</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Earth</td><td>Manipulation, Conjured Weapon</td><td>5</td><td></td><td>Sustained, up to 1 minute</td><td class="wide-column">Conure a giant stone hand that you can control.<br>The stone hand is created at a space you can see within range<br>The stone hand is a large creature with health equal to your Spellshaping roll and resistance 6 to physical and elemental damage.<br>When you cast or sustain this spell, and as a basic action you may move the hand 3 spaces, restore 1d6 + your INT or WIL health to it, make a Grab attack, or position the hand provide greater cover to adjecant allies.<br>Grab attacks are made with using your Spellshaping roll, and do 2d6 damage and with the Improved Grab trait.</td><td></td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="hail-of-nails">
+                <td>Hail of Nails</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Metal</td><td>Area</td><td>8</td><td>-</td><td>Sustained, up to 1 minute</td><td class="wide-column">Creates a rain of small metallic projectiles in a 8x8 area. <br>It deals 3d8 physical damage with a basic Reflex save<br>The first time you sustain this spell each turn, you may spend an action to repeat the hail targeting the same or a new area</td><td></td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="haste">
+                <td>Haste</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Arcane</td><td>Complex, Enchantment, Temporal</td><td>Self</td><td>Self</td><td>1 Minute</td><td class="wide-column">By subtly manipulating the timestream around you can move slightly faster than normal<br>You are quickened 1.<br>If you spend 3 actions on this spell you can target an adjacent willing creature instead</td><td></td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="lightning-bolt">
+                <td>Lightning Bolt</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Lightning</td><td>Targeting</td><td>10</td><td>One Creature or Object</td><td></td><td class="wide-column">Create a bolt of lightning to strike a target in range<br>The target needs to make a basic Reflex save, taking 4d12 lightning damage on failure.<br>If the target is wearing armor made of metal or holding a metal object it makes this save with a -4 modifier, otherwise the modifier is -2.</td><td></td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="shunt">
+                <td>Shunt</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Arcane</td><td>Teleportation, Complex</td><td>Touch</td><td>One Creature or Object</td><td></td><td class="wide-column">Reach out to a creature and teleport them.<br>If the creature is hostile it can make a WIL save to resist.<br>On a failure you may teleport them to a destination within 6 tiles</td><td></td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="slow">
+                <td>Slow</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Arcane</td><td>Complex, Enchantment, Temporal</td><td>5</td><td>One creature</td><td>2 Minute</td><td class="wide-column">By subtly manipulating the timestream around you can slow it's movement and perception of the world.<br>It must make a Will save.<br>Success: Target is slowed 1 for one round<br>Failure: Target is slowed 1 for the spells duration<br>Critical Failure: Target is slowed 2 for the spells duration<br>The target may attempt to redo the save at end of turn</td><td>By Rank: Choose one more creature</td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="thunder-rush">
+                <td>Thunder Rush</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Lightning</td><td>Enchantment, Complex</td><td>Self</td><td>Self</td><td>Sustained, up to 1 minute</td><td class="wide-column">Taking on some of the speed of lightning lets you move faster and zap any targets as you move by them.<br>When you cast and sustain the spell you can take the Stride action<br>Your movespeed increases by 2<br>Creatures have disadvantage on oppertunity attacks against you<br>Once per turn, when you move adjacen to a creature they take d4 lightning damage.</td><td></td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="thunder-step">
+                <td>Thunder Step</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Arcane, Air</td><td>Teleportation, Complex</td><td>10</td><td>Self</td><td>-</td><td class="wide-column">Teleport to a tile you can see within range.<br>Creatures within 5 tiles of where you teleported and/or where you teleported from take 3d8 thunder damage with a basic Fortitude save</td><td></td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="water-jet">
+                <td>Water Jet</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Water</td><td>Area</td><td>Area from Self</td><td>-</td><td></td><td class="wide-column">Create a high pressure jet of water in a 1 tile wide, 10 tiles long line<br>It deals 5d8 piercing damage with a basic Reflex save</td><td></td><td>(3) Magus</td>
+            </tr>
+        
+            <tr id="chain-lightning">
+                <td>Chain Lightning</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Lightning</td><td>Targeting</td><td>10</td><td>One Creature or Object</td><td></td><td class="wide-column">Create a bolt of lightning to strike a target in range, that then arcs to strike other nearby creatures<br>The target needs to make a basic Reflex save, taking 4d12 lightning damage on failure.<br>If the target is wearing armor made of metal or holding a metal object it makes this save with a -4 modifier, otherwise the modifier is -2.<br>Whether on a hit or not, you may then direct the spell to another target within 4 tiles. <br>You may keep the chain going for up to 5 bounces as it hits new targets.</td><td>By Rank: Increase the damage by 1d12</td><td>(4) Grand Magus</td>
+            </tr>
+        
+            <tr id="cold-snap">
+                <td>Cold Snap</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Water</td><td>Area</td><td>10</td><td></td><td></td><td class="wide-column">Create an impact of extreme cold at a point in range.<br>Creatures in a 4x4 area around the point need to make a Fortitude saving throw.<br> Success: The creature takes half damage.<br> Failure: The creature takes 6d8 cold damage and is frozen 1<br> Critical Failure: The creature takes double damage and is frozen 2<br>Creatures in a 8x8 area around the point take half as much damage and aren't frozen</td><td>By Rank: Increase the damage by 2d8</td><td>(4) Grand Magus</td>
+            </tr>
+        
+            <tr id="disintegrate">
+                <td>Disintegrate</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Arcane</td><td>Targeting, Complex, Precision</td><td>10</td><td>One Creature or Object</td><td></td><td class="wide-column">Send a beam of pure unraveling magic at a creature or object in range.<br>It deals 8d12 force damage with a basic Reflex Saving throw.<br>Shields, armors and objects hit by Disintegrate are destroyed unless they are enchanted with anti-magic runes or made of Adamantium or Mithril </td><td>By Rank: Increase the damage by 2d12</td><td>(4) Grand Magus</td>
+            </tr>
+        
+            <tr id="fiery-body">
+                <td>Fiery Body</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Fire</td><td>Enchantment</td><td>Self</td><td>Self</td><td>Sustained, up to 1 minute</td><td class="wide-column">Turn your body into fire. <br>While sustaining this spell you cannot be grappled, restrained or have your movespeed reduced.<br>Any creature that hits you with a melee attack takes 3d6 fire damage. <br>Your unarmed melee attacks deal an extra 2d6 damage and is all fire damage.<br>You are immune to fire damage and effects from fire spells.<br>You can use a reaction to reform around a damaging attack or effect, increasing the result of a Reflex saving throw one step<br>You have vulnerability 10 to cold damage and damage from water spells. <br>When in water or restrained by water spells you take 2d6 vital damage at the start of your turn.</td><td></td><td>(4) Grand Magus</td>
+            </tr>
+        
+            <tr id="steelskin">
+                <td>Steelskin</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Metal</td><td>Enchantment</td><td>Area from Self</td><td>Self</td><td>Sustained, up to 10 minutes, </td><td class="wide-column">Covers the caster’s body with a layer of metallic armor that doesn't hinder movement, offering extraordinary protection against physical attacks. <br>Grants resistance 15 to physical damage, resistance 10 to fire, cold and acid damage, and a +5 bonus to fortitude saving throws. <br>The steel attracts lightning however, giving you a minus -4 penalty to saves against lightning effects</td><td></td><td>(4) Grand Magus</td>
+            </tr>
+        
+            <tr id="storm">
+                <td>Storm</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/> Minute</td><td>Water, Air</td><td>Area, Environmental , Draining</td><td>Area from Self</td><td></td><td>Sustained, up to 1 hour</td><td class="wide-column">Conjure a storm of pouring rain and wind in a 100 tile area.<br>All creatures under the storm clouds become wet and take half damage from fire but double from ice and lightning.<br>The storm obscures vision, giving a -3 penalty to all visual perception checks<br>If the spell is sustained for a minute, loose dirt and ground turn to mud that counts as difficult terrain</td><td>At Archmage: The spell takes only 3 actions</td><td>(4) Grand Magus</td>
+            </tr>
+        
+            <tr id="wall-of-fire">
+                <td>Wall of Fire</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Fire</td><td>Area</td><td>8</td><td></td><td></td><td class="wide-column">Conjure a wall of flames to hurt any that dare walk through<br>The wall is 10 tiles long of adjoining tiles.<br>Creatures that start their turn in the wall or that walk into it take 4d6 fire damage. </td><td></td><td>(4) Grand Magus</td>
+            </tr>
+        
+            <tr id="waterspout">
+                <td>Waterspout</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Water</td><td>Area</td><td>10</td><td>-</td><td></td><td class="wide-column">Creates a 3 tiles burst, 10 tiles high waterspout within range. Creatures at that location need to make a Reflex or Fortitude saving throw. <br> Success: The creature takes half damage and is pushed up 3 tiles<br> Failure: The creature takes 4d10 bludgeoning damage and is pushed up 8 tiles<br> Critical Failure: The creature takes double damage and is pushed up 12 tiles<br>Creatures pushed up by the spell fall down afterwards, taking fall damage as normal.</td><td>By Rank: Increase the damage by 1d10</td><td>(4) Grand Magus</td>
+            </tr>
+        
+            <tr id="wind-walk">
+                <td>Wind Walk</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Air</td><td>Enchantment</td><td>6</td><td>Up to 6 creatures</td><td>Up to 1 hour</td><td class="wide-column">You select up an amount of creatures equal to 4 + your INT (or WIL if cast as an Attuned Spell). You may include yourself.<br>The chosen creatures gain a flight speed equal to their walking speed for the duration.</td><td>By Rank: Increase the flying speed by 2</td><td>(4) Grand Magus</td>
+            </tr>
+        
+            <tr id="dimensional-net">
+                <td>Dimensional Net</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/>, when you see a projectile within range</td><td>Arcane</td><td>Complex, Dimensional</td><td>5</td><td></td><td>Sustain, up to a minute</td><td class="wide-column">Conjure a dimensional net to catch an incoming projectile without the Dimensionalism trait. <br>If your spellshaping roll is higher than the projectile, you catch it in the net and it's stopped before it can hit its intended target<br>Projectiles caught in the net are stored there while the spell is sustained and can be unleashed as a two action activity.<br>Open Net - Target a point within 5 tiles and set a direction.<br>Projectiles from the net fly forward in your chosen direction. If the projectile had a set target, you may select a new one.<br>If you fail to sustain the spell, the net collapses and the projectile continues in the direction it was going before it was caught in the net</td><td></td><td>(5) Archmage</td>
+            </tr>
+        
+            <tr id="dimensional-tear">
+                <td>Dimensional Tear</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Arcane</td><td>Area, Complex, Dimensional</td><td>10</td><td></td><td></td><td class="wide-column">Send a beam of pure unraveling magic at a creature or object in range.<br>It deals 8d12 unraveling damage with a basic Reflex Saving throw.<br>Shields, armors and objects hit by Disintegrate are destroyed unless they are enchanted with anti-magic runes or made of Adamantium or Mithril </td><td></td><td>(5) Archmage</td>
+            </tr>
+        
+            <tr id="earthquake">
+                <td>Earthquake</td><td>10</td><td>Earth</td><td>Area, Draining, Environmental</td><td>10</td><td></td><td>Sustained, up to 10 minute</td><td class="wide-column">Shake the earth and land.<br>Any creature on land in a 200 tile burst around the in range need to fortitude save or be knocked prone and take 3d6 physical damage.<br>This spell deals heavy damage to buildings and terrain.<br>You may repeat the effect of the spell as you sustain it.</td><td></td><td>(5) Archmage</td>
+            </tr>
+        
+            <tr id="inferno">
+                <td>Inferno</td><td>7</td><td>Fire</td><td>Area, Draining</td><td>10</td><td></td><td>Sustained, up to 1 hour</td><td class="wide-column">Creates a 10x10 roaring fire of primordial proportions at a location you can see within range.<br>It deals 12d6 fire damage with a basic Reflex save.<br>The fire spreads to any flammable materials nearby and cannot be put out by nonmagical means while you sustain it.<br>Water or Ice spells may attempt to make a contested check to put out part of the fire.</td><td></td><td>(5) Archmage</td>
+            </tr>
+        
+            <tr id="miniature-sun">
+                <td>Miniature Sun</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Fire, Light</td><td>Area, Complex</td><td>Touch</td><td></td><td>Sustained, up to 10 minutes, </td><td class="wide-column">Conure a miniature sun in the palm of your hand.<br>The sun starts as a tiny object that hovers in the air in front of you. <br>It emits bright light for 8 tiles and dim light for 8 tiles more. <br>Any creature that moves into the bright light or ends its turn there need to make a Fortitude save or take 3d8 fire damage.<br>You are immune to all negative effects of the sun.<br>Creatures that target you with an attack need to make a Fortitude save or be Blinded for the turn</td><td></td><td>(5) Archmage</td>
+            </tr>
+        
+            <tr id="pyroblast">
+                <td>Pyroblast</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Fire</td><td>Area</td><td>Area from Self</td><td></td><td></td><td class="wide-column">Sends forth a stream of superheated flame in a line.<br>The line is up to 10 tiles long and 1 tile wide.<br>Any creatures in the area need to make a Reflex saving throw or take 15d6 fire damage.<br>Due to supernatural heat of the spell, fire resistance is half as effective against it</td><td></td><td>(5) Archmage</td>
+            </tr>
+        
+            <tr id="simulacra">
+                <td>Simulacra</td><td>-</td><td>Arcane</td><td>Complex</td><td>5</td><td>Self</td><td>As long as you maintain them</td><td class="wide-column">Create a copy of yourself out of magic. <br>The copy appears exactly as you. When you make the simulacra you may choose to give it illusory clothes that appears as normal clothes, but cannot be interacted with<br>The copy has 5d6 health and aura. <br>It can take any actions you can do except those with the "Soul" trait. <br>When it casts spells, reinforces it's aura or uses mana in any way it uses your mana.<br>The simulacra cannot be healed or benefit from potions or the like, but can spend an action to drain 1d8 of your mana to restore that much health to it.<br>You always know the location of your Simulacras<br>After you take a long rest you must spend mana equal to half the cost of this spell per Simulacra you maintain. <br>Simulacras can dismiss themselves as free action</td><td></td><td>(5) Archmage</td>
+            </tr>
+        
+            <tr id="storm-of-swords">
+                <td>Storm of Swords</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Metal</td><td>Enchantment</td><td>Self</td><td>Self</td><td>Sustained, up to 10 minutes, </td><td class="wide-column">A devastating spell that allows the caster to control an array of metallic objects, often swords, spears and other weapons, simultaneously, striking with unparalleled precision. <br>When you cast or sustain the spell you may throw up to 3 metal objects at creatures within range, dealing 3d8 physical damage with a basic Reflex save for each<br>Additionally you may keep a number of metal objects hovering around equal to your level + your INT + your WIL.<br>If you have at least 5 objects hovering around you, any creature that starts it turn within 3 tiles or moves into the area must make a Reflex saving throw or take 2d8 physical damage.</td><td></td><td>(5) Archmage</td>
+            </tr>
+        
+            <tr id="sunbeam">
+                <td>Sunbeam</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Light</td><td>Area</td><td>Area from Self</td><td></td><td></td><td class="wide-column">Create a massive illuminating beam of burning light <br>The beam is a 5 tile wide and 30 tile long.<br>Any creatures in the line must make a Fortitude save. <br>Success: Target is dazzled for one turn and takes 4d6 fire damage<br>Failure: Target is blinded for one turn and dazzled for one minute and takes 8d6 fire damage<br>Critical Failure: Target is blinded for one minute and takes 16d6 fire damage<br>While affected by this spell, the target can spend one action to attempt to redo the save, removing the remaining effects on a success.</td><td></td><td>(5) Archmage</td>
+            </tr>
+        
+            <tr id="tornado">
+                <td>Tornado</td><td>6</td><td>Air</td><td>Area</td><td>10</td><td></td><td>Sustained, up to 10 minutes, </td><td class="wide-column">Conjure a massive swirling whirlwind that move around and pick up objects.<br>The tornado is 3x3 area, 20 tiles tall. <br>Creatures that start their turn or enter the area of the tornade need to make a Reflex or Fortitude saving throw, taking 6d8 bludgeoning damage and being sucked up into the tornado and moved 4 tiles up on a failure.<br>Creatures stuck in the tornado are move with it and are off-guard 4. They can spend an action on their turn to attempt to escape, making a Athletics check against the spell. Creatures stuck in the tornado take 6d8 bludgeoning damage and are lifted 3 tiles up in the tornado at the start of their turns.<br>When you sustain the spell you may move the tornado up to 6 tiles.</td><td></td><td>(5) Archmage</td>
+            </tr>
+        
+            <tr id="true-lightning">
+                <td>True Lightning</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Lightning</td><td>Targeting</td><td>15</td><td>One Creature or Object</td><td></td><td class="wide-column">Create an extremely fast bolt of true lightning to strike a target in range<br>The target needs to make a basic Reflex save, taking 10d12 lightning damage on failure.<br>If the target is wearing armor made of metal or holding a metal object it makes this save with a -16 modifier, otherwise the modifier is -8.</td><td></td><td>(5) Archmage</td>
+            </tr>
+        
+            <tr id="tsunami">
+                <td>Tsunami</td><td>6</td><td>Water</td><td>Area</td><td>10</td><td>-</td><td>Up to 1 minute</td><td class="wide-column">Creates a massive wave of water that crashes down on everything in its path. <br>The waves take the form of 10 tile wide line or 15 tile wide if your in water.<br>The line moves 5 tiles forward when you cast the spell and at the end of your turn while the spell lasts Creatures hit by the save make a Fortitude saving throw.<br> Success: The creature takes half damage and is moved 1 tile back<br> Failure: The creature takes 6d10 bludgeoning damage and is moved 3 tiles back<br> Critical Failure: The creature takes double damage and is moved 6 tiles back</td><td></td><td>(5) Archmage</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

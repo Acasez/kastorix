@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>The Shattered Isles</title>
+		<meta charset="utf-8" />
+		<base href="/Kastorix/">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+						<h3 class="portfolio-title">The Shattered Isles</h3>
+						</header>
+						<div class="portfolio-row reverse"> <!-- The Shattered Isles -->
+							<div class="portfolio-image large">
+								<img src="/images/Kastorix/Maps/The Shattered Ilses.jpg" alt="World Map" />
+							</div>
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Overview</h3>
+									<!-- Overview Text Below -->
+                                    <p>The Shattered Isles is a large archipelago located to the northeast of <a href="Worldbuilding/Geography/Meibor.html">Meibor</a> in <a href="Worldbuilding/Geography/Kastorix.html">Kastorix</a>. Known for its breathtaking landscapes, volatile environment, and the unique avian species known as the <a href="Worldbuilding/Species/Aruna.html">Aruna</a>, who live in decentralized flocks united by  <a href="Worldbuilding/Nations/The Windsong Conclave.html">The Windsong Conclave</a>, these islands are both a mystery and a marvel to the wider world.</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Geography -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Geography</h3>
+									<!-- Geography Text Below -->
+                                    <p>The Shattered Isles are a collection of hundreds of islands of varying sizes, seemingly formed by intense volcanic activity and geological upheavals. The islands are characterized by their dramatic cliffs, jagged rock formations, and lush greenery. Volcanic activity is a constant presence, with active volcanoes frequently altering the landscape and contributing to the rich mineral deposits found throughout the region. The seas around the isles are notoriously stormy and unpredictable, making navigation treacherous for outsiders.</p>
+<p>The islands are also known for their unique and often extreme weather patterns. Strong winds and updrafts are common, which the native aruna have adapted to for gliding. These conditions also support a diverse range of flora and fauna, many of which are endemic to the Shattered Isles. The volcanic soil is incredibly fertile, supporting a variety of plant life, while the surrounding waters teem with marine life, providing abundant resources for the aruna.</p>
+							</div>
+						</div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				// Close dropdowns when clicking outside
+				window.onclick = function(event) {
+					if (!event.target.matches('.dropbtn')) {
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						for (var i = 0; i < dropdowns.length; i++) {
+							var openDropdown = dropdowns[i];
+							if (openDropdown.style.display === "block") {
+								openDropdown.style.display = "none";
+							}
+						}
+					}
+				};
+			</script>
+	</body>
+</html>

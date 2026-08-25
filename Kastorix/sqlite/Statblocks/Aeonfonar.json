@@ -1,0 +1,159 @@
+{
+  "name": "Aeonfonar",
+  "phy": 2,
+  "dex": 7,
+  "int": 1,
+  "wil": 3,
+  "health": 21,
+  "maxHealth": 21,
+  "mana": 44,
+  "maxMana": 43,
+  "aura": 43,
+  "maxAura": 43,
+  "spellsByRank": {
+    "Apprentice": [
+      {
+        "name": "Blinding Flash",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+        "aspects": "Light",
+        "traits": "Targeting",
+        "range": "10",
+        "target": "One Creature",
+        "duration": "Up to one minute",
+        "effect": "Send a blinding flash of light at a creature. It must make a Fortitude save \n Success: Target is dazzled for one turn.\n Failure: Target is blinded for one turn and dazzled for one minute \n Critical Failure: Target is blinded for one minute\nWhile affected by this spell, the target can spend one action to attempt to redo the save, removing the remaining effects on a success.",
+        "upcast": "",
+        "rank": "(1) Apprentice",
+        "selectedRunes": [],
+        "proficiency": 8
+      }
+    ],
+    "Adept": [
+      {
+        "name": "Soul Sight",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+        "aspects": "Arcane",
+        "traits": "Enchantment, Complex, Soul",
+        "range": "Self",
+        "target": "Self",
+        "duration": "Sustained, up to 10 minutes, ",
+        "effect": "With an incantation you can see the souls of others.\nWhile this spell is active you have the effect of Soul Sight advantage.",
+        "upcast": "At Archmage: The spell does not need to be sustained",
+        "rank": "(2) Adept",
+        "selectedRunes": [],
+        "proficiency": 8
+      },
+      {
+        "name": "Beam of Light",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/ThreeActions.png\" alt=\"3 Actions\"/>-<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/ThreeActions.png\" alt=\"3 Actions\"/>",
+        "aspects": "Light",
+        "traits": "Enchantment",
+        "range": "Self",
+        "target": "-",
+        "duration": "-",
+        "effect": "Casts a beam of light that can blind a multiple creatures in a 1 tile wide, 6 tiles long line. Any creatures in the line must make a Fortitude save. \nSuccess: Target is dazzled for one turn. \nFailure: Target is blinded for one turn and dazzled for one minute. \nCritical Failure: Target is blinded for one minute. \nWhile affected by this spell, the target can spend one action to attempt to redo the save, removing the remaining effects on a success.",
+        "upcast": "",
+        "rank": "(2) Adept",
+        "selectedRunes": [],
+        "proficiency": 8
+      }
+    ],
+    "Magus": [
+      {
+        "name": "Air Slice",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+        "aspects": "Air",
+        "traits": "Targeting, Precision",
+        "range": "12",
+        "target": "One Creature",
+        "duration": "-",
+        "effect": "Send out a cutting wind, dealing 3d10 slashing damage with a basic Reflex save.",
+        "upcast": "By Rank: Increase the damage by 1d10",
+        "rank": "(3) Magus",
+        "selectedRunes": [],
+        "proficiency": 6
+      }
+    ],
+    "GrandMagus": [],
+    "Archmage": []
+  },
+  "currentArmor": null,
+  "saves": {
+    "fortitude": 4,
+    "reflex": 8,
+    "will": 6
+  },
+  "statuses": [],
+  "weapons": [
+    {
+      "name": "Rapier",
+      "damage": "1d6 piercing",
+      "hands": 1,
+      "range": 1,
+      "traits": "Agile, Precision, Finesse, Parry",
+      "description": "A duelists weapon, for outmaneuvering their foes on the battlefield",
+      "price": "4 gp",
+      "type": "Martial",
+      "weaponGroup": "Sword",
+      "selectedRunes": [
+        {
+          "name": "Major Striking",
+          "effect": "The weapon has an item bonus of +3 to hit",
+          "item": "Weapon",
+          "price": 7000,
+          "level": 13,
+          "requirement": "[Greater Striking]",
+          "striking": 3,
+          "auraCleaving": "",
+          "elementalWard": "",
+          "hardening": ""
+        },
+        {
+          "name": "Major Aura Cleaving",
+          "effect": "The weapon does three extra damage dice to auras",
+          "item": "Weapon",
+          "price": 15000,
+          "level": 16,
+          "requirement": "[Greater Aura Cleaving]",
+          "striking": "",
+          "auraCleaving": 3,
+          "elementalWard": "",
+          "hardening": ""
+        },
+        {
+          "name": "Anti-Tampering",
+          "effect": "The item cannot be affected by Manipulation spells such as Ferrokinesis",
+          "item": "All",
+          "price": 20,
+          "level": 1,
+          "requirement": "",
+          "striking": "",
+          "auraCleaving": "",
+          "elementalWard": "",
+          "hardening": ""
+        }
+      ],
+      "proficiency": 8
+    }
+  ],
+  "actions": [
+    {
+      "name": "Guardians of Ages",
+      "actions": "3",
+      "requirement": "Once per minute, Costs 15 mana.",
+      "effect": "The Aeonfonar creates up to 6 illusory copies of itself within 10 tiles. These copies can move and attack as usual but cannot use spells and disappear if they would take any damage. When it uses this ability the Aeonfonar can immiditaly switch places with one of the copies that it could Move to"
+    },
+    {
+      "name": "Mislead",
+      "actions": "1",
+      "requirement": "Once per turn, Costs 3 mana.",
+      "effect": "The Aeonfonar Traverses and creates an illusary copy of itself where it stood before, as per Guardians of Ages. It may then choose to switch position with the created copy."
+    }
+  ],
+  "passives": [],
+  "size": "Medium",
+  "speeds": "Land 8, Fly 10",
+  "weaponButtons": [],
+  "skills": "Acrobatics +15, ",
+  "senses": "Perception 11, Darkvision",
+  "spellButtons": []
+}

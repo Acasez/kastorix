@@ -1,0 +1,341 @@
+.creature-container {
+    width: 100%;
+    max-width: 825px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    color: #e0d8d8;
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #5a3921;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.creature-header {
+    background-color: #3a2a1e;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #5a3921;
+}
+
+.creature-name {
+    font-size: 24px;
+    margin: 0;
+    color: #d8b87c;
+}
+
+.creature-type {
+    font-size: 14px;
+    color: #a8a8a8;
+    font-weight: bold;
+}
+
+.creature-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.creature-stats {
+    flex: 2;
+    padding-right: 20px;
+}
+
+.creature-image {
+    flex: 1;
+    text-align: center;
+}
+
+.creature-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #5a3921;
+}
+
+.creature-actions {
+    padding: 15px;
+    border-top: 1px solid #5a3921;
+}
+
+.field-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.field-container p {
+    margin: 0;
+    margin-bottom: -5px;
+    /* Space between label and input */
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.sidebar input {
+    width: 100%;
+    /* Make inputs fill the form group */
+    padding: 5px;
+    box-sizing: border-box;
+    /* Include padding in width */
+}
+
+.extendableList {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    width: 400px;
+}
+
+.spellData {
+    display: flex;
+    flex-direction: row;
+}
+
+.spellActions,
+.attackBonus {
+    width: 50px;
+}
+
+.input-field {
+    width: 50px;
+}
+
+.sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Form Row Styling */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+
+.form-group {
+    flex: 1;
+    margin: 0 5px;
+}
+
+/* Resource Bars Container */
+.resource-bars-container {
+    margin-bottom: 10px;
+}
+
+/* Section Titles */
+.section-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333;
+}
+
+/*Stats*/
+.stats-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    /* Center the save boxes horizontally */
+    gap: 20px;
+    /* Space between save boxes */
+}
+
+.stat-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.stat-input,
+.bar-input {
+    width: 50px;
+    text-align: center;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-width: 360px;
+}
+
+.stat-box,
+.save-box {
+    flex: 1;
+    min-width: 100px;
+    border: 1px solid #f52eba;
+    padding: 0px 5px 0px 5px;
+    border-radius: 4px;
+    text-align: center;
+    max-width: fit-content;
+}
+
+.stat-box p {
+    margin-top: -5px;
+    margin-bottom: -5px;
+    font-size: 22px;
+}
+
+.saveLoadCreatureMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #2a2320;
+    border-radius: 8px;
+    min-width: 180px;
+}
+
+.saveLoadCreatureMenu button,
+.saveLoadCreatureMenu select {
+    width: 80%;
+    max-width: 150px;
+    padding: 0.5em 1em;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #4d3a21;
+    color: #f3e6d0;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.saveLoadCreatureMenu button:hover,
+.saveLoadCreatureMenu select:focus {
+    background: #7a552e;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.saveLoadCreatureMenu>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newCreature {
+    height: 40px;
+    background: #111;
+    color: #fffcf7;
+}
+
+.proficiency-button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.action-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 0 auto;
+}
+
+.select2-container--default .select2-results__option {
+    padding: 6px;
+    text-align: center;
+}
+
+.select2-container--default .select2-selection--single {
+    padding: 6px 12px;
+    height: auto;
+    text-align: center;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding: 0;
+    line-height: 24px;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 3% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    /* Could be more or less, depending on screen size */
+    height: 85%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    width: 400px;
+    z-index: 10000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+    /* Slightly lift the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tall {
+    height: 50px;
+}
+
+.short {
+    height: 10px;
+    margin-top: 2px;
+}

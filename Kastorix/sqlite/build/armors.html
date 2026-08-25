@@ -1,0 +1,69 @@
+
+    <style>
+        #armorsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="armorsTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Resistances</th><th onclick='sortTable(2)'>Weak Point Difficulty</th><th onclick='sortTable(3)'>Penalties</th><th onclick='sortTable(4)'>Mana Recovery Speed</th><th onclick='sortTable(5)'>Traits</th><th onclick='sortTable(6)'>Description</th><th onclick='sortTable(7)'>Price</th><th onclick='sortTable(8)'>Type</th><th onclick='sortTable(9)'>PHY</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="unarmored">
+                <td>Unarmored</td><td>(0) Physical</td><td>0</td><td>0</td><td></td><td></td><td class="wide-column"><span class='flavor-text'></span></td><td>-</td><td>Unarmored</td><td>-</td>
+            </tr>
+        
+            <tr id="reinforced-cloth">
+                <td>Reinforced Cloth</td><td>(1) Physical, (1) Elemental</td><td>3</td><td>-1</td><td></td><td>Can still add half your DEX to spellshaping checks if you aren't proficient</td><td class="wide-column"><span class='flavor-text'>Commonly used by adventurers unused to heavier armor.</span></td><td>3 gp</td><td>Light</td><td>-</td>
+            </tr>
+        
+            <tr id="hide-armor">
+                <td>Hide Armor</td><td>(2) Physical, (2) Elemental</td><td>4</td><td>-1</td><td></td><td></td><td class="wide-column"><span class='flavor-text'>Tough leather armor made from the hides of large animals. Popular among rangers and hunters.</span></td><td>5 gp</td><td>Light</td><td>0</td>
+            </tr>
+        
+            <tr id="leather-lamellar">
+                <td>Leather Lamellar</td><td>(4) Physical, (4) Elemental</td><td>6</td><td>-2</td><td></td><td></td><td class="wide-column"><span class='flavor-text'>Overlapping leather plates provide good all-round protection, without limiting mana recovery</span></td><td>12 gp</td><td>Light</td><td>1</td>
+            </tr>
+        
+            <tr id="chain-mail">
+                <td>Chain Mail</td><td>(6) Slashing, (6) Piercing, (3) Bludgeoning, (2) Cold, (2) Fire, (2) Acid, (1) Thunder</td><td>4</td><td>-2</td><td>1/2</td><td></td><td class="wide-column"><span class='flavor-text'>Interlocking metal rings provide good all-round protection, but are less effective against heavy blows and spells.</span></td><td>5 gp</td><td>Heavy</td><td>1</td>
+            </tr>
+        
+            <tr id="splint-mail">
+                <td>Splint Mail</td><td>(7) Slashing, (7) Piercing, (4) Bludgeoning, (3) Cold, (3) Fire, (3) Acid, (2) Thunder</td><td>5</td><td>-2</td><td>1/3</td><td></td><td class="wide-column"><span class='flavor-text'>Metal plates riveted to leather, designed to deflect spells and blows.</span></td><td>10 gp</td><td>Heavy</td><td>2</td>
+            </tr>
+        
+            <tr id="half-plate">
+                <td>Half Plate</td><td>(8) Slashing, (8) Piercing, (4) Bludgeoning, (2) Cold, (2) Fire, (2) Acid, (1) Thunder</td><td>5</td><td>-2</td><td>1/2</td><td></td><td class="wide-column"><span class='flavor-text'>A hybrid of plate and leather, favored by dedicated battle-mages. Unlike the protection of full platemail, it has more weak points to be exploited by clever enemies.</span></td><td>20 gp</td><td>Heavy</td><td>2</td>
+            </tr>
+        
+            <tr id="plate-mail">
+                <td>Plate Mail</td><td>(10) Slashing, (10) Piercing, (5) Bludgeoning, (3) Cold, (3) Fire, (2) Acid, (2) Thunder</td><td>8</td><td>-3</td><td>1/3</td><td></td><td class="wide-column"><span class='flavor-text'>Full plate provides the greatest protection and has fewer weak spots to target. Being encased in metal is dampens mana recovery though, making it rarely used by mages, but favored by some knight orders.</span></td><td>50 gp</td><td>Heavy</td><td>3</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

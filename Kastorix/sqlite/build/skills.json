@@ -1,0 +1,109 @@
+{
+    "All": [
+        {
+            "name": "Acrobatics",
+            "stat": "DEX",
+            "armorPenalties": "Light"
+        },
+        {
+            "name": "Arcana",
+            "stat": "INT",
+            "armorPenalties": ""
+        },
+        {
+            "name": "Athletics",
+            "stat": "PHY",
+            "armorPenalties": ""
+        },
+        {
+            "name": "Brawling",
+            "stat": "PHY",
+            "armorPenalties": ""
+        },
+        {
+            "name": "Channeling",
+            "stat": "INT",
+            "armorPenalties": "Light"
+        },
+        {
+            "name": "Crafting",
+            "stat": "INT",
+            "armorPenalties": ""
+        },
+        {
+            "name": "Deception",
+            "stat": "WIL",
+            "armorPenalties": ""
+        },
+        {
+            "name": "History",
+            "stat": "INT",
+            "armorPenalties": ""
+        },
+        {
+            "name": "Insight",
+            "stat": "WIL",
+            "armorPenalties": ""
+        },
+        {
+            "name": "Intimidation",
+            "stat": "PHY",
+            "armorPenalties": ""
+        },
+        {
+            "name": "Investigation",
+            "stat": "INT",
+            "armorPenalties": ""
+        },
+        {
+            "name": "Mana Sensing",
+            "stat": "WIL",
+            "armorPenalties": "Light"
+        },
+        {
+            "name": "Medicine",
+            "stat": "INT",
+            "armorPenalties": ""
+        },
+        {
+            "name": "Nature",
+            "stat": "INT",
+            "armorPenalties": ""
+        },
+        {
+            "name": "Perception",
+            "stat": "INT",
+            "armorPenalties": "Heavy"
+        },
+        {
+            "name": "Performance",
+            "stat": "DEX",
+            "armorPenalties": "Heavy"
+        },
+        {
+            "name": "Persuasion",
+            "stat": "WIL",
+            "armorPenalties": ""
+        },
+        {
+            "name": "Sleight of Hand",
+            "stat": "DEX",
+            "armorPenalties": ""
+        },
+        {
+            "name": "Society",
+            "stat": "INT",
+            "armorPenalties": ""
+        },
+        {
+            "name": "Stealth",
+            "stat": "DEX",
+            "armorPenalties": "Heavy"
+        },
+        {
+            "name": "Survival",
+            "stat": "WIL",
+            "armorPenalties": ""
+        }
+    ]
+}

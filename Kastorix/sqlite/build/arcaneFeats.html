@@ -1,0 +1,345 @@
+
+    <style>
+        #arcaneFeatsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="arcaneFeatsTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Feat Name</th><th onclick='sortTable(1)'>Description</th><th onclick='sortTable(2)'>Prerequisites</th><th onclick='sortTable(3)'>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="alchemy-training">
+                <td>Alchemy Training</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in crafting or alchemy lore increases (max Expert). </span><br>Each morning you can make two temporary potions. <br>For each potion you prepare you lock away 1 mana from your mana well for the day and they expire after the day. <br>The potions can be <a href="Lesser Health Potions.html">Lesser Health Potions</a>, <a href="Lesser Mana Potions.html">Lesser Mana Potions</a> or <a href="Lesser Elemental Resistance Potions.html">Lesser Elemental Resistance Potions</a>.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="attunement-shortcut">
+                <td>Attunement Shortcut</td><td class="wide-column"><span class='flavor-text'>Your attunement lets you learn spells that would normally be too complex for you.</span><br>Learn two Adept Spells from your attunement<br>Before Level 4 you you need to spend a focus point when you cast these spells due to their complexity</td><td><a href="Advantages.html#attunement">Attunement</a></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="aura-hardening">
+                <td>Aura Hardening</td><td class="wide-column"><span class='flavor-text'>Your aura is tougher and you are trained in using it for defense. </span><br>When succeed with an Aura Block, the damage it takes is reduced by your WIL. <br>Your proficiency level in Will saves increases (max Trained).</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="aura-reinforcement">
+                <td>Aura Reinforcement</td><td class="wide-column"><span class='flavor-text'>You have trained your aura and can raise and lower it as a single action. </span><br>When you use the Reinforce Aura action you can spend mana up to 3 times your level + your Will.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="basic-elemental-magic">
+                <td>Basic Elemental Magic</td><td class="wide-column"><span class='flavor-text'>Can be chosen multiple times, once for each aspect. </span><br>Choose one aspect and learn two apprentice rank spells from that aspect. <br>You gain a bonus depending on the aspect</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="focused-spellshaping">
+                <td>Focused Spellshaping</td><td class="wide-column"><span class='flavor-text'>You have a +1 to spellshaping when casting spells that cost 3 actions or more. </span><br>Learn two apprentices spells that costs 3 actions or more.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="freeform-learning">
+                <td>Freeform Learning</td><td class="wide-column"><span class='flavor-text'>You learn 2 + your INT apprentice spells of your choosing. </span><br>You can choose this feat multiple times</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="gadget-crafting">
+                <td>Gadget Crafting</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in crafting increases (max Expert). </span><br>Each morning you can make one temporary gadget. <br>If you do you lock away 2 mana from your mana well for the day.<br>The gadget only breaks apart after the day and only works for you (unless specified).<br>You can choose this feat multiple times, letting you craft one more gadget each time</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="knowledge-is-power">
+                <td>Knowledge Is Power</td><td class="wide-column"><span class='flavor-text'>Knowing how the spells work, allows you to move to its edges and weak points</span><br>When you make saving throws against spells you know or successfully identify you may add half your INT to the saving throw.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="metamagic-novice">
+                <td>Metamagic Novice</td><td class="wide-column"><span class='flavor-text'>You've studied metamagics, ways of modifying spells you cast.</span><br>You learn 2 + your INT metamagics<br>You can choose this feat multiple times</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="monster-hunting">
+                <td>Monster Hunting</td><td class="wide-column"><span class='flavor-text'>You are trained in monster hunting lore, which can be used to recall knowledge against monsters and elementals. </span><br>When you succeed on a recall knowledge check with monster hunting lore, the creature takes a -2 penalty to the next save you impose on it.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="physical-sort">
+                <td>Physical Sort</td><td class="wide-column"><span class='flavor-text'>You have forgone some of your arcane training to focus on the practical. </span><br>Gain one level 1 <a href="General Feats.html">General Feats</a></td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="runed-ammo">
+                <td>Runed Ammo</td><td class="wide-column"><span class='flavor-text'>You can inscribe runes in mundane ammunition.</span><br>Your proficiency level with crafting increases (max Expert)<br>Each morning you can inscribe 5 pieces of mundane arrows, crossbow bolts, runegun ammo or sling stones with magic.<br>You can make them into;<br>Disruptor Ammo - If it hits a targets aura, their aura gains 2 weakness to all damage until the end of your next turn<br>Tracer Rounds - On a hit the target, the target glows. It has a -3 penalty to stealth checks until the end of your next turn<br>Incendiary Ammo - The attack deals an extra 1d4 fire damage, but reduces the weapon damage die by 2. (1d8 to 1d6 for example)<br>Heavy Rounds- On a hit the target is knocked Off-Guard 1 until the end of your next turn. You have -1 range when attacking with these.<br>You can give the ammo to others, though the runes fade at the end of day.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="siphon-mana">
+                <td>Siphon Mana</td><td class="wide-column"><span class='flavor-text'>You've learned to reuse magic from failed spells. </span><br>You learn the Siphon Mana action which you can use if your last action was a failed spellshape<br>1 Action - Siphon Mana; recover half the spells mana cost</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="spellcraft-scholar">
+                <td>Spellcraft Scholar</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in arcana increases (max Expert). </span><br>You have +2 bonus to identify spells. <br>Learn one level 1 spell.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="studied-ahead">
+                <td>Studied Ahead</td><td class="wide-column"><span class='flavor-text'>You have studied ahead to get to the cool spells. </span><br>Learn two Adept Spells without the Complex Trait. <br>Before Level 4 you you need to spend a focus point when you cast these spells due to their complexity</td><td>Int 3 or higher</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="tools-of-the-trade">
+                <td>Tools of the trade</td><td class="wide-column"><span class='flavor-text'>You've learned a few tricks to vary your magic</span><br>You learn one apprentice rank spell<br>You learn one metamagic<br>Your proficiency level with Arcana, Crafting, Channeling, Mana Sensing, Alchemy Lore, Soul Lore or Dimensionalism Lore increases (max Trained)<br>You can choose this feat multiple times</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="extend-aura">
+                <td>Extend Aura</td><td class="wide-column"><span class='flavor-text'>You have learned to protect others with your aura. </span><br>You have the Extend Aura reaction<br><span class='action-title'>Extend Aura</span> - <img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/>, when a friendly creatures within 3 tiles takes damage<br>Expand your aura to cover the creature. <br>You aura takes half the damage they would take.</td><td></td><td class="narrow-column">2</td>
+            </tr>
+        
+            <tr id="mana-thread">
+                <td>Mana Thread</td><td class="wide-column"><span class='flavor-text'>You've figured out how to draw a thread of mana to a target, allowing you to target them with magic at a range.</span><br>You have the Draw Mana Thread action<br><span class='action-title'>Draw Mana Thread</span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/>, 1 Mana<br>Touch a creature. If unwilling, it may make a Reflex save against your Channeling roll. On a success, you connect an invisible mana thread to it.<br>While the thread is up you can cast spells on the creature as if you were adjacent to it and you know its exact position<br>The thread consumes 1 mana/turn and breaks if:<br>The target moves 6+ tiles away, it gains full cover, or you break it as a free action.<br>Creatures with Truesight or passive Manasense higher than your roll can sense the thread. <br>Creatures aware of it may spend an action and mana equal your WIL to break it.</td><td>Trained in Channeling</td><td class="narrow-column">2</td>
+            </tr>
+        
+            <tr id="mana-purifier">
+                <td>Mana Purifier</td><td class="wide-column"><span class='flavor-text'>You learn how to make a Pure variants of Mana Potions you make. </span><br>If you make them as part of daily preparations you lock away one extra mana.<br>Your proficiency level in Arcana, Mana sensing or Alchemy lore increases (max Expert).</td><td><a href="Arcane Feats.html#alchemy-training">Alchemy Training</a></td><td class="narrow-column">3</td>
+            </tr>
+        
+            <tr id="adept-elemental-magic">
+                <td>Adept Elemental Magic</td><td class="wide-column"><span class='flavor-text'>Can be chosen multiple times, once for each aspect. </span><br>Choose one aspect and learn two adept rank spells from that aspect. <br>You become expert in casting spells of your chosen aspect</td><td><a href="Arcane Feats.html#basic-elemental-magic">Basic Elemental Magic</a>, for the same aspect</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="adept-spellcraft">
+                <td>Adept Spellcraft</td><td class="wide-column"><span class='flavor-text'>You learn 2 + your INT adept spells of your choosing. </span><br>You can choose this feat multiple times</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="armor-artificer">
+                <td>Armor Artificer</td><td class="wide-column"><span class='flavor-text'>You have constructed a enchanted suit of armor, designed for you specifically. </span><br>You can choose between Leather Laminar, Half Plate and Full Plate. <br>You are trained in this armor and can ignore its PHY requirements. <br>It has Anti Tampering runes, preventing it from being affected by hostile magic and can be improved by future feats<br>Your proficiency level in crafting increases (max Expert). </td><td>Trained in Crafting</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="artificers-weapon">
+                <td>Artificers Weapon</td><td class="wide-column"><span class='flavor-text'>You create a custom weapon powered through artifice. </span><br>It's a Whip Sword, Powered Hammer or a pair of Impact Gauntlets<br>You are trained in the weapon.<br>It has Anti Tampering runes, preventing it from being affected by magic and can be improved by future feats<br>Your proficiency level in crafting increases (max Expert). </td><td>Trained in Crafting</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="combat-mana-threads">
+                <td>Combat Mana Threads</td><td class="wide-column"><span class='flavor-text'>Weather with a strike or a spell, you know how to attach mana threads in combat.</span><br>After you succeed on a unarmed melee strike you spend an action to attach a mana thread without making a check.<br>You learn the Tracing Spell metamagic.<br>Your proficiency level in channeling increases (max Master)</td><td><a href="Arcane Feats.html#mana-thread">Mana Thread</a></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="elemental-aura">
+                <td>Elemental Aura</td><td class="wide-column"><span class='flavor-text'>You've learned to infuse elemental magic into your aura.</span><br>You learn the Elemental Aura action, which you can use with any aspects you have at least Basic Elemental Magic with<br><span class='action-title'>Elemental Aura</span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/>, 5 mana.<br>Infuse your aura with an aspect, giving it resistance 5 to damage of that aspect and a bonus based on the chosen aspect.<br>While you have your Elemental Aura up, you can force any creature that end its turn next to you to make a Reflex or Fortitude Save against a WIL check. <br>On a higher roll you deal 2d6 damage to them.<br>You can sustain your elemental aura as an action for 3 mana, as if it were a spell.<br>You can also drop it as a reaction or free action on your turn.</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="enhancement-brewer">
+                <td>Enhancement Brewer</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in crafting or alchemy lore increases (max Master). </span><br>You've learned to make enhancement potions to temporarily enhance your and your allies abilities.<br>You can make Yeti's Strength, Griffin's Agility, Drake's Cunning and Diratheen's Will potions as temporary potions</td><td><a href="Arcane Feats.html#alchemy-training">Alchemy Training</a></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="golem-upgrade">
+                <td>Golem Upgrade</td><td class="wide-column"><span class='flavor-text'>You've tinkered with your golem to upgrade it. </span><br>Add one golem upgrade to it<br>You can choose this feat multiple times</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="incanter's-stance">
+                <td>Incanter's Stance</td><td class="wide-column"><span class='flavor-text'>You've learned how to enter a stance were you put all your focus on your magic, ignoring the outside world. </span><br>You have the Incanter's Stance action<br><span class='action-title'>Incanter's Stance</span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/> (Stance)<br>While in this stance and cast spells using a verbal component your INT or WIL counts twice<br>You also have advantage on Channeling and Mana Sensing Checks. <br>However, you are off-guard 2 and have disadvantage on perception checks.</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="manafuel-aura">
+                <td>Manafuel Aura</td><td class="wide-column"><span class='flavor-text'>You've learned how to infuse some of the mana from spells into your aura.</span><br>If you use the Reinforce Aura action after casting a spell you may add twice the spell's rank worth of mana to your aura for free.</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="metamagic-adept">
+                <td>Metamagic Adept</td><td class="wide-column"><span class='flavor-text'>You learn three metamagics of your choice. </span><br>You may use two metamagics on a single spell</td><td><a href="Arcane Feats.html#metamagic-novice">Metamagic Novice</a></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="overload-golem">
+                <td>Overload Golem</td><td class="wide-column"><span class='flavor-text'>You've learned how to put some extra power into your Golem.</span><br>At the start of the turn you can choose to give your Golem an action for the turn.<br>After using this ability your golem takes a d4 vital damage and gets stunned 2 next turn as it overloads the runework.<br>You can also use this ability on other allied golems by making a Golem Lore or Crafting check.</td><td><a href="Advantages.html#golemcrafter">Golemcrafter</a></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="quick-tinkerer">
+                <td>Quick Tinkerer</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in Crafting increases (max Master). </span><br>Increase the amount of gadgets you can craft each day by 1<br>You may spend 1 minute turning one crafted gadget into another gadget</td><td><a href="Arcane Feats.html#gadget-crafting">Gadget Crafting</a></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="runegun-smith">
+                <td>Runegun Smith</td><td class="wide-column"><span class='flavor-text'>You have created a runegun of your own design, that you are proficient with and can modify.</span><br>Your proficiency level with Runeguns increases (max Expert). <br>It's a runegun rifle, sharpshot, pistol or cannon. <br>It has the Anti Tampering rune<br>Your proficiency level in crafting increases (max Expert)</td><td>Trained in Crafting</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="runegun-upgrade">
+                <td>Runegun Upgrade</td><td class="wide-column"><span class='flavor-text'>You've upgraded your Runegun</span><br>Pick a Runegun Upgrade<br>You can choose this feat multiple times</td><td><a href="Arcane Feats.html#runegun-smith">Runegun Smith</a></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="sensing-threads">
+                <td>Sensing Threads</td><td class="wide-column"><span class='flavor-text'>Through your mana threads you can sense enemies weaknesses and detect when they are about to cast spells.</span><br>You can use Channeling to Recall Knowlegde on weaknesses and abilities about creatures in your Mana Threads<br>When creatures in your mana threads cast spells you have +1 on any saving throws from them<br>Your proficiency level in channeling increases (max Master)</td><td><a href="Arcane Feats.html#mana-thread">Mana Thread</a></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="spellbreaking">
+                <td>Spellbreaking</td><td class="wide-column"><span class='flavor-text'>You have studied the art of Spellbreaking, tearing apart spells before they get formed. </span><br>You learn the Spellbreak reaction.<br><span class='action-title'>Spellbreak</span> - <img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/>,  when you successfully identify a spell being cast within 3 tiles of you. <br>Spend mana equal to half the spells cost and make a check against the Spellshaping Check of the caster.<br>If you know the spell being cast you may add your profficiency in the spell to the roll<br>If you got a critical success on the Identify Spell Check you may add your INT or DEX (min 1) to the roll.<br>If you roll higher than the caster you prevent the spell from being cast.</td><td>Trained in Arcana</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="stabilize-spell">
+                <td>Stabilize Spell</td><td class="wide-column"><span class='flavor-text'>When you fail at spellcasting you can put some extra effort in to stabilize them.</span><br>You learn the Stabilize Spell reaction<br><span class='action-title'>Stabilize Spell</span> - <img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/>,  When you fail a spellshaping check by your INT or less<br>Spend a focus point and the amount you failed by in mana to turn the spell into a success.<br>The spells spellcasting DC is still the rolled number</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="threaded-spellbreak">
+                <td>Threaded Spellbreak</td><td class="wide-column"><span class='flavor-text'>You can perform Spellbreaking through your mana threads.</span><br>You can use the Spellbreak reaction from any of your Mana Threads<br>If the caster of the spell is the target of your thread you have +2 bonus to the Spellbreak roll and recover mana equal to the rank of the spell on a succesful spellbreak</td><td><a href="Arcane Feats.html#mana-thread">Mana Thread</a>, <a href="Arcane Feats.html#spellbreaking">Spellbreaking</a></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="absorb-mana">
+                <td>Absorb Mana</td><td class="wide-column"><span class='flavor-text'>You have experience sensing and harnessing mana allowing you to get more mana faster</span><br>Your proficiency level in mana sensing increases (max Master). <br>When you harness mana you can choose to increase the DC by 5 to gain an additional dice. <br>If you are Master in mana sensing you can increase the DC by 10 to get two more dice, and if you legendary you can increase by 15 for three more dice of mana</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="double-runegun">
+                <td>Double Runegun</td><td class="wide-column"><span class='flavor-text'>You've made another runegun.</span><br>You have two custom Runeguns, they can be the same type or different.<br>They both get upgrades from the Runegun Upgrade feats, those upgrade can be the same or different.</td><td><a href="Arcane Feats.html#runegun-smith">Runegun Smith</a></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="drain-attuned-spell">
+                <td>Drain Attuned Spell</td><td class="wide-column"><span class='flavor-text'>When others attempt to use spells of your element, you can take control.</span><br>You have the Drain Attuned Spell action<br><span class='action-title'>Drain Attuned Spell</span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/><br>Target a creature maintaining a spell of your attunement within 5 tiles. Spend a focus point and mana equal to the cost of the spell. <br>Make a Spellshaping Check against the creature's spellshaping check. <br>On a success you take over the spell, getting the benefits as if you were the caster.<br>On a critical success you recover the mana you spent<br>If the spells needs to be sustained you still need to sustain in future turns.</td><td><a href="Advantages.html#attunement">Attunement</a></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="efficient-tinkerer">
+                <td>Efficient Tinkerer</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in crafting or arcana increases (max Master). </span><br>Increase the amount of gadgets you can craft each day by 1<br>When crafting gadgets, reduce the amount of locked away mana by 1</td><td><a href="Arcane Feats.html#gadget-crafting">Gadget Crafting</a></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="enchanter">
+                <td>Enchanter</td><td class="wide-column"><span class='flavor-text'>You've trained with spells that enhance your or others physical abilities</span><br>You become expert in casting spells with the enhancement trait<br>If you get a critical success on spellshaping a spell with the enhancement trait, recover mana equal to its rank</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="evoker">
+                <td>Evoker</td><td class="wide-column"><span class='flavor-text'>You've trained with spells that hit a wide area.</span><br>You become expert in casting spells with the area trait<br>Learn the Expand Spell metamagic, or another level 1 metamagic if you already know that one</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="expand-aura">
+                <td>Expand Aura</td><td class="wide-column"><span class='flavor-text'>You can now expand your aura to protect your allies from a distance. </span><br>You learn the Expand Aura action.<br><span class='action-title'>Expand Aura</span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/>.<br>Expand your aura an amount of tiles equal to your WIL away from you. <br>Any attacks that hit or pass though that space automatically hits your aura, blocking half the damage.<br>You may Aura Block as normal, absorbing the entire attack<br>Keeping your aura expanded costs 3 mana per turn</td><td><a href="Arcane Feats.html#extend-aura">Extend Aura</a></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="expanded-soulsight">
+                <td>Expanded Soulsight</td><td class="wide-column"><span class='flavor-text'>With some practice observing souls, the range you can use your soulsight on expands.</span><br>Increase the range of your Inspect Soul action to 7 tiles.<br>Your proficiency level in Soul Lore increases (max Master)</td><td><a href="Advantages.html#soulsight">Soulsight</a></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="incanter's-flow">
+                <td>Incanter's Flow</td><td class="wide-column"><span class='flavor-text'>Using the Incanter's stance you've figured out to weave spells into one another.</span><br>When you cast a spell in Incanter's Stance and your last action was to cast another spell, you may spend a focus point to reduce its action cost by 1</td><td><a href="Incanaters Stance.html">Incanaters Stance</a></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="multi-aspect-mastery">
+                <td>Multi-Aspect Mastery</td><td class="wide-column"><span class='flavor-text'>Your skills extends to all aspects of magic. </span><br>You count as having <a href="Arcane Feats.html#basic-elemental-magic">Basic Elemental Magic</a> Feat for all aspects of magic.<br>Learn 5 Apprentice or Adept rank Spells, all from different aspects.</td><td><a href="Arcane Feats.html#basic-elemental-magic">Basic Elemental Magic</a>, for two different aspects</td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="overchannel-spell">
+                <td>Overchannel Spell</td><td class="wide-column"><span class='flavor-text'>You may overchannel spells to levels beyond that you would normally be capable of</span><br>You can spend a focus point to upcast a spell you know one rank beyond your rank<br>Afterwards you gain one level of mana poisoning</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="reinforce-elemental-aura">
+                <td>Reinforce Elemental Aura</td><td class="wide-column"><span class='flavor-text'>Using the energy of your spells, you can maintain your elemental aura without effort.</span><br>When you use Elemental Aura and cast a spell of the same aspect as the aura, you may Sustain the Aura as free action for no cost.</td><td><a href="Arcane Feats.html#elemental-aura">Elemental Aura</a></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="remote-activation">
+                <td>Remote Activation</td><td class="wide-column"><span class='flavor-text'>You can activate magical devices at range using your mana threads.</span><br>You can attach mana threads to objects, and activate magical devices at range<br>If you have a mana thread attached to a creature you can active gadgets and runeguns they are carrying, by making a Channeling roll against their 10 + their crafting.<br>Your proficiency level in Crafting or Channeling increases (max Master)</td><td><a href="Arcane Feats.html#mana-thread">Mana Thread</a></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="spell-sharpshooter">
+                <td>Spell Sharpshooter</td><td class="wide-column"><span class='flavor-text'>You're good at spells that target foes at range.</span><br>You become expert in casting spells with the targeting trait<br>When casting spells with the targeting trait you add 1 to their range</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="compress-spell">
+                <td>Compress Spell</td><td class="wide-column"><span class='flavor-text'>Your dimensionalism studies have led to a way to compress spells in "dimensional bubbles" and keep them for later. </span><br>You learn the Compress Spell Metamagic, ignoring its normal level requirement<br>Your proficiency level in Arcana or Channeling increases (max Master).</td><td>Trained in Arcana</td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="ethereal-threads">
+                <td>Ethereal Threads</td><td class="wide-column"><span class='flavor-text'>Your mana threads are more durable and can go through objects.</span><br>Your mana threads have a max range of 12 and no longer break if the target has full cover, as they phase through matter.<br>Solid Adamantium and special wards may still block your threads<br>Your proficiency level in channeling increases (max Master)</td><td><a href="Arcane Feats.html#mana-thread">Mana Thread</a></td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="forceful-spell-breaking">
+                <td>Forceful Spell Breaking</td><td class="wide-column"><span class='flavor-text'>By pouring more mana into the Spellbreaking you've learned to amplify the chances. </span><br>When you attempt to break a spell you may spend mana equal to its full cost. <br>If you do, add your WIL to the Spellbreaking Check.</td><td><a href="Arcane Feats.html#spellbreaking">Spellbreaking</a></td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="magus-spellcraft">
+                <td>Magus Spellcraft</td><td class="wide-column"><span class='flavor-text'>You learn 2 + your INT magus spells of your choosing. </span><br>You can choose this feat multiple times</td><td></td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="metamagic-expert">
+                <td>Metamagic Expert</td><td class="wide-column"><span class='flavor-text'>You learn 2 + your INT metamagics of your choice. </span><br>When you cast a spell with at least one metamagic you have a +1 bonus to the spellshaping check</td><td><a href="Arcane Feats.html#metamagic-adept">Metamagic Adept</a></td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="spellcasting-savant">
+                <td>Spellcasting Savant</td><td class="wide-column"><span class='flavor-text'>Complex spells aren't as complicated as some say. At least for you</span><br>The complex spell trait only increases the Spellshaping DC for you by 2 (instead of 3)<br>You learn 3 complex spells</td><td>Int 4 or higher</td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="teleportation-expertize">
+                <td>Teleportation Expertize</td><td class="wide-column"><span class='flavor-text'>You're a master at teleportating yourself and others.</span><br>When you cast a spell with the Teleportation trait, increase it's range by 2 tiles. <br>Your proficiency level in spells with Teleportation increases (max Expert). <br>Your proficiency level in arcana or dimensionalism lore increases (max Master). </td><td>Trained in Dimensionalism Lore</td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="improved-design">
+                <td>Improved Design</td><td class="wide-column"><span class='flavor-text'>You've improved your golems skillset</span><br>All of its proficiency levels is set increases (max Expert).<br>Your proficiency level in Crafting or Arcana increases (max Master). </td><td><a href="Advantages.html#golemcrafter">Golemcrafter</a></td><td class="narrow-column">9</td>
+            </tr>
+        
+            <tr id="rapid-spellbreak">
+                <td>Rapid Spellbreak</td><td class="wide-column"><span class='flavor-text'>Spellbreaking comes naturally to you, and you do it swift as the wind</span><br>You have one additional reaction per round, which you may only use to Spellbreak or Recognize spell</td><td><a href="Arcane Feats.html#spellbreaking">Spellbreaking</a></td><td class="narrow-column">10</td>
+            </tr>
+        
+            <tr id="strengthened-elemental-aura">
+                <td>Strengthened Elemental Aura</td><td class="wide-column"><span class='flavor-text'>When you use your elemental aura you may strengthen it. </span><br>This doubles the mana cost to infuse it and sustain it, but increases any resistances it provides by 5 and makes it deal an additional dice of damage</td><td><a href="Arcane Feats.html#elemental-aura">Elemental Aura</a></td><td class="narrow-column">10</td>
+            </tr>
+        
+            <tr id="master-enchanter">
+                <td>Master Enchanter</td><td class="wide-column"><span class='flavor-text'>Enhancement spells become second nature to you and you can strengthen them to speed up allies.</span><br>Your proficiency level with enhancement spells increases (max Master)<br>Creatures (including you) affected by your Enhancement spells may spend a focus point at the start of their turn to become Hastened 1 for that turn </td><td></td><td class="narrow-column">11</td>
+            </tr>
+        
+            <tr id="master-evoker">
+                <td>Master Evoker</td><td class="wide-column"><span class='flavor-text'>Your spells can devaste all large areas</span><br>Your proficiency level with Area spells increases (max Master)<br>When you cast area spells you may increase the size of their damage dice by 1. (d8 to d10 etc)</td><td></td><td class="narrow-column">11</td>
+            </tr>
+        
+            <tr id="master-spellslinger">
+                <td>Master Spellslinger</td><td class="wide-column"><span class='flavor-text'>Your spellslinging skills are renowned</span><br>Your proficiency level with Targeting spells increases (max Master)<br>When casting Targeting spells you can use one metamagic beyond your normal limit<br>You learn one metamagic</td><td></td><td class="narrow-column">11</td>
+            </tr>
+        
+            <tr id="grand-magus-spellcraft">
+                <td>Grand Magus Spellcraft</td><td class="wide-column"><span class='flavor-text'>You learn 2 + your INT grand magus spells of your choosing. </span><br>You can choose this feat multiple times</td><td></td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="master-of-many-magics">
+                <td>Master of Many Magics</td><td class="wide-column"><span class='flavor-text'>You have practiced many types of magic. </span><br>Gain three level 4 or lower Arcane Feats</td><td></td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="metamagic-master">
+                <td>Metamagic Master</td><td class="wide-column"><span class='flavor-text'>You learn four metamagics of your choice. </span><br>You may use any amount of metamagics on a single spell, taking a -1 penalty for each one beyond 3</td><td><a href="Arcane Feats.html#metamagic-expert">Metamagic Expert</a></td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="master-of-threads">
+                <td>Master of Threads</td><td class="wide-column"><span class='flavor-text'>With your mana threads you can ensure no one escapes your spells.</span><br>You learn the Hold By Thread action<br>Your proficiency level in Channeling increases (max Legendary). <br><span class='action-title'>Hold By Thread</span> - <img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/>, when a creature attached by a mana thread attempts to leave its range<br>Make a WIL roll against the creatures Athletics roll.<br>If the creature is moving via spell, use their Spellshaping roll instead.<br>If they are moving by another way, use a fitting roll<br>If you roll higher, you hold them and prevent the movement.</td><td><a href="Arcane Feats.html#ethereal-threads">Ethereal Threads</a></td><td class="narrow-column">14</td>
+            </tr>
+        
+            <tr id="masterwork-golem">
+                <td>Masterwork Golem</td><td class="wide-column"><span class='flavor-text'>Your golem has no imperfections. </span><br>All of its proficiency levels is set increases (max Master).<br>Your proficiency level in Crafting or Arcana increases (max Legendary). </td><td><a href="Arcane Feats.html#improved-design">Improved Design</a></td><td class="narrow-column">14</td>
+            </tr>
+        
+            <tr id="archmage-spellcraft">
+                <td>Archmage Spellcraft</td><td class="wide-column"><span class='flavor-text'>You learn 2 + your INT archmage spells of your choosing. </span><br>You can choose this feat multiple times</td><td></td><td class="narrow-column">16</td>
+            </tr>
+        
+            <tr id="archmage's-versatility">
+                <td>Archmage's Versatility</td><td class="wide-column"><span class='flavor-text'>Your magical expertise makes it easier to cast any spell.</span><br>Your proficiency level with all spells you know is at least Master</td><td></td><td class="narrow-column">16</td>
+            </tr>
+        
+            <tr id="detonate-spell">
+                <td>Detonate Spell</td><td class="wide-column"><span class='flavor-text'>When you attempt a Spellbreak, you can spend a focus point to attempt to detonate the spell.</span><br>On a success you detonate the spell in a burst of mana<br>The caster and adjecant creatures need to make a PHY save or take 1d8 unraveling damage per rank of the spell.<br>Creatures that fail the spell are also mana poisoned 1, or 2 on a critical failure.<br>You can not get back any mana or other resources from spellbreaking when you do this</td><td></td><td class="narrow-column">16</td>
+            </tr>
+        
+            <tr id="signature-spell">
+                <td>Signature Spell</td><td class="wide-column"><span class='flavor-text'>You've mastered a spell beyond any other.</span><br>Your proficiency level with a spell increases (max Legendary)<br>You may use one extra Metamagic when casting that spell and reduce that metamagic DC increase by 1.</td><td></td><td class="narrow-column">16</td>
+            </tr>
+        
+            <tr id="legendary-evoker">
+                <td>Legendary Evoker</td><td class="wide-column"><span class='flavor-text'>Your proficiency level with Area spells increases (max Legendary)</span><br>You can use spend a focus points to reroll the damage of an area spell (as many times as you want)</td><td></td><td class="narrow-column">18</td>
+            </tr>
+        
+            <tr id="legendary-golemsmith">
+                <td>Legendary Golemsmith</td><td class="wide-column"><span class='flavor-text'>Your golem will be studied for generations</span><br>All of its proficiency levels is set increases (max Legendary).<br>Your proficiency level in crafting or arcana increases (max Legendary). </td><td><a href="Arcane Feats.html#masterwork-golem">Masterwork Golem</a></td><td class="narrow-column">18</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

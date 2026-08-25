@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Upgrades</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+							<h3 class="portfolio-title">Runegun Upgrades</h3>
+						</header>
+						<div class="portfolio-text">
+							<p class="portfolio-description">
+								Here's a list of Runegun Upgrades, that can be taken from the Runegun Upgrade feat
+							</p>
+						</div>
+						<hr class="big-divider">
+						<div class="search-container">
+							<input type="text" id="searchInput" placeholder="Search for upgrade..." title="Type in a upgrade name">
+						</div>
+						<div id="runegunUpgrades_table"></div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script src="sortAndSearchTables.js"></script>
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+
+				fetch('sqlite/build/runegunUpgrades.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('runegunUpgrades_table').innerHTML = data;
+						setTableId("runegunUpgrades_table"); // Pass the ID as a string
+					});
+			</script>
+	</body>
+</html>

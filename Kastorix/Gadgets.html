@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Gadgets</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+							<h3 class="portfolio-title">Gadgets</h3>
+							<p class="portfolio-text">List of all gadgets and their effects</p>
+						</header>
+						<div class="portfolio-text">
+							<p class="portfolio-description">
+								Gadgets are a shorthand for various magical trinkets and tools crafted by artificers. Gadgets can be gotten by some feats or acquired in other ways, though simply buying them is often harder than it might appear. Gadgets can only be used a limited amount of times per day, as they need to recover mana over time or be reconstructed.
+							</p>
+						</div>
+						<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Gadget Types</h3>
+									Gadgets are split into five types; bombs, equipment, held items, thrown devices and upgrades to other gadgets. If you need to make a roll for a gadget the modifier is your Crafting skill + your DEX
+									<h3 class="portfolio-subtitle">Bombs</h3>
+									Bombs are gadgets that are thrown to cause an instant effect in an aura. You can throw bombs 3 + your DEX or PHY tiles. 
+									<h3 class="portfolio-subtitle">Equipment</h3>
+									Equipment are gadgets that are worn. You cannot wear gadgets in the same equipment slot (no two boot gadgets) or where you have other permanently enchanted items. Equipped items don’t interfere with your armor. They can be activated with an action, unless specified otherwise. 
+									<h3 class="portfolio-subtitle">Held Items</h3>
+									Held Items are gadgets that need to be held to be used. 
+									<h3 class="portfolio-subtitle">Thrown Devices</h3>
+									Thrown Devices are gadgets that are thrown to cause a lingering effect in an aura around them. You can throw them 3 + your DEX tiles. Their effect lasts for a minute, until you deactivate them as an action or until they are destroyed. 
+									<h3 class="portfolio-subtitle">Upgrades</h3>
+									Upgrades aren’t new gadgets, but rather modifications on old ones. They modify one or more gadgets.
+								</p>
+							</div>
+						<div class="search-container">
+							<input type="text" id="searchInput" placeholder="Search for gadget..." title="Type in a gadget name">
+						</div>
+						<div id="gadgets_table"></div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script src="sortAndSearchTables.js"></script>
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+
+				fetch('sqlite/build/gadgets.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('gadgets_table').innerHTML = data;
+						setTableId("gadgets_table"); // Pass the ID as a string
+					});
+			</script>
+	</body>
+</html>

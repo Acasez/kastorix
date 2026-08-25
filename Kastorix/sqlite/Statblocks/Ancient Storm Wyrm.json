@@ -1,0 +1,83 @@
+{
+  "name": "Ancient Storm Wyrm",
+  "phy": 9,
+  "dex": 2,
+  "int": -2,
+  "wil": 3,
+  "health": "213",
+  "maxHealth": "213",
+  "mana": "322",
+  "maxMana": "322",
+  "aura": "322",
+  "maxAura": "322",
+  "spellsByRank": {
+    "Archmage": []
+  },
+  "currentArmor": null,
+  "saves": {
+    "fortitude": 8,
+    "reflex": 4,
+    "will": 6
+  },
+  "statuses": [],
+  "weapons": [
+    {
+      "name": "Charged Claw",
+      "damage": "3d8 Slashing + 2d10 Lightning",
+      "hands": "1",
+      "range": "2",
+      "traits": "",
+      "description": "",
+      "price": "",
+      "type": "",
+      "weaponGroup": "",
+      "isCustom": true,
+      "proficiency": 6
+    },
+    {
+      "name": "Bite",
+      "damage": "3d10 Piercing",
+      "hands": "",
+      "range": "",
+      "traits": "Grab",
+      "description": "",
+      "price": "",
+      "type": "",
+      "weaponGroup": "",
+      "isCustom": true,
+      "proficiency": 6
+    }
+  ],
+  "actions": [
+    {
+      "name": "Swallow Whole",
+      "actions": "1",
+      "requirement": "The Storm Wyrm has a creature grabbed in its mouth",
+      "effect": "Medium, 3d8 bludgeoning + 2d10 lightning, Rupture DC 30"
+    },
+    {
+      "name": "Lightning Breath",
+      "actions": "2",
+      "requirement": "25 mana, 1d4 turns cooldown",
+      "effect": "The storm wyrm creates a 12 tile cone of lightning. Creatures inside the cone need to make a Reflex save against d20 + 19. Deals 5d12 lightning damage.Targets with metal armor have -5 to the save."
+    },
+    {
+      "name": "Command the Storm",
+      "actions": "-1",
+      "requirement": "Another creature within 10 tiles uses an action or spell with the Lightning aspect",
+      "effect": "The Storm Wyrm attempts to take control of the action, making a WIL Save against the action. On a success it control the targets of the action."
+    }
+  ],
+  "passives": [],
+  "traits": "Draconoid",
+  "senses": "+12, Darkvision, Precise Mana Sense",
+  "languages": "-",
+  "skills": "",
+  "size": "Gargantuan",
+  "resistances": "50 Lightning, 20 Cold and Physical",
+  "speeds": "Swim 8, Storm Flight 10",
+  "equipment": "",
+  "notes": "",
+  "weaponButtons": [],
+  "spellButtons": []
+}

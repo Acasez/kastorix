@@ -1,0 +1,149 @@
+
+    <style>
+        #actionsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="actionsTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Actions</th><th onclick='sortTable(2)'>Trigger</th><th onclick='sortTable(3)'>Description</th><th onclick='sortTable(4)'>Traits</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="strike">
+                <td>Strike</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Make an unarmed or weapon attack, rolling against a Reflex saving throw of the target. </span><br>Attacks after the first each turn take a stacking multiple attack penalty</td><td>Attack</td>
+            </tr>
+        
+            <tr id="stride">
+                <td>Stride</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Move a number of tiles up to your land speed</span></td><td>Move, Traverse</td>
+            </tr>
+        
+            <tr id="leap">
+                <td>Leap</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Jump up to 3 tiles horizontally.</span><br>You may attempt a athletics check to jump farther, DC is 15 for 4 tiles and increases by 5 for each additional tile.</td><td>Move</td>
+            </tr>
+        
+            <tr id="step">
+                <td>Step</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Move one tile without triggering reactions. </span><br>You cannot Step into difficult terrain</td><td>Move</td>
+            </tr>
+        
+            <tr id="fly">
+                <td>Fly</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Move a number of tiles up to your fly speed. </span><br>Flying one tile upwards costs two movement, opposite for downwards</td><td>Move, Traverse</td>
+            </tr>
+        
+            <tr id="glide">
+                <td>Glide</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Move a number of tiles up to your glide speed. </span><br>You cannot Glide upwards and you fall one tile downwards per four you fly forwards (minimum one per round). </td><td>Move, Traverse</td>
+            </tr>
+        
+            <tr id="swim">
+                <td>Swim</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Move a number of tiles up to your swim speed. </span><br>If you don't have a Swim speed you can make a Athletics check, moving half you land speed on Success</td><td>Move, Traverse</td>
+            </tr>
+        
+            <tr id="glide">
+                <td>Glide</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Move a number of tiles up to your glide speed. </span></td><td>Move, Traverse</td>
+            </tr>
+        
+            <tr id="sneak">
+                <td>Sneak</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td></td><td class="wide-column"><span class='flavor-text'>Make a stealth check. </span><br>On a success you can move at half speed while staying hidden<br>You attempt a stealth check with a -5 penalty to move at full speed</td><td>Move, Stealth</td>
+            </tr>
+        
+            <tr id="crawl">
+                <td>Crawl</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Move one tile. </span></td><td>Move</td>
+            </tr>
+        
+            <tr id="cast-a-spell">
+                <td>Cast a Spell</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/>-<img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td></td><td class="wide-column"><span class='flavor-text'>Make a spellshaping check (Int + Dex + Proficiency) compared to the difficulty of the spell. On a success the spell is cast and the result of spellshaping check is used for the DC of any saving throws imposed by the spell</span></td><td>Spellcasting, Magic</td>
+            </tr>
+        
+            <tr id="reinforce-aura">
+                <td>Reinforce Aura</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Spend mana up to your level + your Wil times 2, and restore aura health by that amount.</span></td><td>Aura, Magic</td>
+            </tr>
+        
+            <tr id="aura-block">
+                <td>Aura Block</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/></td><td>When you would partially block damage with your aura.</td><td class="wide-column"><span class='flavor-text'>Block the force of the attack with your Aura, making it take all of the damage. If it breaks your aura, you take the remaining damage.</span></td><td>Aura, Magic</td>
+            </tr>
+        
+            <tr id="harness-mana">
+                <td>Harness Mana</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/>-<img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td></td><td class="wide-column"><span class='flavor-text'>Attempt to absorb mana from the air, making a WIL check compared to mana density of the region. </span><br>On a success you recover some mana.<br>On a critical failure you gain one level of mana poisoning. <br>You have +2 to the check and the mana recovered is increased if you spent two actions to Harness Mana.</td><td>Magic</td>
+            </tr>
+        
+            <tr id="stand-up">
+                <td>Stand Up</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Stand up from Prone</span></td><td>Move</td>
+            </tr>
+        
+            <tr id="drop">
+                <td>Drop</td><td><img class="action-icon" src="/images/Kastorix/Icons/FreeAction.png" alt="Free Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Become Prone.</span></td><td>Move</td>
+            </tr>
+        
+            <tr id="escape">
+                <td>Escape</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Attempt to become free from being Grappled or Restrained. </span><br>Roll Brawling or Acrobatics, one a success you become grappled instead of restrained or free if already grappled.<br>On a critical success you immediately become free</td><td>Attack</td>
+            </tr>
+        
+            <tr id="take-cover">
+                <td>Take Cover</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Gain cover or upgrade cover to Greater Cover</span></td><td></td>
+            </tr>
+        
+            <tr id="identify-spell">
+                <td>Identify Spell</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/></td><td>You see a spell being cast</td><td class="wide-column"><span class='flavor-text'>Make an Arcana check against the spells unmodified spellshaping DC. </span><br>On a critical success you gain a +2 bonus to saves against the spell</td><td>Skill, Arcana</td>
+            </tr>
+        
+            <tr id="stabilize">
+                <td>Stabilize</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>You are holding a medicine kit</td><td class="wide-column"><span class='flavor-text'>Make a Medicine check, DC 10 + Creature's dying Value.</span><br>On a success the creature reduces its dying by 2, or 4 on a Critical Success</td><td>Medicine, Skill</td>
+            </tr>
+        
+            <tr id="drink-potion">
+                <td>Drink Potion</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>You are holding a potion or have one on a potion belt</td><td class="wide-column"><span class='flavor-text'>Gain the benefits of the potion</span></td><td>Item</td>
+            </tr>
+        
+            <tr id="feed-potion">
+                <td>Feed Potion</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>You are holding a potion or have one on a potion belt</td><td class="wide-column"><span class='flavor-text'>Feed an willing adjacent creature a potion, giving them the benefits</span></td><td>Item</td>
+            </tr>
+        
+            <tr id="sustain">
+                <td>Sustain</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Extends the duration of a spell that you are sustaining by 1 turn When you sustain a spell make a spellshaping roll as if you were casting the spell. You cannot fail the spell when sustaining it, but the DC changes to the new spellshaping result Some spells have effects that happen when you sustain such as moving the spell. You cannot sustain a spell more than once per turn, but you can sustain multiple spells in the same turn using multiple sustain actions</span></td><td>Spellcasting, Magic</td>
+            </tr>
+        
+            <tr id="high-jump">
+                <td>High Jump</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Jump up to 2 tiles vertically</span><br>You may attempt a athletics check to jump higher, DC is 18 for 3 tiles and increases by 8 for each additional tile.</td><td></td>
+            </tr>
+        
+            <tr id="recall-knowledge">
+                <td>Recall Knowledge</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Make an Arcana, Crafting, History, Nature or Society to find out what you know about a creature, place or organisation.</span></td><td>Skill</td>
+            </tr>
+        
+            <tr id="battlefield-medicine">
+                <td>Battlefield Medicine</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>You are holding a medicine kit</td><td class="wide-column"><span class='flavor-text'>Make a Mend Wounds Check, but without removing wounded. </span><br>Creatures can only have their health restored by Battlefield Medicine once per day</td><td>Medicine, Skill</td>
+            </tr>
+        
+            <tr id="mend-wounds">
+                <td>Mend Wounds</td><td>10 Minutes</td><td>You are holding a medicine kit</td><td class="wide-column"><span class='flavor-text'>Make a DC 10 medicine check on a target.</span><br>On a success you restore 1d6 + 2 health to the creature and reduce it's wounded value by 1. <br>On a critical success restore twice the amount and reduce wounded by 2.</td><td>Medicine, Skill</td>
+            </tr>
+        
+            <tr id="intimidate">
+                <td>Intimidate</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>With threatening words or gestures, attempt to frighten a foe.</span><br>Make a Intimidation check against their Will save. <br>On a success they are Frightened 1, on a critical success they are Frightened 2</td><td>Skill, Intimidation </td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

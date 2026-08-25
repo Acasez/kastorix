@@ -1,0 +1,237 @@
+
+    <style>
+        #combatManeuversTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="combatManeuversTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Actions</th><th onclick='sortTable(2)'>Traits</th><th onclick='sortTable(3)'>Description</th><th onclick='sortTable(4)'>Prerequisites</th><th onclick='sortTable(5)'>Type</th><th onclick='sortTable(6)'>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="grapple">
+                <td>Grapple</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Brawling, Attack</td><td class="wide-column"><span class='flavor-text'>Make a Brawling check versus an creature's within reach Brawling roll. </span><br>It may defend with a Reflex or Fortitude save instead, taking a -2 penalty to the roll<br>On a success, you Grapple the creature. <br>On a critical success, the creature becomes Restrained instead<br>While you have the creature grabbed, it is immobilized and off-guard 3<br>You can only have one creature grabbed at a time and you cannot grab a creature two or more sizes larger than you.<br>Successfully grappling an already grappled creature Restrains them</td><td>You have one hand free</td><td>Basic</td><td class="narrow-column">0</td>
+            </tr>
+        
+            <tr id="reactive-strike">
+                <td>Reactive Strike</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>You take advantage of a creature moving within your reach.</span><br>Make an attack against the creature with -3 penalty, or -2 if you have agile weapon</td><td>A creature takes a traverse action within the reach of your weapon. </td><td>Basic</td><td class="narrow-column">0</td>
+            </tr>
+        
+            <tr id="shove">
+                <td>Shove</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Brawling, Attack</td><td class="wide-column"><span class='flavor-text'>Make a Brawling check versus an creature's within reach Brawling roll. </span><br>It may defend with a Reflex or Fortitude save instead, taking a -2 penalty to the roll<br>On a success, you push the creature up to 2 tiles away from you. <br>On a critical success, the creature is shoved up to 4 tiles instead<br>You cannot shove a creature two or more sizes larger than you.</td><td>You have one hand free or a weapon with Shove trait</td><td>Basic</td><td class="narrow-column">0</td>
+            </tr>
+        
+            <tr id="trip">
+                <td>Trip</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Brawling, Attack</td><td class="wide-column"><span class='flavor-text'>Make a Brawling check versus an creature's within reach Brawling roll. </span><br>It may defend with a Reflex or Fortitude save instead, taking a -2 penalty to the roll <br>On a success, the creature falls prone.<br>On a critical success, the creature also takes 1d6 bludgeoning damage. <br>You cannot trip a creature two or more sizes larger than you.</td><td>You have one hand free.</td><td>Basic</td><td class="narrow-column">0</td>
+            </tr>
+        
+            <tr id="aim">
+                <td>Aim</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>You carefully aim your next ranged attack, gaining a +2 bonus to the attack roll. </span><br>Additionally you ignore the obscured roll on the attack if the target is obscured<br>The bonus lasts until you move or the start of your next turn.</td><td>You are holding a ranged weapon</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="block-spell">
+                <td>Block Spell</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/></td><td></td><td class="wide-column"><span class='flavor-text'>You position your shield in front of the blast. Make your save with a -4 penalty.</span><br>If you succeed the allies you a providing cover don't have to make the save</td><td>A creature is targeting you and at least one ally, who you providing cover to and you have a shield raised</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="charge">
+                <td>Charge</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>You rush forward, attacking your opponent with your momentum.</span><br>Stride twice, then make a melee strike.</td><td></td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="combat-assessment">
+                <td>Combat Assessment</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/></td><td></td><td class="wide-column"><span class='flavor-text'>As you strike an enemy you quickly assess its capabilities. </span><br>Make a Recall Knowledge check against the creature. </td><td>You hit an enemy with a melee strike</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="cut-down-projectile">
+                <td>Cut Down Projectile</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/></td><td></td><td class="wide-column"><span class='flavor-text'>Attempt to cut down the projectile. </span><br>Make a melee attack against it, instead of a Reflex saving throw</td><td>You are currently parrying and you would make a Reflex saving throw against a projectile</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="defensive-positions">
+                <td>Defensive Positions</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Tactical</td><td class="wide-column"><span class='flavor-text'>Your order your allies to take cover.</span><br>Up to three allies can use their reactions to Step, Stride or Traverse into Cover or use the Block, Parry or Take Cover actions</td><td></td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="double-slice">
+                <td>Double Slice</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>Make two weapon attacks at the same target, one with each weapon. </span><br>If the second weapon is agile it takes no multiple attack penalty, otherwise the penalty is -2.<br>If both attacks hit you combine their damage for the purpose of overcoming resistances.</td><td>You are wielding two melee weapons, one in each hand.</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="duck">
+                <td>Duck</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/></td><td></td><td class="wide-column"><span class='flavor-text'>You attempt to dive out of the effect. You move 1 tile. </span><br>If this causes you to leave the area of the spell you have +5 bonus to the saving throw, otherwise it's a +3 bonus. <br>After making the save you fall prone.</td><td>You are forced to make a Reflex saving throw and have a move speed</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="far-shot">
+                <td>Far Shot</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>You make a shot beyond the normal range of the weapon</span><br>Make a ranged strike at two range increments above the default at no penalty.</td><td></td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="feint">
+                <td>Feint</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>You make a maneuver that appears as strike to throw an enemy off-guard. </span><br>Make a Deception check against an enemies Perception roll.<br>On a success, the creature becomes off-guard 2 for the rest of the turn<br>On a critical success,  the creature becomes off-guard 2 until the start of its next turn</td><td>You have an enemy in reach of one your melee strikes</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="flying-kick">
+                <td>Flying Kick</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td></td><td class="wide-column"><span class='flavor-text'>Leap then make an unarmed Strike at any point during the leap.</span><br>It deals an additional d4 damage</td><td></td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="lunge">
+                <td>Lunge</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>Attack an enemy at the edge of your reach. </span><br>Make a melee strike with a 1 tile bonus range</td><td></td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="measured-strike">
+                <td>Measured Strike</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>You strike with measured practice.</span><br>Make a strike with half your current multiple attack penalty (rounded down)</td><td></td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="movementum-roll">
+                <td>Movementum Roll</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/></td><td>Acrobatics</td><td class="wide-column"><span class='flavor-text'>You use the momentum of the effect that would knock you down to roll forward and kip up.</span><br>Make an Acrobatics against the effect that would knock you prone.<br>On a success you Step once and don't fall prone.<br>On a critical success you also gain a +2 bonus to all saves until the start of your turn</td><td>You would fall prone</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="pommel-strike">
+                <td>Pommel Strike</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>Make an attack with the backend of your weapon using the momentum of your last strike.</span><br>Make a strike with the same MAP as your last attack<br>On a hit it does 1d4 bludgeoning damage or 1d6 if you hold the weapon in both hands<br>If your weapon has the unwieldy trait, this strike ignores that</td><td>You are wielding a weapon in the Polearm or Spear group and you last action was to make a Strike with it</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="protect-ally">
+                <td>Protect Ally</td><td></td><td></td><td class="wide-column"><span class='flavor-text'>Instead of defending yourself you ready to protect your ally.</span><br>Give an adjacent creature a defense bonus equal to the Block value of your shield. <br>You cannot Block and Protect Ally at the same time with the same weapon.</td><td>You are holding a weapon with the Block trait</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="quick-draw">
+                <td>Quick Draw</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>You draw a weapon and strike with in the same movement. </span><br>Draw a weapon and Strike with it.</td><td></td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="rapid-retreat">
+                <td>Rapid Retreat</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Tactical</td><td class="wide-column"><span class='flavor-text'>You order an ally to flee from danger.</span><br>Chose an ally and enemy. The ally can use their reactions to Stride or Traverse to move away from that enemy.<br>They move with a +1 move speed bonus and the chosen enemy has disadvantage on Reactive Strikes from the movement </td><td></td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="riposte">
+                <td>Riposte</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>Take advantage of the opening to attack your opponent. </span><br>Make a Strike at that creature </td><td>You are currently parrying and a creature missed you with a melee strike</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="running-reload">
+                <td>Running Reload</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>You move and reload your weapon simultaneously. </span><br>Stride with a -2 speed penalty and Reload your weapon<br>You can spend a focus point to stride at full speed</td><td></td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="set-weapon">
+                <td>Set Weapon</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>Set your weapon ready to strike a foes that come into your reach.</span><br>If you make a Reactive Strike until the start of the next turn you ignore the penalty on the strike.<br>On a critical hit you deal an additional d6 damage.</td><td></td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="slide-into-cover">
+                <td>Slide Into Cover</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td></td><td class="wide-column"><span class='flavor-text'>With a swift move you move and take cover at once.</span><br>Stride or Step then Take Cover</td><td></td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="snap-shot">
+                <td>Snap Shot</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>Make a quick shot in the heart of battle. </span><br>Make a Strike, ignoring the Volley trait</td><td>You a wielding a weapon with the Volley Trait</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="strike-now!">
+                <td>Strike Now!</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Tactical</td><td class="wide-column"><span class='flavor-text'>You order an ally to strike at an opportune moment.</span><br>Choose an ally, they can use a reaction to make an attack at a target you both can see.</td><td></td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="sweep">
+                <td>Sweep</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>Make a strike against two adjacent enemies in range of your melee weapon. </span><br>They make their own Reflex saving throw against the attack.<br>This counts as two attacks for your MAP</td><td>You are wielding a melee weapon with Sweep trait</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="tumble-through">
+                <td>Tumble Through</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Acrobatics</td><td class="wide-column"><span class='flavor-text'>You slide through an opponent.</span><br>Make a Acrobatics check against a creature's Reflex save<br>On a success you move through their space without provoking reactive strikes.<br>On a critical success they also become of guard to you until the start of your turn.</td><td>You are adjacent to the creature and your move speed is higher than the tiles it occupies</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="wild-strike">
+                <td>Wild Strike</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>Strike in a wild swing that leaves you open afterward. </span><br>Make a melee Strike and add your PHY again to the damage<br>After that making this Strike you become off-guard 2 until the start of your next turn, or prone if you were already off-guard.</td><td>You are not prone</td><td>Simple</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="blade-dance">
+                <td>Blade Dance</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>You move graceful like a dancer in the flow of combat</span><br>Strike, then Step, then Strike another creature</td><td>You are wielding a weapon that does slashing or piercing damage</td><td>Advanced</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="double-shot">
+                <td>Double Shot</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>You draw two arrows at once and loose them at separate targets.</span><br>Make two attacks on two different targets in range with a weapon in bow group. <br>You have a -2 penalty on both attacks, but your multiple attack penalty increases first after both shots<br>You can spend a focus point to use this as one action</td><td></td><td>Advanced</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="flurry-of-blows">
+                <td>Flurry of Blows</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>Make 3 unarmed strikes. </span><br>Each strike counts towards your MAP, but it increases first after all three</td><td>You have at least one hand free</td><td>Advanced</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="momentum-toss">
+                <td>Momentum Toss</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/></td><td>Brawling, Attack</td><td class="wide-column"><span class='flavor-text'>Make a Brawling check against the creature's Brawling roll. </span><br>It may defend with a Reflex or Fortitude save instead, taking a -2 penalty to the roll<br>If they got a critical failure on their attack they have a -5 penalty the roll<br>On a success, you move the creature to another free square adjacent to you.<br>On a critical success, the creature also falls prone. </td><td>An creature within your unarmed reach attacks misses an attack against you and you have a hand free</td><td>Advanced</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="piercing-thrust">
+                <td>Piercing Thrust</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>You strike through a creature to hit both it and a creature behind.</span><br>Make Strike against two creatures in a line within reach of your weapon.<br>This counts as two attacks for your MAP</td><td>You are wielding a weapon that does piercing damage</td><td>Advanced</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="pincer-movement">
+                <td>Pincer Movement</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Tactical</td><td class="wide-column"><span class='flavor-text'>You know how to outmaneuver your enemies</span><br>Choose two allies, they can use their reactions to Step, Stride or Traverse next to an enemy. <br>If they end their movements on the opposite sides of an enemy, one of them can make a Strike against that enemy</td><td></td><td>Advanced</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="guarded-advance">
+                <td>Guarded Advance</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td></td><td class="wide-column"><span class='flavor-text'>Move protected towards your opponent.</span><br>Block or Parry, then Stride twice. <br>You must end your movement closer to an enemy than you started</td><td></td><td>Advanced</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="pinning-shot">
+                <td>Pinning Shot</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>You shoot or throw your weapon in way that pins an enemy to the ground or wall.</span><br>Make a Strike against a creature. <br>On a hit the creature takes no damage, but is immobilized and off guard until they spend an action to make a DC 10 Athletics or Acrobatics check.<br>On a critical hit the DC is 15</td><td>You are holding a weapon in the Bow, Crossbow or Spear weapon groups</td><td>Advanced</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="predict-their-movement">
+                <td>Predict Their Movement</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Tactical</td><td class="wide-column"><span class='flavor-text'>Attempt to predict a foes next move.</span><br>Make a Tactics Lore roll against the Tactics Lore or Deception of a creature you can see within 10 tiles.<br>On a success you learn the next action the creature is planning to next turn.<br>It can either choose to do that or take -2 penalty to all actions next turn as scrambles to adapt.</td><td></td><td>Advanced</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="quick-parry">
+                <td>Quick Parry</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/></td><td></td><td class="wide-column"><span class='flavor-text'>You draw your weapon in the blink of an eye and parry an opponent's strike.</span><br>You may draw a weapon with the Parry trait from a quick access slot.<br>Then defend against the attack as if you had parried the turn before</td><td>You are forced to make a Reflex saving throw against a melee strike</td><td>Advanced</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="spellbreak-strike">
+                <td>Spellbreak Strike</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>You know how to make a strike to disrupt a sustained spell</span><br>Make a unarmed melee strike or one with a weapon with the channeling trait<br>On a hit, make a INT or WIL check against the targets Fortitude Save, breaking the sustained spell on a success.<br>If you know the spell you may add your proficiency with it to the strike.</td><td></td><td>Advanced</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="stunning-strike">
+                <td>Stunning Strike</td><td><img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/></td><td>Draining, Attack</td><td class="wide-column"><span class='flavor-text'>Make a forceful strike against an enemy. </span><br>On a hit they need to make a Fortitude Saving throw or be Stunned 1, or Stunned 2 on a Critical Failure</td><td>You are wielding a weapon that does bludgeoning damage</td><td>Advanced</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="cut-down-spell">
+                <td>Cut Down Spell</td><td><img class="action-icon" src="/images/Kastorix/Icons/Reaction.png" alt="Reaction Symbol"/></td><td></td><td class="wide-column"><span class='flavor-text'>You've learned to cut down spells just like projectiles. </span><br>Make a melee attack against it, instead of a Reflex saving throw</td><td>You are currently parrying and you would make a Reflex saving throw against a targeting spell</td><td>Complex</td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="deadshot">
+                <td>Deadshot</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Attack</td><td class="wide-column"><span class='flavor-text'>You take a moment to focus and take a perfectly aimed shot.</span><br>Make a ranged strike, it does an additional weapon dice of damage</td><td></td><td>Complex</td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="run-and-gun">
+                <td>Run and Gun</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Draining</td><td class="wide-column"><span class='flavor-text'>Stride then Stride or Take Cover, then make an attack with a ranged weapon</span></td><td></td><td>Complex</td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="a-thousand-cuts">
+                <td>A Thousand Cuts</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Blade Art, Attack</td><td class="wide-column"><span class='flavor-text'>You move faster than what should be possible, cutting into an enemy.</span><br>Make a melee attack with an agile weapon.<br>If you hit you may attack again at a -2 penalty, or -1 if you attack with a weapon in your other hand<br>You may keep attacking until you miss, with the multi attack penalty increasing as described above every time</td><td></td><td>Masterwork</td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="crash-of-the-titan">
+                <td>Crash of the Titan</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Blade Art, Attack</td><td class="wide-column"><span class='flavor-text'>Your weapon slams into the ground, creating a shockwave from the impact</span><br>Strike a tile within range, all creatures on and adjacent from it need to make Reflex saves against the attack.<br>Creatures on the slammed tile take an additional 2d10 bludgeoning damage. <br>This bonus is doubled if you were falling or jumping as you did the attack</td><td></td><td>Masterwork</td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="moonlight-crescent">
+                <td>Moonlight Crescent</td><td><img class="action-icon" src="/images/Kastorix/Icons/ThreeActions.png" alt="3 Actions"/></td><td>Blade Art, Attack</td><td class="wide-column"><span class='flavor-text'>You make a strike that seems to extend your weapon beyond its normal reach, cutting into multiple foes</span><br>Make a strike against up to five adjacent enemies in range of your melee weapon with a 1 tile bonus range<br>They make their own Reflex saving throw against the attack.<br>On a hit they take an extra 2d8 damage from the strike</td><td></td><td>Masterwork</td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="serpent-stride">
+                <td>Serpent Stride</td><td><img class="action-icon" src="/images/Kastorix/Icons/TwoActions.png" alt="2 Actions"/></td><td>Blade Art, Attack</td><td class="wide-column"><span class='flavor-text'>Step, Stride, Strike and Parry in any order </span></td><td></td><td>Masterwork</td><td class="narrow-column">12</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

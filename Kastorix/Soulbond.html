@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Soulbond</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="kastorix.css" />
+	<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<div id="header-placeholder"></div>
+	<!-- Main -->
+	<div id="main">
+		<!-- Main Projects -->
+		<section id="Main Projects" class="sectionText">
+			<header>
+				<h3 class="portfolio-title">Soulbond Rules</h3>
+			</header>
+			<div class="portfolio-row">
+				<div class="portfolio-text">
+					<p class="portfolio-description">
+						You have a soulbond, a bond to a magical creature that allows communication, sharing of magic
+						and other benefits. To
+						acquire a soulbond you have to take <a href="Advantages.html#Souldbond">Soulbond</a> advantage
+						and performing a soulbonding ritual in the game.
+						<br>
+						The power of creatures you can soulbond with depends on your level, with more powerful creatures
+						requiring higher levels.
+						<br><br>
+						You can spend one action to give a general command to your soulbond, such as “attack that
+						target” or “follow me”, which it will follow until it gets new commands.
+						You can also spend one or more actions to command it more specifically.
+
+						Soulbonded creatures understand you and will generally follow your commands, but can refuse
+						orders that would needlessly endanger them or go against their will.
+						You can aura block for your soulbond using your own mana. 
+						You can only have one soulbond at a time, and if your soulbond dies you take 2d6 vital damage.
+						<br><br>
+						There are arcane feats to enhance your soulbonded creature and share some of its power, as well
+						as teleport and shield it.
+					</p>
+				</div>
+			</div>
+		</section>
+	</div>
+	<!-- Footer -->
+	<div id="footer">
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+	<!-- Scripts -->
+	<script>
+		fetch('rpgheader.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('header-placeholder').innerHTML = data;
+			});
+	</script>
+</body>
+
+</html>

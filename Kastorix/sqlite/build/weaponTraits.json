@@ -1,0 +1,214 @@
+{
+    "All": [
+        {
+            "name": "Grab",
+            "effect": "If your next action after hitting a creature with this attack is a Grapple Maneuver, it neither counts nor applies multi attack penalties.",
+            "specialAction": "",
+            "type": "Special",
+            "modifiable": ""
+        },
+        {
+            "name": "Improved Grab",
+            "effect": "If your next action after hitting a creature with this attack is a Grapple Maneuver, it costs no action and neither counts nor applies multi attack penalties.",
+            "specialAction": "",
+            "type": "Special",
+            "modifiable": ""
+        },
+        {
+            "name": "Innate",
+            "effect": "You use your WIL instead of PHY when making attacks and damage rolls with this weapon",
+            "specialAction": "",
+            "type": "Special",
+            "modifiable": ""
+        },
+        {
+            "name": "Psionic",
+            "effect": "You use your INT instead of PHY when making attacks and damage rolls with this weapon",
+            "specialAction": "",
+            "type": "Special",
+            "modifiable": ""
+        },
+        {
+            "name": "Agile",
+            "effect": "The multiple attack penalty you take with this weapon -4 per attack instead of -5. The penalty on oppertunity attacks is 1 less",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Aiming Focus",
+            "effect": "When casting spells with a range over 10 tiles, their range increases by 4.",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Bayonet",
+            "effect": "Bayonets are fastened on runegun rifles, and provide an quick melee attack. Their construction means you have -1 penalty on attacks with them",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Block (X)",
+            "effect": "While holding this weapon you have the Block action. ",
+            "specialAction": "1 Action. Get ready to block incoming attacks and spells. You have a +X bonus to your Reflex and Fortitude saves against targeted attacks and non-environmental area effects until the start of next turn.",
+            "type": "",
+            "modifiable": "Yes"
+        },
+        {
+            "name": "Channeling",
+            "effect": "You can still perform somantic component with a hand holding a channeling weapon.",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Deadly (dX)",
+            "effect": "Critical hits with this weapon adds the specified dice to the damage. ",
+            "specialAction": "",
+            "type": "",
+            "modifiable": "Yes"
+        },
+        {
+            "name": "Disarm",
+            "effect": "You make the Disarm Maneuver with this weapon, using its range and the attack bonus you have with it",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Extend (X)",
+            "effect": "You can extend this weapon to the range specified as part of the strike. While extended you have a -2 move speed penalty and cannot make reactive strikes until you take an action to retract it",
+            "specialAction": "",
+            "type": "",
+            "modifiable": "Yes"
+        },
+        {
+            "name": "Finesse",
+            "effect": "You can use your DEX instead of PHY when making attacks with this weapon. PHY is still added to the damage roll (even if its negative)",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Heavy",
+            "effect": "Small or tiny creatures have disadvantage on attacks with this weapon.",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Light",
+            "effect": "You may attempt to hide a light weapon on you as a Slight of Hand action.",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Loud",
+            "effect": "Using this weapon creates a loud burst of noise",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Parry",
+            "effect": "While holding this weapon you have the Parry action.",
+            "specialAction": "1 Action. Get ready to parry. When you are attacked by a melee attack until the start of next turn you may defend with your weapon attack bonus instead of your Reflex save. ",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Precision",
+            "effect": "When targeting weak points the penalty is 2 lower than normal (to a minimum of 1).",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Propulsive",
+            "effect": "You add your PHY bonus to the damage rolls of this weapon",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Ranged ",
+            "effect": "You use your DEX instead of PHY when making attacks with this weapon. No bonus is added to the damage of the weapon (unless it has propulsive)",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Ranged Trip",
+            "effect": "Foes hit by this weapon must make a Fortitude saving throw or fall prone",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Shove",
+            "effect": "Creatures hit by this weapon need to make a Fortitude saving throw or be moved up to 1 tile of attackers choice.",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Slowing (X)",
+            "effect": "Your move speed is reduced by X tiles when holding this.",
+            "specialAction": "",
+            "type": "",
+            "modifiable": "Yes"
+        },
+        {
+            "name": "Sluggish",
+            "effect": "The multiple attack penalty you take with this weapon -6 per attack instead of -5. The penalty on oppertunity attacks is 1 more",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Sweep",
+            "effect": "The multiple attack penalty you take with this weapon is -3 if the last attack was against a different target",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Swing Around",
+            "effect": "You also ignore half the bonus from cover and the Block ability",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Thrown (X)",
+            "effect": "You can throw this weapon up to specifed range as a ranged attack.",
+            "specialAction": "",
+            "type": "",
+            "modifiable": "Yes"
+        },
+        {
+            "name": "Unwieldy",
+            "effect": "While attacking with this weapon you have a -3 penalty if the target is adjacent to you",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Versatile",
+            "effect": "You choose the damage type among those specified. If the damage type has a dice next to it changes the damage roll to that.",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        },
+        {
+            "name": "Volley",
+            "effect": "While attacking with this weapon you have a -3 penalty if the target is within Volley Range",
+            "specialAction": "",
+            "type": "",
+            "modifiable": ""
+        }
+    ]
+}

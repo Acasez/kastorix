@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Combat Maneuvers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+							<h3 class="portfolio-title">Combat Maneuvers</h3>
+							<p class="portfolio-text">
+								Combat Maneuvers are actions you take in combat.
+								Strike and basic combat maneuvers can be done by anyone, while more advanced ones require specific feats. Hostile actions increase your multiple attack penalty or MAP. Each level of MAP gives you a stacking -5 penalty for future attack rolls during the turn. 
+								<br><br>
+								Combat Maneuvers traits
+								<br>Draining; Costs a focus point. 
+								<br>Blade Art; You can do a limited amount of Blade Arts per day.
+							</p>
+						</header>
+						<div class="search-container">
+							<input type="text" id="searchInput" placeholder="Search for feats..." title="Type in a feat name">
+						</div>
+						<div id="combat_Maneuvers_Table"></div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script src="sortAndSearchTables.js"></script>
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+
+				fetch('sqlite/build/combatManeuvers.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('combat_Maneuvers_Table').innerHTML = data;
+						setTableId("combat_Maneuvers_Table"); // Pass the ID as a string
+					});
+			</script>
+	</body>
+</html>

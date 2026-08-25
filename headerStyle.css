@@ -1,0 +1,173 @@
+/* Base styles for the top navigation */
+.topnav {
+	line-height: 1.75em;
+}
+
+.topnav ul {
+	list-style: none;
+	display: flex;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: black;
+}
+
+.topnav ul li {
+	padding: 10px 15px;
+	flex-grow: 1;
+	text-align: center;
+	position: relative;
+	margin-left: 0;
+	font-size: 20px;
+}
+
+.topnav ul li a {
+	color: #ddd;
+	text-decoration: none;
+	transition: all 0.3s;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.topnav ul li a:hover {
+	color: lightgray;
+}
+
+.topnav ul li a[href="index.html"] {
+	color: #E27689 !important;
+	font-weight: bold;
+}
+
+/* First-level dropdown */
+.dropdown_menu {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background-color: black;
+	min-width: 150px;
+	/* Optional: Set a minimum width */
+	z-index: 10;
+	padding: 0;
+	margin: 0;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 0 0 4px 4px;
+}
+
+/* Ensure dropdown menu items wrap text and respect container width */
+.dropdown_menu li a {
+	display: block;
+	/* Makes the anchor a block-level element */
+	white-space: normal !important;
+	/* Allows text to wrap */
+	word-break: break-word;
+	/* Breaks long words if necessary */
+	padding: 2px 4px;
+	/* Add some padding for readability */
+	width: 100%;
+	/* Ensures the anchor fills the container */
+	box-sizing: border-box;
+	/* Includes padding in width calculation */
+	margin-left: -12px;
+}
+
+.topnav ul li:hover>.dropdown_menu {
+	display: block;
+	flex-direction: column;
+}
+
+/* Nested dropdowns */
+.dropdown_menu ul {
+	display: block !important;
+	/* Override flex for dropdowns */
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.dropdown_menu li {
+	position: relative;
+	width: 100%;
+	text-align: left;
+	padding: 8px 12px;
+}
+
+.dropdown_menu .dropdown_menu {
+	left: auto;
+	/* Remove default left positioning */
+	right: 100%;
+	/* Position to the left of the parent */
+	top: 0;
+	margin-left: 0;
+	border-radius: 5%;
+	border-color: aqua;
+}
+
+.dropdown_menu li:hover>.dropdown_menu {
+	display: block;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+	.topnav ul {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.topnav ul li {
+		width: 100%;
+		text-align: left;
+		margin: 0;
+	}
+
+	.dropdown_menu {
+		position: static;
+		width: 100%;
+	}
+
+	.dropdown_menu .dropdown_menu {
+		left: 0;
+		top: 100%;
+	}
+}
+
+/* Add this new media query for medium screens */
+@media screen and (max-width: 1080px) and (min-width: 769px) {
+	.topnav ul {
+		flex-wrap: wrap;
+		/* Allow items to wrap to the next line */
+		justify-content: center;
+		/* Center items horizontally */
+	}
+
+	.topnav ul li {
+		font-size: 16px;
+		/* Scale down from 20px */
+		padding: 8px 10px;
+		/* Reduce padding slightly */
+		flex: 0 1 auto;
+		/* Prevent flex-grow from stretching items */
+		min-width: 120px;
+		/* Ensure dropdown parents have enough width */
+	}
+
+	/* Adjust dropdown positioning for wrapped items */
+	.dropdown_menu {
+		left: 0;
+		min-width: 180px;
+		/* Wider dropdowns for readability */
+	}
+}
+
+.logo {
+	color: var(--color-white);
+	font-size: clamp(12px, 1.5vw, 20px);
+	white-space: nowrap;
+	width: fit-content;
+}
+
+.topnav a.active {
+	font-weight: bold;
+}

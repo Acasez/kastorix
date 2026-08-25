@@ -1,0 +1,101 @@
+
+    <style>
+        #runegunUpgradesTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="runegunUpgradesTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Description</th><th onclick='sortTable(2)'>Prerequisites</th><th onclick='sortTable(3)'>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="scope">
+                <td>Scope</td><td class="wide-column"><span class='flavor-text'>You put a custom designed scope on your runegun.</span><br>It's range is increased by 2 tiles.<br>When you take the Aim Combat Maneuver with it the bonus increases to +3.</td><td>Rifle or Sharpshot Runegun</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="revolving-barrel">
+                <td>Revolving Barrel</td><td class="wide-column"><span class='flavor-text'>You've designed a system to allow you load multiple bullets at once in your runegun</span><br>Your Runegun has the Magazine 3 trait, allowing you to fire three times before reloading.<br>The reload action still only reloads one bullet, so you will need to spend three actions to fully reload</td><td>Pistol or Rifle Runegun</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="agile-gunsmith">
+                <td>Agile Gunsmith</td><td class="wide-column"><span class='flavor-text'>You've modified your pistol to be a quick and graceful weapon.</span><br>You're Runegun Pistol has the Agile trait</td><td>Pistol Runegun</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="integrated-bayonet">
+                <td>Integrated Bayonet</td><td class="wide-column"><span class='flavor-text'>You have integrated an bayonet into the design of your runegun.</span><br>Your runegun has an in built bayonet, which loses the -1 attack penalty.<br>It can be retracted or extended from your runegun as an action<br>It benefits from all the Runes you apply to your runegun.</td><td>Incompatible with Pistol Runegun</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="bigger-booms">
+                <td>Bigger Booms</td><td class="wide-column"><span class='flavor-text'>You can increase the impact of your cannon</span><br>When firing your runegun you can spend 5 mana to make it deal an additional dice of damage<br>After using this you become Off-Guard 2 until the start of your next turn or until you take an action to steady yourself</td><td>Cannon Runegun</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="silencer">
+                <td>Silencer</td><td class="wide-column"><span class='flavor-text'>You've added a sound rune absorbing rune to make your runegun more subtle.</span><br>When firing your runegun you can spend 2 mana to ignore the Loud trait</td><td>Incompatible with Runegun Cannon</td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="mighty-blast">
+                <td>Mighty Blast</td><td class="wide-column"><span class='flavor-text'>You have modified your runegun so you can project a cone of thundering force in front of you</span><br>When firing your runegun you can spend 4 mana to deal a d8 of thunder damage in a 3 tile cone</td><td>Incompatible with Pistol Runegun</td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="blastback">
+                <td>Blastback</td><td class="wide-column"><span class='flavor-text'>You can let the power of your weapon blast you back away from your foes.</span><br>When you strike with your Runegun Cannon you can choose to move back 1 tile away from the direction you fired.<br>Enemies have disadvantage on Reactive Strikes provoked by this movement</td><td>Cannon Runegun</td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="fatal-bullets">
+                <td>Fatal Bullets</td><td class="wide-column"><span class='flavor-text'>Your custom bullets are even more deadly than normal</span><br>Increase the deadly damage dice of your runegun by 2. (d6 to d8, d8 to d10, d10 to d12)<br>Your proficiency level in crafting, intimidation or survival increases (max Expert).</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="six-shot">
+                <td>Six Shot</td><td class="wide-column"><span class='flavor-text'>You've enhanced your barrel capacity.</span><br>Your Runegun now has the Magazine 6 trait.</td><td><a href="Revolving Barrel.html">Revolving Barrel</a></td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="harness-discharged-mana">
+                <td>Harness Discharged Mana</td><td class="wide-column"><span class='flavor-text'>You can empower your Bayonet with discharged mana from the runework of your runegun.</span><br>If you make a bayonet attack as the next action after firing your Runegun it gains a +1 bonus and does and extra d6 damage</td><td><a href="Integrated Bayonet.html">Integrated Bayonet</a></td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="stabilizer">
+                <td>Stabilizer</td><td class="wide-column"><span class='flavor-text'>When stabilized and aiming at stationary targets you almost can't miss</span><br>If you've taken the Aim action and your target hasn't moved since last turn the bonus increases to +5</td><td><a href="Scope.html">Scope</a></td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="fan-the-hammer">
+                <td>Fan The Hammer</td><td class="wide-column"><span class='flavor-text'>You can quickly unload your bullets into a target</span><br>You can have the Fan The Hammer activity.<br>Fan The Hammer, 1 Focus Point, Two Actions <br> - Attack a target within your runegun's first range increment. Keep attacking until you have made four attacks or your Magazine runs out</td><td><a href="Revolving Barrel.html">Revolving Barrel</a></td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="true-deadliness">
+                <td>True Deadliness</td><td class="wide-column"><span class='flavor-text'>One Shot, One Kill</span><br>Further increase the deadly damage dice for your runegun. (d8 to d10, d10 to d12, d12 to 2d8)<br>Your proficiency level in crafting, intimidation or survival increases (max Master).</td><td><a href="Fatal Bullets.html">Fatal Bullets</a></td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="biggest-booms">
+                <td>Biggest Booms</td><td class="wide-column"><span class='flavor-text'>None can dwarf your blasts</span><br>When using Bigger Booms you can spend 15 mana to deal two additional dice of damage instead.</td><td><a href="Bigger Booms.html">Bigger Booms</a></td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="magazine-reload">
+                <td>Magazine Reload</td><td class="wide-column"><span class='flavor-text'>With a complex mechanical system you can now reload your entire magazine at once</span><br>You can spend two actions to reload your runegun magazine</td><td><a href="Revolving Barrel.html">Revolving Barrel</a></td><td class="narrow-column">16</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

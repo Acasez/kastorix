@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Potions</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+							<h3 class="portfolio-title">Potions</h3>
+						</header>
+						<div class="portfolio-text">
+								<p class="portfolio-description">
+									Potions are consumable items that provide effects. Potions can be drunk as an <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/> action.
+									<br>
+									Potions can also be thrown (4 tiles), creatures can do a Reflex saving throw to dodge thrown potions.
+									Drinking multiple potions with the same effect does not stack the effect, but does extend the duration to the last one drunk
+								</p>
+							</div>
+						<div class="search-container">
+							<input type="text" id="searchInput" placeholder="Search for feats..." title="Type in a feat name">
+						</div>
+						<div id="potions_table"></div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script src="sortAndSearchTables.js"></script>
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+					
+				fetch('sqlite/build/potions.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('potions_table').innerHTML = data;
+						setTableId("potions_table"); // Pass the ID as a string
+					});
+			</script>
+	</body>
+</html>

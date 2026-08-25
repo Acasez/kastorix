@@ -1,0 +1,172 @@
+{
+    "All": [
+        {
+            "name": "Anti-Tampering",
+            "effect": "The item cannot be affected by Manipulation spells such as Ferrokinesis",
+            "item": "All",
+            "price": 20,
+            "level": 1,
+            "requirement": "",
+            "striking": "",
+            "auraCleaving": "",
+            "elementalWard": "",
+            "hardening": ""
+        },
+        {
+            "name": "Spellguard",
+            "effect": "The shield provides an extra +1 bonus to saving throws against spells and magical effects when blocking",
+            "item": "Shield",
+            "price": 60,
+            "level": 2,
+            "requirement": "",
+            "striking": "",
+            "auraCleaving": "",
+            "elementalWard": "",
+            "hardening": ""
+        },
+        {
+            "name": "Elemental Ward",
+            "effect": "The armor increases its resistance to one element by 3 for Light Armor or 5 for Heavy Armor",
+            "item": "Armor",
+            "price": 50,
+            "level": 2,
+            "requirement": "",
+            "striking": "",
+            "auraCleaving": "",
+            "elementalWard": 1,
+            "hardening": ""
+        },
+        {
+            "name": "Striking",
+            "effect": "The weapon has an item bonus of +1 to hit",
+            "item": "Weapon",
+            "price": 40,
+            "level": 2,
+            "requirement": "",
+            "striking": 1,
+            "auraCleaving": "",
+            "elementalWard": "",
+            "hardening": ""
+        },
+        {
+            "name": "Hardening",
+            "effect": "The armor increases its resistance to physical damage by 1 for Light Armor and 2 for Heavy Armor",
+            "item": "Armor",
+            "price": 50,
+            "level": 2,
+            "requirement": "",
+            "striking": "",
+            "auraCleaving": "",
+            "elementalWard": "",
+            "hardening": 1
+        },
+        {
+            "name": "Aura Cleaving",
+            "effect": "The weapon does an extra damage dice to auras (This also increases the amount of dice for the deadly trait)",
+            "item": "Weapon",
+            "price": 60,
+            "level": 4,
+            "requirement": "",
+            "striking": "",
+            "auraCleaving": 1,
+            "elementalWard": "",
+            "hardening": ""
+        },
+        {
+            "name": "Greater Elemental Ward",
+            "effect": "The armor increases its resistance to one element by 6 for Light Armor or 10 for Heavy Armor",
+            "item": "Armor",
+            "price": 400,
+            "level": 6,
+            "requirement": "[Elemental Ward]",
+            "striking": "",
+            "auraCleaving": "",
+            "elementalWard": 2,
+            "hardening": ""
+        },
+        {
+            "name": "Greater Striking",
+            "effect": "The weapon has an item bonus of +2 to hit",
+            "item": "Weapon",
+            "price": 500,
+            "level": 6,
+            "requirement": "[Striking]",
+            "striking": 2,
+            "auraCleaving": "",
+            "elementalWard": "",
+            "hardening": ""
+        },
+        {
+            "name": "Greater Hardening",
+            "effect": "The armor increases its resistance to physical damage by 2 for Light Armor and 4 for Heavy Armor",
+            "item": "Armor",
+            "price": 1000,
+            "level": 8,
+            "requirement": "[Hardening]",
+            "striking": "",
+            "auraCleaving": "",
+            "elementalWard": "",
+            "hardening": 2
+        },
+        {
+            "name": "Greater Aura Cleaving",
+            "effect": "The weapon does two extra damage dice to auras",
+            "item": "Weapon",
+            "price": 2500,
+            "level": 10,
+            "requirement": "[Aura Cleaving]",
+            "striking": "",
+            "auraCleaving": 2,
+            "elementalWard": "",
+            "hardening": ""
+        },
+        {
+            "name": "Major Elemental Ward",
+            "effect": "The armor increases its resistance to one element by 12 for Light Armor or 20 for Heavy Armor",
+            "item": "Armor",
+            "price": 6000,
+            "level": 13,
+            "requirement": "[Greater Elemental Ward]",
+            "striking": "",
+            "auraCleaving": "",
+            "elementalWard": 3,
+            "hardening": ""
+        },
+        {
+            "name": "Major Striking",
+            "effect": "The weapon has an item bonus of +3 to hit",
+            "item": "Weapon",
+            "price": 7000,
+            "level": 13,
+            "requirement": "[Greater Striking]",
+            "striking": 3,
+            "auraCleaving": "",
+            "elementalWard": "",
+            "hardening": ""
+        },
+        {
+            "name": "Greater Hardening",
+            "effect": "The armor increases its resistance to physical damage by 3 for Light Armor and 6 for Heavy Armor",
+            "item": "Armor",
+            "price": 9000,
+            "level": 14,
+            "requirement": "[Hardening]",
+            "striking": "",
+            "auraCleaving": "",
+            "elementalWard": "",
+            "hardening": 1
+        },
+        {
+            "name": "Major Aura Cleaving",
+            "effect": "The weapon does three extra damage dice to auras",
+            "item": "Weapon",
+            "price": 15000,
+            "level": 16,
+            "requirement": "[Greater Aura Cleaving]",
+            "striking": "",
+            "auraCleaving": 3,
+            "elementalWard": "",
+            "hardening": ""
+        }
+    ]
+}

@@ -1,0 +1,100 @@
+{
+    "All": [
+        {
+            "name": "Unarmored",
+            "resistances": "(0) Physical",
+            "weakPointDiff": 0,
+            "penalties": 0,
+            "manaRecovery": "",
+            "traits": "",
+            "description": "",
+            "price": "-",
+            "type": "Unarmored",
+            "phy": "-"
+        },
+        {
+            "name": "Reinforced Cloth",
+            "resistances": "(1) Physical, (1) Elemental",
+            "weakPointDiff": 3,
+            "penalties": -1,
+            "manaRecovery": "",
+            "traits": "Can still add half your DEX to spellshaping checks if you aren't proficient",
+            "description": "Commonly used by adventurers unused to heavier armor.",
+            "price": "3 gp",
+            "type": "Light",
+            "phy": "-"
+        },
+        {
+            "name": "Hide Armor",
+            "resistances": "(2) Physical, (2) Elemental",
+            "weakPointDiff": 4,
+            "penalties": -1,
+            "manaRecovery": "",
+            "traits": "",
+            "description": "Tough leather armor made from the hides of large animals. Popular among rangers and hunters.",
+            "price": "5 gp",
+            "type": "Light",
+            "phy": 0
+        },
+        {
+            "name": "Leather Lamellar",
+            "resistances": "(4) Physical, (4) Elemental",
+            "weakPointDiff": 6,
+            "penalties": -2,
+            "manaRecovery": "",
+            "traits": "",
+            "description": "Overlapping leather plates provide good all-round protection, without limiting mana recovery",
+            "price": "12 gp",
+            "type": "Light",
+            "phy": 1
+        },
+        {
+            "name": "Chain Mail",
+            "resistances": "(6) Slashing, (6) Piercing, (3) Bludgeoning, (2) Cold, (2) Fire, (2) Acid, (1) Thunder",
+            "weakPointDiff": 4,
+            "penalties": -2,
+            "manaRecovery": "1/2",
+            "traits": "",
+            "description": "Interlocking metal rings provide good all-round protection, but are less effective against heavy blows and spells.",
+            "price": "5 gp",
+            "type": "Heavy",
+            "phy": 1
+        },
+        {
+            "name": "Splint Mail",
+            "resistances": "(7) Slashing, (7) Piercing, (4) Bludgeoning, (3) Cold, (3) Fire, (3) Acid, (2) Thunder",
+            "weakPointDiff": 5,
+            "penalties": -2,
+            "manaRecovery": "1/3",
+            "traits": "",
+            "description": "Metal plates riveted to leather, designed to deflect spells and blows.",
+            "price": "10 gp",
+            "type": "Heavy",
+            "phy": 2
+        },
+        {
+            "name": "Half Plate",
+            "resistances": "(8) Slashing, (8) Piercing, (4) Bludgeoning, (2) Cold, (2) Fire, (2) Acid, (1) Thunder",
+            "weakPointDiff": 5,
+            "penalties": -2,
+            "manaRecovery": "1/2",
+            "traits": "",
+            "description": "A hybrid of plate and leather, favored by dedicated battle-mages. Unlike the protection of full platemail, it has more weak points to be exploited by clever enemies.",
+            "price": "20 gp",
+            "type": "Heavy",
+            "phy": 2
+        },
+        {
+            "name": "Plate Mail",
+            "resistances": "(10) Slashing, (10) Piercing, (5) Bludgeoning, (3) Cold, (3) Fire, (2) Acid, (2) Thunder",
+            "weakPointDiff": 8,
+            "penalties": -3,
+            "manaRecovery": "1/3",
+            "traits": "",
+            "description": "Full plate provides the greatest protection and has fewer weak spots to target. Being encased in metal is dampens mana recovery though, making it rarely used by mages, but favored by some knight orders.",
+            "price": "50 gp",
+            "type": "Heavy",
+            "phy": 3
+        }
+    ]
+}

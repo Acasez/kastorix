@@ -1,0 +1,73 @@
+
+    <style>
+        #speciesTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="speciesTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Size</th><th onclick='sortTable(2)'>Health</th><th onclick='sortTable(3)'>Mana</th><th onclick='sortTable(4)'>Trait One</th><th onclick='sortTable(5)'>Trait One Description</th><th onclick='sortTable(6)'>Trait Two</th><th onclick='sortTable(7)'>Trait Two Description</th><th onclick='sortTable(8)'>Trait Three</th><th onclick='sortTable(9)'>Trait Three Description</th><th onclick='sortTable(10)'>Trait Four</th><th onclick='sortTable(11)'>Trait Four Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="naga">
+                <td>Naga</td><td>Medium</td><td>8</td><td>13</td><td>Serpentine Body</td><td>Nagas unique form leave them well adapted for grappling<br>When you have a target grappled, your hands are still free.<br>You have +3 saves to saves against becoming and escaping grappled or restrained. </td><td>Claws</td><td>Nagas sharp claws make for good weapons in a pinch<br>Unarmed Attack. <br>Deals 1d4 slashing damage. (Finesse, Agile)</td><td>Magical Talents</td><td>Nagas are one of the most magically inclined species and most nagas pick up at least some spells<br>Learn two apprentice level spells</td><td>Slither</td><td>Nagas are slightly slower than most, but can move in bursts of motion that make them hard to track<br>4 Tiles Land Speed<br>You can Step 2 tiles, or 1 tile onto difficult terrain<br></td>
+            </tr>
+        
+            <tr id="yirte">
+                <td>Yirte</td><td>Small</td><td>7</td><td>13</td><td>Forest Climber</td><td>Yirtes live in the forests and jungles, and are used to climbing the trees of their homeland<br>4 tiles climbing speed</td><td>Claws</td><td>Unarmed Attack. <br>Deals 1d4 slashing damage. (Finesse, Agile)</td><td>Quick</td><td>6 Tiles Land Speed</td><td>Natural Camouflage</td><td>You have +3 bonus to stealth checks when hiding among foliage and plantlife</td>
+            </tr>
+        
+            <tr id="gnome">
+                <td>Gnome</td><td>Small</td><td>6</td><td>14</td><td>Absorb magic</td><td>Gnomes natural connection to magic allow them to absorb magical effects<br>Reaction, when you take elemental damage Reduce it by 1d4. Increases by 1d4 every other level. Twice per day.</td><td>Font of Knowledge</td><td>Become trained in one intelligence skill of your choice. Can change it on level up</td><td>Ever Tinkerers</td><td>You have one level one <a href="Gadget.html">Gadget</a>.<br>If stolen or destroyed you can make a new one with an hours downtime. </td><td></td><td></td>
+            </tr>
+        
+            <tr id="vesper">
+                <td>Vesper</td><td>Medium</td><td>6</td><td>12</td><td>Flight</td><td>Vespers are the only sapient humanoid species that can fly, though their fighting abilities are limited while they do<br>4 tile flying speed, cannot be used while wearing heavy armored or encumbered<br>You cannot use two handed weapons while flying<br>You take a -3 penalty on other attacks or spellshaping checks while flying using their natural flight</td><td>Cave Eyes</td><td>Having lived for long in the dark caves, Vespers see well in darker environments<br>You have low-light vision</td><td>Sensitive Ears</td><td>While not true echolocation Vespers ears are sensitive, though this makes loud noises dangerous.<br>You have a +3 bonus on perception relying on hearing.<br>-3 Penalty on saves against effects that does thunder damage or inflict the defined condition</td><td>Lightweight Bones</td><td>Vespers lightweight bones make them bad brawlers and leave them struggling in heavy winds<br>You count as one size smaller when it comes to grappling<br>-3 penalty on saves against wind effects while flying</td>
+            </tr>
+        
+            <tr id="human">
+                <td>Human</td><td>Medium</td><td>9</td><td>12</td><td>Endurance</td><td>Humans are enduring, pressing beyond their limits<br>The first time you would be fatigued each day ignore it</td><td>Natural Ambition</td><td>Gain one more Level 1 <a href="General Feats.html">General Feats</a></td><td></td><td></td><td></td><td></td>
+            </tr>
+        
+            <tr id="dragonkin">
+                <td>Dragonkin</td><td>Medium</td><td>9</td><td>12</td><td>Tail</td><td>Dragonkin can use their powerful tail to stand firm against blows that would move them<br>Reaction, when you save against being knocked prone, off-guard or moved against your will, Add your PHY to the roll </td><td>Dragons Claw</td><td>Dragonkin have sharper claws, though perhaps with less finesse<br>Unarmed Attack. <br>Deals 1d6 slashing damage. (Agile)</td><td>Scales</td><td>You have a +1 bonus to Reflex and Fortitude saving throws.</td><td>Proud Bearing</td><td>Once per day you can add +2 to a D20 roll.<br>If you critically fail on this on roll you become frightened 1</td>
+            </tr>
+        
+            <tr id="aruna">
+                <td>Aruna</td><td>Medium</td><td>6</td><td>14</td><td>Glide</td><td>Aruna wings cannot provide true flight, but they can glide between <br>You have a 6 tile Glide speed when not restrained. <br>When falling, you can use a reaction to spread your wingarms, preventing any fall damage.</td><td>Talons</td><td>Unarmed Attack. <br>Deals 1d4 slashing damage. (Finesse, Agile)</td><td>Child of the Archipelago</td><td>You have a 4 tile swim speed. <br>You can hold your breath for a minute plus twice your PHY rounds.</td><td></td><td></td>
+            </tr>
+        
+            <tr id="troll">
+                <td>Troll</td><td>Medium</td><td>10</td><td>12</td><td>Regeneration</td><td>Trolls have a natural regeneration that they can channel to recover<br>Can spend a minute to regenerate a 1d8 health. <br>Twice per long rest.</td><td>Though Hide</td><td>The through hide of trolls allow them shrug of damage<br>Has resistance 2 to physical damage. </td><td>Bad Eyesight</td><td>Whenever you force a creature 8 or more tiles away to make a Reflex or Fortitude saving throw, they have a +2 bonus to the save.<br>-3 To visual perception checks targeting things beyond 8 tiles</td><td></td><td></td>
+            </tr>
+        
+            <tr id="brannur">
+                <td>Brannur</td><td>Medium</td><td>10</td><td>13</td><td>Strong Build</td><td>You have a +2 bonus to athletics checks to carry and break things.</td><td>Red Eyes</td><td>The red eyes of brannur allow them to see in dark. It has scared many foes<br>You have low-light vision.<br>You can make visual intimidation checks without penalties</td><td>Formidable</td><td>Once per day you may choose to reroll a saving throw.</td><td></td><td></td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

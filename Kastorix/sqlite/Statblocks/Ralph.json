@@ -1,0 +1,103 @@
+{
+  "name": "Ralph",
+  "phy": 5,
+  "dex": 1,
+  "int": -4,
+  "wil": 1,
+  "health": 28,
+  "maxHealth": 28,
+  "mana": 17,
+  "maxMana": 13,
+  "aura": 19,
+  "maxAura": 13,
+  "spellsByRank": {
+    "Apprentice": [],
+    "Adept": [],
+    "Magus": [],
+    "GrandMagus": [],
+    "Archmage": []
+  },
+  "currentArmor": null,
+  "saves": {
+    "fortitude": 4,
+    "reflex": 0,
+    "will": 0
+  },
+  "statuses": [],
+  "weapons": [
+    {
+      "name": "Bite",
+      "damage": "2d6 Piercing",
+      "hands": "",
+      "range": "",
+      "traits": "Grab,Agile",
+      "description": "",
+      "price": "",
+      "type": "",
+      "weaponGroup": "",
+      "isCustom": true,
+      "proficiency": 2
+    },
+    {
+      "name": "Stomp",
+      "damage": "2d6 Bludgeoning",
+      "hands": "",
+      "range": "1",
+      "traits": "Deadly",
+      "description": "",
+      "price": "",
+      "type": "",
+      "weaponGroup": "",
+      "isCustom": true,
+      "proficiency": 2
+    }
+  ],
+  "actions": [
+    {
+      "name": "Trample",
+      "actions": "2",
+      "requirement": "",
+      "effect": "The hydra strides twice. It makes a Stomp attack against any creature it moves over as part of this movement. "
+    },
+    {
+      "name": "Biting Frenzy",
+      "actions": "3",
+      "requirement": "1d4 turn cooldown",
+      "effect": "The hydra makes one Bite attack for each head it has. Attacks made against unique targets only increase the MAP by 2."
+    },
+    {
+      "name": "Always more heads",
+      "actions": "1",
+      "requirement": "The hydra starts its turn with a head destroyed but not cauterized and less than 9 heads.",
+      "effect": "The Hydra spends 7 mana. It's destroyed head grows into to two more. "
+    }
+  ],
+  "passives": [
+    {
+      "name": "Hydra Regeneration",
+      "requirement": "",
+      "effect": "The Hydra spends 1 mana each turn to regenerate 8 health (no action) spread among its body and heads. It cannot use this ability if it took fire*, lightning or acid damage last turn. \n*Heat damage (fire damage while underwater) does not disable the regeneration."
+    },
+    {
+      "name": "Reactive Heads",
+      "requirement": "",
+      "effect": "The Hydra has one additional reaction for making reactive strikes for each head it has."
+    },
+    {
+      "name": "Hydra Heads",
+      "requirement": "",
+      "effect": "The Hydra starts with 5 heads, which can be targeted as Precise strike with a +4 defense bonus. Each head has 9 health. If a head is destroyed and not cauterized with fire, acid and lightning it can be restored as usual.\nIf all the heads are destroyed and it cannot grow any back, the hydra dies.  "
+    }
+  ],
+  "traits": "Beast",
+  "senses": "+6 Perception, Low Light Vision",
+  "languages": "",
+  "skills": "Athletics +7, ",
+  "size": "Huge",
+  "resistances": "Physical 2",
+  "speeds": "Swim 6, Land 3",
+  "equipment": "",
+  "notes": "",
+  "weaponButtons": [],
+  "spellButtons": []
+}

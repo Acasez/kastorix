@@ -1,0 +1,123 @@
+{
+    "All": [
+        {
+            "name": "Careful Spell",
+            "spelltype": "",
+            "effect": "Increase the action cost of the spell by 1",
+            "DC": -3,
+            "level": 1
+        },
+        {
+            "name": "Channeled Spell",
+            "spelltype": "",
+            "effect": "Reduce the mana cost of the spell by its rank times your WIL",
+            "DC": 3,
+            "level": 1
+        },
+        {
+            "name": "Close-range Cast",
+            "spelltype": "Targeting",
+            "effect": "You cast the spell in a way to weave in the flow of combat. \nAdjacent creatures have a -1 penalty to their saving throw of the spell instead of a +2 bonus",
+            "DC": 2,
+            "level": 1
+        },
+        {
+            "name": "Distant Spell",
+            "spelltype": "",
+            "effect": "Double the range of the spell.\nIf the spell had a range of touch, it's instead 3 tiles",
+            "DC": 3,
+            "level": 1
+        },
+        {
+            "name": "Expand Spell",
+            "spelltype": "Area",
+            "effect": "Increase the amount of the tiles the spell effects by one row or column. (4x4 to 4x5 for example)",
+            "DC": 3,
+            "level": 1
+        },
+        {
+            "name": "Fuel Spell",
+            "spelltype": "Fire",
+            "effect": "Increase the amount of dice dealt by the spell. You take that dice's damage as Vital damage.",
+            "DC": 0,
+            "level": 1
+        },
+        {
+            "name": "Obscure Spell",
+            "spelltype": "",
+            "effect": "You weave the mana in an unorthodox fashion for the spell, giving any attempts to Identify it a -5 penalty.\nAlternatively you may attempt to make the spell appear as another spell you know. ",
+            "DC": 2,
+            "level": 1
+        },
+        {
+            "name": "Sculpted Spell",
+            "spelltype": "Area",
+            "effect": "Choose one creature in the area of the spell to not be affected by the spell.\n You may choose more than one creature, increasing the Spellshaping DC by one for each extra creature.",
+            "DC": 2,
+            "level": 1
+        },
+        {
+            "name": "Tracing Spell",
+            "spelltype": "Targeting",
+            "effect": "You attach a thread of mana to the target with the spell\nIf the target is in range of a mana thread attach one",
+            "DC": 2,
+            "level": 2
+        },
+        {
+            "name": "Armor Breaking Spell",
+            "spelltype": "",
+            "effect": "You infuse the spell with more force to overwhelm and shatter armor.\nThe instant damage done by the spell ignores resistance equal to its rank + your INT or WIL",
+            "DC": 3,
+            "level": 4
+        },
+        {
+            "name": "Elemental Shift",
+            "spelltype": "",
+            "effect": "Shift the spell's damage type to an aspect you have [Basic Elemental Magic] with",
+            "DC": 3,
+            "level": 4
+        },
+        {
+            "name": "Homing Spell",
+            "spelltype": "Targeting",
+            "effect": "Increase the initial Save of the spell by 3.",
+            "DC": 4,
+            "level": 4
+        },
+        {
+            "name": "Quick Spell",
+            "spelltype": "",
+            "effect": "Reduce the action cost of the spell by 1 (minimum one action)",
+            "DC": 5,
+            "level": 4
+        },
+        {
+            "name": "Sustaining Spell",
+            "spelltype": "",
+            "effect": "The first three turns the spell sustains itself, needing no action from you",
+            "DC": 5,
+            "level": 4
+        },
+        {
+            "name": "Ride the lightning",
+            "spelltype": "Lightning",
+            "effect": "Move to any location the spell hits",
+            "DC": 4,
+            "level": 8
+        },
+        {
+            "name": "Twin Spell",
+            "spelltype": "Targeting",
+            "effect": "Casts the spell at two targets within range, use the same spellshaping for both. \nGives the spell the Draining Trait (it costs twice the mana)",
+            "DC": 6,
+            "level": 8
+        },
+        {
+            "name": "Compressed Spell",
+            "spelltype": "",
+            "effect": "Instead of being cast immediately, the spell is prepared and stored in a dimensional bubble. \nIt can be released later as reaction to any trigger\nAt the end of each turn you hold a Compressed Spell, you pay a third of its mana cost or its cast automatically, centered on you",
+            "DC": 4,
+            "level": 10
+        }
+    ]
+}

@@ -1,0 +1,117 @@
+
+    <style>
+        #conditionsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="conditionsTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Effect</th><th onclick='sortTable(2)'>Type</th><th onclick='sortTable(3)'>Disappears</th><th onclick='sortTable(4)'>Neutrality</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="exhausted">
+                <td>Exhausted</td><td class="wide-column">You have -X penalty to all D20 rolls</td><td>Numeric</td><td>-1 on long rests, -1 on first warm meal per day</td><td>Negative</td>
+            </tr>
+        
+            <tr id="frightened">
+                <td>Frightened</td><td class="wide-column">You have -X penalty to all D20 rolls</td><td>Numeric</td><td>-1 per turn</td><td>Negative</td>
+            </tr>
+        
+            <tr id="quickened">
+                <td>Quickened</td><td class="wide-column">You have X extra actions each turn<br>You have a +2X bonus on all D20 rolls made as part of reactions</td><td>Numeric</td><td>Timed/Conditional</td><td>Positive</td>
+            </tr>
+        
+            <tr id="slowed">
+                <td>Slowed</td><td class="wide-column">You have X fewer actions each turn. <br>You have a -2X penalty on all D20 rolls made as part of reactions</td><td>Numeric</td><td>Timed/Conditional</td><td>Negative</td>
+            </tr>
+        
+            <tr id="mana-poisoned">
+                <td>Mana Poisoned</td><td class="wide-column">You take X damage whenever you cast a spell or spend mana</td><td>Numeric</td><td>-1 per hour</td><td>Negative</td>
+            </tr>
+        
+            <tr id="dying">
+                <td>Dying</td><td class="wide-column">You only have one action per turn. <br>At the end of your turn you roll a Death Saving Throw, increasing dying on a failure and decreasing on success<br>You die if you reach Dying 4</td><td>Numeric</td><td>-1 per Successful Death Saving Throw</td><td>Negative</td>
+            </tr>
+        
+            <tr id="wounded">
+                <td>Wounded</td><td class="wide-column">If you become you Dying you start at X more Dying</td><td>Numeric</td><td>-1 on long rests or successful Medicine checks</td><td>Negative</td>
+            </tr>
+        
+            <tr id="off-guard">
+                <td>Off-Guard</td><td class="wide-column">You have a -X penalty to all saves</td><td>Numeric</td><td>Timed/Conditional</td><td>Negative</td>
+            </tr>
+        
+            <tr id="prone">
+                <td>Prone</td><td class="wide-column">Your Off-Guard 3 and you have -3 penalty to attack rolls. <br>You can only move by Crawling 1 tile</td><td>Binary</td><td>When you stand up</td><td>Negative</td>
+            </tr>
+        
+            <tr id="grappled">
+                <td>Grappled</td><td class="wide-column">You cannot move and are Off-Guard 2</td><td>Binary</td><td>Escape action</td><td>Negative</td>
+            </tr>
+        
+            <tr id="restrained">
+                <td>Restrained</td><td class="wide-column">You cannot move and are Off-Guard 3. <br>You cannot add your DEX to spellshaping checks and have disadvantage attacks target other than the one that restrains you </td><td>Binary</td><td>Escape action</td><td>Negative</td>
+            </tr>
+        
+            <tr id="stunned">
+                <td>Stunned</td><td class="wide-column">You lose the next X actions. <br>You cannot take reactions while stunned</td><td>Numeric</td><td>Until the stun has worn off</td><td>Negative</td>
+            </tr>
+        
+            <tr id="dazzled">
+                <td>Dazzled</td><td class="wide-column">You have a -5 penalty visual perception checks and -2 penalty on ranged attacks and spells</td><td>Binary</td><td>Timed/Conditional</td><td>Negative</td>
+            </tr>
+        
+            <tr id="blinded">
+                <td>Blinded</td><td class="wide-column">You cannot do visual visual perception checks. <br>You cannot target target creatures at range if you don't have another precise sense</td><td>Binary</td><td>Timed/Conditional</td><td>Negative</td>
+            </tr>
+        
+            <tr id="stupefied">
+                <td>Stupefied</td><td class="wide-column">You have -X penalty to all INT based D20 rolls</td><td>Numeric</td><td>-1 per turn</td><td>Negative</td>
+            </tr>
+        
+            <tr id="clumsy">
+                <td>Clumsy</td><td class="wide-column">You have -X penalty to all DEX based D20 rolls</td><td>Numeric</td><td>-1 per turn</td><td>Negative</td>
+            </tr>
+        
+            <tr id="weakened">
+                <td>Weakened</td><td class="wide-column">You have -X penalty to all PHY based D20 rolls</td><td>Numeric</td><td>-1 per turn</td><td>Negative</td>
+            </tr>
+        
+            <tr id="drained">
+                <td>Drained</td><td class="wide-column">You have -X penalty to all WIL based D20 rolls</td><td>Numeric</td><td>-1 per turn</td><td>Negative</td>
+            </tr>
+        
+            <tr id="flanked">
+                <td>Flanked</td><td class="wide-column">You are Off-Guard 2</td><td>Binary</td><td></td><td>Negative</td>
+            </tr>
+        
+            <tr id="wet">
+                <td>Wet</td><td class="wide-column">You take half damage of any fire damage you would take.<br>You take 50% extra lightning and cold damage.</td><td>Binary</td><td></td><td>Negative</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

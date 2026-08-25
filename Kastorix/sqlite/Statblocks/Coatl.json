@@ -1,0 +1,299 @@
+{
+  "name": "Coatl",
+  "phy": -1,
+  "dex": 4,
+  "int": 6,
+  "wil": 6,
+  "health": 14,
+  "maxHealth": 13,
+  "mana": 124,
+  "maxMana": 124,
+  "aura": 124,
+  "maxAura": 124,
+  "spellsByRank": {
+    "Apprentice": [
+      {
+        "name": "Gust",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>-<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/ThreeActions.png\" alt=\"3 Actions\"/>",
+        "aspects": "Air",
+        "traits": "Targeting",
+        "range": "10",
+        "target": "One creature or object",
+        "duration": "-",
+        "effect": "Creates a sudden burst of wind that can push away small objects, unbalance foes, or snuff out small flames. If the target is a creature it must make a Reflex or Fortitude save. \n Success: Target is knocked back 1 tile or knocked off-guard 1 (targets choice)\n Failure: Target is knocked back 2 tiles and knocked off-guard 2\n Critical Failure: Target is knocked back 4 tiles and knocked prone\nA light object is pushed 4 tiles back. This spell cannot push large or larger creatures. You may increase the actions spent on the spell to increase the amount of tiles of knockback by 2 for each action.",
+        "upcast": "",
+        "rank": "(1) Apprentice",
+        "selectedRunes": [],
+        "proficiency": 8
+      },
+      {
+        "name": "Blinding Flash",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+        "aspects": "Light",
+        "traits": "Targeting",
+        "range": "10",
+        "target": "One Creature",
+        "duration": "Up to one minute",
+        "effect": "Send a blinding flash of light at a creature. It must make a Fortitude save \n Success: Target is dazzled for one turn.\n Failure: Target is blinded for one turn and dazzled for one minute \n Critical Failure: Target is blinded for one minute\nWhile affected by this spell, the target can spend one action to attempt to redo the save, removing the remaining effects on a success.",
+        "upcast": "",
+        "rank": "(1) Apprentice",
+        "selectedRunes": [],
+        "proficiency": 8
+      },
+      {
+        "name": "Flameshape",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>-<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/ThreeActions.png\" alt=\"3 Actions\"/>",
+        "aspects": "Fire",
+        "traits": "Manipulation",
+        "range": "3",
+        "target": "-",
+        "duration": "-",
+        "effect": "Can be used to light candles, create patterns, or manipulate flames for visual effects. \nCannot be used to deal damage directly. \nCan be cast as a Complex spell to also change the color of fire. ",
+        "upcast": "By Rank: You can control an additional fire",
+        "rank": "(1) Apprentice",
+        "selectedRunes": [],
+        "proficiency": 8
+      }
+    ],
+    "Adept": [
+      {
+        "name": "Levitate",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+        "aspects": "Air",
+        "traits": "Enchantment",
+        "range": "Self",
+        "target": "One Creature",
+        "duration": "Sustained, up to 1 minute",
+        "effect": "You defy gravity and levitate the target 1 tile off the ground. When you sustain you can move the target up or down 10 feet. \nA creature floating in the air from levitate takes a -2 circumstance penalty to attack rolls, but can spend an Interact action to stabilize itself and negate this penalty for the remainder of its turn.\nIf the target is adjacent to a fixed object or terrain of suitable stability, it can move across the surface by climbing (if the surface is vertical, like a wall) or crawling (if the surface is horizontal, such as a ceiling). \nCreatures with a Glide speed have a Flight speed when affected by this spell.",
+        "upcast": "",
+        "rank": "(2) Adept",
+        "selectedRunes": [],
+        "proficiency": 8
+      },
+      {
+        "name": "Whirlwind",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/ThreeActions.png\" alt=\"3 Actions\"/>",
+        "aspects": "Air",
+        "traits": "Area, Complex",
+        "range": "10",
+        "target": "-",
+        "duration": "Sustained, up to 1 minute",
+        "effect": "Creates a whirlwind in a 3x3 tile area. \nCreatures within the whirlwind must make a Fortitude save at the start of their turn: \n Failure: The creature is lifted 2 tiles into the air and takes 2d6 bludgeoning damage. \n Critical Failure: The creature is lifted 4 tiles into the air and takes 4d6 bludgeoning damage. \nWhen you sustain this you can move the whirlwind up to 3 tiles, carrying creatures inside the whirlwind with it.\nThe first time each turn you move the whirlwind into a creatures space, they must make a Fortitude save",
+        "upcast": "By Rank: Increase the amount of tiles creatures are lifted by 1 and the damage by 1d6",
+        "rank": "(2) Adept",
+        "selectedRunes": [],
+        "proficiency": 8
+      },
+      {
+        "name": "Wind Wall",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+        "aspects": "Air",
+        "traits": "Area",
+        "range": "10",
+        "target": "-",
+        "duration": "Sustained, up to 1 minute",
+        "effect": "Creates a wall of strong wind, 10 tiles long and 3 tiles high. \nThe wall blocks gaseous forms, such as clouds, and imposes a -4 penalty to ranged attack rolls passing through it. \nSmall or smaller creatures attempting to move through the wall must make a Fortitude save or be pushed back 2 tiles.",
+        "upcast": "",
+        "rank": "(2) Adept",
+        "selectedRunes": [],
+        "proficiency": 8
+      }
+    ],
+    "Magus": [
+      {
+        "name": "Air Slice",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+        "aspects": "Air",
+        "traits": "Targeting, Precision",
+        "range": "12",
+        "target": "One Creature",
+        "duration": "-",
+        "effect": "Send out a cutting wind, dealing 3d10 slashing damage with a basic Reflex save.",
+        "upcast": "By Rank: Increase the damage by 1d10",
+        "rank": "(3) Magus",
+        "selectedRunes": [],
+        "proficiency": 8
+      },
+      {
+        "name": "Lightning Bolt",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+        "aspects": "Lightning",
+        "traits": "Targeting",
+        "range": "10",
+        "target": "One Creature or Object",
+        "duration": "",
+        "effect": "Create a bolt of lightning to strike a target in range\nThe target needs to make a basic Reflex save, taking 4d12 lightning damage on failure.\nIf the target is wearing armor made of metal or holding a metal object it makes this save with a -4 modifier, otherwise the modifier is -2.",
+        "upcast": "",
+        "rank": "(3) Magus",
+        "selectedRunes": [],
+        "proficiency": 6
+      },
+      {
+        "name": "Fireball",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+        "aspects": "Fire",
+        "traits": "Area",
+        "range": "8",
+        "target": "-",
+        "duration": "",
+        "effect": "Creates a 4 tiles burst of fire at a location you can see within range.\nIt deals 6d6 fire damage with a basic Reflex save",
+        "upcast": "",
+        "rank": "(3) Magus",
+        "selectedRunes": [],
+        "proficiency": 8
+      },
+      {
+        "name": "Haste",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>-<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/ThreeActions.png\" alt=\"3 Actions\"/>",
+        "aspects": "Arcane",
+        "traits": "Complex, Enchantment",
+        "range": "Self",
+        "target": "Self",
+        "duration": "1 Minute",
+        "effect": "By subtly manipulating the timestream around you can move slightly faster than normal\nYou are quickened 1.\nIf you spend 3 actions on this spell you can target an adjecant willing creature instead",
+        "upcast": "",
+        "rank": "(3) Magus",
+        "selectedRunes": [],
+        "proficiency": 6
+      }
+    ],
+    "GrandMagus": [
+      {
+        "name": "Wind Walk",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/ThreeActions.png\" alt=\"3 Actions\"/>",
+        "aspects": "Air",
+        "traits": "Enchantment",
+        "range": "6",
+        "target": "Up to 6 creatures",
+        "duration": "Up to 1 hour",
+        "effect": "You select up an amount of creatures equal to 4 + your INT (or WIL if cast as an Attuned Spell). You may include yourself.\nThe chosen creatures gain a flight speed equal to their walking speed for the duration.",
+        "upcast": "By Rank: Increase the flying speed by 2",
+        "rank": "(4) Grand Magus",
+        "selectedRunes": [],
+        "proficiency": 8
+      },
+      {
+        "name": "Fiery Body",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+        "aspects": "Fire",
+        "traits": "Enchantment",
+        "range": "Self",
+        "target": "Self",
+        "duration": "Sustained, up to 1 minute",
+        "effect": "Turn your body into fire. \nWhile sustaining this spell you cannot be grappled, restrained or have your movespeed reduced.\nAny creature that hits you with a melee attack takes 3d6 fire damage. \nYour unarmed melee attacks deal an extra 2d6 damage and is all fire damage.\nYou are immune to fire damage and effects from fire spells.\nYou can use a reaction to reform around a damaging attack or effect, increasing the result of a Reflex saving throw one step\nYou have vulnerability 10 to cold damage and damage from water spells. \nWhen in water or restrained by water spells you take 2d6 vital damage at the start of your turn.",
+        "upcast": "",
+        "rank": "(4) Grand Magus",
+        "selectedRunes": [],
+        "proficiency": 8
+      }
+    ],
+    "Archmage": [
+      {
+        "name": "Pyroblast",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+        "aspects": "Fire",
+        "traits": "Area",
+        "range": "Area from Self",
+        "target": "",
+        "duration": "",
+        "effect": "Sends forth a stream of superheated flame in a line.\nThe line is up to 10 tiles long and 1 tile wide.\nAny creatures in the area need to make a Reflex saving throw or take 15d6 fire damage.\nDue to supernatural heat of the spell, fire resistance is half as effective against it",
+        "upcast": "",
+        "rank": "(5) Archmage",
+        "selectedRunes": [],
+        "proficiency": 8
+      },
+      {
+        "name": "Sunbeam",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/ThreeActions.png\" alt=\"3 Actions\"/>",
+        "aspects": "Light",
+        "traits": "Area",
+        "range": "Area from Self",
+        "target": "",
+        "duration": "",
+        "effect": "Create a massive illuminating beam of burning light \nThe beam is a 5 tile wide and 30 tile long.\nAny creatures in the line must make a Fortitude save. \nSuccess: Target is dazzled for one turn and takes 4d6 fire damage\nFailure: Target is blinded for one turn and dazzled for one minute and takes 8d6 fire damage\nCritical Failure: Target is blinded for one minute and takes 16d6 fire damage\nWhile affected by this spell, the target can spend one action to attempt to redo the save, removing the remaining effects on a success.",
+        "upcast": "",
+        "rank": "(5) Archmage",
+        "selectedRunes": [],
+        "proficiency": 8
+      },
+      {
+        "name": "Tornado",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/ThreeActions.png\" alt=\"3 Actions\"/>",
+        "aspects": "Water",
+        "traits": "Area",
+        "range": "10",
+        "target": "",
+        "duration": "Sustained, up to 10 minutes, ",
+        "effect": "Conjure a massive swirling whirlwind that move around and pick up objects.\nThe tornado is 3x3 area, 20 tiles tall. \nCreatures that start their turn or enter the area of the tornade need to make a Reflex or Fortitude saving throw, taking 4d4 bludgeoning damage and being sucked up into the tornado and moved 3 tiles up on a failure.\nCreatures stuck in the tornado are move with it and are off-guard 3. They can spend an action on their turn to attempt to escape, making a Athletics check against the spell. Creatures stuck in the tornado take 4d4 bludgeoning damage and are lifted 3 tiles up in the tornado at the start of their turns.\nWhen you sustain the spell you may move the tornado up to 4 tiles.",
+        "upcast": "",
+        "rank": "(5) Archmage",
+        "selectedRunes": [],
+        "proficiency": 8
+      }
+    ]
+  },
+  "currentArmor": null,
+  "saves": {
+    "fortitude": 4,
+    "reflex": 6,
+    "will": 8
+  },
+  "statuses": [],
+  "weapons": [
+    {
+      "name": "Bite",
+      "damage": "1d6 Piercing",
+      "hands": "-",
+      "range": "1",
+      "traits": "Agile,Finesse,Deadly,Coatl Venom",
+      "description": "",
+      "price": "",
+      "type": "",
+      "weaponGroup": "",
+      "isCustom": true,
+      "proficiency": 6
+    }
+  ],
+  "actions": [
+    {
+      "name": "Quicken Spell",
+      "actions": "0",
+      "requirement": "Once per round",
+      "effect": "The Coatl uses its mastery of magic to cast its next spell for 1 action less. It spends 12 additional mana. "
+    },
+    {
+      "name": "Attune with Lair",
+      "actions": "2",
+      "requirement": "Once per minute.The Coatl is in it's designated lair which is a zone of potent mana",
+      "effect": "The Coatl refuels its mana and aura through an esoteric method. It regains 10d8 mana and aura."
+    }
+  ],
+  "passives": [
+    {
+      "name": "Coatl Venom",
+      "requirement": "",
+      "effect": "When a creature takes piercing damage from a Coatls bite they need to make Fortitude Saving Throw or take 2d8 persistent poison damage. Creatures affected by this poison they are Off-Guard 3"
+    },
+    {
+      "name": "Coatl Lair",
+      "requirement": "The Coatl is in it's  designated lair which is a zone of potent mana",
+      "effect": "The Coatl spends half the mana needed to casts spells. "
+    },
+    {
+      "name": "True Aura",
+      "requirement": "",
+      "effect": "While not Off-Guard the Coatl can always Aura Block without using a reaction"
+    }
+  ],
+  "traits": "",
+  "senses": "Truesight, Perception +12",
+  "languages": "",
+  "skills": "Acrobatics 10, Arcana 11, Nature 11, Insight 10",
+  "size": "Medium",
+  "resistances": "Physical 2, Elemental 4",
+  "speeds": "Fly 6, Land 4, Swim 6",
+  "equipment": "",
+  "notes": "",
+  "weaponButtons": [],
+  "spellButtons": []
+}

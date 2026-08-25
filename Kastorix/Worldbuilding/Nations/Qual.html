@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Qual</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<base href="/Kastorix/">
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+						<h3 class="portfolio-title">Qual</h3>
+						</header>
+						<div class="portfolio-row"> <!-- El-Shavri -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<!-- Overview Text Below -->
+                                    <p>Qual is a landlocked nation in eastern Santsim, known for its powerful military and many castles. Qual borders <a href="Worldbuilding/Nations/Terill.html">Terill</a> to the west, <a href="Worldbuilding/Nations/Tharn.html">Tharn</a> to the north, <a href="Worldbuilding/Nations/Odiana.html">Odiana</a> to the south and has a long border with <a href="Worldbuilding/Nations/Glarnast.html">Glarnast</a> to east. In recent years Qual has taken a strong stance against Glarnast and its rapid growth, claiming that it destroys the old ways.</p>
+							</div>
+							<div class="wikibox">
+								<div class="wikibox-header">
+									<h4>Qual</h4>
+								</div>
+								<div class="wikibox-content">
+									<b>Location:</b> Eastern [[Santsim]]<br>
+									<b>Size:</b> 114 000 km²<br>
+									<b>Population:</b> 18 Million<br>
+									<b>Military Strength:</b> Fairly strong<br>
+									<b>Government:</b> Absolute monarchy<br>
+									<b>Exports:</b> <br>
+									<b>Imports:</b> Metals, magical materials<br>
+									<b>Species:</b> Varied<br>
+									<b>History:</b> Old<br>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Geography -->
+							<div class="portfolio-image large">
+								<img src="/images/Kastorix/Maps/Santsim.jpg" alt="Map of the Nation" />
+							</div>
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Geography</h3>
+									<!-- Geography Text Below -->
+                                    <h3>Government</h3>
+<p>Qual is an absolute monarchy</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Government -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Government</h3>
+									<!-- Government Text Below -->
+                                    <p>Qual is an absolute monarchy</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- History -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">History</h3>
+									<!-- History Text Below -->
+                                    <h3>Society and Culture</h3>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Economy -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Economy</h3>
+									<!-- Economy Text Below -->
+                                    <h3>History</h3>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Society and Culture -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Society and Culture</h3>
+									<!-- Society and Culture Text Below -->
+                                    <h3>Military</h3>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Military -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Military</h3>
+									<!-- Military Text Below -->
+                                    
+							</div>
+						</div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				// Close dropdowns when clicking outside
+				window.onclick = function(event) {
+					if (!event.target.matches('.dropbtn')) {
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						for (var i = 0; i < dropdowns.length; i++) {
+							var openDropdown = dropdowns[i];
+							if (openDropdown.style.display === "block") {
+								openDropdown.style.display = "none";
+							}
+						}
+					}
+				};
+			</script>
+	</body>
+</html>

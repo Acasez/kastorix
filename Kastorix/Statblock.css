@@ -1,0 +1,161 @@
+/* Base statblock styling */
+    .statblock {
+      font-family: "Times New Roman", serif;
+      background-color: #f5e7d3;
+      border: 1px solid #8b4513;
+      padding: 10px;
+      margin: 10px 0;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      color: #333;
+      line-height: 1.4;
+    }
+
+    /* Header styling */
+    .statblock-header {
+      border-bottom: 1px solid #8b4513;
+      margin-bottom: 8px;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    .statblock-name {
+      margin: 0;
+      font-size: 1.4em;
+      color: #8b0000;
+      font-weight: bold;
+    }
+
+    .statblock-meta {
+      margin: 5px 0 0 0;
+      font-style: italic;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    /* Attributes grid */
+    .statblock-attributes {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+      margin-bottom: 10px;
+      font-size: 0.9em;
+      justify-content: center;
+    }
+
+    .attribute-label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .attribute-value {
+      color: #333;
+    }
+
+    /* Section styling */
+    .statblock-section {
+      margin-bottom: 10px;
+    }
+
+    .statblock-section-title {
+      font-size: 1em;
+      color: #8b4513;
+      margin: 8px 0 4px 0;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 2px;
+    }
+
+    /* Saves styling */
+    .statblock-saves {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.9em;
+      justify-content: center;
+    }
+
+    .save-item {
+      margin-right: 10px;
+    }
+
+    /* Action styling */
+    .statblock-action {
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #ccc;
+    }
+
+    .action-name {
+      margin: 0;
+      font-size: 1em;
+      color: #333;
+    }
+
+    .action-cost {
+      font-weight: normal;
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .action-requirement,
+    .action-effect {
+      margin: 2px 0;
+      font-size: 0.9em;
+      color: #444;
+    }
+
+    /* Weapons styling */
+    .statblock-weapons {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 0.9em;
+    }
+
+    .weapon-item {
+      margin-bottom: 5px;
+    }
+
+    /* Meta info styling */
+    .statblock-meta-info {
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+
+  .statblock-spells {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9em;
+}
+
+.spell-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+
+.spell-actions {
+  margin-left: 4px;
+}
+
+.spell-aspects,
+.spell-traits {
+  font-size: 0.85em;
+  color: #555;
+}
+
+.statblock-container {
+    margin-left: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    float: right; /* or use flexbox/grid for better layout */
+    width: 35%; /* Adjust as needed */
+}
+
+.passive-name {
+  margin-top: -5px;
+  margin-bottom: -20px;
+}

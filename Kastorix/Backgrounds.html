@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Backgrounds</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="kastorix.css" />
+	<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<div id="header-placeholder"></div>
+	<!-- Main -->
+	<div id="main">
+		<!-- Main Projects -->
+		<section id="Main Projects" class="sectionText">
+			<header>
+				<h3 class="portfolio-title">Backgrounds</h3>
+				<p class="portfolio-text">Backgrounds give you a general feat, and two skills to be trained in or one
+					skill and another feature</p>
+			</header>
+			<div class="search-container">
+				<input type="text" id="searchInput" placeholder="Search for feats..." title="Type in a feat name">
+			</div>
+			<div id="backgrounds_table"></div>
+		</section>
+	</div>
+	<!-- Footer -->
+	<div id="footer">
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+	<!-- Scripts -->
+	<!-- Scripts -->
+	<script src="sortAndSearchTables.js"></script>
+	<script>
+		fetch('rpgheader.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('header-placeholder').innerHTML = data;
+			});
+
+		fetch('sqlite/build/backgrounds.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('backgrounds_table').innerHTML = data;
+				setTableId("backgrounds_table"); // Pass the ID as a string
+			});
+	</script>
+</body>
+
+</html>

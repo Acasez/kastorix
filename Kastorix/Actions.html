@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Actions</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="kastorix.css" />
+	<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<div id="header-placeholder"></div>
+	<!-- Main -->
+	<div id="main">
+		<!-- Main Projects -->
+		<section id="Main Projects" class="sectionText">
+			<header>
+				<h3 class="portfolio-title">Actions</h3>
+				<p class="portfolio-subtitle"> <!--TODO FIX-->
+					These are the basic actions that can be taken
+				</p>
+			</header>
+			<div class="search-container">
+				<input type="text" id="searchInput" placeholder="Search for feats..." title="Type in a feat name">
+			</div>
+			<div id="actions_Table"></div>
+		</section>
+	</div>
+	<!-- Footer -->
+	<div id="footer">
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+	<!-- Scripts -->
+	<script>
+		fetch('rpgheader.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('header-placeholder').innerHTML = data;
+			});
+
+		fetch('sqlite/build/actions.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('actions_Table').innerHTML = data;
+				const table = document.querySelector('#actions_Table table');
+			});
+
+
+		function sortTable(n) {
+			let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+			table = document.querySelector('#actions_Table table');
+			switching = true;
+			dir = "asc";
+			while (switching) {
+				switching = false;
+				rows = table.rows;
+				for (i = 1; i < (rows.length - 1); i++) {
+					shouldSwitch = false;
+					x = rows[i].getElementsByTagName("td")[n];
+					y = rows[i + 1].getElementsByTagName("td")[n];
+					if (dir === "asc") {
+						if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+							shouldSwitch = true;
+							break;
+						}
+					} else if (dir === "desc") {
+						if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+							shouldSwitch = true;
+							break;
+						}
+					}
+				}
+				if (shouldSwitch) {
+					rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+					switching = true;
+					switchcount++;
+				} else {
+					if (switchcount === 0 && dir === "asc") {
+						dir = "desc";
+						switching = true;
+					}
+				}
+			}
+		}
+
+		document.getElementById("searchInput").addEventListener("keyup", function () {
+			let input, filter, table, tr, td, i, txtValue;
+			input = document.getElementById("searchInput");
+			filter = input.value.toUpperCase();
+			table = document.querySelector('#actions_Table table'); // Get the table inside the div
+			tr = table.getElementsByTagName("tr");
+			for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[0];
+				if (td) {
+					txtValue = td.textContent || td.innerText;
+					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+						tr[i].style.display = "";
+					} else {
+						tr[i].style.display = "none";
+					}
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+{
+    "All": [
+        {
+            "name": "Acolyte",
+            "description": "You've served in a temple or church.\nYou're trained in religion lore and crafting, society or insight. You gain the [Skilled] feat.\nYou start with 7 gold and a holy symbol",
+            "unlockedFeats": "General Feat - Level 1 - [Skilled]"
+        },
+        {
+            "name": "Airship Pilot",
+            "description": "You've trained to pilot airships and navigate the skies.\nYou're trained in airship lore and crafting, arcana or survival. You gain the [Expert Pilot] feat.\nYou start with 5 gold and an airship piloting license",
+            "unlockedFeats": "General Feat - Level 1 - [Expert Pilot]"
+        },
+        {
+            "name": "Artisan",
+            "description": "You have trained in a craft or trade. \nYou are trained in crafting and sleight of hand, society or persuasion and gain the [Skilled] feat. \nYou start with a set of artisan's tools and 10 gold pieces.",
+            "unlockedFeats": "General Feat - Level 1 - [Skilled]"
+        },
+        {
+            "name": "Criminal",
+            "description": "You have stayed on the other side of the law. \nYou are trained in sleight of hand or stealth and get the [Sneaky] feat. \nYou are also trained in Underworld Lore. You start with 8 gold.",
+            "unlockedFeats": "General Feat - Level 1 - [Sneaky]"
+        },
+        {
+            "name": "Entertainer",
+            "description": "You make money performing, making music or dancing. \nYou are trained in performance or athletics, one instrument of your choice and have the [Quick Witted] feat. \nYou start with an instrument of your choice and 12 gold pieces.",
+            "unlockedFeats": "General Feat - Level 1 - [Quick Witted]"
+        },
+        {
+            "name": "Explorer",
+            "description": "You have traveled to many different places and seen many different things. \nYou are trained in survival or nature and gain the [Surveyor] feat. \nYou start with a set of traveler's clothes, a bedroll, and 8 gold pieces.",
+            "unlockedFeats": "General Feat - Level 1 - [Surveyor]"
+        },
+        {
+            "name": "Hunter",
+            "description": "You've learned how to hunt using traditional ranged weapons or runeguns. \nYou are trained in either bows, crossbows or runeguns. \nYou are also trained in nature or survival. \nYou gain the [Marksman] feat. \nYou start with a ranged weapon that you are trained in and 10 gold pieces.",
+            "unlockedFeats": "General Feat - Level 1 - [Marksman]"
+        },
+        {
+            "name": "Labourer",
+            "description": "You have been working hard, tough jobs and can take on physical strain other mages might not\nYou're trained in athletics and crafting, survival or brawling. You gain the [Defensive Training] feat.\nYou start with 5 gold and set of sturdy tools",
+            "unlockedFeats": "General Feat - Level 1 - [Defensive Training]"
+        },
+        {
+            "name": "Medic",
+            "description": "You are practiced in the art of healing and curing. \nYou are trained in medicine or athletics and get the [Battlefield Medic] feat. \nYou start with 5 gold and a medicine kit",
+            "unlockedFeats": "General Feat - Level 1 - [Battlefield Medic]"
+        },
+        {
+            "name": "Noble",
+            "description": "You come from a wealthy or influential family. \nYou are trained in society, insight or persuasion and gain the [Skilled] feat. \nYou start with 15 gold pieces and have a seal from your house.",
+            "unlockedFeats": "General Feat - Level 1 - [Skilled]"
+        },
+        {
+            "name": "Scholar",
+            "description": "You have spent years studying a specific field of knowledge. \nYou are trained in arcana, history, or nature and gain the [Dedicated Student] feat. \nYou start with a book on your field of study and 5 gold pieces.",
+            "unlockedFeats": "General Feat - Level 1 - [Dedicated Student]"
+        },
+        {
+            "name": "Soldier",
+            "description": "You have trained and fought in a army or militia. \nYou are trained in athletics or brawling and gain the [Army Training] feat. \nYou start with a set of light armor and a martial weapon of your choice (worth at most 10 gold)",
+            "unlockedFeats": "General Feat - Level 1 - [Army Training]"
+        },
+        {
+            "name": "Spy",
+            "description": "You have worked in the shadows, gathering information and secrets. \nYou are trained in stealth or deception and gain the [Sneaky] feat. \nYou start with a disguise kit, a forged identity and 10 gold pieces.",
+            "unlockedFeats": "General Feat - Level 1 - [Sneaky]"
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+  "name": "Frost Wyvern",
+  "phy": 4,
+  "dex": 3,
+  "int": -2,
+  "wil": 1,
+  "health": "22",
+  "maxHealth": "22",
+  "mana": "12",
+  "maxMana": "12",
+  "aura": "12",
+  "maxAura": "12",
+  "spellsByRank": {
+    "Archmage": [],
+    "Apprentice": [],
+    "Adept": [],
+    "Magus": [],
+    "GrandMagus": []
+  },
+  "currentArmor": null,
+  "saves": {
+    "fortitude": 4,
+    "reflex": 4,
+    "will": 2
+  },
+  "statuses": [],
+  "weapons": [
+    {
+      "name": "Claw",
+      "damage": "2d6 Slashing",
+      "hands": "1",
+      "range": "1",
+      "traits": "Agile",
+      "description": "",
+      "price": "",
+      "type": "",
+      "weaponGroup": "Unarmed",
+      "isCustom": true,
+      "proficiency": 4
+    },
+    {
+      "name": "Bite",
+      "damage": "2d8 Piercing",
+      "hands": "-",
+      "range": "1",
+      "traits": "",
+      "description": "",
+      "price": "",
+      "type": "",
+      "weaponGroup": "Unarmed",
+      "isCustom": true,
+      "proficiency": 4
+    },
+    {
+      "name": "Tail",
+      "damage": "1d12 Bludgeoning",
+      "hands": "-",
+      "range": "2",
+      "traits": "Shove",
+      "description": "",
+      "price": "",
+      "type": "",
+      "weaponGroup": "Unarmed",
+      "isCustom": true,
+      "proficiency": 4
+    }
+  ],
+  "actions": [
+    {
+      "name": "Freezing Breath",
+      "actions": "2",
+      "requirement": "5 Mana, 1d4 turn cool-down",
+      "effect": "The Wyvern breaths out a 5 tile cone of freezing air. All creatures caught in the blast make a Fortitude save against d20 + PHY + 3 or 2d6 cold damage"
+    },
+    {
+      "name": "Breath in",
+      "actions": "1",
+      "requirement": "",
+      "effect": "The dragon breathes in. If it uses Freezing Breath next turn it costs 3 less mana and deals one d6 more damage.\nIf Freezing Breath is on cooldown next turn it instead reduces the cooldown by one"
+    }
+  ],
+  "passives": [],
+  "traits": "Beast, Dragonoid",
+  "senses": "Perception 8",
+  "languages": "",
+  "skills": "Athletics 6, Brawling 6, Survival 5",
+  "size": "Large",
+  "resistances": "Cold 8, Physical 3",
+  "speeds": "Fly 6, Land 4",
+  "equipment": "",
+  "notes": "",
+  "weaponButtons": [],
+  "spellButtons": []
+}

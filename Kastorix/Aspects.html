@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Aspects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="kastorix.css"/>
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+						<h3 class="portfolio-title">Aspects</h3>
+						</header>
+						<div class="portfolio-row reverse"> <!-- Avijor -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									There are 9 known aspects of magic, discovered and mapped out by scholars and mages. Aspects are fundamental to all magic, though their theoretical knowledge is most useful for wizards. Many artificers and alchemy also utilize knowledge of aspects when experimenting and testing. All aspects, besides Arcane, are tangible, physical things.
+									<br><br>
+									Some people are born with a connection to a specific aspect, called an attunement allowing them to cast spells of that aspect innately without studying. Mages who primarily use their attunement are called sorcerers and were more common in earlier days where wizardry wasn't as studied as it is today. Today many attuned also learn spells from other aspects, even if they may favor their attuned spells and find them easier to cast. Attuned mages cannot however cast spells of the opposite aspect to them, a water attuned cannot cast a fire spell. 
+									<br><br>
+									Soulbound individuals will find that their connection to a magical creature influences their magic and makes channeling an aspect opposite their bound creature difficult.
+								</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- List of Aspects -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">List of Aspects</h3>
+									<p class="portfolio-subtitle">Primal Aspects</p>
+									<ul class="trait-list">
+										<li><u>Arcane</u> No known opposite. Cannot be Attuned to.</li>
+										<li><u>Fire</u> Opposite: Water</li>
+										<li><u>Water</u> Opposite: Fire</li>
+										<li><u>Earth</u>  Opposite: Air</li>
+										<li><u>Air</u> Opposite: Earth</li>
+									</ul>
+									<p class="portfolio-subtitle">Lesser Aspects</p>
+									<ul class="trait-list">
+										<li><u>Metal</u> Opposite: Lightning</li>
+										<li><u>Lightning</u> Opposite: Metal</li>
+										<li><u>Darkness</u> Opposite: Light</li>
+										<li><u>Light</u> Opposite: Darkness</li>
+									</ul>
+									Some scholars theorize that the Void Creatures are connected to a previously unknown Void aspect, which would be the opposite of Arcane.
+								</p>
+							</div>
+						</div>
+						<div id="aspects_table"></div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				fetch('sqlite/build/aspects.html')
+						.then(response => response.text())
+						.then(data => {
+							document.getElementById('aspects_table').innerHTML = data;
+							setTableId("aspects_table"); // Pass the ID as a string
+						});
+			</script>
+	</body>
+</html>

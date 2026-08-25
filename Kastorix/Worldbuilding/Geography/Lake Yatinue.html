@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Lake Yatinue</title>
+		<meta charset="utf-8" />
+		<base href="/Kastorix/">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+						<h3 class="portfolio-title">Lake Yatinue</h3>
+						</header>
+						<div class="portfolio-row reverse"> <!-- Lake Yatinue -->
+							<div class="portfolio-image large">
+								<img src="/images/Kastorix/Maps/Meibor.jpg" alt="World Map" />
+							</div>
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Overview</h3>
+									<!-- Overview Text Below -->
+                                    <p>Lake Yatinue is one of the largest lakes in <a href="Worldbuilding/Geography/Kastorix.html">Kastorix</a>, located in the southern part of <a href="Worldbuilding/Geography/Najanova Jungle.html">Najanova Jungle</a>, in the center of <a href="Worldbuilding/Geography/Meibor.html">Meibor</a>. Lake Yatinue is fed by many mountain streams that run into it from the neighboring <a href="Worldbuilding/Geography/Everglow Mountains.html">Everglow Mountains</a>. <a href="Worldbuilding/Geography/The Yearning.html">The Yearning</a> runs out from the lake towards the northeastern coast.</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Geography -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Geography</h3>
+									<!-- Geography Text Below -->
+                                    <p>Lake Yatinue is the lake by area in Kastorix, at 175,000 km². The lake is fed by many streams that come down from the nearby mountains in the Everglow mountain chain. The lake runs of into the <a href="Worldbuilding/Geography/The Yearning.html">The Yearning</a> river, which runs north out to grand sea.</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Biodiversity -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Biodiversity</h3>
+									<!-- Biodiversity Text Below -->
+                                    <p>The lake is large enough to have its own ecosystem and climate. There are many species of fish and amphibians in the lake.</p>
+<p>The lake is also known for the many water <a href="Worldbuilding/Geography/Elementals.html">elementals</a> that live there. Many of them feature in traditional naga myths, though they may occasionally prove dangerous as some elementals will try to drown travelers. <br>
+Some unique flora and fauna that live near the lake are.<br>
+- <strong>Lunar Lilies</strong>: A rare, bioluminescent flower that blooms only during full moons, floating on the lake’s surface and glowing with a soft, pale light. The lilies are prized by alchemists and herbalists for their use in potions of clarity and calming.<br>
+- <strong>Gloom Crocodiles</strong>: A dangerous predator, gloom crocodiles can see through any darkness and can spread a cloud of darkness from specialized scales on their back. They are particularly common on the western edge, where there is a small marshland, with bogs and unique plants. <br>
+- <strong>Myrkra Fish</strong>: A species of deep-dwelling fish that can change their coloration to blend into the dark depths. Myrkra Fish are known to be incredibly elusive, but their scales are highly valued for creating enchanted armor.<br>
+- <strong>Shavarazen</strong>, are a rare variant of mist elementals that live on the lakes water. They are said to sometimes point towards lost treasure.</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Settlements -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Settlements</h3>
+									<!-- Settlements Text Below -->
+                                    <p>There are two nations that border the lake, <a href="Worldbuilding/Nations/Narrei.html">Narrei</a> on the west and south coast and <a href="Worldbuilding/Nations/Ellios.html">Ellios</a> on the eastern coast. The lake and the Yearning river acts as a trading hub, connecting the interior of the jungle to the coast. Ellios, while landlocked without coast has a sizeable harbor and merchant fleet that trades out from the lake and connected rivers. Most of the cities and towns in both nations sit on the lake shore. </p>
+<p>Narrei's coast features multiple floating gardens that grow many different crops in the lakes fertile waters. The lake also has a fishing industry with many boats, harvesting the unique fish that thrive in its climate.</p>
+							</div>
+						</div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				// Close dropdowns when clicking outside
+				window.onclick = function(event) {
+					if (!event.target.matches('.dropbtn')) {
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						for (var i = 0; i < dropdowns.length; i++) {
+							var openDropdown = dropdowns[i];
+							if (openDropdown.style.display === "block") {
+								openDropdown.style.display = "none";
+							}
+						}
+					}
+				};
+			</script>
+	</body>
+</html>

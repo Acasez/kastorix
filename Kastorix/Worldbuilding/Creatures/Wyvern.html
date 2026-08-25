@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Wyvern</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<base href="/Kastorix/">
+		<link rel="stylesheet" href="kastorix.css"/>
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+						<h3 class="portfolio-title">Wyvern</h3>
+						</header>
+						<div class="portfolio-row"> <!-- Aruna -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<p class="portfolio-description">
+									<!-- Overview Text Below -->
+                                    <p>Wyverns are large draconic creatures characterized by their slender bodies, wings, and long tails. They are distantly related to <a href="Worldbuilding/Species/Dragon.html">dragons</a>, though they lack the sentience and speech capabilities of their more formidable kin. Unlike dragons, wyverns have only four limbs: two legs and two wings. Dragons are known to be offended when confused for a wyvern, as they see the see the species beneath them.</p>
+									<!-- Stop Here -->
+								</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Aruna -->
+							<div class="portfolio-text">
+								<h3 class="portfolio-title">Physical Characteristics</h3>
+								<p class="portfolio-description">
+									<!-- Physical Text Below -->
+                                    <p>Wyverns have a streamlined, aerodynamic form that makes them agile in the air. Their wings are leathery and bat-like, providing them with the lift and maneuverability needed for hunting in rugged terrains. The scales of a wyvern are tough and often carry a dull sheen, providing excellent natural armor. Wyvern coloration varies depending on their habitat, ranging from earthy browns and greens to more exotic hues like blues and reds in mana-rich regions.</p>
+									<!-- Stop Here -->
+								</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Aruna -->
+							<div class="portfolio-text">
+								<h3 class="portfolio-title">Habitat and Behavior</h3>
+									<!-- Habitat Text Below -->
+                                    <p>Wyverns prefer mountainous environments where they can leverage their flight capabilities to outmaneuver prey and avoid larger predators. Many live in mountain chains like the <a href="Worldbuilding/Geography/Everglow Mountains.html">Everglow Mountains</a>. They build nests, on cliff faces where their eggs are safe from most ground-based threats. Groups or wyverns or <em>wyers</em> consists of around a dozen, led by a dominant alpha pair.</p>
+									<!-- Stop Here -->
+								</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Diet -->
+							<div class="portfolio-text">
+								<h3 class="portfolio-title">Diet</h3>
+								<p class="portfolio-description">
+									<!-- Diet Text Below -->
+                                    <p>Wyverns are obligate carnivores, relying on coordinated group tactics to bring down large prey. They are known for their sharp talons and teeth, which can rend flesh and bone with ease. In mana-rich areas, some wyverns develop the ability to use a form of dragonbreath, typically a burst of fire or a corrosive acid, to incapacitate their prey or defend against threats.</p>
+									<!-- Stop Here -->
+								</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Interaction with Other Species -->
+							<div class="portfolio-text">
+								<h3 class="portfolio-title">Interaction with Other Species</h3>
+								<p class="portfolio-description">
+									<!-- Interaction Text Below -->
+                                    <p>While wyverns are reasonably intelligent, their cognitive abilities are limited compared to true dragons. They exhibit problem-solving skills and can learn from experience, but they lack the higher reasoning and communicative abilities of sentient beings. Efforts to tame wyverns for use as mounts have met with limited success, primarily due to their aggressive nature and dietary needs. In recent years <a href="Worldbuilding/Nations/Odiana.html">Odiana</a> has spent considerable effort building a establishing a detachment of wyvern riders to counter airships.</p>
+<h4 class="portfolio-subtitle">Cultural Significance</h4>
+<p>In some cultures, wyverns are seen as symbols of strength and agility, often featured in heraldry and folklore. The image of a wyvern is sometimes used to represent agility and ferocity in battle. Despite their danger, wyverns are respected and even revered in certain regions, with local legends and stories frequently highlighting their majestic and fearsome nature.</p>
+									<!-- Stop Here -->
+								</p>
+							</div>
+							<!-- Load In Frost Wyvern Statblock.html here -->
+							<div class="statblock-container" id="frost-wyvern-statblock"></div>
+						</div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script src="fetchAndInsertStatblock.js"></script>
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				// Close dropdowns when clicking outside
+				window.onclick = function(event) {
+					if (!event.target.matches('.dropbtn')) {
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						for (var i = 0; i < dropdowns.length; i++) {
+							var openDropdown = dropdowns[i];
+							if (openDropdown.style.display === "block") {
+								openDropdown.style.display = "none";
+							}
+						}
+					}
+				};
+				
+				loadStatblock("Frost Wyvern Statblock", "frost-wyvern-statblock")
+			</script>
+	</body>
+</html>

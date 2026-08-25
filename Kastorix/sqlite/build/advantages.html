@@ -1,0 +1,117 @@
+
+    <style>
+        #advantagesTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="advantagesTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Feat Name</th><th onclick='sortTable(1)'>Description</th><th onclick='sortTable(2)'>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="arcane-training">
+                <td>Arcane Training</td><td class="wide-column"><span class='flavor-text'>You have spend your time studying magic to compete with those that have magical gifts. </span><br>Learn two level 2 <a href="Arcane Feats.html">Arcane Feats</a>. <br>Your proficiency level in arcana increases (max Expert)</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="attunement">
+                <td>Attunement</td><td class="wide-column"><span class='flavor-text'>You have an attunement, a magical connection through your soul to one aspect of magic. </span><br>This makes it easier to cast that type of magic, but prevents you from casting the opposite aspect. <br>Spells from your attuned aspect are called attuned spells  <br>-While casting attuned spells, reduce their mana cost by their rank<br>-While casting attuned spells, you may also use your WIL instead of INT for the spellshaping check.<br>-You cannot learn or cast spells of the opposite aspect from your attunement<br>Get the <a href="Arcane Feats.html#basic-elemental-magic">Basic Elemental Magic</a> arcane feat for your attuned aspect</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="crafting-prodigy">
+                <td>Crafting Prodigy</td><td class="wide-column"><span class='flavor-text'>You are specialized in one field of crafting above everything else and are able to craft things that would normally be above your level of knowledge. </span><br>You learn one of the <a href="Arcane Feats.html#armor-artificer">Armor Artificer</a>, <a href="Artificer´s Weapon.html">Artificer´s Weapon</a> or <a href="Arcane Feats.html#runegun-smith">Runegun Smith</a> feats, ignoring their level requirements. <br>When picking new feats you treat feats from your chosen archetype as if their level requirements were 2 levels lower. <br>Additionally you become trained in crafting and have a +3 bonus to any checks regarding your field.</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="experienced">
+                <td>Experienced</td><td class="wide-column"><span class='flavor-text'>You've spent your time doing a variety of things. </span><br>Gain one more background and one level 1 <a href="General Feat.html">General Feat</a></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="voidchild">
+                <td>Voidchild</td><td class="wide-column"><span class='flavor-text'>Marked by the void, feared by living.</span><br>You ignore the Complex trait on spells with the Void trait.<br>You learn spells equal to your INT<br>You have +3 bonus on saves against effects with the Void or Soul traits<br>Voidchildren have starry purple eyes and faintly glowing skin<br>NOTE: Voidchildren are outlawed in the Draconium and some other countries and will be hunted on sight</td><td class="narrow-column"></td>
+            </tr>
+        
+            <tr id="large-mana-well">
+                <td>Large Mana Well</td><td class="wide-column"><span class='flavor-text'>You have an larger than average mana well, allowing you to cast more spells and increasing the strength of your aura. </span><br>Increase your maximum Mana by your WIL<br>Every time you level up your maximum mana increases by 2 more</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="remnant-connection">
+                <td>Remnant Connection</td><td class="wide-column"><span class='flavor-text'>You have a rare and mysterious connection to the Remnant, an ancient civilization which left ruins all of Kastorix, which helps you in small ways.</span><br>Once per day you may choose to reroll a failed roll, you must keep the new one even if its worse.<br>Certain artifacts and creatures may treat you differently. </td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="soulsight">
+                <td>Soulsight</td><td class="wide-column"><span class='flavor-text'>You posses the rare gift of natural soulsight, allowing you to see souls. Souls appear as tiny dots of light in the center of living creatures. </span><br>You have the Inspect Soul action. You may spend a focus point to use it as a free action<br><span class='action-title'>Inspect Soul</span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/><br>Target one creature you can see within 6 tiles. Looking at a creatures soul you perceive a few details about it. You learn if it has<br>An attunement, and if so which aspect.<br>A soulbond. You can make a DC 20 arcana check to try to figure out the nature of the soulbond.<br>Whether any other soul magic is affecting the target, though you don't know what type it is.<br>If the creature is an illusion, or a object or golem made to look like a creature you get no information about it, but see that it's not a creature</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="swift">
+                <td>Swift</td><td class="wide-column"><span class='flavor-text'>You have 1 tile extra movement speed and may add your DEX again to initiative checks. </span><br>Your proficiency level in Reflex saves increases one step (max Master)</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="tough">
+                <td>Tough</td><td class="wide-column"><span class='flavor-text'>Your tougher than most. </span><br>Increase your maximum health by 3 + your PHY.  <br>Twice per day when you reduce your exhaustion you may also restore your health equal to your PHY<br>Your proficiency level in fortitude saves increases one step (max Expert)</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="force-of-personality">
+                <td>Force of Personality</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in persuasion and intimidation increases one step (max Master).</span><br>You may use WIL for intimidation checks.<br>When you cast spells you may spend mana equal to their rank to increase their initial DC's by that much.</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="golemcrafter">
+                <td>Golemcrafter</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in golem lore and crafting increases (max Expert). </span><br>You have created a golem companion that follows you around. <br>See the golem companion page for more information. <br>If it is reduced to 0 hit points it is disabled and can be repaired with an hours work at a workbench.<br>Once per turn, when you or your Golem takes an action, the other one can take one as a free action</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="soulbond">
+                <td>Soulbond</td><td class="wide-column"><span class='flavor-text'>You have a soulbonded with a magical creature giving you a direct connection to it.</span><br>The creature you can soulbond with depends on your level, as more powerful creatures require stronger magical power.<br>See the soulbonding page for more information. <br>You can only have one soulbond at a time, and if your soulbond dies you take 2d6 vital damage.</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="magical-genius">
+                <td>Magical Genius</td><td class="wide-column"><span class='flavor-text'>You learn extra spells of all ranks you know equal to your INT. </span><br>You also learn Metamagics equal to your INT<br>You may attempt to copy a spell (of a rank you can cast) you saw last turn,  casting the spell even without being proficient with it.</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="nimble-as-a-fox">
+                <td>Nimble as a Fox</td><td class="wide-column"><span class='flavor-text'>Once per turn you may use a focus point to take on of the Step, Stand Up, Hide, Take Cover, Tumble Through or Steal as a free actions. </span><br>The first time each day you critical success on a Tumble Through, Steal or Reflex Save you regain one focus point<br>Your proficiency level in Reflex saves increases one step (max Master)</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="physical-might">
+                <td>Physical Might</td><td class="wide-column"><span class='flavor-text'>You add half your PHY again on weapon damage rolls, or if the weapon is two handed you add your full PHY again instead. </span><br>Your proficiency level in athletics or brawling increases one step (max Master)</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="protective-aura">
+                <td>Protective Aura</td><td class="wide-column"><span class='flavor-text'>Your aura absorbs more of the energy of incoming attacks.</span><br>While you aura has above half health you can aura block without using your reaction</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="reactive">
+                <td>Reactive</td><td class="wide-column"><span class='flavor-text'>Your reaction speed is faster than others. </span><br>You have two reactions per round. <br>You can only use one reaction for each creatures turn.</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="faster-than-the-eye">
+                <td>Faster Than The Eye</td><td class="wide-column"><span class='flavor-text'>Your so fast your movements can't even be perceived by some.</span><br>Your movespeed increases by 1.<br>If your movespeed + 5 is higher than a creature's passive perception, they can't see you move and take reactions to it.</td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="peerless-master">
+                <td>Peerless Master</td><td class="wide-column"><span class='flavor-text'>You stand beyond the rest in the fields you've trained in. </span><br>You have +1 bonus to all checks you've are trained, increasing to +2 if you are have mastery in them</td><td class="narrow-column">8</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

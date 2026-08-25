@@ -1,0 +1,366 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Dm Screen</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<base href="/Kastorix/">
+	<link rel="stylesheet" href="kastorix.css">
+	<link rel="stylesheet" href="InteractivePages/CSS/interactivePages.css" />
+	<link rel="stylesheet" href="InteractivePages/CSS/DM Screen.css" />
+	<link rel="stylesheet" href="InteractivePages/CSS/list.css" />
+	<link rel="stylesheet" href="InteractivePages/CSS/spells.css" />
+	<link rel="stylesheet" href="InteractivePages/CSS/customWeapon.css" />
+	<link rel="stylesheet" href="InteractivePages/CSS/collectionItem.css">
+	<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	<!--Select2 and Jquery for Action Select Menu-->
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<div id="header-placeholder"></div>
+	<div id="mainModal" class="modal">
+		<div class="modal-content">
+			<div id="modalList"></div>
+		</div>
+	</div>
+	<div id="customWeaponModal-placeholder" style="display: none;"></div>
+	<div class="container">
+		<div class="sidebar">
+			<div id="newCreatureButton"></div>
+			<button class="saveload-button newCreature" onclick="addNewCreature()">Add new creature</button>
+		</div>
+	</div>
+	<!-- Creature Template-->
+	<template id="creatureTemplate">
+		<div class="creature-container" data-creature-index="0">
+			<div class="saveLoadCreatureMenu">
+				<button class="saveload-button" data-creature-index="0" onclick="saveCreature(this)">Save
+					Creature</button>
+				<div style="margin: 1em 0;">
+					<select data-creature-index="0" id="creatureSelect"></select>
+					<button data-creature-index="0" onclick="loadCreature(this)">Load Creature</button>
+				</div>
+				<button data-creature-index="0" onclick="deleteCreature(this)">Delete Creature</button>
+				<div style="margin: 1em 0;">
+					<button data-creature-index="0" class="importCreatureButton" accept=".json">Import</button>
+					<button data-creature-index="0" onclick="exportCreature(this)">Export</button>
+				</div>
+				<button data-creature-index="0" onclick="closeCreatureContainer(this)">Close</button>
+			</div>
+			<div class="creature-header">
+				<div class="form-row">
+					<div class="field-container">
+						<p>Name</p>
+						<input class="text-field" type="text" placeholder="Creature Name" data-creature-index="0"
+							data-property="name">
+					</div>
+					<div class="field-container">
+						<p>Traits</p>
+						<input class="text-field" type="text" placeholder="Character Traits" data-creature-index="0"
+							data-property="traits">
+					</div>
+				</div>
+			</div>
+			<div class="creature-content">
+				<div class="creature-stats">
+					<div class="form-row">
+						<div class="field-container">
+							<p>Senses</p>
+							<input class="text-field" type="text" placeholder="Perception: " data-creature-index="0"
+								data-property="senses">
+						</div>
+						<div class="field-container">
+							<p>Languages</p>
+							<input class="text-field" type="text" placeholder="Languages: " data-creature-index="0"
+								data-property="languages">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="field-container">
+							<p>Skills</p>
+							<input class="text-field" type="text" placeholder="Skills: " data-creature-index="0"
+								data-property="skills">
+						</div>
+						<div class="field-container">
+							<p>Size</p>
+							<input class="text-field" type="text" placeholder="Size: " data-creature-index="0"
+								data-property="size">
+							<div class="damage-input-container">
+								<div class="size-dropdown">
+									<button type="button" class="size-button">Creature Size ▼</button>
+									<div class="size-options" id="sizeOptions">
+										<!-- Sizes will be populated here -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="crSectionTitle">Stats</div>
+						<div class="stats-wrapper">
+							<div class="stats-container">
+								<div class="stat-box">
+									<p>Physique</p>
+									<div class="stat-input-container">
+										<div class="stat-label">PHY</div>
+										<input class="stat-input" type="number" min="-5" max="10" value="0"
+											data-creature-index="0" data-property="phy">
+									</div>
+								</div>
+								<div class="stat-box">
+									<p>Dexterity</p>
+									<div class="stat-input-container">
+										<div class="stat-label">DEX</div>
+										<input class="stat-input" type="number" min="-5" max="10" value="0"
+											data-creature-index="0" data-property="dex">
+									</div>
+								</div>
+								<div class="stat-box">
+									<p>Intelligence</p>
+									<div class="stat-input-container">
+										<div class="stat-label">INT</div>
+										<input class="stat-input" type="number" min="-5" max="10" value="0"
+											data-creature-index="0" data-property="int">
+									</div>
+								</div>
+								<div class="stat-box">
+									<p>Willpower</p>
+									<div class="stat-input-container">
+										<div class="stat-label">WIL</div>
+										<input class="stat-input" type="number" min="-5" max="10" value="0"
+											data-creature-index="0" data-property="wil">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="resource-bars-container">
+						<!-- Health Bar -->
+						<div class="resource-bar-wrapper">
+							<div class="bar-container">
+								<div id="healthBar" class="bar" style="width: 50%; background-color: #ff4d4d;"></div>
+							</div>
+							<div class="resource-inputs">
+								<label for="health">Health:</label>
+								<input class="bar-input" type="number" min="0" max="100" value="10"
+									data-creature-index="0" data-property="health">
+								/
+								<input class="bar-input" type="number" min="0" max="100" value="10"
+									data-creature-index="0" data-property="maxHealth">
+							</div>
+						</div>
+
+						<!-- Aura Bar -->
+						<div class="resource-bar-wrapper">
+							<div class="bar-container">
+								<div id="auraBar" class="bar" style="width: 30%; background-color: #4da6ff;"></div>
+							</div>
+							<div class="resource-inputs">
+								<label for="aura">Aura:</label>
+								<input class="bar-input" type="number" min="0" max="100" value="10"
+									data-creature-index="0" data-property="aura">
+								/
+								<input class="bar-input" type="number" min="0" max="100" value="10"
+									data-creature-index="0" data-property="maxAura">
+							</div>
+						</div>
+
+						<!-- Mana Bar -->
+						<div class="resource-bar-wrapper">
+							<div class="bar-container">
+								<div id="manaBar" class="bar" style="width: 70%; background-color: #b34dff;"></div>
+							</div>
+							<div class="resource-inputs">
+								<label for="mana">Mana:</label>
+								<input class="bar-input" type="number" min="0" max="100" value="10"
+									data-creature-index="0" data-property="mana">
+								/
+								<input class="bar-input" type="number" min="0" max="100" value="10"
+									data-creature-index="0" data-property="maxMana">
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="crSectionTitle">Saving Throws</div>
+						<div class="stats-wrapper">
+							<div class="stats-container">
+								<div class="save-box">
+									<div class="save-label">
+										<p>Fortitude (PHY):</p>
+										<button class="proficiency-cycle-button" data-creature-index="0"
+											data-property="fortitude">U</button>
+										<p class="savingThrow" data-creature-index="0" data-save-type="fortitude">0</p>
+									</div>
+								</div>
+								<div class="save-box">
+									<div class="save-label">
+										<p>Reflex (DEX):</p>
+										<button class="proficiency-cycle-button" data-creature-index="0"
+											data-property="reflex">U</button>
+										<p class="savingThrow" data-creature-index="0" data-save-type="reflex">0</p>
+									</div>
+								</div>
+								<div class="save-box">
+									<div class="save-label">
+										<p>Will (WIL):</p>
+										<button class="proficiency-cycle-button" data-creature-index="0"
+											data-property="will">U</button>
+										<p class="savingThrow" data-creature-index="0" data-save-type="will">0</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Armor Button here-->
+					<button data-creature-index="0" class="chooseArmorModal modalButton"
+						onclick="openModal(this, 'armor')" oncontextmenu="clearFeat(this, 'armor'); return false;"
+						id="SelectedArmor" data-original-text="Select Armor">Select Armor<div class="tooltip"></div>
+					</button>
+					<div class="form-row">
+						<div class="field-container">
+							<p>Resistances</p>
+							<input class="text-field" type="text" placeholder="Resistances: " data-creature-index="0"
+								data-property="resistances">
+						</div>
+						<div class="field-container">
+							<p>Speeds</p>
+							<input class="text-field" type="text" placeholder="Speed: " data-creature-index="0"
+								data-property="speeds">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="form-row">
+					<div class="extendableList">
+						<div class="section-title">Strikes</div>
+						<div class="strikesContainer" id="weaponsContainer">
+
+						</div>
+					</div>
+					<div class="extendableList">
+						<div class="section-title">Actions</div>
+						<div class="actionsContainer" id="actionsContainer">
+
+						</div>
+						<button class="addAction">+</button>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="extendableList">
+						<div class="section-title">Spells</div>
+						<!-- Apprentice Spells -->
+						<div class="spell-rank">
+							<div class="spell-rank-header">
+							</div>
+							<div class="spellsContainer" id="spellsContainer-Apprentice"></div>
+						</div>
+
+						<!-- Adept Spells -->
+						<div class="spell-rank">
+							<div class="spell-rank-header">
+							</div>
+							<div class="spellsContainer" id="spellsContainer-Adept"></div>
+						</div>
+
+						<!-- Magus Spells -->
+						<div class="spell-rank">
+							<div class="spell-rank-header">
+							</div>
+							<div class="spellsContainer" id="spellsContainer-Magus"></div>
+						</div>
+
+						<!-- Grand Magus Spells -->
+						<div class="spell-rank">
+							<div class="spell-rank-header">
+							</div>
+							<div class="spellsContainer" id="spellsContainer-GrandMagus"></div>
+						</div>
+
+						<!-- Archmage Spells -->
+						<div class="spell-rank">
+							<div class="spell-rank-header">
+							</div>
+							<div class="spellsContainer" id="spellsContainer-Archmage"></div>
+						</div>
+					</div>
+					<div>
+						<div class="extendableList">
+							<div class="section-title">Passives</div>
+							<div class="passivesContainer" id="passivesContainer">
+
+							</div>
+							<button class="addPassive">+</button>
+						</div>
+						<div class="section-title">Inventory</div>
+						<textarea data-creature-index="0" data-property="equipment" placeholder="equipment"></textarea>
+						<textarea data-creature-index="0" data-property="notes" placeholder="notes"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+	<!-- Hidden Action Template -->
+	<template id="actionTemplate">
+		<div class="spellSection">
+			<div class="spellData">
+				<textarea class="actionName short" placeholder="action name"></textarea>
+				<select name="actions" class="image-select"> <!-- Remove id="actionsSelect" -->
+					<option value="0" data-image="/images/Kastorix/Icons/FreeAction.png">Free Action</option>
+					<option value="1" data-image="/images/Kastorix/Icons/OneAction.png">1 Action</option>
+					<option value="2" data-image="/images/Kastorix/Icons/TwoActions.png">2 Actions</option>
+					<option value="3" data-image="/images/Kastorix/Icons/ThreeActions.png">3 Actions</option>
+					<option value="-1" data-image="/images/Kastorix/Icons/Reaction.png">Reaction</option>
+				</select>
+				<button class="removeAction">×</button>
+			</div>
+			<textarea class="actionRequirement" placeholder="requirement"></textarea>
+			<textarea class="actionEffect tall" placeholder="effect"></textarea>
+		</div>
+	</template>
+	<!-- Hidden Passive Template -->
+	<template id="passiveTemplate">
+		<div class="spellSection">
+			<div class="spellData">
+				<textarea class="passiveName short" placeholder="passive name"></textarea>
+				<button class="removePassive">×</button>
+			</div>
+			<textarea class="passiveRequirement" placeholder="requirement"></textarea>
+			<textarea class="passiveEffect tall" placeholder="effect"></textarea>
+		</div>
+	</template>
+	<!-- Scripts -->
+	<script>
+		fetch('rpgheader.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('header-placeholder').innerHTML = data;
+			});
+
+	</script>
+	<script src="InteractivePages/Scripts/jsonFetcher.js"></script>
+	<script src="InteractivePages/Scripts/customWeapon.js"></script>
+	<script src="InteractivePages/Scripts/profficiencyManagement.js"></script>
+
+	<script src="InteractivePages/Scripts/DMScreen.js"></script>
+	<script src="InteractivePages/Scripts/DMScreenDomHelpers.js"></script>
+	<script src="InteractivePages/Scripts/creatureLoadSave.js"></script>
+	<script src="InteractivePages/Scripts/creatureStats.js"></script>
+	<script src="InteractivePages/Scripts/creatureUI.js"></script>
+
+	<script src="InteractivePages/Scripts/detailsRenderers.js"></script>
+	<script src="InteractivePages/Scripts/modalHandling.js"></script>
+	<script src="InteractivePages/Scripts/modalTemplate.js"></script>
+	<script src="InteractivePages/Scripts/customActionLogic.js"></script>
+	<script src="InteractivePages/Scripts/collectionButtonManager.js"></script>
+	<script src="InteractivePages/Scripts/buttonAppearance.js"></script>
+	<script src="InteractivePages/Scripts/tooltips.js"></script>
+	<script src="InteractivePages/Scripts/dropDowns.js"></script>
+</body>
+
+</html>

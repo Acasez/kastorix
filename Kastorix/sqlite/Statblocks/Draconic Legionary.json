@@ -1,0 +1,67 @@
+{
+  "name": "Draconic Legionary",
+  "phy": 2,
+  "dex": 2,
+  "int": 0,
+  "wil": 0,
+  "health": 13,
+  "maxHealth": 13,
+  "mana": 13,
+  "maxMana": 13,
+  "aura": 14,
+  "maxAura": 13,
+  "spellsByRank": {
+    "Apprentice": [],
+    "Adept": [],
+    "Magus": [],
+    "GrandMagus": [],
+    "Archmage": []
+  },
+  "currentArmor": null,
+  "saves": {
+    "fortitude": 2,
+    "reflex": 2,
+    "will": 2
+  },
+  "statuses": [],
+  "weapons": [
+    {
+      "name": "Runegun Rifle",
+      "damage": "1d10 piercing",
+      "hands": 2,
+      "range": 10,
+      "traits": "Deadly (d8), Loud, Ranged, Reload (1)",
+      "description": "Runegun rifles use mana to accelerate bullets to high speeds.",
+      "price": "6 gp",
+      "type": "Simple",
+      "weaponGroup": "Runegun",
+      "selectedRunes": [],
+      "proficiency": 2
+    },
+    {
+      "name": "Bayonet",
+      "damage": "1d8 piercing",
+      "hands": 2,
+      "range": 1,
+      "traits": "Bayonet",
+      "description": "Bayonets can fastened to rifles for a good but inaccurate reserve melee weapon",
+      "price": "1 gp",
+      "type": "Martial",
+      "weaponGroup": "Runegun",
+      "selectedRunes": [],
+      "proficiency": 2
+    }
+  ],
+  "actions": [],
+  "passives": [
+    {
+      "name": "Will of the Legion",
+      "requirement": "",
+      "effect": "The Legionary has a +1 bonus to saves and attack rolls when adjacent to at least two allies. "
+    }
+  ],
+  "size": "Medium",
+  "weaponButtons": [],
+  "resistances": "(7) Slashing, (7) Piercing, (4) Bludgeoning, (3) Cold, (3) Fire, (2) Acid, (2) Thunder",
+  "skills": "Athletics +4, Perception +2"
+}

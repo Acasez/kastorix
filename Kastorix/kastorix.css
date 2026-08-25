@@ -1,0 +1,627 @@
+/*Others*/
+.is-preload {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.action-icon {
+	vertical-align: middle;
+	/* Optional: Adjust height/width if needed */
+	height: 1em;
+	/* Match text height */
+}
+
+#main {
+	padding-top: 0px;
+	/* Adjust based on the height of your topnav */
+	max-width: 100%;
+}
+
+.portfolio-row {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 1em;
+	gap: 1em;
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+@media screen and (max-width: 1200px) {
+	.portfolio-row {
+		display: block;
+	}
+}
+
+.portfolio-image img {
+	max-width: 800px;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-image.large img {
+	max-width: 1000px;
+	/* Larger max width for large images */
+}
+
+.portfolio-image.cover img {
+	max-width: 2000px;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1200px) {
+	.portfolio-row {
+		flex-direction: column;
+	}
+
+	.portfolio-image,
+	.portfolio-text {
+		width: 100%;
+	}
+}
+
+.floated-image {
+	float: right;
+	margin: 0 0 15px 15px;
+	max-width: 55%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-text {
+	flex: 1;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.portfolio-text a {
+	text-decoration: underline;
+}
+
+.portfolio-text a:hover {
+	color: blue;
+	text-decoration: none;
+}
+
+.portfolio-title {
+	font-size: 2.5em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin-bottom: 0.3em;
+	margin-top: 0em;
+	line-height: 60px;
+	color: orange;
+}
+
+.portfolio-subtitle {
+	font-size: 1.2em;
+	margin-bottom: 0.4em;
+	margin-top: 0em;
+	color: darkgreen;
+}
+
+.portfolio-description {
+	margin-bottom: -0.6em;
+	/* Space between description and end text */
+}
+
+.wikibox {
+	border: 2px solid #a2a9b1;
+	border-radius: 5px;
+	background-color: #f8f9fa;
+	padding: 0;
+	margin-left: 1em;
+	max-width: 600px;
+	font-size: 0.9em;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wikibox-header {
+	background-color: #e9ecef;
+	padding: 0.5em;
+	border-bottom: 2px solid #a2a9b1;
+	text-align: center;
+	font-weight: bold;
+}
+
+.wikibox-content {
+	padding: 1em;
+}
+
+.wikibox-content p {
+	margin: 0.3em 0;
+}
+
+.wikibox-content a {
+	text-decoration: underline;
+}
+
+.wikibox-content a:hover {
+	color: blue;
+	text-decoration: none;
+}
+
+.wikibox-content b {
+	font-weight: bolder;
+}
+
+.half-width {
+	max-width: 100%;
+}
+
+.third-width {
+	min-width: 33%;
+}
+
+.portfolio-row.doubleImage {
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.portfolio-row.doubleImage .portfolio-image {
+	flex: 1 1 45%;
+	max-width: 48%;
+	text-align: center;
+}
+
+.portfolio-row.reverse {
+	flex-direction: row-reverse;
+}
+
+.portfolio-row.reverse .portfolio-image {
+	margin-left: 1em;
+	margin-right: 0;
+}
+
+.portfolio-row .portfolio-image {
+	margin-right: 1em;
+}
+
+.portfolio-link {
+	margin-top: 10px;
+	;
+	background-color: lightblue;
+	width: 250px;
+	box-shadow: 10px black;
+	border-radius: 0% 8px 8px 0%;
+}
+
+.portfolio-link a {
+	font-size: larger;
+	margin-left: 4%;
+	color: black;
+}
+
+.image-with-caption {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* Center the image and caption */
+}
+
+.image-with-caption img {
+	max-width: 800px;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	margin-bottom: 0.5em;
+	/* Space between image and caption */
+}
+
+.image-with-caption-cover img {
+	max-width: 100%;
+	width: 100%;
+	align-self: center;
+}
+
+.image-caption {
+	text-align: center;
+	font-size: 1.4em;
+	margin-top: 0;
+	color: #555;
+	/* Optional: Adjust color to fit your design */
+	max-width: 800px;
+	/* Match the max-width of the image */
+}
+
+.image-caption-cover {
+	max-width: 2000px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	/* Line thickness */
+	background: #0000ff;
+	margin-bottom: 1.2em;
+	margin-top: 2.2em;
+	width: 100%;
+	/* Full width */
+}
+
+hr.big-divider {
+	height: 4px;
+	/* Thicker line for big divider */
+	background: #ff0000;
+	/* Red color, adjust as needed */
+}
+
+.intro-image img {
+	width: 320px;
+	height: 320px;
+	object-fit: cover;
+	border-radius: 10px;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.intro-text {
+	color: black;
+	font-size: 1.1em;
+	max-width: 1400px;
+	margin-left: 1em;
+}
+
+.intro-text a:hover {
+	color: blue;
+}
+
+.intro-text p {
+	margin-bottom: 0.7em;
+	/* Less space between paragraphs */
+}
+
+.intro-text h2 {
+	margin-top: 0;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.intro-text a {
+	color: black;
+	text-decoration: underline;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.underlined-link {
+	text-decoration: underline;
+}
+
+.underlined-link:hover {
+	color: blue;
+	text-decoration: none;
+}
+
+.about-me-image img {
+	align-content: center;
+	height: 520px;
+	object-fit: fill;
+	border-radius: 10px;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+	margin-bottom: 1em;
+}
+
+.about-me-text {
+	text-align: center;
+	margin-top: -1em;
+	margin-bottom: 1.2em;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.sectionText {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 1em;
+}
+
+.b {
+	font-weight: 600;
+}
+
+
+/* Basic */
+body {
+	background: #fff;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 19pt;
+	font-weight: 300;
+	line-height: 1.75em;
+	color: #888;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 300;
+	color: #666;
+	line-height: 1.5em;
+}
+
+footer {
+	margin: 2em 0 0 0;
+}
+
+strong,
+b {
+	font-weight: 800;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
+}
+
+a:hover {
+	color: #E27689;
+	border-bottom-color: rgba(255, 255, 255, 0);
+}
+
+hr {
+	border: 0;
+	border-top: solid 1px #ddd;
+}
+
+/* Footer */
+#footer {
+	text-align: center;
+	background-color: #dce3e2;
+	padding: 3em 0 4em 0;
+	box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
+	font-size: 0.8em;
+}
+
+#footer .copyright {
+	cursor: default;
+	margin: 0;
+}
+
+#footer .copyright li {
+	display: inline-block;
+	line-height: 1em;
+	border-left: solid 1px rgba(128, 128, 128, 0.35);
+	padding: 0 0 0 0.5em;
+	margin: 0 0 0 0.5em;
+}
+
+#footer .copyright li:first-child {
+	border-left: 0;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+/* Feats */
+.search-container {
+	margin-bottom: 10px;
+}
+
+#searchInput {
+	padding: 8px;
+	width: 300px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.smallTable {
+	max-width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 30px;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+
+th {
+	background-color: #f2f2f2;
+	cursor: pointer;
+}
+
+th:hover {
+	background-color: #e6e6e6;
+}
+
+tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+tr:hover {
+	background-color: #f1f1f1;
+}
+
+table th {
+	text-align: left;
+	padding: 0.5em 1em 0.5em 1em;
+	color: #fff;
+	background: #222729;
+}
+
+/* Lists */
+.trait-list li,
+.lore-list li {
+	list-style-position: inside;
+}
+
+.lore-list {
+	justify-content: left;
+}
+
+.smaller-list {
+	margin-left: 8em;
+	margin-right: 8em;
+}
+
+
+.action-box {
+	float: right;
+	margin: 0 0 15px 15px;
+	padding: 10px;
+	border: 1px solid #8b4513;
+	background: #f9f5e8;
+	font-family: serif;
+	max-width: 300px;
+}
+
+.action-box.wide {
+	max-width: 450px;
+}
+
+.action-box.wider {
+	max-width: 650px;
+}
+
+.action-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.action-icon {
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+}
+
+.stats-box {
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 10px;
+	border: 1px solid #8b4513;
+	background: #f9f5e8;
+	font-family: serif;
+	max-width: 320px;
+}
+
+.stats-box.wide {
+	max-width: 640px;
+}
+
+.stat-item {
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.stat-item:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.stat-item h4 {
+	margin: 0 0 5px 0;
+	color: #8b4513;
+	font-size: 1.1em;
+}
+
+.stat-design {
+	font-style: italic;
+	color: #555;
+	font-size: 0.9em;
+	margin-bottom: 5px;
+}
+
+.stat-mechanics {
+	font-size: 0.9em;
+	color: #333;
+	margin: 0;
+}
+
+.wilStat {
+	color: green;
+}
+
+.intStat {
+	color: #5cabfd;
+}
+
+.dexStat {
+	color: orange;
+}
+
+.phyStat {
+	color: purple;
+}
+
+.feat-types,
+.level-one-steps {
+	padding: 12px 15px;
+	margin: 15px 0;
+	border-left: 3px solid;
+}
+
+.feat-types {
+	background: #f9f5e8;
+	border-color: #8b4513;
+}
+
+.level-one-steps {
+	background: #f0f4f2;
+	border-color: #2d4a3e;
+}
+
+.step-list {
+	padding-left: 20px;
+	margin: 10px 0;
+	list-style: none;
+}
+
+.step-list li {
+	margin-bottom: 5px;
+}
+
+a {
+	color: #8b4513;
+	text-decoration: underline;
+}
+
+.action-icon {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	margin: 0 6px;
+}
+
+.flavor-and-image {
+	display: flex;
+	align-items: flex-start;
+	gap: 15px;
+	margin-bottom: 20px;
+}
+
+.flavor-text {
+	margin: 0;
+	flex: 1;
+}
+
+.gameplay-text {
+	margin-top: 15px;
+}

@@ -1,0 +1,105 @@
+
+    <style>
+        #potionsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="potionsTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Effect</th><th onclick='sortTable(2)'>Duration</th><th onclick='sortTable(3)'>Price</th><th onclick='sortTable(4)'>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="lesser-elemental-resistance-potion">
+                <td>Lesser Elemental Resistance Potion</td><td class="wide-column">Gain resistance 3 to one type of elemental damage: fire, cold, electricity, acid or sonic.</td><td>10 Minute</td><td>3 gp</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="lesser-healing-potion">
+                <td>Lesser Healing Potion</td><td class="wide-column">Restore 1d6 + 3 health</td><td>Instant</td><td>2 gp</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="lesser-mana-potion">
+                <td>Lesser Mana Potion</td><td class="wide-column">Restore 1d8 + 3 mana. Make a Mana Poisoning check</td><td>Instant</td><td>3 gp</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="lesser-poison">
+                <td>Lesser Poison</td><td class="wide-column">Take 1d8 + 3 poison damage. Fortitude DC 12</td><td>Instant</td><td>2 gp</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="antidote">
+                <td>Antidote</td><td class="wide-column">Make a check with a +2 bonus against all poisons affecting you, </td><td>Instant</td><td>12 gp</td><td class="narrow-column">3</td>
+            </tr>
+        
+            <tr id="minor-elemental-resistance-potion">
+                <td>Minor Elemental Resistance Potion</td><td class="wide-column">Gain resistance 8 to one type of elemental damage: fire, cold, electricity, acid or sonic.</td><td>10 Minute</td><td>15 gp</td><td class="narrow-column">3</td>
+            </tr>
+        
+            <tr id="minor-stamina-potion">
+                <td>Minor Stamina Potion</td><td class="wide-column">Recover one level of exhaustion</td><td>Instant</td><td>12 gp</td><td class="narrow-column">3</td>
+            </tr>
+        
+            <tr id="pure-lesser-mana-potion">
+                <td>Pure Lesser Mana Potion</td><td class="wide-column">Restore 1d8 + 3 mana.</td><td>Instant</td><td>10 gp</td><td class="narrow-column">3</td>
+            </tr>
+        
+            <tr id="diratheen's-will">
+                <td>Diratheen's Will</td><td class="wide-column">Increase your WIL by 2 for the duration</td><td>10 Minute</td><td>15 gp</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="drake's-cunning">
+                <td>Drake's Cunning</td><td class="wide-column">Increase your INT by 2 for the duration</td><td>10 Minute</td><td>15 gp</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="griffin's-agility">
+                <td>Griffin's Agility</td><td class="wide-column">Increase your DEX by 2 for the duration</td><td>10 Minute</td><td>15 gp</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="minor-mana-potion">
+                <td>Minor Mana Potion</td><td class="wide-column">Restore 2d8 + 7 mana. Make a Mana Poisoning check</td><td>Instant</td><td>15 gp</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="vitality-potion">
+                <td>Vitality Potion</td><td class="wide-column">Increase your max health by 1d6 + 2 for the duration. <br>(You cannot be have your max health temporarily increased by two effects at once)</td><td>1 Hour</td><td>15gp</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="yeti's-strength">
+                <td>Yeti's Strength</td><td class="wide-column">Increase your PHY by 2 for the duration</td><td>10 Minute</td><td>15 gp</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="pure-minor-mana-potion">
+                <td>Pure Minor Mana Potion</td><td class="wide-column">Restore 2d8 + 7 mana.</td><td>Instant</td><td>25 gp</td><td class="narrow-column">7</td>
+            </tr>
+        
+            <tr id="potion-of-regeneration">
+                <td>Potion of Regeneration</td><td class="wide-column">Gain Fast Healing 10 for the duration</td><td>1 Minute</td><td>60 gp</td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="greater-vitality-potion">
+                <td>Greater Vitality Potion</td><td class="wide-column">Increase your max health by 2d6 + 4 for the duration. <br>(You cannot be have your max health temporarily increased by two effects at once)</td><td>1 Hour</td><td>60 gp</td><td class="narrow-column">8</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

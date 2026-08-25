@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="Statblock.css" />
+</head>
+<body>
+  <div class="statblock">
+    <!-- Header -->
+    <div class="statblock-header">
+      <h2 class="statblock-name">{{ name }}</h2>
+      {% if traits %}
+        <p class="statblock-meta">{{ traits }}</p>
+      {% endif %}
+    </div>
+
+    <!-- Attributes -->
+    <div class="statblock-attributes">
+      <div>
+        <span class="attribute-label">PHY:</span>
+        <span class="attribute-value">{{ phy }}</span>
+      </div>
+      <div>
+        <span class="attribute-label">DEX:</span>
+        <span class="attribute-value">{{ dex }}</span>
+      </div>
+      <div>
+        <span class="attribute-label">INT:</span>
+        <span class="attribute-value">{{ int }}</span>
+      </div>
+      <div>
+        <span class="attribute-label">WIL:</span>
+        <span class="attribute-value">{{ wil }}</span>
+      </div>
+      <div>
+        <span class="attribute-label">Health:</span>
+        <span class="attribute-value">{{ maxHealth }}</span>
+      </div>
+      <div>
+        <span class="attribute-label">Mana:</span>
+        <span class="attribute-value">{{ maxMana }}</span>
+      </div>
+      <div>
+        <span class="attribute"><strong>Aura:</strong> {{ maxAura }}</span>
+      </div>
+    </div>
+
+    <!-- Saves -->
+    <div class="statblock-section">
+      <h3 class="statblock-section-title">Saves</h3>
+      <div class="statblock-saves">
+        <span class="save-item"><strong>Fortitude:</strong> {{ saves.fortitude + phy}}</span>
+        <span class="save-item"><strong>Reflex:</strong> {{ saves.reflex + dex}}</span>
+        <span class="save-item"><strong>Will:</strong> {{ saves.will + wil}}</span>
+      </div>
+    </div>
+
+    <!-- Meta Info -->
+    <div class="statblock-meta-info">
+      <h3 class="statblock-section-title">Others</h3>
+      {% if resistances %}
+        <p><strong>Resistances:</strong> {{ resistances }}</p>
+      {% endif %}
+      {% if speeds %}
+        <p><strong>Speeds:</strong> {{ speeds }}</p>
+      {% endif %}
+      {% if senses %}
+        <p><strong>Senses:</strong> {{ senses }}</p>
+      {% endif %}
+      {% if skills %}
+        <p><strong>Skills:</strong> {{ skills }}</p>
+      {% endif %}
+    </div>
+
+    <!-- Actions -->
+    {% if actions %}
+      <div class="statblock-section">
+        <h3 class="statblock-section-title">Actions</h3>
+        {% for action in actions %}
+          <div class="statblock-action">
+            <h4 class="action-name">
+              {{ action.name }}
+              <span class="action-cost">
+                ({{ action.actions | replace_action_numbers }})
+              </span>
+            </h4>
+            {% if action.requirement %}
+              <p class="action-requirement"><em>Requirement:</em> {{ action.requirement }}</p>
+            {% endif %}
+            <p class="action-effect"><em>Effect:</em> {{ action.effect }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- Passives -->
+    {% if passives %}
+      <div class="statblock-section">
+        <h3 class="statblock-section-title">Passives</h3>
+        {% for passive in passives %}
+          <div class="statblock-action">
+            <h4 class="passive-name">
+              {{ passive.name }}
+            </h4>
+            {% if passive.requirement %}
+              <p class="passive-requirement"><em>Requirement:</em> {{ passive.requirement }}</p>
+            {% endif %}
+            <p class="passive-effect"><em>Effect:</em> {{ passive.effect }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- Weapons -->
+    {% if weapons %}
+      <div class="statblock-section">
+        <h3 class="statblock-section-title">Weapons</h3>
+        <div class="statblock-weapons">
+          {% for weapon in weapons %}
+            <div class="weapon-item">
+              <strong>{{ weapon.name }}</strong>: {{ weapon.damage }}
+              {% if weapon.traits %}
+                (Traits: {{ weapon.traits }})
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+  <!-- Spells -->
+{% if spellsByRank and spellsByRank | has_spells %}
+  <div class="statblock-section">
+    <h3 class="statblock-section-title">Spells</h3>
+    <div class="statblock-spells">
+      {% for rank, spells in spellsByRank.items() %}
+        {% if spells %}
+          {% for spell in spells %}
+            <div class="spell-item">
+              <strong>{{ spell.name }}</strong>
+              <span class="spell-actions">{{ spell.actions | safe }}</span>
+              {% if spell.aspects %}
+                <span class="spell-aspects">(Aspects: {{ spell.aspects }})</span>
+              {% endif %}
+              {% if spell.traits and spell.traits != "-" %}
+                <span class="spell-traits">(Traits: {{ spell.traits }})</span>
+              {% endif %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+  </div>
+</body>
+</html>

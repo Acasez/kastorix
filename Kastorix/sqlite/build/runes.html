@@ -1,0 +1,93 @@
+
+    <style>
+        #runesTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="runesTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Effect</th><th onclick='sortTable(2)'>Item</th><th onclick='sortTable(3)'>Price (GP)</th><th onclick='sortTable(4)'>Level</th><th onclick='sortTable(5)'>Requirement</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="anti-tampering">
+                <td>Anti-Tampering</td><td class="wide-column">The item cannot be affected by Manipulation spells such as Ferrokinesis</td><td>All</td><td>20</td><td class="narrow-column">1</td><td></td>
+            </tr>
+        
+            <tr id="spellguard">
+                <td>Spellguard</td><td class="wide-column">The shield provides an extra +1 bonus to saving throws against spells and magical effects when blocking</td><td>Shield</td><td>60</td><td class="narrow-column">2</td><td></td>
+            </tr>
+        
+            <tr id="elemental-ward">
+                <td>Elemental Ward</td><td class="wide-column">The armor increases its resistance to one element by 3 for Light Armor or 5 for Heavy Armor</td><td>Armor</td><td>50</td><td class="narrow-column">2</td><td></td>
+            </tr>
+        
+            <tr id="striking">
+                <td>Striking</td><td class="wide-column">The weapon has an item bonus of +1 to hit</td><td>Weapon</td><td>40</td><td class="narrow-column">2</td><td></td>
+            </tr>
+        
+            <tr id="hardening">
+                <td>Hardening</td><td class="wide-column">The armor increases its resistance to physical damage by 1 for Light Armor and 2 for Heavy Armor</td><td>Armor</td><td>50</td><td class="narrow-column">2</td><td></td>
+            </tr>
+        
+            <tr id="aura-cleaving">
+                <td>Aura Cleaving</td><td class="wide-column">The weapon does an extra damage dice to auras (This also increases the amount of dice for the deadly trait)</td><td>Weapon</td><td>60</td><td class="narrow-column">4</td><td></td>
+            </tr>
+        
+            <tr id="greater-elemental-ward">
+                <td>Greater Elemental Ward</td><td class="wide-column">The armor increases its resistance to one element by 6 for Light Armor or 10 for Heavy Armor</td><td>Armor</td><td>400</td><td class="narrow-column">6</td><td><a href="Elemental Ward.html">Elemental Ward</a></td>
+            </tr>
+        
+            <tr id="greater-striking">
+                <td>Greater Striking</td><td class="wide-column">The weapon has an item bonus of +2 to hit</td><td>Weapon</td><td>500</td><td class="narrow-column">6</td><td><a href="Striking.html">Striking</a></td>
+            </tr>
+        
+            <tr id="greater-hardening">
+                <td>Greater Hardening</td><td class="wide-column">The armor increases its resistance to physical damage by 2 for Light Armor and 4 for Heavy Armor</td><td>Armor</td><td>1000</td><td class="narrow-column">8</td><td><a href="Hardening.html">Hardening</a></td>
+            </tr>
+        
+            <tr id="greater-aura-cleaving">
+                <td>Greater Aura Cleaving</td><td class="wide-column">The weapon does two extra damage dice to auras</td><td>Weapon</td><td>2500</td><td class="narrow-column">10</td><td><a href="Aura Cleaving.html">Aura Cleaving</a></td>
+            </tr>
+        
+            <tr id="major-elemental-ward">
+                <td>Major Elemental Ward</td><td class="wide-column">The armor increases its resistance to one element by 12 for Light Armor or 20 for Heavy Armor</td><td>Armor</td><td>6000</td><td class="narrow-column">13</td><td><a href="Greater Elemental Ward.html">Greater Elemental Ward</a></td>
+            </tr>
+        
+            <tr id="major-striking">
+                <td>Major Striking</td><td class="wide-column">The weapon has an item bonus of +3 to hit</td><td>Weapon</td><td>7000</td><td class="narrow-column">13</td><td><a href="Greater Striking.html">Greater Striking</a></td>
+            </tr>
+        
+            <tr id="greater-hardening">
+                <td>Greater Hardening</td><td class="wide-column">The armor increases its resistance to physical damage by 3 for Light Armor and 6 for Heavy Armor</td><td>Armor</td><td>9000</td><td class="narrow-column">14</td><td><a href="Hardening.html">Hardening</a></td>
+            </tr>
+        
+            <tr id="major-aura-cleaving">
+                <td>Major Aura Cleaving</td><td class="wide-column">The weapon does three extra damage dice to auras</td><td>Weapon</td><td>15000</td><td class="narrow-column">16</td><td><a href="Greater Aura Cleaving.html">Greater Aura Cleaving</a></td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

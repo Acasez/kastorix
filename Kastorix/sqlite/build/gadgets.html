@@ -1,0 +1,85 @@
+
+    <style>
+        #gadgetsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="gadgetsTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Type</th><th onclick='sortTable(2)'>Effect</th><th onclick='sortTable(3)'>Level</th><th onclick='sortTable(4)'>Requirement</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="smoke-bomb">
+                <td>Smoke Bomb</td><td>Bomb</td><td class="wide-column">Create a 4x4 tiles cloud of smoke obscuring creatures inside.<br>The smoke lasts an amount of around equal to your INT + 1<br>When you craft Smoke Bombs you get 3</td><td class="narrow-column">1</td><td></td>
+            </tr>
+        
+            <tr id="grappling-hook">
+                <td>Grappling Hook</td><td>Held Item</td><td class="wide-column">Move to a location at higher elevation within 5 tiles. <br>Opportunity attacks have disadvantage on this movement. <br>After using your Grappling Hook you must reel it in as an action before you can use it again.</td><td class="narrow-column">1</td><td></td>
+            </tr>
+        
+            <tr id="runic-detector">
+                <td>Runic Detector</td><td>Thrown Device</td><td class="wide-column">Throw a tiny device that detects any Wards or Runes within 10 tiles <br>The device has 4 health<br>If recovered the Runic Detector can be used up to three times per day</td><td class="narrow-column">1</td><td></td>
+            </tr>
+        
+            <tr id="flashbang">
+                <td>Flashbang</td><td>Bomb</td><td class="wide-column">Throw a device to create a burst of light in a 3x3 tiles area.<br>Creatures inside need to make a Fortitude save, against your INT + DEX<br> Success: Target is dazzled for one turn.<br> Failure: Target is blinded for one turn and dazzled for one minute <br> Critical Failure: Target is blinded for one minute<br>While affected by this, the creatures can spend one action to attempt to redo the save, removing the remaining effects on a success.</td><td class="narrow-column">1</td><td></td>
+            </tr>
+        
+            <tr id="spark-bomb">
+                <td>Spark Bomb</td><td>Bomb</td><td class="wide-column">Throw a device to create a burst of electricity in a 2x2 tiles area.<br>Creatures inside need to make a basic Fortitude or Reflex saving throw or take 1d12 lightning damage<br>Creatures that fail their save are also stunned 1.<br>Creatures wearing metal armor have -2 to their save. </td><td class="narrow-column">1</td><td></td>
+            </tr>
+        
+            <tr id="boots-of-jumping">
+                <td>Boots of Jumping</td><td>Equipment</td><td class="wide-column">Fly 3 tiles. <br>If you are in the air at the end of this movement you fall unless you have a fly or glide speed.<br>You can use Boots of Jumping 3 times per day</td><td class="narrow-column">3</td><td></td>
+            </tr>
+        
+            <tr id="improved-grappling-hook">
+                <td>Improved Grappling Hook</td><td>Upgrade</td><td class="wide-column">You may attempt to pull a medium or smaller creature within 5 tiles to you with your grappling hook. <br>It makes a Reflex saving throw against your Crafting or Athletics, being pulled on a failure.<br>On a critical failure you may also grapple or knock the creature prone.<br>Alternatively you may let yourself be pulled to that creature</td><td class="narrow-column">3</td><td><a href="Grappling Hook.html">Grappling Hook</a></td>
+            </tr>
+        
+            <tr id="manasight-goggles">
+                <td>Manasight Goggles</td><td>Equipment</td><td class="wide-column">You have advantage on Mana Sensing and Identify Spell checks until the start of next turn. <br>You can use Boots of Jumping 3 times per day</td><td class="narrow-column">3</td><td></td>
+            </tr>
+        
+            <tr id="silence-emitter">
+                <td>Silence Emitter</td><td>Thrown Device</td><td class="wide-column">Throw a tiny device that projects a 6x6 tile area within where no sounds can be heard.<br>The device has 4 health<br>The area lasts for a minute or until the device is destroyed</td><td class="narrow-column">3</td><td></td>
+            </tr>
+        
+            <tr id="lightning-grounder">
+                <td>Lightning Grounder</td><td>Thrown Device</td><td class="wide-column">Throw a small device that projects a 6x6 tile area within that arcs lightning into it<br>The device has 10 health and has resistance 20 to lightning damage<br>When spell or effect would deal lightning damage in the area, make a gadget check with a +5 bonus against them<br>On a success the device absorbs the lightning damage no other targets in the area are affected</td><td class="narrow-column">3</td><td></td>
+            </tr>
+        
+            <tr id="orb-of-unweaving">
+                <td>Orb of Unweaving</td><td>Bomb</td><td class="wide-column">Throw a specially designed bomb that does no damage but attempts to disrupt a nearby spell effect.<br>The Orb can target a spell effect such as a Water Ball or effects on a creature. If it targets a creature, the creature gets to first make a Reflex save<br>Then make a Gadget roll against the Will Save of the caster of the spell, ending the spell on a success</td><td class="narrow-column">3</td><td></td>
+            </tr>
+        
+            <tr id="teleportation-ward-device">
+                <td>Teleportation Ward Device</td><td>Thrown Device</td><td class="wide-column">Throw a small teleportation ward that projects a 8x8 tile area that blocks teleportation effects<br>The device has 6 health<br>When any creature would teleport inside or into the area, make a gadget check with a +5 bonus against them<br>On a success the device blocks the teleportation</td><td class="narrow-column">6</td><td></td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

@@ -1,0 +1,683 @@
+/* Table */
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: left;
+}
+
+table th {
+	text-align: left;
+	padding: 0.5em 1em 0.5em 1em;
+	color: #fff;
+	background: #222729;
+}
+
+#actionsTable,
+#skillsTable tr:nth-child(even) {
+	background-color: #31373f;
+}
+
+.mod-column {
+	text-align: center;
+}
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 19pt;
+	line-height: 1.75em;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+h1 {
+	text-align: center;
+	color: #333;
+	margin-bottom: 20px;
+	margin-top: 5px;
+}
+
+.character-sheet-title {
+	width: 400px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.section {
+	margin-bottom: 5px;
+	border-bottom: 1px solid #ff5722;
+	padding-bottom: 10px;
+}
+
+.levelSelection {
+	margin-top: 10px;
+	;
+	background-color: lightblue;
+	width: 220px;
+	box-shadow: 10px black;
+	border-radius: 0% 8px 8px 0%;
+	margin-bottom: -5px;
+}
+
+.levelSelection p {
+	font-size: larger;
+	margin-left: 4%;
+	color: black;
+	margin-bottom: -5px;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+}
+
+.sidebar {
+	width: 220px;
+	box-shadow: 10px black;
+	border-radius: 0% 8px 8px 0%;
+	margin-right: 20px;
+}
+
+.main-content {
+	flex: 1;
+	height: calc(100vh - 3.8em);
+	margin-left: -1em;
+	padding-left: .5em;
+	padding-right: .5em;
+	min-width: 0;
+	min-height: 0;
+}
+
+.character-info-container {
+	display: flex;
+	flex-direction: column;
+	max-width: 800px;
+	gap: 20px;
+}
+
+.top-row {
+	display: flex;
+	flex-direction: row;
+	max-height: 420px;
+}
+
+#lowerHalf-row {
+	display: flex;
+	flex-flow: row;
+	height: calc(100vh - 17.8em);
+	min-width: 0;
+	min-height: 0;
+}
+
+#tabbed-area {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	background: #31373f;
+	min-height: 700px;
+	position: relative;
+	z-index: 0;
+	border-radius: 8px;
+	height: fit-content;
+}
+
+.tabbed-area-menu {
+	padding-bottom: 0.2em;
+	border-bottom: 2px solid #ff5722;
+	z-index: 1;
+}
+
+.section-menu {
+	margin-right: 1em;
+	color: #a7a7a7;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 1.3em;
+	padding: 0.5em 0;
+	margin-left: 8px;
+}
+
+.section-menu-selected {
+	color: #ff5722;
+	border-bottom: 2px solid #ff5722;
+}
+
+.tabbed-area-display-holder {
+	min-width: 0;
+	min-height: 0;
+}
+
+.tabbed-area-display {
+	margin-top: 1em;
+	vertical-align: top;
+	margin-right: 1em;
+	margin-left: 5px;
+	height: auto;
+	/* Let the height adjust to content */
+	min-width: 0;
+	min-height: 0;
+}
+
+.stat-label {
+	font-weight: bold;
+	color: #4da6ff;
+	margin-top: -5px;
+	margin-bottom: -5px;
+	font-size: 20px;
+	display: flex;
+}
+
+.stat-label p {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.skillsContainer {
+	display: inline-flex;
+	margin-top: -0.4em;
+	overflow-y: auto;
+	margin-left: -15px;
+	margin-right: 15px;
+}
+
+.extendableList {
+	display: inline-flex;
+	flex-direction: column;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	width: 400px;
+}
+
+.spellshapingBonus,
+.strikeTitle {
+	display: flex;
+	margin-top: -25px;
+	margin-bottom: -25px;
+	justify-content: center;
+}
+
+.spellshapingBonus p {
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: larger;
+}
+
+.action-icon {
+	vertical-align: middle;
+	/* Optional: Adjust height/width if needed */
+	height: 1em;
+	/* Match text height */
+}
+
+.blueBoxTextArea {
+	margin-bottom: -5px;
+	width: 170px;
+}
+
+.doubleWidth {
+	width: 400px;
+}
+
+/* Red Box: Stats and Saving Throws */
+.character-stats-box {
+	/*border-top: 2px solid #ff5722;*/
+	border-radius: 4px;
+	padding: 10px;
+	background: #31373f;
+	width: 550px;
+	height: 28rem;
+}
+
+.form-group {
+	flex: 1;
+	margin: 0 5px;
+}
+
+/* Status Container */
+.status-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/* Vertically center items */
+	gap: 1em;
+	/* Space between groups */
+	margin-left: 5px;
+	height: 30px;
+}
+
+.status-item {
+	display: flex;
+	align-items: center;
+	/* Vertically center text and buttons */
+	gap: 0.2em;
+	/* Space between text and buttons */
+	height: 30px;
+	color: white;
+}
+
+.button-group {
+	display: flex;
+	gap: 0em;
+	/* Space between buttons */
+}
+
+.button-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 10px;
+}
+
+/* Style for the form row (Level, Initiative, Passive Perception) */
+.form-row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+	margin-bottom: 0px;
+	gap: 20px;
+}
+
+.form-group {
+	flex: 1;
+	margin: 0 5px;
+}
+
+.form-group p {
+	margin: 0;
+	margin-bottom: -5px;
+	/* Space between label and input */
+	font-weight: bold;
+	font-size: clamp(12px, 1.5vw, 17px);
+}
+
+.sidebar-group p {
+	margin: 0;
+	margin-bottom: -5px;
+	/* Space between label and input */
+	margin-left: 0.5em;
+}
+
+.sidebar input {
+	width: 100%;
+	/* Make inputs fill the form group */
+	padding: 5px;
+	box-sizing: border-box;
+	/* Include padding in width */
+}
+
+.number-input {
+	width: 40px;
+	padding: 2px 4px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	text-align: center;
+	font-weight: bold;
+	background-color: white;
+}
+
+/*SaveLoad*/
+.saveload-button {
+	background: #4CAF50;
+	color: white;
+	border: none;
+	padding: 8px 12px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/*Stats*/
+.stats-wrapper {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.stats-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 10px;
+	justify-content: center;
+	/* Center the save boxes horizontally */
+	gap: 20px;
+	/* Space between save boxes */
+}
+
+.stat-input-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	background-color: rgb(245, 255, 255);
+	border-radius: 8px;
+	padding: 4px 8px;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	margin-bottom: 5px;
+}
+
+.stat-input {
+	text-align: center;
+	margin: 0;
+	border: none;
+	background: transparent;
+	font-weight: bold;
+	color: black;
+	font-size: 15px;
+}
+
+textarea {
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	max-width: 360px;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.close:hover {
+	color: black;
+}
+
+button {
+	position: relative;
+}
+
+.stat-column {
+	text-align: center;
+	width: 10px;
+	font-weight: 500;
+	color: #5cabfd;
+}
+
+.name-column {
+	text-align: left;
+}
+
+.crSheetTitle {
+	font-size: 16px;
+	margin-top: -5px;
+	margin-bottom: -5px;
+}
+
+/* Style for the spell rank container */
+.spell-rank {
+	margin-bottom: 15px;
+	border: 1px solid #444;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #222;
+}
+
+/* Style for the spell rank header */
+.spell-rank-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+/* Style for the spell rank title */
+.spell-rank-header h3 {
+	margin: 0;
+	font-size: 16px;
+	color: #fff;
+}
+
+.spell-rank-header p {
+	margin: 0;
+	font-size: 16px;
+	color: #fff;
+}
+
+/* Style for the spell count input */
+.spell-count-input {
+	width: 50px;
+	text-align: center;
+}
+
+/* Style for the spells container */
+.spellsContainer,
+.metamagicsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+/* Style for spell buttons */
+.spell-button,
+.metamagic-button {
+	padding: 5px 10px;
+	background-color: #333;
+	border: 1px solid #555;
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.everythingButSideBar {
+	display: flex;
+	flex: 1;
+}
+
+.blue-box {
+	background-color: #0d1b2a;
+	/* Box formerly known as blue box */
+	padding: 10px;
+	font-family: Arial, sans-serif;
+	border-radius: 10px;
+	min-width: 43rem;
+	max-height: 28rem;
+	box-shadow: 0px 10px;
+}
+
+.mainPartOfBlueBox {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.halfBlueBox {
+	min-width: 0;
+	/* Prevent overflow */
+	flex: 1;
+}
+
+.first {
+	flex: 1 !important;
+}
+
+/* Ensure the speed items stay on the same line */
+.speed-boxes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	align-items: flex-end;
+	/* Align items to the bottom */
+}
+
+.form-row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+}
+
+.form-group {
+	flex: 1;
+	min-width: 200px;
+	margin: 5px;
+	border-bottom: 1px solid #ff5722;
+}
+
+.noBorder {
+	border-bottom: 0px
+}
+
+h3 {
+	margin-top: 0;
+	font-size: 1.2em;
+	text-decoration: underline;
+}
+
+.speed-boxes,
+.senses-boxes,
+.resistance-boxes,
+.other-boxes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.speed-item,
+.sense-item,
+.resistance-item {
+	margin-right: 10px;
+	align-items: center;
+}
+
+.blueBox-label {
+	font-size: 16px;
+	color: white;
+}
+
+label {
+	font-weight: bold;
+	margin-bottom: 2px;
+	font-size: 22px;
+}
+
+.small-box {
+	width: 50px;
+	height: 20px;
+	border: 1px solid #000;
+	background-color: white;
+	text-align: center;
+}
+
+.medium-box {
+	width: 60px;
+	height: 20px;
+	border: 1px solid #000;
+	background-color: white;
+	text-align: center;
+}
+
+.status-container {
+	padding: 10px;
+	gap: 20px;
+	background-color: #222;
+	border-radius: 15px;
+}
+
+.button-group {
+	display: flex;
+	gap: 2px;
+}
+
+.condition-button {
+	width: 25px;
+	height: 25px;
+	border: 1px solid #000;
+	background-color: white;
+	cursor: pointer;
+}
+
+.blueBoxCategoryName {
+	margin-bottom: -10px;
+	margin-top: -15px;
+	color: #fe8b68;
+	text-align: center;
+}
+
+.wilStat {
+	color: green;
+}
+
+.intStat {
+	color: #5cabfd;
+}
+
+.dexStat {
+	color: orange;
+}
+
+.phyStat {
+	color: purple;
+}
+
+#level {
+	width: 25%;
+	margin-left: 10%;
+}
+
+.greenText {
+	color: lightgreen !important;
+}
+
+.redText {
+	color: red !important;
+}
+
+.centered {
+	justify-content: center;
+	display: flex;
+}
+
+.hiddenTemplate {
+	display: none;
+}
+
+.featChosen {
+	color: lightgreen
+}
+
+.tooltip {
+	display: none;
+	position: absolute;
+	bottom: 100%;
+	/* Position above the spell name */
+	left: 0;
+	background-color: #333;
+	color: #eee;
+	padding: 10px;
+	border-radius: 5px;
+	width: 400px;
+	z-index: 10000;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	transform: translateY(-10px);
+	/* Slightly lift the tooltip */
+	opacity: 0;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.sideBarInfoBorder {
+	width: 100%;
+	height: 35px;
+	border: 1px solid #888;
+	background-color: rgb(44, 139, 86);
+	color: #e6e6e6;
+	font-size: 17px;
+}
+
+.sideBarInfoBorder.activated {
+	background-color: rgb(128, 186, 148);
+}

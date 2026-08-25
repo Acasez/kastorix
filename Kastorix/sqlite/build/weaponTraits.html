@@ -1,0 +1,141 @@
+
+    <style>
+        #weaponTraitsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="weaponTraitsTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Effect</th><th onclick='sortTable(2)'>Special Action</th><th onclick='sortTable(3)'>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="agile">
+                <td>Agile</td><td class="wide-column">The multiple attack penalty you take with this weapon -4 per attack instead of -5. The penalty on oppertunity attacks is 1 less</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="aiming-focus">
+                <td>Aiming Focus</td><td class="wide-column">When casting spells with a range over 10 tiles, their range increases by 4.</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="bayonet">
+                <td>Bayonet</td><td class="wide-column">Bayonets are fastened on runegun rifles, and provide an quick melee attack. Their construction means you have -1 penalty on attacks with them</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="block-(x)">
+                <td>Block (X)</td><td class="wide-column">While holding this weapon you have the Block action. </td><td class="wide-column">1 Action. Get ready to block incoming attacks and spells. You have a +X bonus to your Reflex and Fortitude saves against targeted attacks and non-environmental area effects until the start of next turn.</td><td></td>
+            </tr>
+        
+            <tr id="channeling">
+                <td>Channeling</td><td class="wide-column">You can still perform somantic component with a hand holding a channeling weapon.</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="deadly-(dx)">
+                <td>Deadly (dX)</td><td class="wide-column">Critical hits with this weapon adds the specified dice to the damage. </td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="disarm">
+                <td>Disarm</td><td class="wide-column">You make the Disarm Maneuver with this weapon, using its range and the attack bonus you have with it</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="extend-(x)">
+                <td>Extend (X)</td><td class="wide-column">You can extend this weapon to the range specified as part of the strike. While extended you have a -2 move speed penalty and cannot make reactive strikes until you take an action to retract it</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="finesse">
+                <td>Finesse</td><td class="wide-column">You can use your DEX instead of PHY when making attacks with this weapon. PHY is still added to the damage roll (even if its negative)</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="heavy">
+                <td>Heavy</td><td class="wide-column">Small or tiny creatures have disadvantage on attacks with this weapon.</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="light">
+                <td>Light</td><td class="wide-column">You may attempt to hide a light weapon on you as a Slight of Hand action.</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="loud">
+                <td>Loud</td><td class="wide-column">Using this weapon creates a loud burst of noise</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="parry">
+                <td>Parry</td><td class="wide-column">While holding this weapon you have the Parry action.</td><td class="wide-column">1 Action. Get ready to parry. When you are attacked by a melee attack until the start of next turn you may defend with your weapon attack bonus instead of your Reflex save. </td><td></td>
+            </tr>
+        
+            <tr id="precision">
+                <td>Precision</td><td class="wide-column">When targeting weak points the penalty is 2 lower than normal (to a minimum of 1).</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="propulsive">
+                <td>Propulsive</td><td class="wide-column">You add your PHY bonus to the damage rolls of this weapon</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="ranged-">
+                <td>Ranged </td><td class="wide-column">You use your DEX instead of PHY when making attacks with this weapon. No bonus is added to the damage of the weapon (unless it has propulsive)</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="ranged-trip">
+                <td>Ranged Trip</td><td class="wide-column">Foes hit by this weapon must make a Fortitude saving throw or fall prone</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="shove">
+                <td>Shove</td><td class="wide-column">Creatures hit by this weapon need to make a Fortitude saving throw or be moved up to 1 tile of attackers choice.</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="slowing-(x)">
+                <td>Slowing (X)</td><td class="wide-column">Your move speed is reduced by X tiles when holding this.</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="sluggish">
+                <td>Sluggish</td><td class="wide-column">The multiple attack penalty you take with this weapon -6 per attack instead of -5. The penalty on oppertunity attacks is 1 more</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="sweep">
+                <td>Sweep</td><td class="wide-column">The multiple attack penalty you take with this weapon is -3 if the last attack was against a different target</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="swing-around">
+                <td>Swing Around</td><td class="wide-column">You also ignore half the bonus from cover and the Block ability</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="thrown-(x)">
+                <td>Thrown (X)</td><td class="wide-column">You can throw this weapon up to specifed range as a ranged attack.</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="unwieldy">
+                <td>Unwieldy</td><td class="wide-column">While attacking with this weapon you have a -3 penalty if the target is adjacent to you</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="versatile">
+                <td>Versatile</td><td class="wide-column">You choose the damage type among those specified. If the damage type has a dice next to it changes the damage roll to that.</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+            <tr id="volley">
+                <td>Volley</td><td class="wide-column">While attacking with this weapon you have a -3 penalty if the target is within Volley Range</td><td class="wide-column"></td><td></td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

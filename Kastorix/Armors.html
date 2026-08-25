@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Armor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+							<h3 class="portfolio-title">Armor</h3>
+						</header>
+						<div class="portfolio-text">
+								<p class="portfolio-description">
+									Armor is split into light and heavy armor and provides damage resistance, but reduces your mana recovery and some dexterity based stats. Armor comes with a weak point which can be targeted, bypassing the armor's resistances at the cost of making the attack easier to dodge. 	
+									<br><br>
+									Some armor require characters to have a certain Physique score to wear it. You take a 1 tile movement penalty for each step below the requirement. 
+									<br><br>
+									Light armor applies the armor penalties to acrobatics and manasensing. Heavy armor also applies penalties to perception, performance, stealth and reflex saving throws. If you don't have proficiency in the armor your wearing it's penalties is doubled and you can't add your DEX to spellshaping checks. 
+									<br><br>
+								</p>
+							</div>
+						<div class="search-container">
+							<input type="text" id="searchInput" placeholder="Search for feats..." title="Type in a feat name">
+						</div>
+						<div id="armors_table"></div> 
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+		 	<script src="sortAndSearchTables.js"></script>
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				fetch('sqlite/build/armors.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('armors_table').innerHTML = data;
+						setTableId("armors_table"); // Pass the ID as a string
+					});
+			</script>
+	</body>
+</html>

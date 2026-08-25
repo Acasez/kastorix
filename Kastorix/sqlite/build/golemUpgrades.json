@@ -1,0 +1,166 @@
+{
+    "All": [
+        {
+            "name": "Aura Cleaving Weapon",
+            "description": "You have improved your golems offence by allowing it to energize its weapon to punch through auras.\nYour golems natural attacks does an extra damage dice to auras",
+            "prerequisites": "",
+            "level": 4
+        },
+        {
+            "name": "Ballista",
+            "description": "You mount a ballista on your golem, giving it a ranged weapon.\nYour golem has a ranged attack (DEX + trained), 1d10 + PHY piercing damage, with the Reload 1 trait and a range of 10 tiles. \nWhile adjacent to your golem you may use your DEX instead of it's own DEX for the attack.",
+            "prerequisites": "Quadruped Golem Model",
+            "level": 4
+        },
+        {
+            "name": "Elemental Ward",
+            "description": "With the right runes and spellwork your golem is now resistant to elemental damage\nYour Golem has resistance 3 to elemental damage",
+            "prerequisites": "",
+            "level": 4
+        },
+        {
+            "name": "Feathersteel Wings",
+            "description": "You've equipped your golem with feathersteel wings that lets it glide down and perform acrobatic maneuvers.\nYour golem has a glide speed equal to its movespeed.\nYour golem is trained in acrobatics or stealth.",
+            "prerequisites": "Scout Golem Model",
+            "level": 4
+        },
+        {
+            "name": "Golem Mount",
+            "description": "You design your golem to serve as a suitable mount.\nYou can mount your golem as 1 action.\nYou have a +2 bonus to Reflex saves against strikes and targeted attacks while mounted on your golem",
+            "prerequisites": "Quadruped Golem Model",
+            "level": 4
+        },
+        {
+            "name": "Integrated Weapon",
+            "description": "You've designed your golem to allow it to integrate a weapon into one of its arm\nYou can spend a minute to attach a weapon.\nWhile attached it cannot be disarmed and has +1 bonus to attack.",
+            "prerequisites": "",
+            "level": ""
+        },
+        {
+            "name": "Programmed Tactics",
+            "description": "You program in two tactical maneuvers for your golem.\nYour golem learns two simple combat maneuvers.\nThis upgrade can be taken multiple times, choosing new combat maneuvers",
+            "prerequisites": "",
+            "level": 4
+        },
+        {
+            "name": "Raise Guard",
+            "description": "Your golem raises its hands or appendages to guard itself.\nYour Golems natural strikes has the Block 2 trait, giving an option to defend itself.\nIt also learns the Protect Ally combat maneuver but can only target you with it.",
+            "prerequisites": "Brawler or Quadruped Golem Model",
+            "level": 4
+        },
+        {
+            "name": "Soul Link",
+            "description": "You set up a crystal connection to connect the golem to your soul, giving you a few benefits\nYou can see and hear through your golems location\nYou can command your golem without verbal commands and the range of command is now 20 tiles \nYou can recharge Capacitor Upgrades within that range.",
+            "prerequisites": "Trained in Souls Lore",
+            "level": 4
+        },
+        {
+            "name": "Specialized Armory",
+            "description": "Your golem becomes trained in two weapon groups.\nYou may choose an Advanced Weapon instead of a weapon group",
+            "prerequisites": "Soldier or Scout Golem Model",
+            "level": 4
+        },
+        {
+            "name": "Defense Protocol",
+            "description": "After your Golem uses the Block action adjacent allies have +1 to all saving throws.\nAdditionally you may Take Cover behind your golem as a part of the Block action.",
+            "prerequisites": "",
+            "level": 6
+        },
+        {
+            "name": "Project Aura",
+            "description": "You can project your Aura to protect your golem from dangerous attacks.\nWhen your golem would take damage, you can use Aura Block as a reaction as long as you are within 20 tiles of it.",
+            "prerequisites": "[Soul Link]",
+            "level": 6
+        },
+        {
+            "name": "Reinforced Armor",
+            "description": "You have improved the defenses of your golem, making it even tougher.\nIncrease it's resistance to physical damage by 2.\nIts health increases by its PHY",
+            "prerequisites": "",
+            "level": 6
+        },
+        {
+            "name": "Size-Up Golem",
+            "description": "You've sized up your golem.\nYour Golem is large. \nIt's health is (4 x your level) + your INT + its PHY",
+            "prerequisites": "",
+            "level": 6
+        },
+        {
+            "name": "Soul Channel Spell",
+            "description": "Using your Soul Link you can now channel spells through your golem.\nWhen casting spells you may choose to cast spells as if you were in your golems space.\nThis gives the spell the Complex trait. \nYou cannot cast spells that already have the Complex trait with this",
+            "prerequisites": "[Soul Link]",
+            "level": 6
+        },
+        {
+            "name": "Tail Strike",
+            "description": "A tail or tentacle is an unorthodox weapon for a golem, but it can it hit foes that aren't expecting\nYour Golem has a Tail natural weapon, with a reach of 2. It does 1d8 damage and has the Sweep trait.\nWhen you design your golem you can choose weather it it's an Agile tail or Shoving tail.\nAn agile tail also has the Agile and Finesse trait and does slashing damage\nA shoving tail also has the Shove and Sweep trait and does bludgeoning damage.",
+            "prerequisites": "",
+            "level": 6
+        },
+        {
+            "name": "Fire Capacitor",
+            "description": "You install a flame throwing projector in your golem.\nYour golem can spend two actions to project a 5 tile cone of fire, dealing 4d6 fire damage with a basic Reflex save\nAfter use, you must then recharge the capacitor with 5 mana as an action while adjacent to your golem.",
+            "prerequisites": "",
+            "level": 6
+        },
+        {
+            "name": "Lightning Capacitor",
+            "description": "You install a lightning projecting device into your golem.\nYour golem can spend two actions to project a 10 tile line of fire, dealing 3d8 lightning damage with a basic Reflex save\nAfter use, you must then recharge the capacitor with 5 mana as an action while adjacent to your golem.",
+            "prerequisites": "",
+            "level": 6
+        },
+        {
+            "name": "Frost Capacitor",
+            "description": "You install a flame throwing projector in your golem.\nYour golem can spend two actions to project a 3 tile cone of fire, dealing 3d4 cold damage with a basic Fortitude save\nMedium and smaller creatures that fail the save also become Frozen 1, or 2 on a critical failure\nAfter use, you must then recharge the capacitor with 5 mana as an action while adjacent to your golem.",
+            "prerequisites": "",
+            "level": 6
+        },
+        {
+            "name": "Upgraded Components",
+            "description": "With some upgraded components, your golem is now stronger or faster than before.\nIncrease your golems PHY or DEX by 1. \nYou may choose this upgrade multiple times.\nThe highest you can raise them to is 5.\nThis limit increases to 6 at level 12, and 7 at level 18",
+            "prerequisites": "",
+            "level": 6
+        },
+        {
+            "name": "Advanced Programmed Tactics",
+            "description": "You've program in more advanced maneuvers\nYour golem learns two advanced combat maneuvers.\nThis upgrade can be taken multiple times, choosing new combat maneuvers",
+            "prerequisites": "[Programmed Tactics]",
+            "level": 8
+        },
+        {
+            "name": "Battlefield Stomp",
+            "description": "Your golems size allows its to create a thundering stomp.\nYour golem has the Battlefield Stomp action. (Environmental, attack, area)\nBattlefield Stomp, 2 actions - Every creature within 3 tiles must make a basic Fortitude save against your Golems attack.\nOn a failure they take 2d6 bludgeoning damage and fall prone",
+            "prerequisites": "[Size Up Golem]",
+            "level": 8
+        },
+        {
+            "name": "Greater Elemental Ward",
+            "description": "Stronger wards have improved your golems resistance to magic.\nIncrease your golems resistance to elemental damage to 8\nIncrease it by 2 more if you have the Size-Up Upgrade, and an additional 2 if you have the War Walker upgrade",
+            "prerequisites": "[Elemental Ward]",
+            "level": 10
+        },
+        {
+            "name": "Perfected Spell Channeling",
+            "description": "You've set up the perfected resonating link to channel your spells\nWhen channeling spells though your golem you no longer give the spells the Complex trait and you can cast Complex spells\nYou can also target your golem with spells that would normally only target you",
+            "prerequisites": "[Soul Channel Spell]",
+            "level": 12
+        },
+        {
+            "name": "War Walker",
+            "description": "You've built your golem as true war walker, a machine of battlefield prowess\nYour Golem is huge. \nIt's health is (5 x your level) + your INT + its PHY\nIt does an extra dice of damage with its attacks",
+            "prerequisites": "[Size Up Golem]",
+            "level": 12
+        },
+        {
+            "name": "Winged Golem",
+            "description": "You've improved your golems wings and given it magical propulsion.\nYour golem has a flight speed equal to its movespeed.",
+            "prerequisites": "[Feathersteel Wings]",
+            "level": 12
+        },
+        {
+            "name": "Capacitor Upcharge",
+            "description": "You have upgraded your golems capacitors, allowing to channel more mana into destructive magic.\nWhen using the an capacitor action you may overcharge them, increase the damage and size.\nIf you do, your golem becomes Stunned 1 and needs 15 mana before the capacitor can be recharged.\nFire Capacitor, 8d6 damage, 7 tile cone.\nLightning Capacitor, 5d12 damage, 2 tile wide, 12 tile long line\nFrost Capacitor, 6d4 damage, 5 tile cone. Frozen status works on large creatures",
+            "prerequisites": "",
+            "level": 12
+        }
+    ]
+}

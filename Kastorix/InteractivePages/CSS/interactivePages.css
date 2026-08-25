@@ -1,0 +1,200 @@
+.proficiency-cycle-button,
+.status-cycle-button {
+    width: 25px;
+    height: 25px;
+    margin-right: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+
+    border: none;
+
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.condition-button {
+    margin-right: 5px;
+}
+
+.proficiency-button,
+.skill {
+    display: inline-block;
+    margin: 0 0 0 0;
+    padding-left: 8px;
+}
+
+.proficiency-cycle-button {
+    margin-top: -10px;
+}
+
+.save-label {
+    font-weight: bold;
+    color: #4da6ff;
+    margin-top: -15px;
+    margin-bottom: -20px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.save-label p {
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: clamp(12px, 1.5vw, 15px);
+}
+
+.stat-box,
+.save-box {
+    flex: 1;
+    min-width: 100px;
+    border: 1px solid #ff5722;
+    ;
+    padding: 0px 5px 0px 5px;
+    border-radius: 4px;
+    text-align: center;
+    max-width: fit-content;
+}
+
+.stat-box p {
+    margin-top: -5px;
+    margin-bottom: -5px;
+    font-size: 22px;
+    color: #4a9bee;
+}
+
+.crSectionTitle {
+    margin-bottom: 0px;
+    margin-top: 5px;
+    color: #444;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.3em;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333;
+    text-decoration: underline;
+    color: #ff5722;
+}
+
+button.has-tooltip:hover .tooltip {
+    display: block;
+    opacity: 1;
+    transform: translateY(-15px);
+}
+
+.item-traits {
+    font-style: italic;
+}
+
+.size-option {
+    top: 100%;
+    left: 0;
+    background: #333;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 120px;
+    z-index: 1000;
+}
+
+.size-options {
+    display: none;
+    top: 100%;
+    left: 0;
+    background: #333;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 120px;
+    z-index: 1000;
+
+    transform: translateY(-10px);
+}
+
+.size-options.show {
+    display: block;
+}
+
+.aspectChoiceContainer {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.inItemChoiceButton {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.runeContainer {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+.runeButton {
+    margin: 5px;
+    padding: 5px 10px;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.runeButton.selected {
+    background: #4CAF50;
+    color: white;
+}
+
+.inItemChoiceButton.selected {
+    background: #4CAF50;
+    color: white;
+}
+
+/*Resource Bars*/
+.resource-bars-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.resource-bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5px;
+}
+
+.bar-container {
+    height: 20px;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+
+.resource-inputs {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: -15px;
+}
+
+.resource-inputs label {
+    margin-right: 5px;
+}

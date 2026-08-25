@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Aldarna</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<base href="/Kastorix/">
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+						<h3 class="portfolio-title">Aldarna</h3>
+						</header>
+						<div class="portfolio-row"> <!-- Aldarna -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<div id="overview-placeholder"></div>  
+								</p>
+							</div>
+							<div class="wikibox">
+								<div class="wikibox-header">
+									<h4>Aldarna</h4>
+								</div>
+								<div class="wikibox-content">
+									<b>Location:</b> Northern Meibor<br>
+									<b>Size:</b> Medium<br>
+									<b>Population:</b> <br>
+									<b>Military Strength:</b> Regional Power<br>
+									<b>Government:</b> Military junta<br>
+									<b>Exports:</b> Wood, food<br>
+									<b>Imports:</b> Metals, magical materials<br>
+									<b>Species:</b> Nagas, gnomes, others<br>
+									<b>History:</b> Old<br>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Geography -->
+							<div class="portfolio-image large">
+								<img src="/images/Kastorix/Maps/Meibor 2.png" alt="Map of the Nation" />
+							</div>
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Geography</h3>
+									<div id="geography-placeholder"></div> 
+								</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Government -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Government</h3>
+									<div id="government-placeholder"></div>
+								</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- History -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">History</h3>
+									<div id="history-placeholder"></div>
+								</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Economy -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Economy</h3>
+									<div id="economy-placeholder"></div>
+								</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Society and Culture -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Society and Culture</h3>
+									<div id="society"></div> 
+								</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Military -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Military</h3>
+									<div id="military-placeholder"></div>
+								</p>
+							</div>
+						</div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				// Close dropdowns when clicking outside
+				window.onclick = function(event) {
+					if (!event.target.matches('.dropbtn')) {
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						for (var i = 0; i < dropdowns.length; i++) {
+							var openDropdown = dropdowns[i];
+							if (openDropdown.style.display === "block") {
+								openDropdown.style.display = "none";
+							}
+						}
+					}
+				};
+			</script>
+	</body>
+</html>

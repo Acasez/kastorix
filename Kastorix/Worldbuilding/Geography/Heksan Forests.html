@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Heksan Forests</title>
+		<meta charset="utf-8" />
+		<base href="/Kastorix/">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+						<h3 class="portfolio-title">Heksan Forests</h3>
+						</header>
+						<div class="portfolio-row reverse"> <!-- Heksan Forests -->
+							<div class="portfolio-image large">
+								<img src="/images/Kastorix/Maps/Eastern Meibor.jpg" alt="World Map" />
+							</div>
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Overview</h3>
+									<!-- Overview Text Below -->
+                                    <p><strong>Santsim</strong> is the smallest continent on [[Kastorix]], located west of <a href="Worldbuilding/Geography/Meibor.html">Meibor</a> and south of <a href="Worldbuilding/Geography/Avijor.html">Avijor</a>. It is home to a diverse range of species, including humans, gnomes, nagas, yirte, and brannur. Notably, it also hosts the largest collection of dragonkin and vesper outside of their native lands.</p>
+							</div>
+						</div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				// Close dropdowns when clicking outside
+				window.onclick = function(event) {
+					if (!event.target.matches('.dropbtn')) {
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						for (var i = 0; i < dropdowns.length; i++) {
+							var openDropdown = dropdowns[i];
+							if (openDropdown.style.display === "block") {
+								openDropdown.style.display = "none";
+							}
+						}
+					}
+				};
+			</script>
+	</body>
+</html>

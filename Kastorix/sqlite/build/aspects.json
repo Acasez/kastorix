@@ -1,0 +1,85 @@
+{
+    "All": [
+        {
+            "name": "Arcane",
+            "type": "Primal",
+            "opposite": "None",
+            "basicMagic": "",
+            "aura": "",
+            "infusion": "",
+            "elementalization": ""
+        },
+        {
+            "name": "Fire",
+            "type": "Primal",
+            "opposite": "Water",
+            "basicMagic": "After you cast a fire spell you may increase the amount of damage dice dealt by the spell by one. You take that much damage as Vital damage.",
+            "aura": "Increase the damage dice to d8s",
+            "infusion": "You have resistance equal to your level to fire damage and ignore environmental effects based on fire, smoke and heat",
+            "elementalization": "You are immune to fire damage. \nYour unarmed melee attacks deal an additional d6 of fire damage\nYou take a d6 of vital damage if you start your turn with the wet condition, or 2d6 if you are underwater"
+        },
+        {
+            "name": "Water",
+            "type": "Primal",
+            "opposite": "Fire",
+            "basicMagic": "After you cast an water spell you may walk on water and ignore difficult terrain from ice and snow for the rest of the turn ",
+            "aura": "Also gain the same resistance to fire",
+            "infusion": "You have a swim speed equal to you land speed. You have a +3 bonus to Athletics, Acrobatics and Brawling checks underwater",
+            "elementalization": "You can breathe underwater and are unaffected by deep sea pressure. \nYou ignore difficult terrain for snow, ice, and checks to balance on them.\nYou can hide underwater without objects to hide behind and have +3 bonus to Stealth checks underwater"
+        },
+        {
+            "name": "Earth",
+            "type": "Primal",
+            "opposite": "Air",
+            "basicMagic": "After you cast an earth spell you have a +3 bonus to saving throws against being knocked prone, off-guard or moved against your will until the start of your next turn",
+            "aura": "Also gain half that resistance to physical damage",
+            "infusion": "You have resistance equal to a third of your level to physical damage. ",
+            "elementalization": "You have a burrow speed of 3. \nYour resistance increases to half your level"
+        },
+        {
+            "name": "Air",
+            "type": "Primal",
+            "opposite": "Earth",
+            "basicMagic": "After you cast an air spell you ignore difficult terrain for the rest of the turn",
+            "aura": "Gain a +1 bonus to reflex saving throws against ranged attacks",
+            "infusion": "When you jump the distance and height you can jump is doubled. You treat difficult terrain from harsh winds as one step less.",
+            "elementalization": "You have a fly speed (hover) of 5"
+        },
+        {
+            "name": "Metal",
+            "type": "Lesser",
+            "opposite": "Lightning",
+            "basicMagic": "After you cast an metal spell you gain resistance 3 to physical damage until the start of your next turn",
+            "aura": "Gain a +1 bonus to reflex saving throws against attacks with metal weapons or spells/abilities with the metal trait",
+            "infusion": "You can use your reaction to create a spot of metal on your body, giving you resistance equal to your level against an attack",
+            "elementalization": "TODO"
+        },
+        {
+            "name": "Lightning",
+            "type": "Lesser",
+            "opposite": "Metal",
+            "basicMagic": "After you cast a lightning spell you deal 1d6 lightning damage to the first creature that hits you with a melee attack until the start of the next turn",
+            "aura": "You can spend a focus point to increase the range of the damaging aura to 3 tiles for the turn",
+            "infusion": "You have resistance equal to your level to lightning damage. You can choose to add 1d4 lightning damage on unarmed strikes and melee attacks with metal weapons. When you succeed on grapple check you can deal 1d6 lightning  damage",
+            "elementalization": "Increase your movespeed by 1. \nWhen you Step you move one more tile."
+        },
+        {
+            "name": "Light",
+            "type": "Lesser",
+            "opposite": "Darkness",
+            "basicMagic": "After you cast an light spell you may emit bright light in a radius of 2 + the spells rank until the start of the next turn",
+            "aura": "Your aura emits bright light for 4 tiles, and dim light for 4 more",
+            "infusion": "You emit bright light for 2 tiles, and dim light for 2 more. You can toggle this as an action",
+            "elementalization": "You cannot be blinded or dazzled. \nThe range of your light is doubled and you can choose to emit as a cone or line instead"
+        },
+        {
+            "name": "Darkness",
+            "type": "Lesser",
+            "opposite": "Light",
+            "basicMagic": "After you cast an darkness spell, you gain darkvision until the start of your next turn",
+            "aura": "Creatures that fail their saving throw are blinded next turn unless they take an action to blink",
+            "infusion": "You gain darkvision. You have a +3 bonus to visual stealth checks",
+            "elementalization": "Once per turn you can spend an action to emit a cloud of magical darkness covering adjoining four tiles starting from you. \nYou have +1 movespeed and a +1 bonus to all D20 rolls while in darkness"
+        }
+    ]
+}

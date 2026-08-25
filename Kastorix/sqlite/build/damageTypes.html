@@ -1,0 +1,77 @@
+
+    <style>
+        #damageTypesTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="damageTypesTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Group</th><th onclick='sortTable(2)'>Resistance</th><th onclick='sortTable(3)'>Rarity</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="piercing">
+                <td>Piercing</td><td>Physical</td><td>Armor</td><td>Common</td>
+            </tr>
+        
+            <tr id="slashing">
+                <td>Slashing</td><td>Physical</td><td>Armor</td><td>Common</td>
+            </tr>
+        
+            <tr id="bludgeoning">
+                <td>Bludgeoning</td><td>Physical</td><td>Armor, but not as well</td><td>Common</td>
+            </tr>
+        
+            <tr id="fire">
+                <td>Fire</td><td>Elemental</td><td>Armor, potions</td><td>Common</td>
+            </tr>
+        
+            <tr id="cold">
+                <td>Cold</td><td>Elemental</td><td>Armor, potions</td><td>Uncommon</td>
+            </tr>
+        
+            <tr id="lightning">
+                <td>Lightning</td><td>Elemental</td><td>Potions</td><td>Rare</td>
+            </tr>
+        
+            <tr id="acid">
+                <td>Acid</td><td>Elemental</td><td>Potions</td><td>Rare</td>
+            </tr>
+        
+            <tr id="poison">
+                <td>Poison</td><td>Elemental</td><td>Potions</td><td>Uncommon</td>
+            </tr>
+        
+            <tr id="unraveling">
+                <td>Unraveling</td><td>Exotic</td><td>Runes</td><td>Very Rare</td>
+            </tr>
+        
+            <tr id="vital">
+                <td>Vital</td><td>None</td><td>None</td><td>Very Rare</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

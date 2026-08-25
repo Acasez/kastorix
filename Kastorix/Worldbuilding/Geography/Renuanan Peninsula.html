@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Renuanan Peninsula</title>
+		<meta charset="utf-8" />
+		<base href="/Kastorix/">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+						<h3 class="portfolio-title">Renuanan Peninsula</h3>
+						</header>
+						<div class="portfolio-row reverse"> <!-- Renuanan Peninsula -->
+							<div class="portfolio-image large">
+								<img src="/images/Kastorix/Maps/Northwest Meibor.jpg" alt="World Map" />
+							</div>
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Overview</h3>
+									<!-- Overview Text Below -->
+                                    <p>The Renuanan Peninsula is a region in the northern part of <a href="Worldbuilding/Geography/Meibor.html">Meibor</a>. While most of the of it lies in <a href="Worldbuilding/Nations/Renue.html">Renue</a>, the northeastern tip houses the famous <a href="Worldbuilding/Nations/Ishyin Academy.html">Ishyin Academy</a> and the southern third part of lies in <a href="Worldbuilding/Nations/Theze.html">Theze</a> and <a href="Worldbuilding/Nations/Aldarna.html">Aldarna</a>. Most of is covered in flat plains, though the central part has regions of hills and a dormant volcano</p>
+							</div>
+						</div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				// Close dropdowns when clicking outside
+				window.onclick = function(event) {
+					if (!event.target.matches('.dropbtn')) {
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						for (var i = 0; i < dropdowns.length; i++) {
+							var openDropdown = dropdowns[i];
+							if (openDropdown.style.display === "block") {
+								openDropdown.style.display = "none";
+							}
+						}
+					}
+				};
+			</script>
+	</body>
+</html>

@@ -1,0 +1,333 @@
+
+    <style>
+        #generalFeatsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="generalFeatsTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Feat Name</th><th onclick='sortTable(1)'>Description</th><th onclick='sortTable(2)'>Prerequisites</th><th onclick='sortTable(3)'>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="academic">
+                <td>Academic</td><td class="wide-column"><span class='flavor-text'>You are learned in many scholarly matters.</span><br>Your proficiency level in three of Arcana, Crafting, History, Nature, Society or a Lore skill increases (max Expert)</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="alert">
+                <td>Alert</td><td class="wide-column"><span class='flavor-text'>With a watchful eye you are ready for danger</span><br>Your proficiency level in perception increases (max Expert). <br>Your can choose to roll initiative with your perception score instead of your DEX</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="always-the-right-tool">
+                <td>Always The Right Tool</td><td class="wide-column"><span class='flavor-text'>You always seem to have the correct tool in your pocket.</span><br>Once per day, as a two action activity you may find a small tool, gear, ammunition or material you could have bought earlier in your bags.<br>You then reveal when you bought the item and pay for them.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="army-training">
+                <td>Army Training</td><td class="wide-column"><span class='flavor-text'>You have served in one of the armies, and trained with its equipment. </span><br>Become trained Light Armor and two weapon groups depending on the army<br>Draconic Legions. Polearms and Runeguns<br>Thezan Armies. Swords and Runeguns.<br>Spellshield Formations. Shields and Swords<br>El-Shavrian Armies. Swords and Crossbows<br>Yirte Militias. Bows and Knives</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="athlete">
+                <td>Athlete</td><td class="wide-column"><span class='flavor-text'>You've trained your body </span><br>Increase the distance you can move without making a check when you take the Leap or High Jump action by 2<br>Your proficiency level in Athletics or Acrobatics increases (max Expert). </td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="battlefield-medic">
+                <td>Battlefield Medic</td><td class="wide-column"><span class='flavor-text'>You've trained to practice medicine even in the heat of combat</span><br>Your proficiency level in medicine or athletics increases (max Expert). <br>You don't take the -2 penalty to the treat wounds and stabilize creature actions in combat</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="calculate-the-odds">
+                <td>Calculate The Odds</td><td class="wide-column"><span class='flavor-text'>You take a moment to think and calculate your next move.</span><br>You learn the Calculate The Odds action<br><span class='action-title'>Calculate The Odds</span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/> (Mental)<br>Declare an action that requires a D20 roll. Roll a d20. <br>If your next action afterwards is to do that action, use that roll<br>You may use this a number of times equaling to your INT per day</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="combat-training">
+                <td>Combat Training</td><td class="wide-column"><span class='flavor-text'>Your have seen combat or trained in a army.  </span><br>Your proficiency level in Fortitude Saves increases (max Trained)<br>You become trained in one weapon group of your choice.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="dedicated-student">
+                <td>Dedicated Student</td><td class="wide-column"><span class='flavor-text'>You have put practicing magic as your focus ahead of all else. </span><br>Gain one level 1 <a href="Arcane Feats.html">Arcane Feats</a></td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="defensive-training">
+                <td>Defensive Training</td><td class="wide-column"><span class='flavor-text'>You've trained your defense.</span><br>Your proficiency level in one type of saving throws increases (max Trained). <br>You may choose this feat multiple times.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="duelist">
+                <td>Duelist</td><td class="wide-column"><span class='flavor-text'>You experience has you always ready for combat.</span><br>When you roll initiative, you may Strike, Cast a Spell that costs 1 action or Step as a free action.<br>If you get a critical hit a creature with an attack or spells that only target them, they have -1 penalty on D20 rolls until the start of next turn. </td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="encouraging-words">
+                <td>Encouraging Words</td><td class="wide-column"><span class='flavor-text'>You may attempt to shake your allies out of fright.</span><br>As an action you can persuasion check against the spell or creature that frightens them, reducing their frightened value by 1 on a success or 2 on a critical success.<br>Your proficiency level in persuasion increases (max Expert). </td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="expert-pilot">
+                <td>Expert Pilot</td><td class="wide-column"><span class='flavor-text'>Your skill in piloting vehicles is well known.</span><br>Your proficiency level in Airship Lore, Ship Lore or Land Vehicles Lore increases (max Expert).<br>You count as two people when it comes to operating a vehicle</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="heavy-armor-training">
+                <td>Heavy Armor Training</td><td class="wide-column"><span class='flavor-text'>Unlike most mages you have experience in fighting in heavy armor. </span><br>You are trained with heavy armor</td><td>Trained in light armor</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="inspiring-leader">
+                <td>Inspiring Leader</td><td class="wide-column"><span class='flavor-text'>You have a way with words and can inspire those around you. </span><br>You can use the Inspire Courage action once per day. <br><span class='action-title'>Inspire Courage </span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/><br>You give a rousing speech or perform an act that inspires your allies in a 5 tile wide aura <br>All allies in the aura gain a +1 bonus to attack rolls and saving throws against fear effects for the duration. <br>This bonus increases to +2 at level 10 and +3 at level 15. The aura lasts for one minute or until you are incapacitated.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="item-thrower">
+                <td>Item Thrower</td><td class="wide-column"><span class='flavor-text'>The range you can throw items, gadgets and potions increases by 3.</span><br>Additionally you may attempt a Sleight of Hand check to bounce thrown items around corners or through small openings.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="linguist">
+                <td>Linguist</td><td class="wide-column"><span class='flavor-text'>You know how to speak with people and master any language you come across.</span><br>Learn two extra languages. <br>You have advantage on checks to decipher languages<br>Your proficiency level in Society or Persuasion increases (max Expert)</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="lore-mastery">
+                <td>Lore Mastery</td><td class="wide-column"><span class='flavor-text'>There is one type of lore that you know better than almost anyone.</span><br>Choose one Lore skill to become expert in.<br>At level 5 you become master in the chosen lore<br>At level 12 you become legendary in it.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="marksman">
+                <td>Marksman</td><td class="wide-column"><span class='flavor-text'>You've trained in the art of aiming and shooting. </span><br>You learn the <a href="Aim.html">Aim</a> Combat Maneuver. <br>You don't take a penalty when attacking with runeguns or crossbows while prone.</td><td>Trained with at least one type of ranged weapons</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="martial-arts-training">
+                <td>Martial Arts Training</td><td class="wide-column"><span class='flavor-text'>You know how to fight unarmed, from time spent scrapping or formal martial arts training. </span><br>You become trained with unarmed attacks. <br>Your unarmed attacks use a one step larger dice (1d2 -> 1d4 -> 1d6 -> 1d8). <br>Your proficiency level in Brawling increases one step (max Expert).</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="martial-gun-arts">
+                <td>Martial Gun Arts</td><td class="wide-column"><span class='flavor-text'>You've learned to fight in close range with your firearm.</span><br>You can use runeguns as melee weapons, dealing 1d4 bludgeoning damage or 1d6 if you are holding them in two hands.<br>You no longer take a penalty to attacks with bayonets</td><td>Trained with Runeguns</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="nerves-of-steel">
+                <td>Nerves of Steel</td><td class="wide-column"><span class='flavor-text'>You let nothing scare you</span><br>Your proficiency level in Will saves steel increases (max Trained).<br>You have advantage on Will saves against Fear effects</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="opportunist">
+                <td>Opportunist</td><td class="wide-column"><span class='flavor-text'>Your good at striking enemies when a moment of opportunity appears. </span><br>Your penalty on Opportunity Attacks is -2 less (-1 without agile, 0 with)</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="quick-witted">
+                <td>Quick Witted</td><td class="wide-column"><span class='flavor-text'>You're good at quickly coming up with comebacks and retorts.</span><br>If another creature fails to intimidate or persuade you, you may intimidate or persuade them as a reaction.<br>Your proficiency level in Intimidation or Persuasion increases (max Expert). </td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="quip">
+                <td>Quip</td><td class="wide-column"><span class='flavor-text'>You've learn to banter and quip in the middle of battle to distract your enemies.</span><br>You have the Quip action <br>Your proficiency level in Persuasion increases (max Expert). <br><span class='action-title'>Quip</span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/> (Mental)<br>Make a Persuasion roll versus a creature Will Save.<br>If you succeed the target becomes Off-Guard 1 until the end of its next turn as it distracts them.<br>On a critical success it becomes Off-Guard 2 instead.<br>Regardless of the roll the target is immune to Quip for an hour</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="skilled">
+                <td>Skilled</td><td class="wide-column"><span class='flavor-text'>You have practiced three skills of your choice, becoming trained in them.</span><br>You may choose this feat multiple times.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="sneaky">
+                <td>Sneaky</td><td class="wide-column"><span class='flavor-text'>You can move silently and hide in shadows.</span><br>When sneaking you can move at full speed without taking the -5 penalty.<br>You become trained in the knives weapon group</td><td>Trained in stealth</td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="staff-training">
+                <td>Staff Training</td><td class="wide-column"><span class='flavor-text'>You have trained with staves, a traditional weapon for mages.</span><br>You are trained with the staff weapon group<br>You can turn wood into a battlestaff or longstaff during a short rest. <br>If you have the Shape Metal spell you can use it to create a battlestaff as a three action activity</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="surveyor">
+                <td>Surveyor</td><td class="wide-column"><span class='flavor-text'>You have studied maps and the land, learning how to read the terrain. </span><br>You become trained in geography lore. <br>Your exploration speed is two steps faster than what it would normally be. You can always find north.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="survivor">
+                <td>Survivor</td><td class="wide-column"><span class='flavor-text'>You have survived against the elements. </span><br>You gain resistance 3 to one type of elemental damage: fire, cold, electricity, acid or sonic. <br>You have a +3 bonus on survival checks to avoid natural hazards and extreme weather.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="tactical-combatant">
+                <td>Tactical Combatant</td><td class="wide-column"><span class='flavor-text'>You can make the best of the heat of combat. </span><br>Learn 2 + your INT simple <a href="Combat Maneuvers.html">Combat Maneuvers</a><br>You may choose this feat multiple times.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="underhanded-striker">
+                <td>Underhanded Striker</td><td class="wide-column"><span class='flavor-text'>You know how to strike opponents when their weakened. </span><br>When you attack an opponent that is off-guard you deal 1d6 more damage. <br>Alternatively you may instead reduce the Precision attack penalty against such opponents by 2 (to a minimum of 1)</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="untrained-improvisation">
+                <td>Untrained Improvisation</td><td class="wide-column"><span class='flavor-text'>You are used to improvising and getting into novel scenarios</span><br>You have +1 bonus to all (non lore) skills you are untrained in.</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="weapons-training">
+                <td>Weapons Training</td><td class="wide-column"><span class='flavor-text'>You have trained in a variety of weapons. </span><br>Become trained in two weapon groups of your choice. <br>Instead of picking a weapon group you may pick all Simple Weapons or a single Advanced Weapon<br>You may choose this feat multiple times</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="will-to-live">
+                <td>Will to Live</td><td class="wide-column"><span class='flavor-text'>Taking your down is harder than most and you don't stay down.</span><br>You may add your PHY or WIL to death saving throws.<br>When you would be critically hit you may spend a focus point to add your PHY or WIL to your save, potentially reducing it to a normal hit</td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="you're-next">
+                <td>You're Next</td><td class="wide-column"><span class='flavor-text'>You know the perfect line for when you defeat your foes</span><br>When you kill or defeat a foe you may use your reaction to use Intimidate.<br>Your proficiency level in Intimidation increases (max Expert). </td><td></td><td class="narrow-column">1</td>
+            </tr>
+        
+            <tr id="aerialist">
+                <td>Aerialist</td><td class="wide-column"><span class='flavor-text'>The sky is your calling</span><br>When you have a flight or glide speed it increases by 1. <br>You have a +2 bonus to any acrobatics or athletics check you make in the air.</td><td></td><td class="narrow-column">2</td>
+            </tr>
+        
+            <tr id="bob-and-weave">
+                <td>Bob and Weave</td><td class="wide-column"><span class='flavor-text'>You've learned how to dodge blows in the thick of it.</span><br>Your proficiency level in Reflex saving throws increases (max Trained). <br>When you hit a creature with an unarmed strike you gain +1 bonus to saving throws against them until the start of your next turn</td><td>Trained with Unarmed Strikes</td><td class="narrow-column">2</td>
+            </tr>
+        
+            <tr id="emergency-aura-block">
+                <td>Emergency Aura Block</td><td class="wide-column"><span class='flavor-text'>Your experience of dangers allow you shield yourself with your aura before your sometimes even aware of the threat.</span><br>Once per hour you may Aura Block as free action</td><td></td><td class="narrow-column">2</td>
+            </tr>
+        
+            <tr id="like-shooting-fish...">
+                <td>Like Shooting Fish...</td><td class="wide-column"><span class='flavor-text'>You can keep reloading as you deal with your foes</span><br>Once per turn, when you kill or knock out a creature your may reload an held weapon as a free action</td><td></td><td class="narrow-column">2</td>
+            </tr>
+        
+            <tr id="skilled-fencer">
+                <td>Skilled Fencer</td><td class="wide-column"><span class='flavor-text'>You've trained in the arts of fencing </span><br>You have +1 bonus when Parrying melee attacks<br>You learn the Cut Down Projectile and Riposte combat maneuvers.</td><td></td><td class="narrow-column">2</td>
+            </tr>
+        
+            <tr id="always-ready">
+                <td>Always Ready</td><td class="wide-column"><span class='flavor-text'>When you roll initiative and aren't surprised you may add your INT or WIL to your roll.</span><br>Your proficiency level in perception or insight increases (max Master). </td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="armor-expertize">
+                <td>Armor Expertize</td><td class="wide-column"><span class='flavor-text'>When wearing armor the resistances it grants increases by 1, or 2 if its heavy armor.</span><br>Additionally your unarmed attacks when wearing heavy armor with gauntlets deal 1d4 bludgeoning damage.</td><td>Trained with Armor</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="commanding-presence">
+                <td>Commanding Presence</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in Will saves increases (max Expert). </span><br>Allied creatures within 5 tiles have a +1 bonus to their Will saves</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="evasion-expertize">
+                <td>Evasion Expertize</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in Reflex saves increases (max Expert). </span><br>When you get a success on a reflex save you may use your reaction to turn it into a critical success </td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="expert-brawler">
+                <td>Expert Brawler</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in Brawling increases (max Expert).</span><br>Your proficiency level in unarmed attacks increases (max Expert).<br>You learn 2 combat maneuvers with the Brawling trait</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="fleet">
+                <td>Fleet</td><td class="wide-column"><span class='flavor-text'>You've trained to be faster than most.</span><br>You move speed increases by 1</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="magical-master">
+                <td>Magical Master</td><td class="wide-column"><span class='flavor-text'>You've focused even more on your magical skills</span><br>Gain one level 6 <a href="Arcane Feats.html">Arcane Feats</a></td><td>INT 2 or higher</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="martial-expertize">
+                <td>Martial Expertize</td><td class="wide-column"><span class='flavor-text'>Your martial experience has increased with time. </span><br>Your proficiency level in two weapon groups increases (max Expert). <br>You may learn one combat maneuver instead of picking a weapon group.<br>You may choose this feat multiple times</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="move-together">
+                <td>Move Together</td><td class="wide-column"><span class='flavor-text'>You move together with your companion.</span><br>When you stride you may have your golem, soulbond or other familiar stride in the same direction</td><td>You have a golem, soulbond or other familiar</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="perfect-condition">
+                <td>Perfect Condition</td><td class="wide-column"><span class='flavor-text'>You always keep you body in a healthy state</span><br>Increase your health by your PHY<br>Your proficiency level in Fortitude saving throws increases (max Expert). </td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="rolling-landing">
+                <td>Rolling Landing</td><td class="wide-column"><span class='flavor-text'>You can use your reaction to treat falls as they were 3 tiles shorter.</span><br>If you don't take fall damage from a fall you can immediately step as free action<br>Your proficiency level in Acrobatics increases (max Master).</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="spot-weak-point">
+                <td>Spot Weak Point</td><td class="wide-column"><span class='flavor-text'>Your knowlegde in medicine allows you to spot weak points on creatures.</span><br>You have the spot weak point action<br>Your proficiency level in medicine increases (max Master). <br><span class='action-title'>Spot Weak Point</span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/> (Mental)<br>Make a Medicine check against a creatures Fortitude Save.<br>On a success you spot a weak spot, that can be attacked by your or your allies to deal extra damage to the creature.<br>The creature has a +2 bonus when targeting its weak point, but attacks to it deal an extra d6 damage<br>After dealing 20 damage with this the weak point disappears and the creature becomes immune to Spot Weak Point for the day</td><td>Trained in Medicine</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="strike-the-unwary">
+                <td>Strike The Unwary</td><td class="wide-column"><span class='flavor-text'>Your always taking every opportunity to strike your foes</span><br>You can now use Opportunity Attacks on creatures using actions with the Spellcasting or Manipulate Traits</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="titan-grappler">
+                <td>Titan Grappler</td><td class="wide-column"><span class='flavor-text'>You've grappled with bigger monsters.</span><br>Your proficiency level in brawling increases (max Master). <br>You count as one size bigger when determining penalties and bonuses from grappling</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="battlefield-awareness">
+                <td>Battlefield Awareness</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in perception increases (max Master). </span><br>While off-guard you reduce the penalty by one</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="defensive-duelist">
+                <td>Defensive Duelist</td><td class="wide-column"><span class='flavor-text'>Nothing can get past your guard</span><br>Your bonus when parrying melee attacks increases to +2.<br>When you succeed on a Parry you get a +1 bonus to the next attack until the end of your next turn (Stacks up to 3 times).</td><td><a href="General Feats.html#skilled-fencer">Skilled Fencer</a></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="flash-of-genius">
+                <td>Flash Of Genius</td><td class="wide-column"><span class='flavor-text'>Your mind works at a greater speed</span><br>Once per turn you may spend a focus point to reduce action cost of an action with the Mental trait by 1.<br>Your proficiency level in Arcana, Nature, History or a Lore Skill increases (max Master). </td><td>INT 3 or higher</td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="impactful-strikes">
+                <td>Impactful Strikes</td><td class="wide-column"><span class='flavor-text'>Your strikes carry enough weight to impact creatures through armor.</span><br>Your melee strikes ignore physical resistances up to half your PHY or your full PHY if you use a two handed weapon</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="in-the-thick-of-it">
+                <td>In The Thick of It</td><td class="wide-column"><span class='flavor-text'>You fight the best while in midst of combat</span><br>If you start of your turn adjacent to 2 or more enemies, gain a temporary focus point that last until the end of your turn.</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="second-wind">
+                <td>Second Wind</td><td class="wide-column"><span class='flavor-text'>You take a breath and let energy return to you.</span><br>Once per day you spend an action to lose one level of exhaustion and get back a focus point</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="shield-specialization">
+                <td>Shield Specialization</td><td class="wide-column"><span class='flavor-text'>You know how to use shields to their fullest extent.</span><br>While you are holding bucklers you may cast spells as normal with that hand. <br>You learn the shield bash combat combat maneuver<br>You learn the Steady Shield action for tower shield<br><span class='action-title'>Steady Shield</span> - <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png" alt="1 Action"/><br>Stick a tower shield you are holding in the ground in from you.<br>Steadied shields provide greater cover to creatures behind them<br>You need to spend an action to recover a steadied tower shield.</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="strike-together">
+                <td>Strike Together</td><td class="wide-column"><span class='flavor-text'>You attack together with your companion.</span><br>When you strike you may have your golem, soulbond or other familiar strike the same target</td><td>You have a golem, soulbond or other familiar</td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="rapid-striker">
+                <td>Rapid Striker</td><td class="wide-column"><span class='flavor-text'>You have trained to rapidly strike targets without error.</span><br>You multiple attack penalty is 1 lower per step. (-4 normally, -3 with agile weapons)</td><td></td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="versatile-wielder">
+                <td>Versatile Wielder</td><td class="wide-column"><span class='flavor-text'>You're ready to fight with whatever weapon comes your way.</span><br>Your proficiency level with all weapons is Expert</td><td>Expert in 2 weapon groups</td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="weapon-master">
+                <td>Weapon Master</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in a weapon group increases (max Master).</span><br>You learn an advanced combat maneuver<br>You may choose this feat multiple times</td><td></td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="aspect-infusion">
+                <td>Aspect Infusion</td><td class="wide-column"><span class='flavor-text'>Your connection to an aspect has changed you physically and provided with some elemental abilities.</span><br>Gain a bonus depending on the aspect<br>You require 3 mana per hour</td><td><a href="Advantages.html#attunement">Attunement</a> or <a href="Pseudo-Attunement.html">Pseudo-Attunement</a></td><td class="narrow-column">10</td>
+            </tr>
+        
+            <tr id="instinctive-aura-block">
+                <td>Instinctive Aura Block</td><td class="wide-column"><span class='flavor-text'>Using your aura to shield yourself comes naturally to you after this many battles</span><br>Once per turn you may Aura Block as free action</td><td><a href="General Feats.html#emergency-aura-block">Emergency Aura Block</a></td><td class="narrow-column">10</td>
+            </tr>
+        
+            <tr id="master-sprinter">
+                <td>Master Sprinter</td><td class="wide-column"><span class='flavor-text'>You can run even faster</span><br>You move speed increases by 1<br>When you take a move action you move one extra tile if your last action was also move action</td><td></td><td class="narrow-column">10</td>
+            </tr>
+        
+            <tr id="blade-artist">
+                <td>Blade Artist</td><td class="wide-column"><span class='flavor-text'>You've learned to do the impossible with your weapon.</span><br>You learn one Blade Art Combat Maneuver<br>You can do one Blade Art per day</td><td></td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="parrying-master">
+                <td>Parrying Master</td><td class="wide-column"><span class='flavor-text'>You feel ready to take on the world with a blade your hand.</span><br>Your bonus when parrying melee attacks increases to +3.<br>You can Parry with any melee weapon that does slashing or piercing damage, but you only get the +3 bonus to those with the Parry trait</td><td><a href="General Feats.html#defensive-duelist">Defensive Duelist</a></td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="elementalization">
+                <td>Elementalization</td><td class="wide-column"><span class='flavor-text'>The connection to your aspect is so strong you now have become partly elemental in nature</span><br>Gain a bonus depending on your aspect<br>You require 10 mana per hour<br>You learn all the apprentice spells connected to your element<br>You gain the elemental trait</td><td><a href="General Feats.html#aspect-infusion">Aspect Infusion</a></td><td class="narrow-column">16</td>
+            </tr>
+        
+            <tr id="legendary-weapon-master">
+                <td>Legendary Weapon Master</td><td class="wide-column"><span class='flavor-text'>Your proficiency level in a weapon group increases (max Legendary).</span><br>You learn an masterwork combat maneuver</td><td></td><td class="narrow-column">16</td>
+            </tr>
+        
+            <tr id="mythic-champion">
+                <td>Mythic Champion</td><td class="wide-column"><span class='flavor-text'>Your training and experience allows you repeatedly go beyond normal limits</span><br>You recharge your Blade Arts after 1 hour.<br>Additionally the first time each day you are reduced to below half health, you recharge a Blade Arts</td><td></td><td class="narrow-column">18</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

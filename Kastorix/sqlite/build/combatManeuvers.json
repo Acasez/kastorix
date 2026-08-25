@@ -1,0 +1,412 @@
+{
+    "Basic": [
+        {
+            "name": "Grapple",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Brawling, Attack",
+            "description": "Make a Brawling check versus an creature's within reach Brawling roll. \nIt may defend with a Reflex or Fortitude save instead, taking a -2 penalty to the roll\nOn a success, you Grapple the creature. \nOn a critical success, the creature becomes Restrained instead\nWhile you have the creature grabbed, it is immobilized and off-guard 3\nYou can only have one creature grabbed at a time and you cannot grab a creature two or more sizes larger than you.\nSuccessfully grappling an already grappled creature Restrains them",
+            "prerequisites": "You have one hand free",
+            "type": "Basic"
+        },
+        {
+            "name": "Reactive Strike",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/Reaction.png\" alt=\"Reaction Symbol\"/>",
+            "traits": "Attack",
+            "description": "You take advantage of a creature moving within your reach.\nMake an attack against the creature with -3 penalty, or -2 if you have agile weapon",
+            "prerequisites": "A creature takes a traverse action within the reach of your weapon. ",
+            "type": "Basic"
+        },
+        {
+            "name": "Shove",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Brawling, Attack",
+            "description": "Make a Brawling check versus an creature's within reach Brawling roll. \nIt may defend with a Reflex or Fortitude save instead, taking a -2 penalty to the roll\nOn a success, you push the creature up to 2 tiles away from you. \nOn a critical success, the creature is shoved up to 4 tiles instead\nYou cannot shove a creature two or more sizes larger than you.",
+            "prerequisites": "You have one hand free or a weapon with Shove trait",
+            "type": "Basic"
+        },
+        {
+            "name": "Trip",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Brawling, Attack",
+            "description": "Make a Brawling check versus an creature's within reach Brawling roll. \nIt may defend with a Reflex or Fortitude save instead, taking a -2 penalty to the roll \nOn a success, the creature falls prone.\nOn a critical success, the creature also takes 1d6 bludgeoning damage. \nYou cannot trip a creature two or more sizes larger than you.",
+            "prerequisites": "You have one hand free.",
+            "type": "Basic"
+        }
+    ],
+    "Simple": [
+        {
+            "name": "Aim",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "",
+            "description": "You carefully aim your next ranged attack, gaining a +2 bonus to the attack roll. \nAdditionally you ignore the obscured roll on the attack if the target is obscured\nThe bonus lasts until you move or the start of your next turn.",
+            "prerequisites": "You are holding a ranged weapon",
+            "type": "Simple"
+        },
+        {
+            "name": "Block Spell",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/Reaction.png\" alt=\"Reaction Symbol\"/>",
+            "traits": "",
+            "description": "You position your shield in front of the blast. Make your save with a -4 penalty.\nIf you succeed the allies you a providing cover don't have to make the save",
+            "prerequisites": "A creature is targeting you and at least one ally, who you providing cover to and you have a shield raised",
+            "type": "Simple"
+        },
+        {
+            "name": "Charge",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "Attack",
+            "description": "You rush forward, attacking your opponent with your momentum.\nStride twice, then make a melee strike.",
+            "prerequisites": "",
+            "type": "Simple"
+        },
+        {
+            "name": "Combat Assessment",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/Reaction.png\" alt=\"Reaction Symbol\"/>",
+            "traits": "",
+            "description": "As you strike an enemy you quickly assess its capabilities. \nMake a Recall Knowledge check against the creature. ",
+            "prerequisites": "You hit an enemy with a melee strike",
+            "type": "Simple"
+        },
+        {
+            "name": "Cut Down Projectile",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/Reaction.png\" alt=\"Reaction Symbol\"/>",
+            "traits": "",
+            "description": "Attempt to cut down the projectile. \nMake a melee attack against it, instead of a Reflex saving throw",
+            "prerequisites": "You are currently parrying and you would make a Reflex saving throw against a projectile",
+            "type": "Simple"
+        },
+        {
+            "name": "Defensive Positions",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "Tactical",
+            "description": "Your order your allies to take cover.\nUp to three allies can use their reactions to Step, Stride or Traverse into Cover or use the Block, Parry or Take Cover actions",
+            "prerequisites": "",
+            "type": "Simple"
+        },
+        {
+            "name": "Double Slice",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "Attack",
+            "description": "Make two weapon attacks at the same target, one with each weapon. \nIf the second weapon is agile it takes no multiple attack penalty, otherwise the penalty is -2.\nIf both attacks hit you combine their damage for the purpose of overcoming resistances.",
+            "prerequisites": "You are wielding two melee weapons, one in each hand.",
+            "type": "Simple"
+        },
+        {
+            "name": "Duck",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/Reaction.png\" alt=\"Reaction Symbol\"/>",
+            "traits": "",
+            "description": "You attempt to dive out of the effect. You move 1 tile. \nIf this causes you to leave the area of the spell you have +5 bonus to the saving throw, otherwise it's a +3 bonus. \nAfter making the save you fall prone.",
+            "prerequisites": "You are forced to make a Reflex saving throw and have a move speed",
+            "type": "Simple"
+        },
+        {
+            "name": "Far Shot",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Attack",
+            "description": "You make a shot beyond the normal range of the weapon\nMake a ranged strike at two range increments above the default at no penalty.",
+            "prerequisites": "",
+            "type": "Simple"
+        },
+        {
+            "name": "Feint",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "",
+            "description": "You make a maneuver that appears as strike to throw an enemy off-guard. \nMake a Deception check against an enemies Perception roll.\nOn a success, the creature becomes off-guard 2 for the rest of the turn\nOn a critical success,  the creature becomes off-guard 2 until the start of its next turn",
+            "prerequisites": "You have an enemy in reach of one your melee strikes",
+            "type": "Simple"
+        },
+        {
+            "name": "Flying Kick",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "",
+            "description": "Leap then make an unarmed Strike at any point during the leap.\nIt deals an additional d4 damage",
+            "prerequisites": "",
+            "type": "Simple"
+        },
+        {
+            "name": "Lunge",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Attack",
+            "description": "Attack an enemy at the edge of your reach. \nMake a melee strike with a 1 tile bonus range",
+            "prerequisites": "",
+            "type": "Simple"
+        },
+        {
+            "name": "Measured Strike",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Attack",
+            "description": "You strike with measured practice.\nMake a strike with half your current multiple attack penalty (rounded down)",
+            "prerequisites": "",
+            "type": "Simple"
+        },
+        {
+            "name": "Movementum Roll",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/Reaction.png\" alt=\"Reaction Symbol\"/>",
+            "traits": "Acrobatics",
+            "description": "You use the momentum of the effect that would knock you down to roll forward and kip up.\nMake an Acrobatics against the effect that would knock you prone.\nOn a success you Step once and don't fall prone.\nOn a critical success you also gain a +2 bonus to all saves until the start of your turn",
+            "prerequisites": "You would fall prone",
+            "type": "Simple"
+        },
+        {
+            "name": "Pommel Strike",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Attack",
+            "description": "Make an attack with the backend of your weapon using the momentum of your last strike.\nMake a strike with the same MAP as your last attack\nOn a hit it does 1d4 bludgeoning damage or 1d6 if you hold the weapon in both hands\nIf your weapon has the unwieldy trait, this strike ignores that",
+            "prerequisites": "You are wielding a weapon in the Polearm or Spear group and you last action was to make a Strike with it",
+            "type": "Simple"
+        },
+        {
+            "name": "Protect Ally",
+            "actions": "",
+            "traits": "",
+            "description": "Instead of defending yourself you ready to protect your ally.\nGive an adjacent creature a defense bonus equal to the Block value of your shield. \nYou cannot Block and Protect Ally at the same time with the same weapon.",
+            "prerequisites": "You are holding a weapon with the Block trait",
+            "type": "Simple"
+        },
+        {
+            "name": "Quick Draw",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Attack",
+            "description": "You draw a weapon and strike with in the same movement. \nDraw a weapon and Strike with it.",
+            "prerequisites": "",
+            "type": "Simple"
+        },
+        {
+            "name": "Rapid Retreat",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Tactical",
+            "description": "You order an ally to flee from danger.\nChose an ally and enemy. The ally can use their reactions to Stride or Traverse to move away from that enemy.\nThey move with a +1 move speed bonus and the chosen enemy has disadvantage on Reactive Strikes from the movement ",
+            "prerequisites": "",
+            "type": "Simple"
+        },
+        {
+            "name": "Riposte",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/Reaction.png\" alt=\"Reaction Symbol\"/>",
+            "traits": "Attack",
+            "description": "Take advantage of the opening to attack your opponent. \nMake a Strike at that creature ",
+            "prerequisites": "You are currently parrying and a creature missed you with a melee strike",
+            "type": "Simple"
+        },
+        {
+            "name": "Running Reload",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "",
+            "description": "You move and reload your weapon simultaneously. \nStride with a -2 speed penalty and Reload your weapon\nYou can spend a focus point to stride at full speed",
+            "prerequisites": "",
+            "type": "Simple"
+        },
+        {
+            "name": "Set Weapon",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "",
+            "description": "Set your weapon ready to strike a foes that come into your reach.\nIf you make a Reactive Strike until the start of the next turn you ignore the penalty on the strike.\nOn a critical hit you deal an additional d6 damage.",
+            "prerequisites": "",
+            "type": "Simple"
+        },
+        {
+            "name": "Slide Into Cover",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "",
+            "description": "With a swift move you move and take cover at once.\nStride or Step then Take Cover",
+            "prerequisites": "",
+            "type": "Simple"
+        },
+        {
+            "name": "Snap Shot",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Attack",
+            "description": "Make a quick shot in the heart of battle. \nMake a Strike, ignoring the Volley trait",
+            "prerequisites": "You a wielding a weapon with the Volley Trait",
+            "type": "Simple"
+        },
+        {
+            "name": "Strike Now!",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Tactical",
+            "description": "You order an ally to strike at an opportune moment.\nChoose an ally, they can use a reaction to make an attack at a target you both can see.",
+            "prerequisites": "",
+            "type": "Simple"
+        },
+        {
+            "name": "Sweep",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "Attack",
+            "description": "Make a strike against two adjacent enemies in range of your melee weapon. \nThey make their own Reflex saving throw against the attack.\nThis counts as two attacks for your MAP",
+            "prerequisites": "You are wielding a melee weapon with Sweep trait",
+            "type": "Simple"
+        },
+        {
+            "name": "Tumble Through",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Acrobatics",
+            "description": "You slide through an opponent.\nMake a Acrobatics check against a creature's Reflex save\nOn a success you move through their space without provoking reactive strikes.\nOn a critical success they also become of guard to you until the start of your turn.",
+            "prerequisites": "You are adjacent to the creature and your move speed is higher than the tiles it occupies",
+            "type": "Simple"
+        },
+        {
+            "name": "Wild Strike",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Attack",
+            "description": "Strike in a wild swing that leaves you open afterward. \nMake a melee Strike and add your PHY again to the damage\nAfter that making this Strike you become off-guard 2 until the start of your next turn, or prone if you were already off-guard.",
+            "prerequisites": "You are not prone",
+            "type": "Simple"
+        }
+    ],
+    "Advanced": [
+        {
+            "name": "Blade Dance",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "Attack",
+            "description": "You move graceful like a dancer in the flow of combat\nStrike, then Step, then Strike another creature",
+            "prerequisites": "You are wielding a weapon that does slashing or piercing damage",
+            "type": "Advanced"
+        },
+        {
+            "name": "Double Shot",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "Attack",
+            "description": "You draw two arrows at once and loose them at separate targets.\nMake two attacks on two different targets in range with a weapon in bow group. \nYou have a -2 penalty on both attacks, but your multiple attack penalty increases first after both shots\nYou can spend a focus point to use this as one action",
+            "prerequisites": "",
+            "type": "Advanced"
+        },
+        {
+            "name": "Flurry of Blows",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "Attack",
+            "description": "Make 3 unarmed strikes. \nEach strike counts towards your MAP, but it increases first after all three",
+            "prerequisites": "You have at least one hand free",
+            "type": "Advanced"
+        },
+        {
+            "name": "Momentum Toss",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/Reaction.png\" alt=\"Reaction Symbol\"/>",
+            "traits": "Brawling, Attack",
+            "description": "Make a Brawling check against the creature's Brawling roll. \nIt may defend with a Reflex or Fortitude save instead, taking a -2 penalty to the roll\nIf they got a critical failure on their attack they have a -5 penalty the roll\nOn a success, you move the creature to another free square adjacent to you.\nOn a critical success, the creature also falls prone. ",
+            "prerequisites": "An creature within your unarmed reach attacks misses an attack against you and you have a hand free",
+            "type": "Advanced"
+        },
+        {
+            "name": "Piercing Thrust",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Attack",
+            "description": "You strike through a creature to hit both it and a creature behind.\nMake Strike against two creatures in a line within reach of your weapon.\nThis counts as two attacks for your MAP",
+            "prerequisites": "You are wielding a weapon that does piercing damage",
+            "type": "Advanced"
+        },
+        {
+            "name": "Pincer Movement",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "Tactical",
+            "description": "You know how to outmaneuver your enemies\nChoose two allies, they can use their reactions to Step, Stride or Traverse next to an enemy. \nIf they end their movements on the opposite sides of an enemy, one of them can make a Strike against that enemy",
+            "prerequisites": "",
+            "type": "Advanced"
+        },
+        {
+            "name": "Guarded Advance",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "",
+            "description": "Move protected towards your opponent.\nBlock or Parry, then Stride twice. \nYou must end your movement closer to an enemy than you started",
+            "prerequisites": "",
+            "type": "Advanced"
+        },
+        {
+            "name": "Pinning Shot",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Attack",
+            "description": "You shoot or throw your weapon in way that pins an enemy to the ground or wall.\nMake a Strike against a creature. \nOn a hit the creature takes no damage, but is immobilized and off guard until they spend an action to make a DC 10 Athletics or Acrobatics check.\nOn a critical hit the DC is 15",
+            "prerequisites": "You are holding a weapon in the Bow, Crossbow or Spear weapon groups",
+            "type": "Advanced"
+        },
+        {
+            "name": "Predict Their Movement",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Tactical",
+            "description": "Attempt to predict a foes next move.\nMake a Tactics Lore roll against the Tactics Lore or Deception of a creature you can see within 10 tiles.\nOn a success you learn the next action the creature is planning to next turn.\nIt can either choose to do that or take -2 penalty to all actions next turn as scrambles to adapt.",
+            "prerequisites": "",
+            "type": "Advanced"
+        },
+        {
+            "name": "Quick Parry",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/Reaction.png\" alt=\"Reaction Symbol\"/>",
+            "traits": "",
+            "description": "You draw your weapon in the blink of an eye and parry an opponent's strike.\nYou may draw a weapon with the Parry trait from a quick access slot.\nThen defend against the attack as if you had parried the turn before",
+            "prerequisites": "You are forced to make a Reflex saving throw against a melee strike",
+            "type": "Advanced"
+        },
+        {
+            "name": "Spellbreak Strike",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "Attack",
+            "description": "You know how to make a strike to disrupt a sustained spell\nMake a unarmed melee strike or one with a weapon with the channeling trait\nOn a hit, make a INT or WIL check against the targets Fortitude Save, breaking the sustained spell on a success.\nIf you know the spell you may add your proficiency with it to the strike.",
+            "prerequisites": "",
+            "type": "Advanced"
+        },
+        {
+            "name": "Stunning Strike",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/OneAction.png\" alt=\"1 Action\"/>",
+            "traits": "Draining, Attack",
+            "description": "Make a forceful strike against an enemy. \nOn a hit they need to make a Fortitude Saving throw or be Stunned 1, or Stunned 2 on a Critical Failure",
+            "prerequisites": "You are wielding a weapon that does bludgeoning damage",
+            "type": "Advanced"
+        }
+    ],
+    "Complex": [
+        {
+            "name": "Cut Down Spell",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/Reaction.png\" alt=\"Reaction Symbol\"/>",
+            "traits": "",
+            "description": "You've learned to cut down spells just like projectiles. \nMake a melee attack against it, instead of a Reflex saving throw",
+            "prerequisites": "You are currently parrying and you would make a Reflex saving throw against a targeting spell",
+            "type": "Complex"
+        },
+        {
+            "name": "Deadshot",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "Attack",
+            "description": "You take a moment to focus and take a perfectly aimed shot.\nMake a ranged strike, it does an additional weapon dice of damage",
+            "prerequisites": "",
+            "type": "Complex"
+        },
+        {
+            "name": "Run and Gun",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "Draining",
+            "description": "Stride then Stride or Take Cover, then make an attack with a ranged weapon",
+            "prerequisites": "",
+            "type": "Complex"
+        }
+    ],
+    "Masterwork": [
+        {
+            "name": "A Thousand Cuts",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/ThreeActions.png\" alt=\"3 Actions\"/>",
+            "traits": "Blade Art, Attack",
+            "description": "You move faster than what should be possible, cutting into an enemy.\nMake a melee attack with an agile weapon.\nIf you hit you may attack again at a -2 penalty, or -1 if you attack with a weapon in your other hand\nYou may keep attacking until you miss, with the multi attack penalty increasing as described above every time",
+            "prerequisites": "",
+            "type": "Masterwork"
+        },
+        {
+            "name": "Crash of the Titan",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "Blade Art, Attack",
+            "description": "Your weapon slams into the ground, creating a shockwave from the impact\nStrike a tile within range, all creatures on and adjacent from it need to make Reflex saves against the attack.\nCreatures on the slammed tile take an additional 2d10 bludgeoning damage. \nThis bonus is doubled if you were falling or jumping as you did the attack",
+            "prerequisites": "",
+            "type": "Masterwork"
+        },
+        {
+            "name": "Moonlight Crescent",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/ThreeActions.png\" alt=\"3 Actions\"/>",
+            "traits": "Blade Art, Attack",
+            "description": "You make a strike that seems to extend your weapon beyond its normal reach, cutting into multiple foes\nMake a strike against up to five adjacent enemies in range of your melee weapon with a 1 tile bonus range\nThey make their own Reflex saving throw against the attack.\nOn a hit they take an extra 2d8 damage from the strike",
+            "prerequisites": "",
+            "type": "Masterwork"
+        },
+        {
+            "name": "Serpent Stride",
+            "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+            "traits": "Blade Art, Attack",
+            "description": "Step, Stride, Strike and Parry in any order ",
+            "prerequisites": "",
+            "type": "Masterwork"
+        }
+    ]
+}

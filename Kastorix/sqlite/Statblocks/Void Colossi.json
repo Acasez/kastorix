@@ -1,0 +1,103 @@
+{
+  "name": "Void Colossi",
+  "phy": 6,
+  "dex": 1,
+  "int": 6,
+  "wil": 8,
+  "health": 86,
+  "maxHealth": 86,
+  "mana": 256,
+  "maxMana": 256,
+  "aura": 256,
+  "maxAura": 256,
+  "spellsByRank": {
+    "Apprentice": [],
+    "Adept": [],
+    "Magus": [],
+    "GrandMagus": [],
+    "Archmage": []
+  },
+  "currentArmor": null,
+  "saves": {
+    "fortitude": 8,
+    "reflex": 4,
+    "will": 6
+  },
+  "statuses": [],
+  "weapons": [
+    {
+      "name": "Vine Grasp",
+      "damage": "2d8 Slashing",
+      "hands": "-",
+      "range": "4",
+      "traits": "Agile,Disarm",
+      "description": "",
+      "price": "",
+      "type": "",
+      "weaponGroup": "",
+      "isCustom": true,
+      "proficiency": 6
+    },
+    {
+      "name": "Void Blast",
+      "damage": "3d10 Force",
+      "hands": "",
+      "range": "8",
+      "traits": "Ranged,Volley",
+      "description": "",
+      "price": "",
+      "type": "",
+      "weaponGroup": "",
+      "isCustom": true,
+      "proficiency": 6
+    }
+  ],
+  "actions": [
+    {
+      "name": "Anti-Magic Pulse",
+      "actions": "2",
+      "requirement": "1 Minute Cooldown, 30 Mana",
+      "effect": "The Void Colossi emits a pulse of void antimagic. Any creatures within 8 tiles that are maintaining or sustaining a spell need to make a WIL save against 6 + WIL + d20 or lose their spell."
+    },
+    {
+      "name": "Grasping Barrage",
+      "actions": "2",
+      "requirement": "",
+      "effect": "The Void Colossi makes up to five Vine Grasp attacks. It can only target each creature with a max of two of these attacks. "
+    },
+    {
+      "name": "Null Beam",
+      "actions": "3",
+      "requirement": "1 Minute Cooldown, 35 Mana",
+      "effect": "The Void Colossi fires a beam of of unraveling energy in a 15 tile long, 3 tiles wide line. Creatures in the line need to make a Reflex save or take 10d6 force damage."
+    }
+  ],
+  "passives": [
+    {
+      "name": "Aura Drain",
+      "requirement": "",
+      "effect": "Whenever the Void Colossi uses Vine Grasp and hits a creatures aura it deals an additional 2d6 damage and regains  that much aura."
+    },
+    {
+      "name": "Otherworldly Presence",
+      "requirement": "",
+      "effect": "Any creature that enters or starts their turn within 30 tiles of the Void Colossi and can see it needs to make a WIL save against DC 24 or be frightened 1 (2 on a critical failure). On a success they are immune to this effect for 24 hours."
+    },
+    {
+      "name": "Void Form",
+      "requirement": "",
+      "effect": "The Void Colossi has advantage on saving throws with the Fear, Mind or Soul traits"
+    }
+  ],
+  "traits": "",
+  "senses": "",
+  "languages": "",
+  "skills": "",
+  "size": "",
+  "resistances": "Physical 15, Elemental 10",
+  "speeds": "Fly 5",
+  "equipment": "",
+  "notes": "",
+  "weaponButtons": [],
+  "spellButtons": []
+}

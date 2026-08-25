@@ -1,0 +1,125 @@
+{
+  "name": "Wyvern Rider",
+  "phy": 3,
+  "dex": 2,
+  "int": 0,
+  "wil": 1,
+  "health": 9,
+  "maxHealth": 9,
+  "mana": 22,
+  "maxMana": 22,
+  "aura": 22,
+  "maxAura": 22,
+  "spellsByRank": {
+    "Apprentice": [
+      {
+        "name": "Blinding Flash",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>",
+        "aspects": "Light",
+        "traits": "Targeting",
+        "range": "10",
+        "target": "One Creature",
+        "duration": "Up to one minute",
+        "effect": "Send a blinding flash of light at a creature. It must make a Fortitude save \n Success: Target is dazzled for one turn.\n Failure: Target is blinded for one turn and dazzled for one minute \n Critical Failure: Target is blinded for one minute\nWhile affected by this spell, the target can spend one action to attempt to redo the save, removing the remaining effects on a success.",
+        "upcast": "",
+        "rank": "(1) Apprentice",
+        "proficiency": 2
+      },
+      {
+        "name": "Magnetic Rebound",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/Reaction.png\" alt=\"Reaction Symbol\"/>, when you would have to make a Reflex save to an attack by a metal weapon or projectile.",
+        "aspects": "Metal",
+        "traits": "-",
+        "range": "-",
+        "target": "One metallic weapon or projectile",
+        "duration": "-",
+        "effect": "Attempt to move the metal out of the way. \nUse the Spellshaping check instead of making a Reflex Saving Throw",
+        "upcast": "",
+        "rank": "(1) Apprentice",
+        "proficiency": 2
+      },
+      {
+        "name": "Darken",
+        "actions": "<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/TwoActions.png\" alt=\"2 Actions\"/>-<img class=\"action-icon-modalList\" src=\"/images/Kastorix/Icons/ThreeActions.png\" alt=\"3 Actions\"/>",
+        "aspects": "Darkness",
+        "traits": "Area",
+        "range": "10",
+        "target": "3x3 tiles",
+        "duration": "Up to one turn",
+        "effect": "Creates a 3x3 tiles square zone of darkness that blocks out non-magical lights. \nIf you spend 3 actions on this spell, the zone is 5x5 tiles.",
+        "upcast": "",
+        "rank": "(1) Apprentice",
+        "proficiency": 2
+      }
+    ],
+    "Adept": [],
+    "Magus": [],
+    "GrandMagus": [],
+    "Archmage": []
+  },
+  "currentArmor": null,
+  "saves": {
+    "fortitude": 2,
+    "reflex": 2,
+    "will": 2
+  },
+  "statuses": [],
+  "weapons": [
+    {
+      "name": "Crossbow",
+      "damage": "1d8 piercing",
+      "hands": 2,
+      "range": 10,
+      "traits": "Precision, Reload (1), Ranged",
+      "description": "A ranged weapon that fires bolts with great force",
+      "price": "5 gp",
+      "type": "Martial",
+      "weaponGroup": "Crossbow",
+      "proficiency": 4
+    },
+    {
+      "name": "Glaive",
+      "damage": "1d8 slashing",
+      "hands": 2,
+      "range": 2,
+      "traits": "Versatile (Piercing), Sweep, Deadly (d6)",
+      "description": "A pole weapon with a single edged blade, favored by infantry for its versatility",
+      "price": "8 gp",
+      "type": "Martial",
+      "weaponGroup": "Polearm",
+      "proficiency": 4
+    }
+  ],
+  "actions": [
+    {
+      "name": "Fierce Dive",
+      "actions": "2",
+      "requirement": "The Wyvern rider is mounted on a wyvern that's airborne and not immobilized. ",
+      "effect": "The wyvern dives, Flying twice to end up at a lower elevation than it started. At the end of the movement the rider can make a Glaive attack with a +2 bonus. "
+    },
+    {
+      "name": "Act Together",
+      "actions": "1",
+      "requirement": "Once per turn",
+      "effect": "The Rider and Wyvern both takes 1 action."
+    },
+    {
+      "name": "Evasive Maneuver",
+      "actions": "1",
+      "requirement": "The Wyvern rider is mounted on a wyvern that's airborne and not immobilized. Once per minute",
+      "effect": "The Rider commands the Wyvern to dodge. The Rider and the Wyvern get a +2 bonus to Reflex saves until the start of its next turn. The Wyvern Flies."
+    }
+  ],
+  "passives": [],
+  "traits": "Humanoid",
+  "senses": "+6 Perception",
+  "languages": "",
+  "skills": "+5 Atheletics, +3 Nature",
+  "size": "Medium",
+  "resistances": "Physical 5, Elemental 3",
+  "speeds": 0,
+  "equipment": "",
+  "notes": "",
+  "weaponButtons": [],
+  "spellButtons": []
+}

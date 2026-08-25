@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ashen Lands</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<base href="/Kastorix/">
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+						<h3 class="portfolio-title">Ashen Lands</h3>
+						</header>
+						<div class="portfolio-row reverse"> <!-- Ashen Lands -->
+							<div class="portfolio-image large">
+								<img src="/images/Kastorix/Maps/Santsim.jpg" alt="World Map" />
+							</div>
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Ashen Lands</h3>
+									<!-- Overview Text Below -->
+                                    <p>The ashen lands is a unique region in central <a href="Worldbuilding/Geography/Santsim.html">Santsim</a> famous for its hot temperatures, volcanic activity and many fire <a href="Worldbuilding/Geography/elementals.html">elementals</a>. It's a sparsely populated region with many dangers, though also with many valuable minerals to find.</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Geography -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Geography</h3>
+									<!-- Geography Text Below -->
+                                    <p>The ashen lands are located east of <a href="Worldbuilding/Nations/El-Shavri.html">El-Shavri</a>, south of <a href="Worldbuilding/Nations/Tharn.html">Tharn</a> and north of the central highlands. It's a hilly, harsh terrain that's difficult to navigate. It's hotter than it would normally be due to intense <a href="Worldbuilding/Geography/Fire - Aspect.html">fire</a> magic present, which further discourages travel and exploration. The only nation that lays claim to part of the nation is the kingdom of <a href="Worldbuilding/Nations/Terill.html">Terill</a> which owns the easternmost part.</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Biodiversity -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Biodiversity</h3>
+									<!-- Biodiversity Text Below -->
+                                    <ul>
+<li>Fauna: The ashen lands has little mundane life, as the heat and dangerous environment makes it though to live in. Many fire elementals live in the ashen lands. </li>
+<li>Flora: Few plants grow in the region. It does however contain rare <strong>netherblooms</strong>, which thrive in volcanic climates and are use in alchemy.</li>
+</ul>
+							</div>
+						</div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				// Close dropdowns when clicking outside
+				window.onclick = function(event) {
+					if (!event.target.matches('.dropbtn')) {
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						for (var i = 0; i < dropdowns.length; i++) {
+							var openDropdown = dropdowns[i];
+							if (openDropdown.style.display === "block") {
+								openDropdown.style.display = "none";
+							}
+						}
+					}
+				};
+			</script>
+		 
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

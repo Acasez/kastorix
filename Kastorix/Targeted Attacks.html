@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Targeted Attacks</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+							<h3 class="portfolio-title">Targeted Attacks</h3>
+						</header>
+						<div class="portfolio-row reverse"> <!-- Targeted Attacks -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									When making attacks or casting spells with the Targeting trait, attackers can choose to target a
+									specific part of the body. This can inflict special conditions, like blinding or slowing the
+									target, but makes the attack harder to hit.
+									<br><br>
+									Creatures gain a bonus to their Reflex saves based on the part of the body being targeted.
+									Attacks with a weapon or spell with the Precision trait reduce this bonus by 2.
+									On a critical success the penalty is doubled.Some creatures
+									have special body parts that can be targeted, like a dragon's wings or Losungi's venom fangs.
+									But there are some common weak points on most sapient creatures:
+								<table id="spellTable" class="smallTable">
+									<thead>
+										<tr> <!--Targeted attacks table -->
+											<th onclick="sortTable(0)">Target</th>
+											<th onclick="sortTable(1)">Reflex Bonus</th>
+											<th onclick="sortTable(2)">Hit Effect</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Head</td>
+											<td>+6</td>
+											<td>The creature is stunned 1</td>
+										</tr>
+										<tr>
+											<td>Arms</td>
+											<td>+3</td>
+											<td>The creature has -3 penalty to attacks and actions with that
+												arm until the end of their next turn</td>
+										</tr>
+										<tr>
+											<td>Legs</td>
+											<td>+3</td>
+											<td>The creature has -2 tile move speed next turn</td>
+										</tr>
+										<tr>
+											<td>Eyes</td>
+											<td>+9</td>
+											<td>The creature is blinded next turn and dazzled for a minute</td>
+										</tr>
+										<tr>
+											<td>Armor Weak Point</td>
+											<td>Varies</td>
+											<td>The hit bypasses armor resistance</td>
+										</tr>
+									</tbody>
+								</table>
+								On a critical success the penalty is doubled.
+								</p>
+							</div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+			</script>
+	</body>
+</html>

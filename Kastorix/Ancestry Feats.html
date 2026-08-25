@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Ancestry Feats</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="kastorix.css" />
+	<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<div id="header-placeholder"></div>
+	<!-- Main -->
+	<div id="main">
+		<!-- Main Projects -->
+		<section id="Main Projects" class="sectionText">
+			<header>
+				<h3 class="portfolio-title">Ancestry Feats</h3>
+				<p class="portfolio-text">Ancestry Feats comes from your species and culture
+					You can pick one new arcane feat each level and retrain them during downtime.
+					You cannot pick the same feat twice, unless otherwise specified. <br>
+					If a feat lists multiple possible species, you can choose it if you come from either. <br>
+					If you were raised in a culture unlike your own pick their cultural feats.
+				</p>
+			</header>
+			<div class="search-container">
+				<input type="text" id="searchInput" placeholder="Search for feats..." title="Type in a feat name">
+			</div>
+			<div id="ancestry_feats_table"></div>
+		</section>
+	</div>
+	<!-- Footer -->
+	<div id="footer">
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+	<!-- Scripts -->
+	<script src="sortAndSearchTables.js"></script>
+	<script>
+		fetch('rpgheader.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('header-placeholder').innerHTML = data;
+			});
+
+		fetch('sqlite/build/ancestryFeats.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('ancestry_feats_table').innerHTML = data;
+				setTableId("ancestry_feats_table"); // Pass the ID as a string
+			});
+	</script>
+</body>
+
+</html>

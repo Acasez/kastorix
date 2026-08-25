@@ -1,0 +1,290 @@
+{
+    "All": [
+        {
+            "name": "Advanced Weapon Training",
+            "description": "You've always been fascinated with unique, advanced weapons. \nYour proficiency level with one advanced weapon increases (max Trained)\nYour proficiency level with Warfare Lore or Crafting increases (max Trained)",
+            "type": "Cultural",
+            "prerequisites": "Human",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Clawfighter",
+            "description": "You have trained in fighting with your claws. \nYou gain [Martial Arts Training] Feat",
+            "type": "Biological",
+            "prerequisites": "Dragonkin/Yirte/Naga/Aruna",
+            "level": 1,
+            "unlockedFeats": "General Feat - Level 1",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Coil Up",
+            "description": "You learned to coil your body up, to later move in burst of speed.\nYou have the Coil Up action",
+            "type": "Biological",
+            "prerequisites": "Naga",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": "Coil Up - 1 Action\nNext turn you may Step or Stride once as free action. \nIf you move or are knocked prone, this bonus is lost"
+        },
+        {
+            "name": "Combat Regeneration",
+            "description": "You've learned how to use your regenerative abilities in combat.\nYou learn the Combat Regeneration action",
+            "type": "Biological",
+            "prerequisites": "Troll",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": "Combat Regeneration - 2 Action\nUse one of regeneration charges\nYou cannot use this if you took fire, lightning or acid damage since your last turn"
+        },
+        {
+            "name": "Drums of War",
+            "description": "Music is important to the Brannur and you've learned the tools of your people. Your proficiency level in Performance increases (max Expert). \nYou have the Drums of War action. ",
+            "type": "Cultural",
+            "prerequisites": "Brannur",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": "Drums of War - 1 Action - Can be used once per Day \nMake a warchant to hype yourself and your allies up for battle. \nYou and allies within 5 tiles gain temporary hit points equal to your WIL plus half your level which last up to a minute"
+        },
+        {
+            "name": "Elven Blood",
+            "description": "The elves might be gone but you still have a drop of their blood in your ancestry.\nYou have resistance 3 + half your level to cold damage.\nYou have advantage on saves against illusions",
+            "type": "Biological",
+            "prerequisites": "Human, Brannur, Gnome",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "(3 + Level) Cold",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Powerful Wingflap",
+            "description": "Aruna wings don't generally provide enough lift to fly, but with enough strength and the right technique you can temporary take off.\nYou have the Take Off action. You can use it a number of times equal to PHY each day.",
+            "type": "Biological",
+            "prerequisites": "Aruna",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": "Take Off - 1 Action\nFly a number of spaces equal to your glide speed"
+        },
+        {
+            "name": "Forest Stalker",
+            "description": "You've trained to fight and hunt in the forests and jungles of you homeland\nYour proficiency level in Stealth increases (max Expert)\nYour proficiency level with the Bows weapon group increases (max Trained)",
+            "type": "Cultural",
+            "prerequisites": "Yirte",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Formation Fighting ",
+            "description": "You have fought shoulder to shoulder with your allies.\nYou have a +1 bonus to melee strikes and spell attacks when adjacent to at least two allies",
+            "type": "Cultural",
+            "prerequisites": "Human, Brannur, Dragonkin",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Fruits of Civilization",
+            "description": "The Draconium is the center of civilization and your pride comes it's glory\nWhen you use Proud Bearing the bonus increases to 3 if you are expert in the check, 4 for master and 5 for legendary\nYou can use Proud Bearing one more time per day.",
+            "type": "Cultural",
+            "prerequisites": "Dragonkin",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Jungle Swimmer",
+            "description": "You've grown up swimming in the many rivers and lakes of your homeland. \nYou have a 4 tile Swim Speed",
+            "type": "Cultural",
+            "prerequisites": "Naga, Yirte",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "(4) Swim",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Lesser Dragonbreath",
+            "description": "You've learned to use your attunement to imitate the breath of your draconic ancestor. \nYou gain the Dragonbreath action, breathing out a cone of magic connected to your attunement",
+            "type": "Biological",
+            "prerequisites": "Dragonkin\nAttunement",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": "Dragonbreath - 2 Action, 7 mana\nBreathe out a 5 tile cone of elemental force. \nCreatures inside the cone need to make a basic Reflex save. \nOn a failure they take 3d6 damage. "
+        },
+        {
+            "name": "Marsh Walker",
+            "description": "You've learned to navigate the wet and dangerous grounds of your homeland. \nYou ignore difficult terrain caused by wetlands, swamps, jungles and similar. \nYou have +3 bonus to Survival and Nature checks regarding those environments.",
+            "type": "Biological",
+            "prerequisites": "Naga",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Powerful Tail",
+            "description": "You can use your powerful tail to block incoming attacks and whack foes\nYour tail is a natural weapon that deals 1d4 bludgeoning damage.\nIt has the Block 1 and Shove traits. ",
+            "type": "Biological",
+            "prerequisites": "Dragonkin, Naga",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Resilience",
+            "description": "You won't go down when most would fall.\nOnce per day when you would be reduced to zero health, stay at 1 health instead",
+            "type": "Biological",
+            "prerequisites": "Brannur",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Sensitive Nose",
+            "description": "While all Yirte have a greater sense of smell than most, you have trained your nose beyond that. \nYou have an imprecise sense of smell, which you can use to try find creatures or objects. \nYour proficiency level in Perception increases (max Expert)",
+            "type": "Biological",
+            "prerequisites": "Yirte",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Sha'des'ka Practioner",
+            "description": "You trained in the ancient Naga art of Sha'des'ka, or its modern form Arcane Dueling. \nYou gain the [Duelist] Feat",
+            "type": "Cultural",
+            "prerequisites": "Naga",
+            "level": 1,
+            "unlockedFeats": "General Feat - Level 1",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Subterranean Experize",
+            "description": "You've learned all you can about the depths you call home and can navigate them with ease\nYour proficiency level with Depths Below Lore increases (max Expert)\nYou ignore difficult terrain from natural rocks and earthen formations",
+            "type": "Cultural",
+            "prerequisites": "Vesper",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Updraft Glider",
+            "description": "You ignore difficult terrain from harsh winds and airborne obstacles\nYou take half the normal penalty on aiming through smoke",
+            "type": "Cultural",
+            "prerequisites": "Aruna",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Waters of the isles",
+            "description": "You've grown up swimming around the waters of Te'ohuvi and learned of creatures there.\nYou have a 3 tile Swim Speed\nYou have a +2 bonus on nature and survival checks connected to aquatic creatures",
+            "type": "Cultural",
+            "prerequisites": "Troll",
+            "level": 1,
+            "unlockedFeats": "",
+            "speeds": "(3) Swim",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Lesser Pseudo-Attunement",
+            "description": "While gnomes, can't have a normal attunement you have absorbed some elemental energies from your environment, giving you something similar\nGain the Basic Elemental Magic Feat.\nYou have small visible connections to your elements. This might patches of stone for an Earth Pseudo-Attunement or hair that flows like water for a Water one",
+            "type": "Biological",
+            "prerequisites": "Gnome",
+            "level": 1,
+            "unlockedFeats": "Arcane Feat - Level 1",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Spellward",
+            "description": "You've learned some of the old techniques used by the Spear's Legacy mercenary company to fight battlemages\nYou have a +1 bonus to all saves against spells",
+            "type": "Cultural",
+            "prerequisites": "Brannur",
+            "level": 5,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Inspiring Presence",
+            "description": "Your pride inspires your companions.\nAfter you use Proud Bearing up to 5 nearby allies gets +1 to their next roll. This bonus increases to +2 if you succeed on the roll, or +3 if you critically succeed.\nYou can use Proud Bearing one more time per day.",
+            "type": "Cultural",
+            "prerequisites": "Dragonkin",
+            "level": 5,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Lightning Strike",
+            "description": "You take advantage of the speed from Coil Up to hit foes that aren't expecting it.\nAfter you use the free Step or Stride from Coil Up, your next Strike that turn has a +2 attack bonus",
+            "type": "Biological",
+            "prerequisites": "Naga\n[Coil Up]",
+            "level": 5,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Strong Blood",
+            "description": "You can use your Regeneration trait once more per day",
+            "type": "Biological",
+            "prerequisites": "Troll",
+            "level": 5,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        },
+        {
+            "name": "Winged Dragonkin",
+            "description": "You've been chosen to undergo the ritual of Wings. \nThis ritual is generally only granted to high ranking Dragonkin of the Draconium. \nYour new draconic wings grants you a 5 tile flying speed.",
+            "type": "Biological",
+            "prerequisites": "Dragonkin",
+            "level": 10,
+            "unlockedFeats": "",
+            "speeds": "",
+            "resistances": "",
+            "unlockedAction": ""
+        }
+    ]
+}

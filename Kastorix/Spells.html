@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Spells</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="kastorix.css" />
+	<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<div id="header-placeholder"></div>
+	<!-- Main -->
+	<div id="main">
+		<!-- Main Projects -->
+		<section id="Main Projects" class="sectionText">
+			<header>
+				<h3 class="portfolio-title">Spells</h3>
+				<p class="portfolio-subtitle">List of all spells and spell traits</p>
+			</header>
+			<div class="portfolio-text">
+				<h3 class="portfolio-title">Spellcasting</h3>
+				<p class="portfolio-description">
+					<i>Spells are the tools of mages, allowing them to manipulate the world around them. Spells are
+						learned through study and practice, and can be modified and changed by the mage. Spells are
+						cast by expending mana, shaping it into the desired effect. Spells can be cast quickly in
+						the heat of battle, or prepared ahead of time for more complex effects. Some spells are
+						simple and straightforward, while others are complex and require careful planning. Spells
+						are invented, refined, and recorded by spellcasters around the world, resulting in thousands
+						of spells and variants. Many spells have been independently invented by different cultures
+						and individuals across Kastorix.
+					</i><br><br>
+				<div class="action-box">
+					<b>Sustain Spell</b> <img class="action-icon" src="/images/Kastorix/Icons/OneAction.png"
+						alt="1 Action" /> <br>
+					Extends the duration of a spell that you are sustaining by 1 turn
+					When you sustain a spell make a spellshaping roll as if you were casting the spell.
+					You cannot fail the spell when sustaining it, but the DC changes to the new spellshaping result
+					Some spells have effects that happen when you sustain such as moving the spell.
+					You cannot sustain a spell more than once per turn, but you can sustain multiple spells in the
+					same turn using multiple sustain actions
+				</div>
+				<div class="action-box">
+					<b>Cast a spell</b> <br>
+					Make a spellshaping check (Int + Dex + Proficiency) compared to the difficulty of the spell.
+					On a success the spell is cast and the result of spellshaping check is used for the DC of any
+					saving throws imposed by the spell
+				</div>
+				To cast any spell in Kastorix you need to pay the mana cost and make a spellshaping check to see if
+				you succeed. The difficulty of the check depends on the complexity and rank of the spell you are casting
+				and the
+				characters may have many bonuses and penalties to the roll. In general spellcasting checks are
+				designed so that you succeed most of the time. The result of the spellcasting check also serves as
+				the "Spell Save DC" of other systems.
+				<br>
+				Spells have a vocal and somatic component, which adds INT and DEX to the spellcasting check
+				respectively. Attempting to cast a spell while silenced or restrained means casting without that
+				component. Attuned creatures can use their WIL instead of INT when casting spells of their attuned
+				aspect as they channeling it innately instead of using their knowledge of magic
+				<br><br>
+				Many spells can be sustained to maintain them. This is done via the Sustain action.
+				Spells can be modified with <a href="Metamagics.html">metamagics</a>, which changes the spellshaping
+				DC and adds extra effects to spell.
+				By default you can only use one metamagic per spell, but feats and abilities may allow you to use
+				more.
+				You can read more about spellcasting <a href="Spells.html">here</a>
+				</p>
+			</div>
+			<div class="portfolio-text">
+				<p class="portfolio-description">
+				<p class="portfolio-subtitle">Spell traits</p>
+				<p class="portfolio-description">
+					Spells have traits that describe them and provide effects. Mages can focus on one type of spell or have a diverse repertoire of spells. 
+				</p>
+				<table id="spellTable" >
+					<thead>
+						<tr> <!--Spell Ranks Costs and DC's-->
+							<th onclick="sortTable(0)">Name</th>
+							<th onclick="sortTable(1)">Direct Effect</th>
+							<th onclick="sortTable(2)">Flavor</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Area</td>
+							<td>-</td>
+							<td>Area spells affects multiple tiles in a area</td>
+						</tr>
+						<tr>
+							<td>Complex</td>
+							<td>The spellshaping DC increase by 3</td>
+							<td>Complex spells are are harder to cast, requiring cunning and deftness</td>
+						</tr>
+						<tr>
+							<td>Draining</td>
+							<td>Increase the spells mana cost, see table below.</td>
+							<td>Draining spells require a lot of mana</td>
+						</tr>
+						<tr>
+							<td>Enchantment</td>
+							<td>-</td>
+							<td>The spell temporarily improves the caster or target, or gives them new abilities</td>
+						</tr>
+						<tr>
+							<td>Manipulation</td>
+							<td>-</td>
+							<td>Manipulation spells modifies or shapes matter. They are generally not cast in combat</td>
+						</tr>
+						<tr>
+							<td>Precision</td>
+							<td>When targeting weak points the penalty is 2 lower than normal (to a minimum of 1)</td>
+							<td>These spells are very precise, allowing you to target creature weak points easier </td>
+						</tr>
+						<tr>
+							<td>Targeting</td>
+							<td>Counts as an attack for the purposes of your multiple attack penalty</td>
+							<td>Targeting spells fire one or multiple projectiles</td>
+						</tr>
+						<tr>
+							<td>Sensing</td>
+							<td>-</td>
+							<td>The spell helps the caster detect things</td>
+						</tr>
+					</tbody>
+				</table>
+				</p>
+			</div>
+			<p class="portfolio-subtitle">Spell Ranks</p>
+			<p class="portfolio-description">
+				Spells are split into five ranks after the five tiers of mages, going from Apprentice to Archmage.
+				The complexity and mana cost increase with their rank.
+				<br>
+			</p>
+			<table id="spellTable" class="smallTable">
+				<thead>
+					<tr> <!--Spell Ranks Costs and DC's-->
+						<th onclick="sortTable(0)">Rank</th>
+						<th onclick="sortTable(1)">Spellshaping DC</th>
+						<th onclick="sortTable(2)">DC (Complex)</th>
+						<th onclick="sortTable(3)">Mana Cost</th>
+						<th onclick="sortTable(3)">Mana Cost Draining</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Apprentice (1)</td>
+						<td>12</td>
+						<td>15 </td>
+						<td>3</td>
+						<td>4</td>
+					</tr>
+					<tr>
+						<td>Adept (2)</td>
+						<td>14</td>
+						<td>17 </td>
+						<td>6</td>
+						<td>8</td>
+					</tr>
+					<tr>
+						<td>Magus (3)</td>
+						<td>16</td>
+						<td>18 </td>
+						<td>12</td>
+						<td>16</td>
+					</tr>
+					<tr>
+						<td>Grand Magus (4)</td>
+						<td>18</td>
+						<td>21 </td>
+						<td>24</td>
+						<td>32</td>
+					</tr>
+					<tr>
+						<td>Archmage (5)</td>
+						<td>20</td>
+						<td>23 </td>
+						<td>48</td>
+						<td>64</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="portfolio-title"><u>Spell List</u></p>
+			<div class="search-container">
+				<input type="text" id="searchInput" placeholder="Search for spell..." title="Type in a spell name">
+			</div>
+			<div id="spells_table"></div>
+		</section>
+	</div>
+	<!-- Footer -->
+	<div id="footer">
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+	<!-- Scripts -->
+	<script src="sortAndSearchTables.js"></script>
+	<script>
+		fetch('rpgheader.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('header-placeholder').innerHTML = data;
+			});
+
+		fetch('sqlite/build/spells.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('spells_table').innerHTML = data;
+				setTableId("spells_table"); // Pass the ID as a string
+			});
+	</script>
+</body>
+
+</html>

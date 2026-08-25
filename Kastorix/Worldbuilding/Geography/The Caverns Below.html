@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>The Caverns Below</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<base href="/Kastorix/">
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+						<h3 class="portfolio-title">The Caverns Below</h3>
+						</header>
+						<div class="portfolio-row reverse"> <!-- The Caverns Below -->
+							<div class="portfolio-image large">
+								<img src="/images/Kastorix/Maps/The Caverns Below.jpg" alt="World Map" />
+							</div>
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">The Caverns Below</h3>
+									<!-- Overview Text Below -->
+                                    <p>The caverns below, the underneath, the deep dark, the lands beneath—these enormous cave systems that lie beneath the surface of <a href="Worldbuilding/Geography/Kastorix.html">Kastorix</a> have many names. Ranging from claustrophobic passages to grandiose chambers hundreds of meters tall and kilometers wide, these subterranean worlds are home to numerous magical creatures, including the <a href="Worldbuilding/Species/Vesper.html">vesper</a>, a sapient bat-like species that dominates much of this underworld.</p>
+<p>There are multiple entrances to the caverns, both natural and artificial, on all three continents. However, navigating the caverns is a challenging task for surface dwellers. The labyrinthine tunnels and hidden threats make exploration perilous, even for seasoned adventurers.</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Geography -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Geography</h3>
+									<!-- Geography Text Below -->
+                                    <h4 class="portfolio-subtitle">The Crystalline Lake</h4>
+<p>The <a href="Worldbuilding/Geography/Crystalline Lake.html">Crystalline Lake</a> is the largest cave system in the caverns, spanning dozens of kilometers in width and length. As the name implies, the floor of this cavern is covered by a vast lake, the waters of which are clear and still, reflecting the myriad magical crystals that grow along its shores. These crystals emit a soft, ethereal glow, illuminating the cavern with a kaleidoscope of colors.</p>
+<p>The Crystalline Lake is the seat of the <a href="Worldbuilding/Nations/Emerald Empire.html">Emerald Empire</a>, the largest vesper nation, which houses around half of the vesper population. The edges of the lake are lined with vesper housing and farms, while the lake itself supports a small boating industry and is home to several species of rare underground fish.</p>
+<h4 class="portfolio-subtitle">The Spires</h4>
+<p>The Spires is an area of caves beneath <a href="Worldbuilding/Geography/Santsim.html">Santsim</a>, characterized by massive spires that stretch from floor to ceiling. These spires are made of a unique rock or crystal, displaying a variety of colors, though more muted than those of the Crystalline Lake.</p>
+<p>The <a href="Worldbuilding/Nations/Crimson Spire.html">Crimson Spire</a> nation, residing within these caves, is the primary opposition to the Emerald Empire. The spires serve as both structural supports for the cavern and as homes, with the vesper carving intricate dwellings into the stone.</p>
+<h4 class="portfolio-subtitle">The Farms</h4>
+<p>The vesper are renowned for their efficient use of space in their underground farms, which rely on light from magical crystals and a network of canals and aqueducts to irrigate their crops. These farms, often multi-leveled, grow a variety of fruits and mushrooms, providing sustenance for the vesper population.</p>
+<h4 class="portfolio-subtitle">The Deep Reaches</h4>
+<p>The caverns extend deep underground, but as one descends further, the <a href="Worldbuilding/Geography/Ambient Mana.html">ambient mana</a> levels and the number of strange magical creatures increase, as does the temperature. Below a few thousand meters, the heat becomes a significant barrier to exploration. These <a href="Worldbuilding/Geography/The Deeper Reaches.html">deeper reaches</a> regions are home to creatures with bizarre properties, and unlike the upper caverns, which are sometimes illuminated by crystals, these dark reaches rarely see light.</p>
+							</div>
+						</div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				// Close dropdowns when clicking outside
+				window.onclick = function(event) {
+					if (!event.target.matches('.dropbtn')) {
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						for (var i = 0; i < dropdowns.length; i++) {
+							var openDropdown = dropdowns[i];
+							if (openDropdown.style.display === "block") {
+								openDropdown.style.display = "none";
+							}
+						}
+					}
+				};
+			</script>
+		 
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

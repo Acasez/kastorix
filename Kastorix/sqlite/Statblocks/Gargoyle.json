@@ -1,0 +1,77 @@
+{
+  "name": "Gargoyle",
+  "phy": 4,
+  "dex": -1,
+  "int": -2,
+  "wil": 1,
+  "health": "17",
+  "maxHealth": "17",
+  "mana": "18",
+  "maxMana": "18",
+  "aura": "18",
+  "maxAura": "18",
+  "spellsByRank": {
+    "Archmage": []
+  },
+  "currentArmor": null,
+  "saves": {
+    "fortitude": 4,
+    "reflex": 2,
+    "will": 2
+  },
+  "statuses": [],
+  "weapons": [
+    {
+      "name": "Claw",
+      "damage": "1d8 Slashing",
+      "hands": "1",
+      "range": "1",
+      "traits": "Agile",
+      "description": "",
+      "price": "",
+      "type": "",
+      "weaponGroup": "Unarmed",
+      "isCustom": true,
+      "proficiency": 2
+    },
+    {
+      "name": "Throw Rock",
+      "damage": "1d8 Bludgeoning",
+      "hands": "1",
+      "range": "6",
+      "traits": "Ranged,Propulsive",
+      "description": "",
+      "price": "",
+      "type": "",
+      "weaponGroup": "",
+      "isCustom": true,
+      "proficiency": 4
+    }
+  ],
+  "actions": [
+    {
+      "name": "Shape Rock",
+      "actions": "1",
+      "requirement": "The gargoyle is within 3 tiles to earthen ground or walls.",
+      "effect": "The gargoyle shapes the earth into a rock that holds within its claws, allowing it to use the Throw Rock Strike"
+    },
+    {
+      "name": "Tremor",
+      "actions": "2",
+      "requirement": "",
+      "effect": "The gargoyle slams into the ground, creating rough terrain in adjacent tiles and forcing all creatures there to make Fortitude saves or become prone"
+    }
+  ],
+  "passives": [],
+  "traits": "Elemental, Earth",
+  "senses": "Perception 5",
+  "languages": "Gargoyle",
+  "skills": "Athletics +6, Stealth +8",
+  "size": "Medium",
+  "resistances": "Slashing 5, Physical 2, Fire 2, ",
+  "speeds": "Walk 3, Fly 3",
+  "equipment": "",
+  "notes": "",
+  "weaponButtons": [],
+  "spellButtons": []
+}

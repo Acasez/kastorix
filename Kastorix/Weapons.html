@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Weapons</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+							<h3 class="portfolio-title">Weapons</h3>
+							<p class="portfolio-subtitle">List of all weapons and weapon traits</p>
+						</header>
+						<div class="portfolio-text">
+							<p class="portfolio-description">
+								Weapon attacks are made with PHY rolls and versus a Reflex Save, hitting if the attack roll is higher than the save. Ranged weapon attacks are made with DEX and weapons with the finesse trait can be used with either. Damage rolls always add PHY. Ranged weapons don't add any damage modifier (unless they have the Propulsive trait).
+								<br><br>
+								Ranged and thrown weapons can hit at ranges beyond their listed range, taking a -2 penalty for each increment beyond their base range. So for example attacking at range 20 with a shortbow means you take a -4 penalty. You cannot attack beyond 5 increments. 
+								<br><br>
+								Mages rarely use weapons as they need their hands free for somantic components. Somantic Components, while your hands are free you can add your DEX to spellshaping checks. If you have one hand free you can add half your DEX.  
+								<br><br>
+							</p>
+						</div>
+						<h3 class="portfolio-subtitle">Weapon Traits</h3>
+						<div id="weapon_traits_table"></div>
+						<div class="search-container">
+							<input type="text" id="searchInput" placeholder="Search for weapon..." title="Type in a weapon name">
+						</div>
+						<div id="weapons_table"></div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script src="sortAndSearchTables.js"></script>
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				fetch('sqlite/build/weaponTraits.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('weapon_traits_table').innerHTML = data;
+						setTableId("weapon_traits_table"); // Pass the ID as a string
+					});
+				fetch('sqlite/build/weapons.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('weapons_table').innerHTML = data;
+						setTableId("weapons_table"); // Pass the ID as a string
+					});
+			</script>
+	</body>
+</html>

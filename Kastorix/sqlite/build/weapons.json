@@ -1,0 +1,554 @@
+{
+    "Simple": [
+        {
+            "name": "Battlestaff",
+            "damage": "1d6 bludgeoning",
+            "hands": 1,
+            "range": 1,
+            "traits": "Channeling",
+            "description": "A sturdy wooden staff, which can be used in somantic components",
+            "price": "2 sp",
+            "type": "Simple",
+            "weaponGroup": "Staff"
+        },
+        {
+            "name": "Bayonet",
+            "damage": "1d8 piercing",
+            "hands": 2,
+            "range": 1,
+            "traits": "Bayonet",
+            "description": "Bayonets can fastened to rifles for a good but inaccurate reserve melee weapon",
+            "price": "1 gp",
+            "type": "Simple",
+            "weaponGroup": "Spear"
+        },
+        {
+            "name": "Buckler",
+            "damage": "1d4 bludgeoning",
+            "hands": 1,
+            "range": 1,
+            "traits": "Block 1, Light",
+            "description": "Bucklers are light shields that allows the wearer to also use the hand for interacting with objects, though they can't their shield hand to perform somatic components or wield weapons",
+            "price": "1 gp",
+            "type": "Simple",
+            "weaponGroup": "Shield"
+        },
+        {
+            "name": "Club",
+            "damage": "1d4 bludgeoning",
+            "hands": 1,
+            "range": 1,
+            "traits": "Shove",
+            "description": "A simple wooden club, easy to make and use",
+            "price": "1 sp",
+            "type": "Simple",
+            "weaponGroup": "Club"
+        },
+        {
+            "name": "Dagger",
+            "damage": "1d4 piercing",
+            "hands": 1,
+            "range": 1,
+            "traits": "Precision, Finesse, Versatile (Slashing), Agile, Thrown (3), Light",
+            "description": "A simple fallback weapon that can also be thrown in a pitch",
+            "price": "2 sp",
+            "type": "Simple",
+            "weaponGroup": "Knife"
+        },
+        {
+            "name": "Mace",
+            "damage": "1d6 bludgeoning",
+            "hands": 1,
+            "range": 1,
+            "traits": "Shove",
+            "description": "A simple club with a heavy head, effective against armored foes",
+            "price": "1 gp",
+            "type": "Simple",
+            "weaponGroup": "Club"
+        },
+        {
+            "name": "Runegun Pistol",
+            "damage": "1d6 piercing",
+            "hands": 1,
+            "range": 6,
+            "traits": "Loud, Ranged, Reload (1), Light, Deadly (d8)",
+            "description": "Fitting the runes of runegun on a one-handed object requires great skill, but they are an effective weapon.",
+            "price": "30 gp",
+            "type": "Simple",
+            "weaponGroup": "Runegun"
+        },
+        {
+            "name": "Runegun Rifle",
+            "damage": "1d10 piercing",
+            "hands": 2,
+            "range": 10,
+            "traits": "Deadly (d8), Loud, Ranged, Reload (1)",
+            "description": "Runegun rifles use mana to accelerate bullets to high speeds.",
+            "price": "6 gp",
+            "type": "Simple",
+            "weaponGroup": "Runegun"
+        },
+        {
+            "name": "Shield",
+            "damage": "1d4 bludgeoning",
+            "hands": 1,
+            "range": 1,
+            "traits": "Block 2",
+            "description": "Shields can protect the user from spells and attacks",
+            "price": "6 sp",
+            "type": "Simple",
+            "weaponGroup": "Shield"
+        },
+        {
+            "name": "Shortbow",
+            "damage": "1d6 piercing",
+            "hands": 2,
+            "range": 8,
+            "traits": "Precision, Agile, Ranged, Volley (1)",
+            "description": "A light and easy to handle bow, favored by rangers and scouts",
+            "price": "1 gp",
+            "type": "Simple",
+            "weaponGroup": "Bow"
+        },
+        {
+            "name": "Sling",
+            "damage": "1d6 bludgeoning",
+            "hands": 1,
+            "range": 8,
+            "traits": "Propulsive, Agile, Ranged, Light",
+            "description": "Slings are simple weapons, but underestimating them have lead to many a leaders downfall",
+            "price": "1 sp",
+            "type": "Simple",
+            "weaponGroup": "Sling"
+        },
+        {
+            "name": "Spear",
+            "damage": "1d6 piercing",
+            "hands": 1,
+            "range": 2,
+            "traits": "Precision, Thrown (4)",
+            "description": "A long pole weapon that can be thrown or used to keep enemies at bay",
+            "price": "5 sp",
+            "type": "Simple",
+            "weaponGroup": "Polearm"
+        },
+        {
+            "name": "Throwing Axe",
+            "damage": "1d6 slashing",
+            "hands": 1,
+            "range": 1,
+            "traits": "Agile, Finesse, Thrown (4)",
+            "description": "A small axe designed for throwing, but can also be used in melee combat",
+            "price": "6 sp",
+            "type": "Simple",
+            "weaponGroup": "Axe"
+        }
+    ],
+    "Martial": [
+        {
+            "name": "Arbalest",
+            "damage": "2d8 piercing",
+            "hands": 2,
+            "range": 12,
+            "traits": "Precision, Heavy, Ranged, Reload (2), Sluggish",
+            "description": "A large crossbow that takes longer to reload, but delivers devastating power",
+            "price": "10 gp",
+            "type": "Martial",
+            "weaponGroup": "Crossbow"
+        },
+        {
+            "name": "Channeling Staff",
+            "damage": "1d6 bludgeoning",
+            "hands": 1,
+            "range": 1,
+            "traits": "Channeling, Aiming Focus",
+            "description": "A special staff used by mages to focus and aim their spells",
+            "price": "10 gp",
+            "type": "Martial",
+            "weaponGroup": "Staff"
+        },
+        {
+            "name": "Crossbow",
+            "damage": "1d8 piercing",
+            "hands": 2,
+            "range": 10,
+            "traits": "Precision, Reload (1), Ranged",
+            "description": "A ranged weapon that fires bolts with great force",
+            "price": "5 gp",
+            "type": "Martial",
+            "weaponGroup": "Crossbow"
+        },
+        {
+            "name": "Glaive",
+            "damage": "1d8 slashing",
+            "hands": 2,
+            "range": 2,
+            "traits": "Versatile (Piercing), Sweep, Deadly (d6)",
+            "description": "A pole weapon with a single edged blade, favored by infantry for its versatility",
+            "price": "8 gp",
+            "type": "Martial",
+            "weaponGroup": "Polearm"
+        },
+        {
+            "name": "Greataxe",
+            "damage": "1d12 slashing",
+            "hands": 2,
+            "range": 1,
+            "traits": "Heavy",
+            "description": "A large two handed axe, capable of cleaving through armor and bone alike",
+            "price": "6 gp",
+            "type": "Martial",
+            "weaponGroup": "Axe"
+        },
+        {
+            "name": "Greatsword",
+            "damage": "1d10 slashing",
+            "hands": 2,
+            "range": 1,
+            "traits": "Heavy, Parry, Sweep, Versatile (Piercing)",
+            "description": "A large two handed sword that can cleave through multiple enemies in one swing",
+            "price": "10 gp",
+            "type": "Martial",
+            "weaponGroup": "Sword"
+        },
+        {
+            "name": "Halberd",
+            "damage": "1d10 slashing",
+            "hands": 2,
+            "range": 2,
+            "traits": "Heavy, Versatile (Piercing)",
+            "description": "A pole weapon with an axe blade and a spike, capable of keeping foes at reach",
+            "price": "8 gp",
+            "type": "Martial",
+            "weaponGroup": "Polearm"
+        },
+        {
+            "name": "Longbow",
+            "damage": "1d10 piercing",
+            "hands": 2,
+            "range": 12,
+            "traits": "Precision, Propulsive, Ranged, Volley (4)",
+            "description": "A powerful bow, capable of hitting targets at long range",
+            "price": "5 gp",
+            "type": "Martial",
+            "weaponGroup": "Bow"
+        },
+        {
+            "name": "Longstaff",
+            "damage": "1d8 bludgeoning",
+            "hands": 2,
+            "range": 2,
+            "traits": "Channeling, Aiming Focus",
+            "description": "Longstaffs are longer battlestaves to channel magic in battle",
+            "price": "2 gp",
+            "type": "Martial",
+            "weaponGroup": "Staff"
+        },
+        {
+            "name": "Longsword",
+            "damage": "1d8 slashing",
+            "hands": 1,
+            "range": 1,
+            "traits": "Parry, Sweep, Versatile (Piercing)",
+            "description": "The standard sword of choice for many soldiers and adventurers",
+            "price": "4 gp",
+            "type": "Martial",
+            "weaponGroup": "Sword"
+        },
+        {
+            "name": "Maul",
+            "damage": "1d10 bludgeoning",
+            "hands": 2,
+            "range": 1,
+            "traits": "Shove, Heavy",
+            "description": "A large two handed hammer, capable of crushing armor and bone alike",
+            "price": "8 gp",
+            "type": "Martial",
+            "weaponGroup": "Hammer"
+        },
+        {
+            "name": "Parrying Dagger",
+            "damage": "1d4 piercing",
+            "hands": 1,
+            "range": 1,
+            "traits": "Precision, Finesse, Versatile (Slashing), Agile, Parry, Light",
+            "description": "Parrying daggers are specialized weapons for duelists",
+            "price": "1 gp",
+            "type": "Martial",
+            "weaponGroup": "Knife"
+        },
+        {
+            "name": "Pike",
+            "damage": "1d8 piercing",
+            "hands": 2,
+            "range": 3,
+            "traits": "Unwieldy, Heavy",
+            "description": "Pikes have great reach, but are hard to use in close combat",
+            "price": "2 gp",
+            "type": "Martial",
+            "weaponGroup": "Polearm"
+        },
+        {
+            "name": "Rapier",
+            "damage": "1d6 piercing",
+            "hands": 1,
+            "range": 1,
+            "traits": "Agile, Precision, Finesse, Parry",
+            "description": "A duelists weapon, for outmaneuvering their foes on the battlefield",
+            "price": "4 gp",
+            "type": "Martial",
+            "weaponGroup": "Sword"
+        },
+        {
+            "name": "Runegun Cannon",
+            "damage": "2d10 bludgeoning",
+            "hands": 2,
+            "range": 8,
+            "traits": "Deadly (d10), Heavy, Loud, Ranged, Reload (2), Slowing 1",
+            "description": "Runegun Cannons are weapons made for war, but their size and weight make them generally unfit for adventurers",
+            "price": "18 gp",
+            "type": "Martial",
+            "weaponGroup": "Runegun"
+        },
+        {
+            "name": "Runegun Sharpshot",
+            "damage": "1d10 piercing",
+            "hands": 2,
+            "range": 12,
+            "traits": "Deadly (d10), Precision, Loud, Ranged, Reload (1), Volley (4)",
+            "description": "Sharpshots are specialized runeguns that are cumbersome to use, but extremely accurate a long range",
+            "price": "8 gp",
+            "type": "Martial",
+            "weaponGroup": "Runegun"
+        },
+        {
+            "name": "Shortsword",
+            "damage": "1d6 piercing",
+            "hands": 1,
+            "range": 1,
+            "traits": "Finesse, Agile, Versatile (Slashing), Parry",
+            "description": "A light and easy to handle sword, favored by rogues and scouts",
+            "price": "1 gp",
+            "type": "Martial",
+            "weaponGroup": "Sword"
+        },
+        {
+            "name": "Tower Shield",
+            "damage": "1d4 bludgeoning",
+            "hands": 1,
+            "range": 1,
+            "traits": "Block 3, Slowing 1, Sluggish",
+            "description": "Tower Shields are heavy and cumbersome, but very effective protection",
+            "price": "5 gp",
+            "type": "Martial",
+            "weaponGroup": "Shield"
+        },
+        {
+            "name": "Warhammer",
+            "damage": "1d8 bludgeoning",
+            "hands": 1,
+            "range": 1,
+            "traits": "Shove",
+            "description": "A solid hammer, effective against armored foes",
+            "price": "4 gp",
+            "type": "Martial",
+            "weaponGroup": "Hammer"
+        }
+    ],
+    "Advanced": [
+        {
+            "name": "Atlatl",
+            "damage": "1d10 piercing",
+            "hands": 2,
+            "range": 5,
+            "traits": "Deadly (d8), Propulsive, Ranged, Reload (1)",
+            "description": "Atlats are specialized spearthrowers used by Brannur huntmaster. They can propel deadly spears impressive distances",
+            "price": "2 gp",
+            "type": "Advanced",
+            "weaponGroup": "Spear"
+        },
+        {
+            "name": "Bola",
+            "damage": "1d6 bludgeoning",
+            "hands": 1,
+            "range": 1,
+            "traits": "Thrown (4), Ranged Trip, Light",
+            "description": "Bolas are composed of weights tied to a metal rope. They can trip foes at range",
+            "price": "5 sp",
+            "type": "Advanced",
+            "weaponGroup": "Sling"
+        },
+        {
+            "name": "Flail",
+            "damage": "2d6 bludgeoning",
+            "hands": 2,
+            "range": 2,
+            "traits": "Unwieldy, Agile, Swing Around",
+            "description": "Flails are complex weapons, but can in the right hand be wielded with devastating force",
+            "price": "8 gp",
+            "type": "Advanced",
+            "weaponGroup": "Flail"
+        },
+        {
+            "name": "Shuriken",
+            "damage": "1d4 slashing",
+            "hands": 1,
+            "range": 1,
+            "traits": "Thrown (6), Agile, Finesse, Deadly (d8), Light",
+            "description": "Shurikens are rare weapons which see use by Vesper assassins",
+            "price": "2 sp",
+            "type": "Advanced",
+            "weaponGroup": "Knife"
+        },
+        {
+            "name": "War Pick",
+            "damage": "1d10 piercing",
+            "hands": 2,
+            "range": 1,
+            "traits": "Deadly (d12), Sluggish",
+            "description": "War picks are unorthodox weapons, but when they hit, they hit hard.",
+            "price": "2 gp",
+            "type": "Advanced",
+            "weaponGroup": "Hammer"
+        },
+        {
+            "name": "Whip",
+            "damage": "1d4 slashing",
+            "hands": 1,
+            "range": 3,
+            "traits": "Finesse, Disarm, Trip, Light",
+            "description": "Whips may seem simple, but are complicated weapons to wield effectively. ",
+            "price": "1 sp",
+            "type": "Advanced",
+            "weaponGroup": "Flail"
+        }
+    ],
+    "Unarmed": [
+        {
+            "name": "Claw",
+            "damage": "1d4 slashing",
+            "hands": 0,
+            "range": 1,
+            "traits": "Finesse, Agile",
+            "description": "Naga and Yirte posses sharp claws that can serve as emergency weapons",
+            "price": "-",
+            "type": "Unarmed",
+            "weaponGroup": "Unarmed"
+        },
+        {
+            "name": "Dragon's Claws",
+            "damage": "1d6 slashing",
+            "hands": 0,
+            "range": 1,
+            "traits": "Agile",
+            "description": "Dragonkin's sharp claws can cut through many things, but their not as dexterous as a nagas or yirtes",
+            "price": "-",
+            "type": "Unarmed",
+            "weaponGroup": "Unarmed"
+        },
+        {
+            "name": "Unarmed Strike",
+            "damage": "1d2 bludgeoning",
+            "hands": 0,
+            "range": 1,
+            "traits": "Agile, Finesse",
+            "description": "Punching people has always been a way to fight",
+            "price": "-",
+            "type": "Unarmed",
+            "weaponGroup": "Unarmed"
+        }
+    ],
+    "Artificers": [
+        {
+            "name": "Impact Gauntlet",
+            "damage": "1d8 bludgeoning",
+            "hands": 1,
+            "range": 1,
+            "traits": "Agile, Channeling, Deadly (d8), Finesse, Light",
+            "description": "Impact Gauntlets lets their wielders punch with extraordinarie force",
+            "price": "12 gp",
+            "type": "Artificers",
+            "weaponGroup": "Unarmed"
+        },
+        {
+            "name": "Powered Hammer",
+            "damage": "1d12 bludgeoning",
+            "hands": 2,
+            "range": 1,
+            "traits": "Heavy, Shove",
+            "description": "Powered hammers bring intense power from careful runework",
+            "price": "15 gp",
+            "type": "Artificers",
+            "weaponGroup": "Hammer"
+        },
+        {
+            "name": "Whip Sword",
+            "damage": "1d8 slashing",
+            "hands": 1,
+            "range": 1,
+            "traits": "Agile, Finesse, Parry, Extend (5)",
+            "description": "Whip swords are advanced weapons which can extend to have surprising reach. ",
+            "price": "20 gp",
+            "type": "Artificers",
+            "weaponGroup": "Sword"
+        }
+    ],
+    "Custom": [],
+    "Special": [
+        {
+            "name": "Agile Tail",
+            "damage": "1d8 slashing",
+            "hands": 0,
+            "range": 2,
+            "traits": "Agile, Finesse",
+            "description": "",
+            "price": "-",
+            "type": "Special",
+            "weaponGroup": "Unarmed"
+        },
+        {
+            "name": "Claw",
+            "damage": "1d8 slashing",
+            "hands": 1,
+            "range": 1,
+            "traits": "Finesse",
+            "description": "Quadruped golems can attack foes with their sharp claws",
+            "price": "",
+            "type": "Special",
+            "weaponGroup": "Unarmed"
+        },
+        {
+            "name": "Slam",
+            "damage": "1d10 bludgeoning",
+            "hands": 0,
+            "range": 1,
+            "traits": "",
+            "description": "Brawler type golems use their fists as simple, but effective weapons",
+            "price": "-",
+            "type": "Special",
+            "weaponGroup": "Unarmed"
+        },
+        {
+            "name": "Stomp",
+            "damage": "1d8 bludgeoning",
+            "hands": 0,
+            "range": 1,
+            "traits": "Deadly (d6)",
+            "description": "The legs of quadruped golems is another deadly weapon",
+            "price": "-",
+            "type": "Special",
+            "weaponGroup": "Unarmed"
+        },
+        {
+            "name": "Sweeping Tail",
+            "damage": "1d8 bludgeoning",
+            "hands": 0,
+            "range": 2,
+            "traits": "Sweep, Shove",
+            "description": "",
+            "price": "-",
+            "type": "Special",
+            "weaponGroup": "Unarmed"
+        }
+    ]
+}

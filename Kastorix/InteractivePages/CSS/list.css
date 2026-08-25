@@ -1,0 +1,132 @@
+/* styles.css */
+
+.interactive-list {
+    display: flex;
+    flex: 1; /* Take up remaining space in the modal-content */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.left-panel {
+    background-color: #333;
+    padding: 10px;
+    overflow-y: auto;
+    height: 100%; /* Fill the height of the interactive-list */
+}
+
+.right-panel {
+    flex: 1;
+    background-color: #111;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%; /* Fill the height of the interactive-list */
+    min-width: 65%;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    margin: 0 2px;
+    background-color: #444;
+    color: #eee;
+    border: none;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background-color: #555;
+    font-weight: bold;
+}
+
+.list-container {
+    flex: 1; /* Take up remaining space in the left-panel */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.item-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.item-list li {
+    padding: 8px;
+    margin-bottom: 5px;
+    background-color: #444;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.item-list li:hover {
+    background-color: #555;
+}
+
+.item-list li.item-unavailable {
+    background-color: #555;
+    color: #888;
+    opacity: 0.6;
+    cursor: not-allowed !important;
+}
+
+.item-list li.item-unavailable:hover {
+    background-color: #555;
+    color: #888;
+}
+
+.item-list li.item-current {
+    background-color: #0d703d;
+     color: #fffcfc;
+}
+
+.item-details {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.item-details h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-decoration: underline;
+    color:  lightgray
+}
+
+.item-details p {
+    margin-bottom: 3px;
+    margin-top: 0px;
+}
+
+.item-details strong {
+    text-decoration: underline;
+}
+
+.action-icon-modalList {
+    vertical-align: middle;
+    /* Optional: Adjust height/width if needed */
+    height: 1em; /* Match text height */
+}
+
+.add-spell-button {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.add-spell-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

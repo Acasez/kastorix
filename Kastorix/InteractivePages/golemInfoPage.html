@@ -1,0 +1,93 @@
+<div>
+    <div class="crSectionTitle">Golem</div>
+    <div class="golemModel">
+        <p>Golem Model: <span id="golemModel"></span></p>
+    </div>
+    <div class="stats-wrapper">
+        <!-- Health Bar -->
+        <div class="resource-bar-wrapper">
+            <div class="bar-container">
+                <div id="healthGolemBar" class="bar" style="width: 50%; background-color: #ff4d4d;"></div>
+            </div>
+            <div class="resource-inputs">
+                <label for="healthGolem">Health:</label>
+                <input class="number-input" type="number" id="healthGolem" min="0" max="1000" value="10" oninput="updateBar('healthGolem')">
+                /
+                <input class="number-input" type="number" id="maxHealthGolem" min="1" max="1000" value="10" oninput="updateBar('healthGolem')">
+            </div>
+        </div>
+        <div class="stats-container">
+            <div class="stat-box">
+                <p>Physique</p>
+                <div class="stat-input-container">
+                    <div class="stat-label">PHY</div>
+                    <input type="number" class="stat-input" id="golemPhy" min="-5" max="10" oninput="updateOnStatIncrease()" value="0">
+                </div>
+            </div>
+            <div class="stat-box">
+                <p>Dexterity</p>
+                <div class="stat-input-container">
+                    <div class="stat-label">DEX</div>
+                    <input type="number" class="stat-input" id="golemDex" min="-5" max="10" oninput="updateOnStatIncrease()" value="0">
+                </div>
+            </div>
+            <div class="stat-box">
+                <p>Intelligence</p>
+                <div class="stat-input-container">
+                    <div class="stat-label">INT</div>
+                    <input type="number" class="stat-input" id="golemInt" min="-5" max="10" oninput="updateOnStatIncrease()" value="0">
+                </div>
+            </div>
+            <div class="stat-box">
+                <p>Willpower</p>
+                <div class="stat-input-container">
+                    <div class="stat-label">WIL</div>
+                    <input type="number" class="stat-input" id="golemWil" min="-5" max="10" oninput="updateOnStatIncrease()" value="0">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stats-wrapper">
+        <div class="stats-container">
+            <div class="save-box">
+                <div class="save-label">
+                    <p>Fortitude (PHY):</p>
+                    <button class="proficiency-cycle-button save" data-creature-index="0" data-property="golemFortitude">U</button>
+                    <p class="savingThrow" data-creature-index="0" data-save-type="golemFortitude">0</p>
+                </div>
+            </div>
+            <div class="save-box">
+                <div class="save-label">
+                    <p>Reflex (DEX):</p>
+                    <button class="proficiency-cycle-button save" data-creature-index="0" data-property="golemReflex">U</button>
+                    <p class="savingThrow" data-creature-index="0" data-save-type="golemReflex">0</p>
+                </div>
+            </div>
+            <div class="save-box">
+                <div class="save-label">
+                    <p>Will (WIL):</p>
+                    <button class="proficiency-cycle-button save" data-creature-index="0" data-property="golemWill">U</button>
+                    <p class="savingThrow" data-creature-index="0" data-save-type="golemWill">0</p>
+                </div>
+            </div>
+            <div >
+                <label>Land</label>
+                <input class="small-box" placeholder="5">
+            </div>
+            <div>
+                <label>Physical</label>
+                <input class="small-box" placeholder="5">
+            </div>
+            <div>
+                <label>Elemental</label>
+                <input class="small-box" placeholder="5">
+            </div>
+        </div>
+    </div>
+    <div>
+        <button class="chooseWeaponsModal modalButton" data-selected-feat="Claw" type="weapon" runes="">Claw<button class="proficiency-cycle-button" title="Trained [2]" style="background-color: rgb(71, 209, 71);">T</button><span class="weapon-modifier"> (+5) | MAP -5 | </span><span class="strike-damage"> 1d8 + 3 slashing</span>
+        </button>
+        <button class="chooseWeaponsModal modalButton"data-selected-feat="Slam" type="weapon" runes="">Slam<button class="proficiency-cycle-button" title="Trained [2]" style="background-color: rgb(71, 209, 71);">T</button><span class="weapon-modifier"> (+6) | MAP -5 | </span><span class="strike-damage"> 1d10 + 4 bludgeoning</span></button>
+        <div class="golemStrikesContainer" id="golemStrikesContainer"></div>
+    </div>
+</div>

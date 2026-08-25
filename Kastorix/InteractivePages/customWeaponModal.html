@@ -1,0 +1,47 @@
+<form class="customWeaponForm">
+    <div class="customWeaponRow">
+        <label for="customWeaponName">Name:</label>
+        <input type="text" class="customWeaponName wide" required>
+        <label for="customWeaponDamage">Damage:</label>
+        <div class="damage-input-container">
+            <input type="text" class="customWeaponDamage wide" placeholder="e.g., 2d6" required>
+            <div class="damage-type-dropdown">
+                <button type="button" class="damage-type-button">Damage Type ▼</button>
+                <div class="damage-type-options" id="damageTypeOptions">
+                    <!-- Damage types will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="customWeaponRow">
+        <label for="customWeaponHands">Hands:</label>
+        <input type="text" class="customWeaponHands">
+        <label for="customWeaponRange">Range:</label>
+        <input type="text" class="customWeaponRange">
+    </div>
+    <div class="customWeaponRow">
+        <label for="customWeaponTraits">Traits:</label>
+        <div class="tag-input-container">
+            <div class="selected-tags" id="selectedTags"></div>
+            <input type="text" class="tag-input tall" id="tagInput" placeholder="Type or select traits..."
+                onkeydown="handleTagInput(event)">
+            <div class="traits-dropdown" id="traitsDropdown">
+            </div>
+        </div>
+    </div>
+    <div class="customWeaponRow">
+        <label for="customWeaponDescription">Description:</label>
+        <textarea class="customWeaponDescription"></textarea>
+    </div>
+    <div class="customWeaponRow">
+        <label for="customWeaponPrice">Price:</label>
+        <input type="text" class="customWeaponPrice">
+        <label for="customWeaponType">Type:</label>
+        <input type="text" class="customWeaponType">
+        <label for="customWeaponGroup">Weapon Group:</label>
+        <input type="text" class="customWeaponGroup">
+    </div>
+    <div class="customWeaponRow">
+        <button type="button" class="submit" onclick="finishCustomWeapon(this)">Add Weapon</button>
+    </div>
+</form>

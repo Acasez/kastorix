@@ -1,0 +1,213 @@
+
+    <style>
+        #weaponsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="weaponsTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Damage</th><th onclick='sortTable(2)'>Hands</th><th onclick='sortTable(3)'>Range</th><th onclick='sortTable(4)'>Traits</th><th onclick='sortTable(5)'>Description</th><th onclick='sortTable(6)'>Price</th><th onclick='sortTable(7)'>Type</th><th onclick='sortTable(8)'>Weapon Group</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="atlatl">
+                <td>Atlatl</td><td>1d10 piercing</td><td>2</td><td>5</td><td>Deadly (d8), Propulsive, Ranged, Reload (1)</td><td class="wide-column"><span class='flavor-text'>Atlats are specialized spearthrowers used by Brannur huntmaster. They can propel deadly spears impressive distances</span></td><td>2 gp</td><td>Advanced</td><td>Spear</td>
+            </tr>
+        
+            <tr id="bola">
+                <td>Bola</td><td>1d6 bludgeoning</td><td>1</td><td>1</td><td>Thrown (4), Ranged Trip, Light</td><td class="wide-column"><span class='flavor-text'>Bolas are composed of weights tied to a metal rope. They can trip foes at range</span></td><td>5 sp</td><td>Advanced</td><td>Sling</td>
+            </tr>
+        
+            <tr id="flail">
+                <td>Flail</td><td>2d6 bludgeoning</td><td>2</td><td>2</td><td>Unwieldy, Agile, Swing Around</td><td class="wide-column"><span class='flavor-text'>Flails are complex weapons, but can in the right hand be wielded with devastating force</span></td><td>8 gp</td><td>Advanced</td><td>Flail</td>
+            </tr>
+        
+            <tr id="shuriken">
+                <td>Shuriken</td><td>1d4 slashing</td><td>1</td><td>1</td><td>Thrown (6), Agile, Finesse, Deadly (d8), Light</td><td class="wide-column"><span class='flavor-text'>Shurikens are rare weapons which see use by Vesper assassins</span></td><td>2 sp</td><td>Advanced</td><td>Knife</td>
+            </tr>
+        
+            <tr id="war-pick">
+                <td>War Pick</td><td>1d10 piercing</td><td>2</td><td>1</td><td>Deadly (d12), Sluggish</td><td class="wide-column"><span class='flavor-text'>War picks are unorthodox weapons, but when they hit, they hit hard.</span></td><td>2 gp</td><td>Advanced</td><td>Hammer</td>
+            </tr>
+        
+            <tr id="whip">
+                <td>Whip</td><td>1d4 slashing</td><td>1</td><td>3</td><td>Finesse, Disarm, Trip, Light</td><td class="wide-column"><span class='flavor-text'>Whips may seem simple, but are complicated weapons to wield effectively. </span></td><td>1 sp</td><td>Advanced</td><td>Flail</td>
+            </tr>
+        
+            <tr id="impact-gauntlet">
+                <td>Impact Gauntlet</td><td>1d8 bludgeoning</td><td>1</td><td>1</td><td>Agile, Channeling, Deadly (d8), Finesse, Light</td><td class="wide-column"><span class='flavor-text'>Impact Gauntlets lets their wielders punch with extraordinarie force</span></td><td>12 gp</td><td>Artificers</td><td>Unarmed</td>
+            </tr>
+        
+            <tr id="powered-hammer">
+                <td>Powered Hammer</td><td>1d12 bludgeoning</td><td>2</td><td>1</td><td>Heavy, Shove</td><td class="wide-column"><span class='flavor-text'>Powered hammers bring intense power from careful runework</span></td><td>15 gp</td><td>Artificers</td><td>Hammer</td>
+            </tr>
+        
+            <tr id="whip-sword">
+                <td>Whip Sword</td><td>1d8 slashing</td><td>1</td><td>1</td><td>Agile, Finesse, Parry, Extend (5)</td><td class="wide-column"><span class='flavor-text'>Whip swords are advanced weapons which can extend to have surprising reach. </span></td><td>20 gp</td><td>Artificers</td><td>Sword</td>
+            </tr>
+        
+            <tr id="arbalest">
+                <td>Arbalest</td><td>2d8 piercing</td><td>2</td><td>12</td><td>Precision, Heavy, Ranged, Reload (2), Sluggish</td><td class="wide-column"><span class='flavor-text'>A large crossbow that takes longer to reload, but delivers devastating power</span></td><td>10 gp</td><td>Martial</td><td>Crossbow</td>
+            </tr>
+        
+            <tr id="channeling-staff">
+                <td>Channeling Staff</td><td>1d6 bludgeoning</td><td>1</td><td>1</td><td>Channeling, Aiming Focus</td><td class="wide-column"><span class='flavor-text'>A special staff used by mages to focus and aim their spells</span></td><td>10 gp</td><td>Martial</td><td>Staff</td>
+            </tr>
+        
+            <tr id="crossbow">
+                <td>Crossbow</td><td>1d8 piercing</td><td>2</td><td>10</td><td>Precision, Reload (1), Ranged</td><td class="wide-column"><span class='flavor-text'>A ranged weapon that fires bolts with great force</span></td><td>5 gp</td><td>Martial</td><td>Crossbow</td>
+            </tr>
+        
+            <tr id="glaive">
+                <td>Glaive</td><td>1d8 slashing</td><td>2</td><td>2</td><td>Versatile (Piercing), Sweep, Deadly (d6)</td><td class="wide-column"><span class='flavor-text'>A pole weapon with a single edged blade, favored by infantry for its versatility</span></td><td>8 gp</td><td>Martial</td><td>Polearm</td>
+            </tr>
+        
+            <tr id="greataxe">
+                <td>Greataxe</td><td>1d12 slashing</td><td>2</td><td>1</td><td>Heavy</td><td class="wide-column"><span class='flavor-text'>A large two handed axe, capable of cleaving through armor and bone alike</span></td><td>6 gp</td><td>Martial</td><td>Axe</td>
+            </tr>
+        
+            <tr id="greatsword">
+                <td>Greatsword</td><td>1d10 slashing</td><td>2</td><td>1</td><td>Heavy, Parry, Sweep, Versatile (Piercing)</td><td class="wide-column"><span class='flavor-text'>A large two handed sword that can cleave through multiple enemies in one swing</span></td><td>10 gp</td><td>Martial</td><td>Sword</td>
+            </tr>
+        
+            <tr id="halberd">
+                <td>Halberd</td><td>1d10 slashing</td><td>2</td><td>2</td><td>Heavy, Versatile (Piercing)</td><td class="wide-column"><span class='flavor-text'>A pole weapon with an axe blade and a spike, capable of keeping foes at reach</span></td><td>8 gp</td><td>Martial</td><td>Polearm</td>
+            </tr>
+        
+            <tr id="longbow">
+                <td>Longbow</td><td>1d10 piercing</td><td>2</td><td>12</td><td>Precision, Propulsive, Ranged, Volley (4)</td><td class="wide-column"><span class='flavor-text'>A powerful bow, capable of hitting targets at long range</span></td><td>5 gp</td><td>Martial</td><td>Bow</td>
+            </tr>
+        
+            <tr id="longstaff">
+                <td>Longstaff</td><td>1d8 bludgeoning</td><td>2</td><td>2</td><td>Channeling, Aiming Focus</td><td class="wide-column"><span class='flavor-text'>Longstaffs are longer battlestaves to channel magic in battle</span></td><td>2 gp</td><td>Martial</td><td>Staff</td>
+            </tr>
+        
+            <tr id="longsword">
+                <td>Longsword</td><td>1d8 slashing</td><td>1</td><td>1</td><td>Parry, Sweep, Versatile (Piercing)</td><td class="wide-column"><span class='flavor-text'>The standard sword of choice for many soldiers and adventurers</span></td><td>4 gp</td><td>Martial</td><td>Sword</td>
+            </tr>
+        
+            <tr id="maul">
+                <td>Maul</td><td>1d10 bludgeoning</td><td>2</td><td>1</td><td>Shove, Heavy</td><td class="wide-column"><span class='flavor-text'>A large two handed hammer, capable of crushing armor and bone alike</span></td><td>8 gp</td><td>Martial</td><td>Hammer</td>
+            </tr>
+        
+            <tr id="parrying-dagger">
+                <td>Parrying Dagger</td><td>1d4 piercing</td><td>1</td><td>1</td><td>Precision, Finesse, Versatile (Slashing), Agile, Parry, Light</td><td class="wide-column"><span class='flavor-text'>Parrying daggers are specialized weapons for duelists</span></td><td>1 gp</td><td>Martial</td><td>Knife</td>
+            </tr>
+        
+            <tr id="pike">
+                <td>Pike</td><td>1d8 piercing</td><td>2</td><td>3</td><td>Unwieldy, Heavy</td><td class="wide-column"><span class='flavor-text'>Pikes have great reach, but are hard to use in close combat</span></td><td>2 gp</td><td>Martial</td><td>Polearm</td>
+            </tr>
+        
+            <tr id="rapier">
+                <td>Rapier</td><td>1d6 piercing</td><td>1</td><td>1</td><td>Agile, Precision, Finesse, Parry</td><td class="wide-column"><span class='flavor-text'>A duelists weapon, for outmaneuvering their foes on the battlefield</span></td><td>4 gp</td><td>Martial</td><td>Sword</td>
+            </tr>
+        
+            <tr id="runegun-cannon">
+                <td>Runegun Cannon</td><td>2d10 bludgeoning</td><td>2</td><td>8</td><td>Deadly (d10), Heavy, Loud, Ranged, Reload (2), Slowing 1</td><td class="wide-column"><span class='flavor-text'>Runegun Cannons are weapons made for war, but their size and weight make them generally unfit for adventurers</span></td><td>18 gp</td><td>Martial</td><td>Runegun</td>
+            </tr>
+        
+            <tr id="runegun-sharpshot">
+                <td>Runegun Sharpshot</td><td>1d10 piercing</td><td>2</td><td>12</td><td>Deadly (d10), Precision, Loud, Ranged, Reload (1), Volley (4)</td><td class="wide-column"><span class='flavor-text'>Sharpshots are specialized runeguns that are cumbersome to use, but extremely accurate a long range</span></td><td>8 gp</td><td>Martial</td><td>Runegun</td>
+            </tr>
+        
+            <tr id="shortsword">
+                <td>Shortsword</td><td>1d6 piercing</td><td>1</td><td>1</td><td>Finesse, Agile, Versatile (Slashing), Parry</td><td class="wide-column"><span class='flavor-text'>A light and easy to handle sword, favored by rogues and scouts</span></td><td>1 gp</td><td>Martial</td><td>Sword</td>
+            </tr>
+        
+            <tr id="tower-shield">
+                <td>Tower Shield</td><td>1d4 bludgeoning</td><td>1</td><td>1</td><td>Block 3, Slowing 1, Sluggish</td><td class="wide-column"><span class='flavor-text'>Tower Shields are heavy and cumbersome, but very effective protection</span></td><td>5 gp</td><td>Martial</td><td>Shield</td>
+            </tr>
+        
+            <tr id="warhammer">
+                <td>Warhammer</td><td>1d8 bludgeoning</td><td>1</td><td>1</td><td>Shove</td><td class="wide-column"><span class='flavor-text'>A solid hammer, effective against armored foes</span></td><td>4 gp</td><td>Martial</td><td>Hammer</td>
+            </tr>
+        
+            <tr id="battlestaff">
+                <td>Battlestaff</td><td>1d6 bludgeoning</td><td>1</td><td>1</td><td>Channeling</td><td class="wide-column"><span class='flavor-text'>A sturdy wooden staff, which can be used in somantic components</span></td><td>2 sp</td><td>Simple</td><td>Staff</td>
+            </tr>
+        
+            <tr id="bayonet">
+                <td>Bayonet</td><td>1d8 piercing</td><td>2</td><td>1</td><td>Bayonet</td><td class="wide-column"><span class='flavor-text'>Bayonets can fastened to rifles for a good but inaccurate reserve melee weapon</span></td><td>1 gp</td><td>Simple</td><td>Spear</td>
+            </tr>
+        
+            <tr id="buckler">
+                <td>Buckler</td><td>1d4 bludgeoning</td><td>1</td><td>1</td><td>Block 1, Light</td><td class="wide-column"><span class='flavor-text'>Bucklers are light shields that allows the wearer to also use the hand for interacting with objects, though they can't their shield hand to perform somatic components or wield weapons</span></td><td>1 gp</td><td>Simple</td><td>Shield</td>
+            </tr>
+        
+            <tr id="club">
+                <td>Club</td><td>1d4 bludgeoning</td><td>1</td><td>1</td><td>Shove</td><td class="wide-column"><span class='flavor-text'>A simple wooden club, easy to make and use</span></td><td>1 sp</td><td>Simple</td><td>Club</td>
+            </tr>
+        
+            <tr id="dagger">
+                <td>Dagger</td><td>1d4 piercing</td><td>1</td><td>1</td><td>Precision, Finesse, Versatile (Slashing), Agile, Thrown (3), Light</td><td class="wide-column"><span class='flavor-text'>A simple fallback weapon that can also be thrown in a pitch</span></td><td>2 sp</td><td>Simple</td><td>Knife</td>
+            </tr>
+        
+            <tr id="mace">
+                <td>Mace</td><td>1d6 bludgeoning</td><td>1</td><td>1</td><td>Shove</td><td class="wide-column"><span class='flavor-text'>A simple club with a heavy head, effective against armored foes</span></td><td>1 gp</td><td>Simple</td><td>Club</td>
+            </tr>
+        
+            <tr id="runegun-pistol">
+                <td>Runegun Pistol</td><td>1d6 piercing</td><td>1</td><td>6</td><td>Loud, Ranged, Reload (1), Light, Deadly (d8)</td><td class="wide-column"><span class='flavor-text'>Fitting the runes of runegun on a one-handed object requires great skill, but they are an effective weapon.</span></td><td>30 gp</td><td>Simple</td><td>Runegun</td>
+            </tr>
+        
+            <tr id="runegun-rifle">
+                <td>Runegun Rifle</td><td>1d10 piercing</td><td>2</td><td>10</td><td>Deadly (d8), Loud, Ranged, Reload (1)</td><td class="wide-column"><span class='flavor-text'>Runegun rifles use mana to accelerate bullets to high speeds.</span></td><td>6 gp</td><td>Simple</td><td>Runegun</td>
+            </tr>
+        
+            <tr id="shield">
+                <td>Shield</td><td>1d4 bludgeoning</td><td>1</td><td>1</td><td>Block 2</td><td class="wide-column"><span class='flavor-text'>Shields can protect the user from spells and attacks</span></td><td>6 sp</td><td>Simple</td><td>Shield</td>
+            </tr>
+        
+            <tr id="shortbow">
+                <td>Shortbow</td><td>1d6 piercing</td><td>2</td><td>8</td><td>Precision, Agile, Ranged, Volley (1)</td><td class="wide-column"><span class='flavor-text'>A light and easy to handle bow, favored by rangers and scouts</span></td><td>1 gp</td><td>Simple</td><td>Bow</td>
+            </tr>
+        
+            <tr id="sling">
+                <td>Sling</td><td>1d6 bludgeoning</td><td>1</td><td>8</td><td>Propulsive, Agile, Ranged, Light</td><td class="wide-column"><span class='flavor-text'>Slings are simple weapons, but underestimating them have lead to many a leaders downfall</span></td><td>1 sp</td><td>Simple</td><td>Sling</td>
+            </tr>
+        
+            <tr id="spear">
+                <td>Spear</td><td>1d6 piercing</td><td>1</td><td>2</td><td>Precision, Thrown (4)</td><td class="wide-column"><span class='flavor-text'>A long pole weapon that can be thrown or used to keep enemies at bay</span></td><td>5 sp</td><td>Simple</td><td>Polearm</td>
+            </tr>
+        
+            <tr id="throwing-axe">
+                <td>Throwing Axe</td><td>1d6 slashing</td><td>1</td><td>1</td><td>Agile, Finesse, Thrown (4)</td><td class="wide-column"><span class='flavor-text'>A small axe designed for throwing, but can also be used in melee combat</span></td><td>6 sp</td><td>Simple</td><td>Axe</td>
+            </tr>
+        
+            <tr id="claw">
+                <td>Claw</td><td>1d4 slashing</td><td>0</td><td>1</td><td>Finesse, Agile</td><td class="wide-column"><span class='flavor-text'>Naga and Yirte posses sharp claws that can serve as emergency weapons</span></td><td>-</td><td>Unarmed</td><td>Unarmed</td>
+            </tr>
+        
+            <tr id="dragon's-claws">
+                <td>Dragon's Claws</td><td>1d6 slashing</td><td>0</td><td>1</td><td>Agile</td><td class="wide-column"><span class='flavor-text'>Dragonkin's sharp claws can cut through many things, but their not as dexterous as a nagas or yirtes</span></td><td>-</td><td>Unarmed</td><td>Unarmed</td>
+            </tr>
+        
+            <tr id="unarmed-strike">
+                <td>Unarmed Strike</td><td>1d2 bludgeoning</td><td>0</td><td>1</td><td>Agile, Finesse</td><td class="wide-column"><span class='flavor-text'>Punching people has always been a way to fight</span></td><td>-</td><td>Unarmed</td><td>Unarmed</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    

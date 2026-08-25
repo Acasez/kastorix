@@ -1,0 +1,227 @@
+#customWeaponModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#customWeaponModal .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    max-width: 600px;
+    overflow-y: auto;
+}
+
+#customWeaponModal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#customWeaponModal .close:hover,
+#customWeaponModal .close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.customWeaponForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.customWeaponForm input,
+.customWeaponForm textarea,
+.customWeaponForm button {
+    padding: 8px;
+}
+
+.customWeaponForm button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.customWeaponForm button:hover {
+    background-color: #45a049;
+}
+
+.add-custom-weapon-button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add-custom-weapon-button:hover {
+    background-color: #0b7dda;
+}
+
+.tag-input-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: black;
+}
+
+.selected-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-right: 5px;
+}
+
+.tag {
+    background-color: #e0e0e0;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.tag-close {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.tag-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    min-width: 100px;
+}
+
+.traits-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.traits-dropdown.show {
+    display: block;
+}
+
+.trait-option {
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.trait-option:hover {
+    background-color: #f0f0f0;
+}
+
+.damage-input-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.customWeaponDamage {
+    flex: 1;
+    width: 40rem;
+}
+
+.damage-type-dropdown {
+    position: relative;
+}
+
+.damage-type-button {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.damage-type-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 120px;
+    z-index: 1000;
+}
+
+.damage-type-options.show {
+    display: block;
+}
+
+.damage-type-option {
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.damage-type-option:hover {
+    background-color: #f0f0f0;
+}
+
+.customWeaponRow {
+    display: flex;
+    margin-bottom: 1rem;
+    height: 3.5rem;
+    align-items: center;
+}
+
+.customWeaponRow input {
+    width: 10rem;
+    margin-right: 1rem;
+    height: 1rem;
+}
+
+.customWeaponRow .wide {
+    width: 20rem;
+}
+
+.customWeaponRow .tall {
+    height: 2rem;
+}
+
+.customWeaponRow label {
+    text-decoration: underline;
+    margin-right: 1rem;
+}
+
+.customWeaponRow button {
+    width: 100%
+}
+
+.customWeaponRow textarea {
+    max-width: 100%
+}
+
+.traitEffect {
+    font-size: 18px;
+}

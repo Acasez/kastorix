@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Avijor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<base href="/Kastorix/">
+		<link rel="stylesheet" href="kastorix.css"/>
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+						<h3 class="portfolio-title">Avijor</h3>
+						</header>
+						<div class="portfolio-row reverse"> <!-- Avijor -->
+							<div class="portfolio-image large">
+								<img src="/images/Kastorix/Maps/Avijor.jpg" alt="World Map" />
+							</div>
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Overview</h3>
+									<!-- Overview Text Below -->
+                                    <p><strong>Avijor</strong> is the northernmost and largest of the continents on <a href="Worldbuilding/Geography/Kastorix.html">Kastorix</a>. Historically it was composed of many different nations, however after <a href="Worldbuilding/Geography/The Breach.html">The Breach</a>, only <a href="Worldbuilding/Nations/The Draconium.html">The Draconium</a> remains standing. Before the breach Avijor had a majority <a href="Worldbuilding/Species/Human.html">human</a> population, with a significant amount of <a href="Worldbuilding/Species/Gnome.html">gnomes</a>, <a href="Worldbuilding/Species/Brannur.html">brannur</a>, <a href="Worldbuilding/Species/Dragonkin.html">dragonkin</a> and <a href="Worldbuilding/Species/Yirte.html">yirte</a>. It also had all of Kastorix's <a href="Worldbuilding/Species/Elf.html">elves</a> before they vanished in the breach.</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Geography -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Geography</h3>
+									<!-- Geography Text Below -->
+                                    <p>The northwesternmost part of Avijor is covered in a freezing tundra, cut in half by a narrow, rocky strait called <strong>Giant's Cut</strong>, with the large island of <a href="Worldbuilding/Geography/Neihalor.html">Neihalor</a>. East of that lies the former <strong>elven lands</strong> which were said to be filled with beautiful groves and heated by magical hot springs. South of that lies a vast forest named the <strong>Larienian Woods</strong>, which was sparsely populated and had many magical creatures. In the years leading up to the breach endeavors to explore and settle the forest were made to harness rare resources and expanding nearby nations. The Larienian Woods stretches to the <strong>central highlands</strong> which had a large population of brannur before the breach, including the legendary <a href="Worldbuilding/Geography/Spears Legacy.html">Spears Legacy</a> mercenary group. </p>
+<p>West of the highlands and south of the woods is a fertile grassland which housed many kingdoms and nations. In the central part of the grasslands one can also find the mystical <strong>Saryo Forest</strong> which held many giant mushrooms and magical creatures. The grassland stretches to the south part of the continent were the climate grows warmer and hillier again. Before the breach the southern part of Avijor was dominated by a group of powerful city states, primarily populated by gnomes which was the center of <a href="Worldbuilding/Geography/Artifice.html">artifice</a> before the breach.</p>
+<p>On the eastern part Avijor, beyond Spear's Legacy sits the only surviving nation on the continent, the Draconium. Home to almost all the worlds <a href="Worldbuilding/Species/Dragon.html">dragons</a> they hold back the darkness that has befallen the rest of the continent. South of the Draconium lies the <strong>The Charged Lands</strong>, a rocky area known for its lightning magic after a magical comet hit it a many hundred years ago. The charged lands is known for its magical flora and fauna that adapted for life there.</p>
+							</div>
+						</div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				// Close dropdowns when clicking outside
+				window.onclick = function(event) {
+					if (!event.target.matches('.dropbtn')) {
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						for (var i = 0; i < dropdowns.length; i++) {
+							var openDropdown = dropdowns[i];
+							if (openDropdown.style.display === "block") {
+								openDropdown.style.display = "none";
+							}
+						}
+					}
+				};
+			</script>
+	</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Odiana</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<base href="/Kastorix/">
+		<link rel="stylesheet" href="kastorix.css" />
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+						<h3 class="portfolio-title">Odiana</h3>
+						</header>
+						<div class="portfolio-row"> <!-- El-Shavri -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<!-- Overview Text Below -->
+                                    <p>Odiana is a monarchy on the southeast coast of Santsim known for its cavalry and its warrior queens. Odiana has a strong warrior tradition and long had the largest amount of Brannur outside of Avijor.</p>
+							</div>
+							<div class="wikibox">
+								<div class="wikibox-header">
+									<h4>Odiana</h4>
+								</div>
+								<div class="wikibox-content">
+									<b>Location:</b> Southeast [[Santsim]]<br>
+									<b>Size:</b> 186 000 km²<br>
+									<b>Population:</b> 6 Million<br>
+									<b>Military Strength:</b> Medium<br>
+									<b>Government:</b> Feudal monarchy<br>
+									<b>Exports:</b> Mounts, fish, animal products<br>
+									<b>Imports:</b> Metals, magical materials<br>
+									<b>Species:</b> Diverse<br>
+									<b>History:</b> Old<br>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Geography -->
+							<div class="portfolio-image large">
+								<img src="/images/Kastorix/Maps/Santsim.jpg" alt="Map of the Nation" />
+							</div>
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Geography</h3>
+									<!-- Geography Text Below -->
+                                    <p>Odiana borders <a href="Worldbuilding/Nations/Glarnast.html">Glarnast</a> to east, <a href="Worldbuilding/Nations/Qual.html">Qual</a> and <a href="Worldbuilding/Nations/Terill.html">Terill</a> to the north and the <a href="Worldbuilding/Nations/Quarthax.html">Quarthax</a> confederation to west. Odiana lies between the fertile grasslands on the east coast of the continent and the <a href="Worldbuilding/Geography/Quarthax Plains.html">Quarthax Plains</a> on the south coast, and is mostly flat. It's southernmost part is hillier, with a jagged coastlines full of cliffs. The weather is mostly temperate</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Government -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Government</h3>
+									<!-- Government Text Below -->
+                                    <p>Odiana is a feudal monarchy with a monarch ruling over smaller duchies. The role of monarch role can be challenged by the dukes and duchesses in a formal battle.</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- History -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">History</h3>
+									<!-- History Text Below -->
+                                    <h3>Society and Culture</h3>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Economy -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Economy</h3>
+									<!-- Economy Text Below -->
+                                    <p>Odiana trains and sells many mounts and animal products. It has a good working relationship with the tribes of Quarthax and exports many goods gathered from them to rest of the world.</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Society and Culture -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Society and Culture</h3>
+									<!-- Society and Culture Text Below -->
+                                    <h3>Military</h3>
+<p>Odiana has a decently sized professional army that relies heavily on cavalry, using both charges and hit and run tactics. The nation uses a variety of creatures for mounts, including horses, <a href="Worldbuilding/Geography/Raptor.html">raptors</a> and <a href="Worldbuilding/Geography/Anzarin.html">anzarin</a>, and in rare cases tame <a href="Worldbuilding/Creatures/Wyvern.html">wyverns</a>. Recent technological have however developments especially in airships has threatened to reduce dominance of their armies.</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Military -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Military</h3>
+									<!-- Military Text Below -->
+                                    <p>Odiana has a decently sized professional army that relies heavily on cavalry, using both charges and hit and run tactics. The nation uses a variety of creatures for mounts, including horses, <a href="Worldbuilding/Geography/Raptor.html">raptors</a> and <a href="Worldbuilding/Geography/Anzarin.html">anzarin</a>, and in rare cases tame <a href="Worldbuilding/Creatures/Wyvern.html">wyverns</a>. Recent technological have however developments especially in airships has threatened to reduce dominance of their armies.</p>
+							</div>
+							<!-- Load In Wyvern Rider Statblock.html here -->
+							<div class="statblock-container" id="wyvern-rider-statblock"></div>
+							<!-- Load In Frost Wyvern Statblock.html here -->
+							<div class="statblock-container" id="frost-wyvern-statblock"></div>
+						</div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script src="fetchAndInsertStatblock.js"></script>
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				// Close dropdowns when clicking outside
+				window.onclick = function(event) {
+					if (!event.target.matches('.dropbtn')) {
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						for (var i = 0; i < dropdowns.length; i++) {
+							var openDropdown = dropdowns[i];
+							if (openDropdown.style.display === "block") {
+								openDropdown.style.display = "none";
+							}
+						}
+					}
+				};
+				loadStatblock("Frost Wyvern Statblock", "frost-wyvern-statblock")
+				loadStatblock("Wyvern Rider Statblock", "wyvern-rider-statblock")
+			</script>
+	</body>
+</html>

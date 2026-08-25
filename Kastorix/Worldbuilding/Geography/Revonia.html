@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Revonia</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<base href="/Kastorix/">
+		<link rel="stylesheet" href="kastorix.css"/>
+		<link rel="icon" type="image/x-icon" href="/images/Kastorix/ManaIcon.png">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="header-placeholder"></div>
+		<!-- Main -->
+			<div id="main">
+				<!-- Main Projects -->
+					<section id="Main Projects" class="sectionText">
+						<header>
+						<h3 class="portfolio-title">Revonia</h3>
+						</header>
+						<div class="portfolio-row reverse"> <!-- Revonia. -->
+							<div class="portfolio-image large">
+								<img src="/images/Kastorix/Maps/The Draconium.jpg" alt="World Map" />
+							</div>
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Overview</h3>
+									<!-- Overview Text Below -->
+                                    <p>Revonia is a large island of the coast of <a href="Worldbuilding/Geography/Avijor.html">Avijor</a>. At 367 000km², its the second largest island in Kastorix. Revonia is part of <a href="Worldbuilding/Nations/The Draconium.html">The Draconium</a>, though it's culture has always been different than that of the mainland. It has a temperate climate with frequent downfall and occasional storms that drift in from <a href="Worldbuilding/Geography/The Galeward.html">The Galeward</a></p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Geography -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Geography</h3>
+									<!-- Geography Text Below -->
+                                    <p>Revonia is located southeast of the Draconium. It's largely forested, especially its northernmost third which is free from settlements. It's southeastern side has many cliffs with jagged, hilly terrain, eroded from the storms that hit it. Central and western Revonia is gentler with many farms. There are also numerous tiny isles around Revonia, most of them uninhabited.</p>
+							</div>
+						</div>
+						<div class="portfolio-row"> <!-- Settlements -->
+							<div class="portfolio-text">
+								<p class="portfolio-description">
+									<h3 class="portfolio-title">Settlements</h3>
+									<!-- Settlements Text Below -->
+                                    <p>Revonia is more rural and less industrialized than the rest of the Draconium. While it does have a few major cities, they are smaller than those on the mainland. Revonia has many farms and plantation and grows many crops that don't grow as well in the colder climate north. It also has a large fishing industry.</p>
+							</div>
+						</div>
+					</section>
+			</div>
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Edvin Skogsholm Sanne's Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+			</div>
+		<!-- Scripts -->
+			<script>
+				fetch('rpgheader.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('header-placeholder').innerHTML = data;
+					});
+				// Close dropdowns when clicking outside
+				window.onclick = function(event) {
+					if (!event.target.matches('.dropbtn')) {
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						for (var i = 0; i < dropdowns.length; i++) {
+							var openDropdown = dropdowns[i];
+							if (openDropdown.style.display === "block") {
+								openDropdown.style.display = "none";
+							}
+						}
+					}
+				};
+			</script>
+	</body>
+</html>

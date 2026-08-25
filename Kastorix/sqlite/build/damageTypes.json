@@ -1,0 +1,64 @@
+{
+    "All": [
+        {
+            "name": "Piercing",
+            "group": "Physical",
+            "resistance": "Armor",
+            "rarity": "Common"
+        },
+        {
+            "name": "Slashing",
+            "group": "Physical",
+            "resistance": "Armor",
+            "rarity": "Common"
+        },
+        {
+            "name": "Bludgeoning",
+            "group": "Physical",
+            "resistance": "Armor, but not as well",
+            "rarity": "Common"
+        },
+        {
+            "name": "Fire",
+            "group": "Elemental",
+            "resistance": "Armor, potions",
+            "rarity": "Common"
+        },
+        {
+            "name": "Cold",
+            "group": "Elemental",
+            "resistance": "Armor, potions",
+            "rarity": "Uncommon"
+        },
+        {
+            "name": "Lightning",
+            "group": "Elemental",
+            "resistance": "Potions",
+            "rarity": "Rare"
+        },
+        {
+            "name": "Acid",
+            "group": "Elemental",
+            "resistance": "Potions",
+            "rarity": "Rare"
+        },
+        {
+            "name": "Poison",
+            "group": "Elemental",
+            "resistance": "Potions",
+            "rarity": "Uncommon"
+        },
+        {
+            "name": "Unraveling",
+            "group": "Exotic",
+            "resistance": "Runes",
+            "rarity": "Very Rare"
+        },
+        {
+            "name": "Vital",
+            "group": "None",
+            "resistance": "None",
+            "rarity": "Very Rare"
+        }
+    ]
+}

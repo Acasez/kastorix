@@ -1,0 +1,145 @@
+
+    <style>
+        #golemUpgradesTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .wide-column {
+            width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .narrow-column {
+            width: 10%;
+        }
+        .flavor-text {
+            font-style: italic;
+        }
+        .action-title {
+            font-weight: bold;
+        }
+        .action-icon {
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    </style>
+    <table id="golemUpgradesTable">
+        <thead>
+            <tr>
+                <th onclick='sortTable(0)'>Name</th><th onclick='sortTable(1)'>Description</th><th onclick='sortTable(2)'>Prerequisites</th><th onclick='sortTable(3)'>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr id="aura-cleaving-weapon">
+                <td>Aura Cleaving Weapon</td><td class="wide-column"><span class='flavor-text'>You have improved your golems offence by allowing it to energize its weapon to punch through auras.</span><br>Your golems natural attacks does an extra damage dice to auras</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="ballista">
+                <td>Ballista</td><td class="wide-column"><span class='flavor-text'>You mount a ballista on your golem, giving it a ranged weapon.</span><br>Your golem has a ranged attack (DEX + trained), 1d10 + PHY piercing damage, with the Reload 1 trait and a range of 10 tiles. <br>While adjacent to your golem you may use your DEX instead of it's own DEX for the attack.</td><td>Quadruped Golem Model</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="elemental-ward">
+                <td>Elemental Ward</td><td class="wide-column"><span class='flavor-text'>With the right runes and spellwork your golem is now resistant to elemental damage</span><br>Your Golem has resistance 3 to elemental damage</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="feathersteel-wings">
+                <td>Feathersteel Wings</td><td class="wide-column"><span class='flavor-text'>You've equipped your golem with feathersteel wings that lets it glide down and perform acrobatic maneuvers.</span><br>Your golem has a glide speed equal to its movespeed.<br>Your golem is trained in acrobatics or stealth.</td><td>Scout Golem Model</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="golem-mount">
+                <td>Golem Mount</td><td class="wide-column"><span class='flavor-text'>You design your golem to serve as a suitable mount.</span><br>You can mount your golem as 1 action.<br>You have a +2 bonus to Reflex saves against strikes and targeted attacks while mounted on your golem</td><td>Quadruped Golem Model</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="integrated-weapon">
+                <td>Integrated Weapon</td><td class="wide-column"><span class='flavor-text'>You've designed your golem to allow it to integrate a weapon into one of its arm</span><br>You can spend a minute to attach a weapon.<br>While attached it cannot be disarmed and has +1 bonus to attack.</td><td></td><td class="narrow-column"></td>
+            </tr>
+        
+            <tr id="programmed-tactics">
+                <td>Programmed Tactics</td><td class="wide-column"><span class='flavor-text'>You program in two tactical maneuvers for your golem.</span><br>Your golem learns two simple combat maneuvers.<br>This upgrade can be taken multiple times, choosing new combat maneuvers</td><td></td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="raise-guard">
+                <td>Raise Guard</td><td class="wide-column"><span class='flavor-text'>Your golem raises its hands or appendages to guard itself.</span><br>Your Golems natural strikes has the Block 2 trait, giving an option to defend itself.<br>It also learns the Protect Ally combat maneuver but can only target you with it.</td><td>Brawler or Quadruped Golem Model</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="soul-link">
+                <td>Soul Link</td><td class="wide-column"><span class='flavor-text'>You set up a crystal connection to connect the golem to your soul, giving you a few benefits</span><br>You can see and hear through your golems location<br>You can command your golem without verbal commands and the range of command is now 20 tiles <br>You can recharge Capacitor Upgrades within that range.</td><td>Trained in Souls Lore</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="specialized-armory">
+                <td>Specialized Armory</td><td class="wide-column"><span class='flavor-text'>Your golem becomes trained in two weapon groups.</span><br>You may choose an Advanced Weapon instead of a weapon group</td><td>Soldier or Scout Golem Model</td><td class="narrow-column">4</td>
+            </tr>
+        
+            <tr id="defense-protocol">
+                <td>Defense Protocol</td><td class="wide-column"><span class='flavor-text'>After your Golem uses the Block action adjacent allies have +1 to all saving throws.</span><br>Additionally you may Take Cover behind your golem as a part of the Block action.</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="project-aura">
+                <td>Project Aura</td><td class="wide-column"><span class='flavor-text'>You can project your Aura to protect your golem from dangerous attacks.</span><br>When your golem would take damage, you can use Aura Block as a reaction as long as you are within 20 tiles of it.</td><td><a href="Soul Link.html">Soul Link</a></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="reinforced-armor">
+                <td>Reinforced Armor</td><td class="wide-column"><span class='flavor-text'>You have improved the defenses of your golem, making it even tougher.</span><br>Increase it's resistance to physical damage by 2.<br>Its health increases by its PHY</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="size-up-golem">
+                <td>Size-Up Golem</td><td class="wide-column"><span class='flavor-text'>You've sized up your golem.</span><br>Your Golem is large. <br>It's health is (4 x your level) + your INT + its PHY</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="soul-channel-spell">
+                <td>Soul Channel Spell</td><td class="wide-column"><span class='flavor-text'>Using your Soul Link you can now channel spells through your golem.</span><br>When casting spells you may choose to cast spells as if you were in your golems space.<br>This gives the spell the Complex trait. <br>You cannot cast spells that already have the Complex trait with this</td><td><a href="Soul Link.html">Soul Link</a></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="tail-strike">
+                <td>Tail Strike</td><td class="wide-column"><span class='flavor-text'>A tail or tentacle is an unorthodox weapon for a golem, but it can it hit foes that aren't expecting</span><br>Your Golem has a Tail natural weapon, with a reach of 2. It does 1d8 damage and has the Sweep trait.<br>When you design your golem you can choose weather it it's an Agile tail or Shoving tail.<br>An agile tail also has the Agile and Finesse trait and does slashing damage<br>A shoving tail also has the Shove and Sweep trait and does bludgeoning damage.</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="fire-capacitor">
+                <td>Fire Capacitor</td><td class="wide-column"><span class='flavor-text'>You install a flame throwing projector in your golem.</span><br>Your golem can spend two actions to project a 5 tile cone of fire, dealing 4d6 fire damage with a basic Reflex save<br>After use, you must then recharge the capacitor with 5 mana as an action while adjacent to your golem.</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="lightning-capacitor">
+                <td>Lightning Capacitor</td><td class="wide-column"><span class='flavor-text'>You install a lightning projecting device into your golem.</span><br>Your golem can spend two actions to project a 10 tile line of fire, dealing 3d8 lightning damage with a basic Reflex save<br>After use, you must then recharge the capacitor with 5 mana as an action while adjacent to your golem.</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="frost-capacitor">
+                <td>Frost Capacitor</td><td class="wide-column"><span class='flavor-text'>You install a flame throwing projector in your golem.</span><br>Your golem can spend two actions to project a 3 tile cone of fire, dealing 3d4 cold damage with a basic Fortitude save<br>Medium and smaller creatures that fail the save also become Frozen 1, or 2 on a critical failure<br>After use, you must then recharge the capacitor with 5 mana as an action while adjacent to your golem.</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="upgraded-components">
+                <td>Upgraded Components</td><td class="wide-column"><span class='flavor-text'>With some upgraded components, your golem is now stronger or faster than before.</span><br>Increase your golems PHY or DEX by 1. <br>You may choose this upgrade multiple times.<br>The highest you can raise them to is 5.<br>This limit increases to 6 at level 12, and 7 at level 18</td><td></td><td class="narrow-column">6</td>
+            </tr>
+        
+            <tr id="advanced-programmed-tactics">
+                <td>Advanced Programmed Tactics</td><td class="wide-column"><span class='flavor-text'>You've program in more advanced maneuvers</span><br>Your golem learns two advanced combat maneuvers.<br>This upgrade can be taken multiple times, choosing new combat maneuvers</td><td><a href="Programmed Tactics.html">Programmed Tactics</a></td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="battlefield-stomp">
+                <td>Battlefield Stomp</td><td class="wide-column"><span class='flavor-text'>Your golems size allows its to create a thundering stomp.</span><br>Your golem has the Battlefield Stomp action. (Environmental, attack, area)<br>Battlefield Stomp, 2 actions - Every creature within 3 tiles must make a basic Fortitude save against your Golems attack.<br>On a failure they take 2d6 bludgeoning damage and fall prone</td><td><a href="Size Up Golem.html">Size Up Golem</a></td><td class="narrow-column">8</td>
+            </tr>
+        
+            <tr id="greater-elemental-ward">
+                <td>Greater Elemental Ward</td><td class="wide-column"><span class='flavor-text'>Stronger wards have improved your golems resistance to magic.</span><br>Increase your golems resistance to elemental damage to 8<br>Increase it by 2 more if you have the Size-Up Upgrade, and an additional 2 if you have the War Walker upgrade</td><td><a href="Elemental Ward.html">Elemental Ward</a></td><td class="narrow-column">10</td>
+            </tr>
+        
+            <tr id="perfected-spell-channeling">
+                <td>Perfected Spell Channeling</td><td class="wide-column"><span class='flavor-text'>You've set up the perfected resonating link to channel your spells</span><br>When channeling spells though your golem you no longer give the spells the Complex trait and you can cast Complex spells<br>You can also target your golem with spells that would normally only target you</td><td><a href="Soul Channel Spell.html">Soul Channel Spell</a></td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="war-walker">
+                <td>War Walker</td><td class="wide-column"><span class='flavor-text'>You've built your golem as true war walker, a machine of battlefield prowess</span><br>Your Golem is huge. <br>It's health is (5 x your level) + your INT + its PHY<br>It does an extra dice of damage with its attacks</td><td><a href="Size Up Golem.html">Size Up Golem</a></td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="winged-golem">
+                <td>Winged Golem</td><td class="wide-column"><span class='flavor-text'>You've improved your golems wings and given it magical propulsion.</span><br>Your golem has a flight speed equal to its movespeed.</td><td><a href="Feathersteel Wings.html">Feathersteel Wings</a></td><td class="narrow-column">12</td>
+            </tr>
+        
+            <tr id="capacitor-upcharge">
+                <td>Capacitor Upcharge</td><td class="wide-column"><span class='flavor-text'>You have upgraded your golems capacitors, allowing to channel more mana into destructive magic.</span><br>When using the an capacitor action you may overcharge them, increase the damage and size.<br>If you do, your golem becomes Stunned 1 and needs 15 mana before the capacitor can be recharged.<br>Fire Capacitor, 8d6 damage, 7 tile cone.<br>Lightning Capacitor, 5d12 damage, 2 tile wide, 12 tile long line<br>Frost Capacitor, 6d4 damage, 5 tile cone. Frozen status works on large creatures</td><td></td><td class="narrow-column">12</td>
+            </tr>
+        
+        </tbody>
+    </table>
+    
